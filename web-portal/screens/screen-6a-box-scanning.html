@@ -25,10 +25,21 @@ SCBoot(['WireframeDoc','NotDrawnHost','RuggedFrame','Screen6aScan'],function(NS)
   ];
   function Page(){
     const [box,setBox]=React.useState('');
+    const [rows,setRows]=React.useState(ROWS);
+    const [tally,setTally]=React.useState({unloaded:18,ok:14,notOk:4});
+    const record=()=>{
+      const code=(box||'').trim(); if(!code) return;
+      const t=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+      setRows(r=>[{box:code,quality:'OK',status:'\u2713',time:t},...r]);
+      setTally(v=>({unloaded:v.unloaded+1,ok:v.ok+1,notOk:v.notOk}));
+      setBox('');
+    };
     return (
       <WireframeDoc mode={view} {...props} onContent legendColumns={2} gutter={30}>
         <RuggedFrame caption={caption} fit={view==='annotated'}>
-          <window.Screen6aScan box={box} setBox={setBox} rows={ROWS} unloaded={18} expected={50} ok={14} notOk={4}/>
+          <window.Screen6aScan box={box} setBox={setBox} rows={rows}
+            onScan={()=>setBox('BX-'+String(16+(tally.unloaded-18)).padStart(5,'0'))} onSubmit={record}
+            unloaded={tally.unloaded} expected={50} ok={tally.ok} notOk={tally.notOk}/>
         </RuggedFrame>
       </WireframeDoc>
     );

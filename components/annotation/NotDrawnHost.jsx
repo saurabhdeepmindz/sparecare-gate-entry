@@ -17,7 +17,7 @@ export function NotDrawnHost(){
       style={{position:'fixed',inset:0,zIndex:90,background:'rgba(4,1,1,0.45)',display:'flex',alignItems:'center',justifyContent:'center',padding:'24px'}}>
       <div onClick={e=>e.stopPropagation()}
         style={{background:'var(--surface-card)',border:'1px solid var(--border-default)',borderRadius:'var(--radius-card)',boxShadow:'var(--shadow-overlay)',maxWidth:'520px',width:'100%',padding:'var(--pad-card)'}}>
-        <div style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-micro)',fontWeight:'var(--fw-semibold)',letterSpacing:'0.07em',color:'var(--status-warn-fg)',marginBottom:'8px'}}>NOT DRAWN</div>
+        <div style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-micro)',fontWeight:'var(--fw-semibold)',letterSpacing:'0.07em',marginBottom:'8px',color:d.kind==='next'?'var(--sc-teal-deep)':'var(--status-warn-fg)'}}>{d.kind==='next'?'NEXT IN THE FLOW \u2014 NOT YET DRAWN':d.kind==='info'?'SPECIFIED BEHAVIOUR':'NOT DRAWN'}</div>
         <h2 style={{fontFamily:'var(--font-display)',fontWeight:'var(--fw-bold)',fontSize:'23px',color:'var(--text-heading)',marginBottom:'8px'}}>{d.title}</h2>
         <p style={{margin:0,font:'var(--type-caption)',color:'var(--text-secondary)',lineHeight:1.6}}>{d.body}</p>
         {d.ref&&<div style={{marginTop:'12px',display:'inline-block',fontFamily:'var(--font-mono)',fontSize:'var(--fs-micro)',fontWeight:'var(--fw-semibold)',color:'var(--sc-teal-deep)',background:'var(--surface-sunken)',border:'1px solid var(--border-field)',borderRadius:'var(--r-sharp)',padding:'3px 8px'}}>{d.ref}</div>}

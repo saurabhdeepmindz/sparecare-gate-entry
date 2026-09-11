@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"NotDrawnHost","sourcePath":"components/annotation/NotDrawnHost.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/NotDrawnHost.jsx":"e89fdd37d2c4","components/annotation/RuggedFrame.jsx":"7a6f82bd07db","components/annotation/WireframeDoc.jsx":"d5dccb947ef9","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"c2a9b9ea3971","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"8cc1e7835bcc","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"a2fe76daa677","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"97d6a4bd0d24","ui_kits/wms-inward/handheld/handheldAnnotations.js":"88dc1e02f4fd","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"48b4f1f5f5b8","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"198cb65106d1","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"203557b66f59"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"NotDrawnHost","sourcePath":"components/annotation/NotDrawnHost.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/NotDrawnHost.jsx":"dc30f1db0ef5","components/annotation/RuggedFrame.jsx":"7a6f82bd07db","components/annotation/WireframeDoc.jsx":"d5dccb947ef9","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"c2a9b9ea3971","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"8cc1e7835bcc","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"31f259ff8711","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"97d6a4bd0d24","ui_kits/wms-inward/handheld/handheldAnnotations.js":"88dc1e02f4fd","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"48b4f1f5f5b8","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"198cb65106d1","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"203557b66f59"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -494,10 +494,10 @@ function NotDrawnHost() {
       fontSize: 'var(--fs-micro)',
       fontWeight: 'var(--fw-semibold)',
       letterSpacing: '0.07em',
-      color: 'var(--status-warn-fg)',
-      marginBottom: '8px'
+      marginBottom: '8px',
+      color: d.kind === 'next' ? 'var(--sc-teal-deep)' : 'var(--status-warn-fg)'
     }
-  }, "NOT DRAWN"), /*#__PURE__*/React.createElement("h2", {
+  }, d.kind === 'next' ? 'NEXT IN THE FLOW \u2014 NOT YET DRAWN' : d.kind === 'info' ? 'SPECIFIED BEHAVIOUR' : 'NOT DRAWN'), /*#__PURE__*/React.createElement("h2", {
     style: {
       fontFamily: 'var(--font-display)',
       fontWeight: 'var(--fw-bold)',
@@ -3639,10 +3639,14 @@ function Panel({
     }
   }, title), action), children);
 }
+const say = detail => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+  detail
+}));
 function Screen6aScan({
   box = '',
   setBox,
   onScan,
+  onSubmit,
   rows = [],
   unloaded = 18,
   expected = 50,
@@ -3653,6 +3657,19 @@ function Screen6aScan({
   onSave,
   onBack
 }) {
+  const balance = expected - unloaded;
+  const finish = onFinish || (() => say({
+    kind: 'next',
+    title: 'Screen 6c \u2014 Check Variance',
+    body: 'FR-006.10 commits the unloading session here and flags the ' + balance + ' unscanned boxes as Balance in the WIP tracker. The operator then goes to Screen 6c, which carries the quantity variance (As Per Document / Actual / Variance), the quality variance table by condition, the Unload Completion status, the Exception Summary and Print Summary. Screen 6c is specified but not yet drawn \u2014 it is in the remaining part of this batch.',
+    ref: 'FR-006.10, FR-006.9, FR-006.16, FR-006.17'
+  }));
+  const save = onSave || (() => say({
+    kind: 'info',
+    title: 'Session saved',
+    body: 'FR-006.11 persists every box scanned, condition recorded, photograph captured and remark entered, and allows the operator to resume from the same state. This supports shift changes and breaks during a long unload. The resumed state is not drawn as a separate screen because it is this screen, repopulated.',
+    ref: 'FR-006.11'
+  }));
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
     title: "Unload Truck",
     onBack: onBack,
@@ -3751,7 +3768,23 @@ function Screen6aScan({
     onChange: e => setBox && setBox(e.target.value),
     onScan: onScan,
     placeholder: "Scan box barcode"
-  }), /*#__PURE__*/React.createElement("p", {
+  }), onSubmit && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '8px',
+      marginTop: '8px'
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    size: "sm",
+    block: true,
+    onClick: () => onSubmit && onSubmit('ok')
+  }, "Record as OK"), /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    size: "sm",
+    block: true,
+    onClick: () => onSubmit && onSubmit('check')
+  }, "Record & check condition")), /*#__PURE__*/React.createElement("p", {
     style: {
       margin: '7px 0 0',
       font: 'var(--type-caption)',
@@ -3768,7 +3801,7 @@ function Screen6aScan({
       value: unloaded
     }, {
       label: 'Balance',
-      value: expected - unloaded,
+      value: balance,
       tone: 'warn'
     }, {
       label: 'OK',
@@ -3839,7 +3872,7 @@ function Screen6aScan({
   }, /*#__PURE__*/React.createElement(Button, {
     variant: "quiet",
     block: true,
-    onClick: onSave,
+    onClick: save,
     iconLeft: /*#__PURE__*/React.createElement(Icon, {
       name: "save",
       size: 15
@@ -3847,7 +3880,7 @@ function Screen6aScan({
   }, "Save"), /*#__PURE__*/React.createElement(Button, {
     variant: "accent",
     block: true,
-    onClick: onFinish,
+    onClick: finish,
     iconLeft: /*#__PURE__*/React.createElement(Icon, {
       name: "circle-check",
       size: 15

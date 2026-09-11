@@ -45,9 +45,20 @@ with its FR reference:
 window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail:{title,body,ref}}))
 ```
 
+`detail.kind`: omit for NOT DRAWN, `'next'` for a screen later in the flow not yet drawn,
+`'info'` to confirm a behaviour the FRD does specify.
+
 Already wired: the camera on Screens 1 and 4a (FR-001.5), ship list View and Replace on 6a
 (FR-006.12, OI-030), View All on 6a and 6b (FR-006.14), Set Aside and Add Document on 6b
-(FR-006.13, OI-013).
+(FR-006.13, OI-013), Finish Unload on 6a → Screen 6c (kind 'next'), Save on 6a → FR-006.11
+save-and-resume (kind 'info').
+
+### Scanning is simulated, not inert
+
+Screen 6a takes `onScan` (fills the field with the next box number) and `onSubmit(mode)`
+— 'ok' appends a row and increments the counters, 'check' routes to Screen 6b and appends
+on save with the chosen condition. Wired in both `prototype.html` and the standalone 6a
+page. Counters, Balance and the progress bar are all live off that state.
 
 ### Annotation pattern now in force
 

@@ -12,7 +12,16 @@ function Panel({title,action,children,style}){
   );
 }
 
-function Screen6aScan({box='',setBox,onScan,rows=[],unloaded=18,expected=50,ok=14,notOk=4,onBoxTap,onFinish,onSave,onBack}){
+const say=(detail)=>window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail}));
+
+function Screen6aScan({box='',setBox,onScan,onSubmit,rows=[],unloaded=18,expected=50,ok=14,notOk=4,onBoxTap,onFinish,onSave,onBack}){
+  const balance=expected-unloaded;
+  const finish=onFinish||(()=>say({kind:'next',title:'Screen 6c \u2014 Check Variance',
+    body:'FR-006.10 commits the unloading session here and flags the '+balance+' unscanned boxes as Balance in the WIP tracker. The operator then goes to Screen 6c, which carries the quantity variance (As Per Document / Actual / Variance), the quality variance table by condition, the Unload Completion status, the Exception Summary and Print Summary. Screen 6c is specified but not yet drawn \u2014 it is in the remaining part of this batch.',
+    ref:'FR-006.10, FR-006.9, FR-006.16, FR-006.17'}));
+  const save=onSave||(()=>say({kind:'info',title:'Session saved',
+    body:'FR-006.11 persists every box scanned, condition recorded, photograph captured and remark entered, and allows the operator to resume from the same state. This supports shift changes and breaks during a long unload. The resumed state is not drawn as a separate screen because it is this screen, repopulated.',
+    ref:'FR-006.11'}));
   return (
     <React.Fragment>
       <ScreenHeader title="Unload Truck" onBack={onBack} right={<Icon name="refresh-cw" size={17} color="var(--sc-teal)"/>}/>
@@ -39,13 +48,17 @@ function Screen6aScan({box='',setBox,onScan,rows=[],unloaded=18,expected=50,ok=1
 
         <Panel title="Scan / Enter Box No.">
           <ScanField value={box} onChange={e=>setBox&&setBox(e.target.value)} onScan={onScan} placeholder="Scan box barcode"/>
+          {onSubmit&&<div style={{display:'flex',gap:'8px',marginTop:'8px'}}>
+            <Button variant="secondary" size="sm" block onClick={()=>onSubmit&&onSubmit('ok')}>Record as OK</Button>
+            <Button variant="secondary" size="sm" block onClick={()=>onSubmit&&onSubmit('check')}>Record &amp; check condition</Button>
+          </div>}
           <p style={{margin:'7px 0 0',font:'var(--type-caption)',color:'var(--sc-grey-500)',lineHeight:1.45}}>Scan each box as it comes off the truck. Type the number if the label will not read.</p>
         </Panel>
 
         <div style={{marginBottom:'12px'}}>
           <CounterStrip items={[
             {label:'Unloaded',value:unloaded},
-            {label:'Balance',value:expected-unloaded,tone:'warn'},
+            {label:'Balance',value:balance,tone:'warn'},
             {label:'OK',value:ok,tone:'ok'},
             {label:'Not OK',value:notOk,tone:'bad'}
           ]}/>
@@ -65,8 +78,8 @@ function Screen6aScan({box='',setBox,onScan,rows=[],unloaded=18,expected=50,ok=1
         </Panel>
       </div>
       <ActionBar style={{position:'sticky',bottom:0}}>
-        <Button variant="quiet" block onClick={onSave} iconLeft={<Icon name="save" size={15}/>}>Save</Button>
-        <Button variant="accent" block onClick={onFinish} iconLeft={<Icon name="circle-check" size={15}/>}>Finish Unload</Button>
+        <Button variant="quiet" block onClick={save} iconLeft={<Icon name="save" size={15}/>}>Save</Button>
+        <Button variant="accent" block onClick={finish} iconLeft={<Icon name="circle-check" size={15}/>}>Finish Unload</Button>
       </ActionBar>
     </React.Fragment>
   );

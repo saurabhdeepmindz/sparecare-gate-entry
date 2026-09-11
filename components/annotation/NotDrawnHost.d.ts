@@ -6,6 +6,9 @@ import * as React from 'react';
  * destinations the FRD refers to but never specifies — the camera view, the ship list
  * viewer, the full entry log.
  *
+ * `detail.kind` sets the eyebrow: omit for NOT DRAWN, `'next'` for a screen later in the
+ * flow that has not been drawn yet, `'info'` to confirm a behaviour the FRD does specify.
+ *
  * Fire it with:
  * `window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail:{title,body,ref}}))`
  */

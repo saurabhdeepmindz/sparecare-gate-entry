@@ -127,7 +127,23 @@ function App(){
   const [queue,setQueue]=React.useState('unload');
   const [bucket,setBucket]=React.useState('Last 7 days');
   const [box,setBox]=React.useState('');
+  const [rows,setRows]=React.useState(BOX_ROWS);
+  const [tally,setTally]=React.useState({unloaded:18,ok:14,notOk:4});
   const [activeBox,setActiveBox]=React.useState('BX-00012');
+  const [pending,setPending]=React.useState(null);
+
+  /* Pressing the reader fills the field with the next box number, exactly as the device
+     would. FR-006.2 keeps manual entry available, so the field stays editable. */
+  const nextBox=()=>'BX-'+String(11+tally.unloaded-17+5).padStart(5,'0');
+  const simulateScan=()=>setBox('BX-'+String(16+(tally.unloaded-18)).padStart(5,'0'));
+  const recordBox=mode=>{
+    const code=(box||'').trim(); if(!code) return;
+    const t=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+    if(mode==='check'){ setPending({code,time:t}); setActiveBox(code); setSel([]); setPhoto(false); setRemarks(''); setI(5); setBox(''); return; }
+    setRows(r=>[{box:code,quality:'OK',status:'\u2713',time:t},...r]);
+    setTally(v=>({unloaded:v.unloaded+1,ok:v.ok+1,notOk:v.notOk}));
+    setBox('');
+  };
   const [sel,setSel]=React.useState(['damaged']);
   const [od,setOd]=React.useState(true);
   const [photo,setPhoto]=React.useState(false);
@@ -178,7 +194,7 @@ function App(){
     setFlash(true); window.setTimeout(()=>setFlash(false),2300);
   };
 
-  const reset=()=>{setI(0);setGen(null);setD1({});setD2({});setD4({});setInvoices([]);setSteps(DEFAULT_STEPS);setSel(['damaged']);setPhoto(false);setRemarks('');setBox('');};
+  const reset=()=>{setI(0);setGen(null);setD1({});setD2({});setD4({});setInvoices([]);setSteps(DEFAULT_STEPS);setSel(['damaged']);setPhoto(false);setRemarks('');setBox('');setRows(BOX_ROWS);setTally({unloaded:18,ok:14,notOk:4});setPending(null);};
   const create=()=>{const n='GEN-2026-08-12-'+(Math.floor(Math.random()*9000)+1000);setGen(n);setD2(p=>({...p,gen:n,supplier:d1.supplier,courier:d1.courier}));};
 
   /* The terminal is 412 x 880 dp by design. Here it is sized to the window instead, so the
@@ -201,21 +217,32 @@ function App(){
       openInvoice={invOpen} onToggleInvoice={()=>setInvOpen(o=>!o)}
       onAddNext={()=>setInvoices(INVOICES.slice(0,invoices.length+1))}
       onBack={()=>setI(2)} onNext={()=>setI(4)}/>;
-  if(step.id==='scan') screen=<window.Screen6aScan box={box} setBox={setBox} rows={BOX_ROWS}
-      unloaded={18} expected={Number(d4.boxes)||50} ok={14} notOk={4}
-      onBoxTap={r=>{setActiveBox(r.box);setI(5);}} onSave={()=>setI(0)} onFinish={()=>setI(0)} onBack={()=>setI(3)}/>;
+  if(step.id==='scan') screen=<window.Screen6aScan box={box} setBox={setBox} rows={rows}
+      onScan={simulateScan} onSubmit={recordBox}
+      unloaded={tally.unloaded} expected={Number(d4.boxes)||50} ok={tally.ok} notOk={tally.notOk}
+      onBoxTap={r=>{setActiveBox(r.box);setPending(null);setI(5);}} onBack={()=>setI(3)}/>;
   if(step.id==='cond') screen=<window.Screen6bCondition boxNo={activeBox} selected={sel}
       onToggle={id=>setSel(p=>id==='ok'?['ok']:(p.includes(id)?p.filter(x=>x!==id):[...p.filter(x=>x!=='ok'),id]))}
       openDelivery={od} setOpenDelivery={setOd} photo={photo} onCapture={()=>setPhoto(p=>!p)}
       remarks={remarks} setRemarks={setRemarks} recent={BOX_ROWS.slice(2)}
-      onSave={()=>setI(4)} onCancel={()=>setI(4)}/>;
+      onSave={()=>{
+        const t=pending?pending.time:new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+        const label=sel.length?({ok:'OK',tampered:'Packing Tampered',damaged:'Damaged',scratch:'Visible Scratch',nopack:'Without Packing',wrong:'Wrong Delivery'})[sel[0]]:'OK';
+        const bad=sel.some(s=>s!=='ok');
+        if(pending){
+          setRows(r=>[{box:pending.code,quality:label,status:bad?'\u2715':'\u2713',time:t},...r]);
+          setTally(v=>({unloaded:v.unloaded+1,ok:v.ok+(bad?0:1),notOk:v.notOk+(bad?1:0)}));
+          setPending(null);
+        }
+        setI(4);
+      }} onCancel={()=>{setPending(null);setI(4);}}/>;
 
   const jump=step.id==='scan'?{label:'Recent Box Entries',text:'Recent Box Entries'}
             :step.id==='receipt'?{label:'the invoice summary',text:'Details of the Invoices Added'}
             :null;
   const hint=step.id==='gate'&&!gen
     ? (ready?'Press Create Gate Entry to generate the GEN.':"Enter a driver name and contact number \u2014 they are the only mandatory fields.")
-    : step.id==='scan' ? 'Scroll down inside the terminal to Recent Box Entries, then tap any row to open its condition record.'
+    : step.id==='scan' ? 'Press the reader to simulate a scan, then record the box as OK or send it for a condition check. Recent Box Entries is further down \u2014 tap any row to reopen its condition record.'
     : step.id==='cond' ? (notOk&&!photo?'Save is blocked until a photograph is captured \u2014 FR-006.5 requires it for any non-OK condition.':'Condition recorded. Save returns to scanning.')
     : step.id==='receipt' ? 'Open Capture Invoice Details and press Add Next to build the invoice summary further down the screen.'
     : step.id==='dash' ? 'Work starts here. Press Create Gate Entry, top right.'
