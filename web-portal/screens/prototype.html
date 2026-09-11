@@ -13,6 +13,8 @@ html,body{margin:0;height:100%}body{background:var(--anno-canvas);min-width:760p
 .sc-stage :is(button,a[href],input,select,textarea,[role="switch"]){transition:outline-color var(--dur-fast) var(--ease-standard)}
 .sc-rail button,.sc-bar button{white-space:nowrap}
 .sc-hot :is(button,a[href],input,select,textarea,[role="switch"]):not([disabled]){outline:2px solid rgba(90,159,163,.8);outline-offset:2px}
+.sc-hot tbody tr[style*="pointer"]{outline:2px solid rgba(90,159,163,.8);outline-offset:-2px}
+.sc-flash tbody tr[style*="pointer"]{animation:scPulse 1100ms var(--ease-standard) 2}
 .sc-flash :is(button,a[href],input,select,textarea,[role="switch"]):not([disabled]){animation:scPulse 1100ms var(--ease-standard) 2}
 .sc-next{outline:2.5px solid var(--sc-teal-deep)!important;outline-offset:3px!important;animation:scPulse 1300ms var(--ease-standard) infinite!important}
 </style>
@@ -156,6 +158,21 @@ function App(){
     if(btn) btn.classList.add('sc-next');
   },[hot,flash,i,gen,ready,notOk,photo]);
 
+  /* The terminal crops at the device height, so a panel further down the screen is
+     invisible until scrolled. This walks the operator to it rather than leaving the
+     instruction hanging. */
+  const scrollTo=text=>{
+    const root=stage.current; if(!root) return;
+    const scroller=[...root.querySelectorAll('div')].find(d=>{
+      const s=getComputedStyle(d); return (s.overflowY==='auto'||s.overflowY==='scroll')&&d.scrollHeight>d.clientHeight+20;
+    });
+    const target=[...root.querySelectorAll('span,div')].find(n=>(n.textContent||'').trim()===text);
+    if(!scroller||!target) return;
+    const delta=target.getBoundingClientRect().top-scroller.getBoundingClientRect().top;
+    scroller.scrollTop=scroller.scrollTop+delta-14;
+    setFlash(true); window.setTimeout(()=>setFlash(false),2300);
+  };
+
   const onStageClick=e=>{
     if(e.target.closest('button,a[href],input,select,textarea,[role="switch"],tr')) return;
     setFlash(true); window.setTimeout(()=>setFlash(false),2300);
@@ -193,11 +210,14 @@ function App(){
       remarks={remarks} setRemarks={setRemarks} recent={BOX_ROWS.slice(2)}
       onSave={()=>setI(4)} onCancel={()=>setI(4)}/>;
 
+  const jump=step.id==='scan'?{label:'Recent Box Entries',text:'Recent Box Entries'}
+            :step.id==='receipt'?{label:'the invoice summary',text:'Details of the Invoices Added'}
+            :null;
   const hint=step.id==='gate'&&!gen
     ? (ready?'Press Create Gate Entry to generate the GEN.':"Enter a driver name and contact number \u2014 they are the only mandatory fields.")
-    : step.id==='scan' ? 'Tap any row in Recent Box Entries to open its condition record.'
+    : step.id==='scan' ? 'Scroll down inside the terminal to Recent Box Entries, then tap any row to open its condition record.'
     : step.id==='cond' ? (notOk&&!photo?'Save is blocked until a photograph is captured \u2014 FR-006.5 requires it for any non-OK condition.':'Condition recorded. Save returns to scanning.')
-    : step.id==='receipt' ? 'Open Capture Invoice Details and press Add Next to build the invoice summary.'
+    : step.id==='receipt' ? 'Open Capture Invoice Details and press Add Next to build the invoice summary further down the screen.'
     : step.id==='dash' ? 'Work starts here. Press Create Gate Entry, top right.'
     : null;
 
@@ -226,6 +246,10 @@ function App(){
         {(hint||hot)&&<div style={{maxWidth:'900px',margin:'0 auto 10px'}}>
           <InfoNote tone={step.id==='cond'&&notOk&&!photo?'warn':'info'} style={{padding:'7px 11px'}}>
             {hot?'Everything outlined is clickable. The strongest outline is the next step in the flow. ':''}{hint}
+            {jump&&<button type="button" onClick={e=>{e.stopPropagation();scrollTo(jump.text);}}
+              style={{marginLeft:'8px',font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'3px 10px',borderRadius:'var(--r-pill)',border:'1px solid var(--sc-teal)',background:'var(--surface-card)',color:'var(--sc-teal-deep)',cursor:'pointer',whiteSpace:'nowrap'}}>
+              Take me to {jump.label}
+            </button>}
           </InfoNote>
         </div>}
 
