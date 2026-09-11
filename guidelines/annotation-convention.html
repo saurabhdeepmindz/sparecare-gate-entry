@@ -1,0 +1,16 @@
+<!-- @dsCard group="Wireframe" viewport="700x180" name="Annotation convention" subtitle="Numbered circles on the screen, descriptions beneath, every one mapped to an FR number" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:16px 20px;background:var(--surface-card)}.w{display:flex;gap:26px;align-items:flex-start}.demo{position:relative;padding:18px}.scr{width:150px;height:96px;border:1px solid var(--border-soft);background:var(--surface-card);overflow:hidden}.bar{height:22px;border-bottom:1px solid var(--border-soft)}.fld{margin:8px;height:20px;border:1px solid var(--border-field);border-radius:var(--radius-field)}.m{position:absolute;width:26px;height:26px;border-radius:50%;background:var(--anno-marker-bg);color:#fff;border:2.5px solid #fff;box-shadow:var(--shadow-raised);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:14px}ol{margin:0;padding:0;list-style:none}li{display:grid;grid-template-columns:22px 1fr;gap:9px;margin-bottom:9px}.n{width:22px;height:22px;border-radius:50%;background:var(--anno-marker-bg);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:12px}.n.open{background:var(--status-warn)}.ref{font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:600;color:var(--sc-teal-deep);background:var(--surface-sunken);padding:2px 6px}.lb{font:var(--type-label)}.de{font:var(--type-caption);color:var(--sc-grey-600);margin:2px 0 0;line-height:1.45}</style>
+</head><body><div class="w">
+<div class="demo">
+  <div class="scr"><div class="bar"></div><div class="fld"></div><div class="fld"></div></div>
+  <div class="m" style="top:12px;left:82px">1</div>
+  <div class="m" style="top:52px;left:5px">2</div>
+  <div class="m" style="top:82px;left:160px">3</div>
+</div>
+<ol>
+<li><span class="n">1</span><div><span class="lb">Region or field name</span> <span class="ref">FR-001.2</span><p class="de">Quote the FRD field reference wording; don't paraphrase it.</p></div></li>
+<li><span class="n">2</span><div><span class="lb">Markers may straddle the edge</span> <span class="ref">§4.3</span><p class="de">A 22px gutter surrounds every screen and nothing clips, so no circle is ever cut by a boundary.</p></div></li>
+<li><span class="n open">3</span><div><span class="lb">Amber marks an open issue</span> <span class="ref">OI-0xx</span><p class="de">Used where the FRD records the behaviour as undefined.</p></div></li>
+</ol>
+</div></body></html>

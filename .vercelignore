@@ -1,0 +1,11 @@
+# Never upload the token or password.
+.env
+.env.*
+.env.local
+
+# Source/working files, not needed to serve the portal.
+uploads/
+scraps/
+
+# Local tooling state.
+.vercel-old/

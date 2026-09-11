@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Screen 1 — Gate Entry (Create GEN) · SpareCare WMS</title>
+<link rel="stylesheet" href="../../styles.css">
+<script>window.SC_ASSET_BASE='../..'</script>
+<script src="https://unpkg.com/lucide@0.446.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../boot.js"></script>
+<script src="../../ui_kits/wms-inward/web/webAnnotations.js"></script>
+<style>html,body{margin:0}body{background:var(--anno-canvas);min-width:1380px}a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel" src="../../ui_kits/wms-inward/web/WebShell.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/web/GateEntryWeb.jsx"></script>
+<script type="text/babel">
+SCBoot(['WireframeDoc','BrowserChrome','WebShell','GateEntryWeb'],function(NS){
+  const {WireframeDoc,BrowserChrome}=NS;
+  const view=new URLSearchParams(location.search).get('view')==='annotated'?'annotated':'wireframe';
+  const {url,...props}=window.SC_WEB_ANNO['screen-1'];
+  const SEED={person:'Ramesh Yadav',contact:'98xxx xxxxx',courier:'Transport',nature:'Purchase',supplier:'ABC Supplies Pvt. Ltd.',dept:'Spares Store',doc:'Tax Invoice',boxes:'50'};
+
+  function Page(){
+    const [d,setD]=React.useState(view==='annotated'?SEED:{});
+    const [gen,setGen]=React.useState(view==='annotated'?'GEN-2025-05-20-0012':null);
+    const set=(k,v)=>setD(p=>({...p,[k]:v}));
+    const ready=!!(d.person&&d.contact);
+    return (
+      <WireframeDoc mode={view} {...props} legendColumns={2} gutter={26}>
+        <BrowserChrome url={url}>
+          <window.GateEntryWeb state={d} set={set} gen={gen}
+            onNext={()=>{ if(!gen){ if(ready) setGen('GEN-2026-08-12-'+(Math.floor(Math.random()*9000)+1000)); } else { location.href='screen-2-consignment-details.html'+location.search; } }}
+            onCancel={()=>{setD({});setGen(null);}}/>
+        </BrowserChrome>
+      </WireframeDoc>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Page/>);
+});
+</script></body></html>

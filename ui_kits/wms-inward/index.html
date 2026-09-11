@@ -1,0 +1,112 @@
+<!-- @dsCard group="WMS Inward" viewport="1480x880" name="Screens 1–3 handheld" subtitle="The handheld surface — source-verified from the FRD artwork. The web portal is the primary deliverable." -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>SpareCare WMS — Inward, Screens 1–3</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.446.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="./annotations.js"></script>
+<style>body{margin:0;background:var(--anno-canvas)}#root{min-height:100vh}.seg{display:flex;border:1px solid var(--border-default);background:var(--surface-card)}.seg button{font:var(--type-label);white-space:nowrap;padding:9px 16px;border:none;background:none;cursor:pointer;color:var(--sc-grey-600);transition:var(--transition-interactive)}.seg button[aria-pressed="true"]{background:var(--sc-teal-deep);color:#fff}</style>
+</head><body><template id="__bundler_thumbnail" data-bg-color="#3B616C"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#3B616C"/><g fill="#fff"><rect x="300" y="240" width="180" height="320" rx="10" opacity="0.94"/><rect x="510" y="240" width="180" height="320" rx="10" opacity="0.94"/><rect x="720" y="240" width="180" height="320" rx="10" opacity="0.94"/></g><g fill="#5A9FA3"><circle cx="300" cy="280" r="26"/><circle cx="690" cy="400" r="26"/><circle cx="900" cy="520" r="26"/></g><g fill="#fff" font-family="sans-serif" font-size="30" font-weight="700"><text x="300" y="290" fill="#fff" text-anchor="middle">1</text><text x="690" y="410" fill="#fff" text-anchor="middle">2</text><text x="900" y="530" fill="#fff" text-anchor="middle">3</text></g><text x="600" y="670" fill="#fff" font-family="sans-serif" font-size="44" font-weight="700" text-anchor="middle">SpareCare WMS</text><text x="600" y="716" fill="#A8C9CB" font-family="sans-serif" font-size="28" text-anchor="middle">Inward · Screens 1–3</text></svg></template><div id="root"></div>
+<script type="text/babel" src="./Screen1GateEntry.jsx"></script>
+<script type="text/babel" src="./Screen2ConsignmentDetails.jsx"></script>
+<script type="text/babel" src="./Screen3Dashboard.jsx"></script>
+<script type="text/babel">
+const {WireframeSheet,AnnotatedScreen,AnnotationLegend,InfoNote}=window.SpareCareDesignSystem_556483;
+const A=window.SC_WMS_ANNO;
+const DEFAULT_STEPS=[
+  {id:'unload',label:'Unload Truck & Check Primary Boxes',checked:true},
+  {id:'secondary',label:'Check Secondary Boxes',checked:true},
+  {id:'binning',label:'Binning',checked:true},
+  {id:'receipt',label:'Receipt Confirmation',checked:true}
+];
+const FILLED_1={person:'Ramesh Yadav',contact:'98xxx xxxxx',supplier:'ABC Supplies Pvt. Ltd.',dept:'Spares Store',nature:'Purchase',doc:'Tax Invoice',courier:'Transport',boxes:'50'};
+const FILLED_2={gen:'GEN-2025-05-20-0012',productCat:'Spare Parts',supplierCat:'OEM',supplier:'ABC Supplies Pvt. Ltd.',doc:'Tax Invoice',courier:'Transport'};
+
+function Sheet(){
+  const col={display:'flex',flexDirection:'column',gap:'var(--sp-3)',minWidth:0};
+  return (
+    <WireframeSheet width="1480px"
+      title="WMS Inward — Gate Entry to Dashboard"
+      subtitle="Screens 1 to 3 of the Inward module, drawn in the SpareCare brand. Callout numbers key to the legend beneath each screen, and every entry carries the requirement or section it derives from. Amber callouts mark behaviour the FRD records as an open issue."
+      meta={[{label:'Module',value:'WMS / Inward'},{label:'Source',value:'FRD v0.11'},{label:'Sessions',value:'01–07'},{label:'Brand',value:'SpareCare v1'}]}
+      footer="Screens 1 and 2 are specified for both the handheld and the web surface (FR-032.5); Screen 3 is a desk activity. OI-047 records that the screen-by-screen surface assignment is still to be agreed.">
+      <div style={{display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:'var(--sp-4)',alignItems:'start'}}>
+        <div style={col}>
+          <AnnotatedScreen screenLabel={A.screen1.label} screenRef={A.screen1.ref+' · '+A.screen1.surface} markers={A.screen1.markers}>
+            <window.Screen1GateEntry state={FILLED_1} gen="GEN-2025-05-20-0012" frameProps={{height:'800px'}}/>
+          </AnnotatedScreen>
+          <AnnotationLegend title={A.screen1.label} items={A.screen1.items}/>
+        </div>
+        <div style={col}>
+          <AnnotatedScreen screenLabel={A.screen2.label} screenRef={A.screen2.ref+' · '+A.screen2.surface} markers={A.screen2.markers}>
+            <window.Screen2ConsignmentDetails state={FILLED_2} steps={DEFAULT_STEPS} genOptions={['GEN-2025-05-20-0012','GEN-2025-05-20-0013']} frameProps={{height:'800px'}}/>
+          </AnnotatedScreen>
+          <AnnotationLegend title={A.screen2.label} items={A.screen2.items}/>
+        </div>
+        <div style={col}>
+          <AnnotatedScreen screenLabel={A.screen3.label} screenRef={A.screen3.ref+' · '+A.screen3.surface} markers={A.screen3.markers}>
+            <window.Screen3Dashboard queue="unload" bucket="Last 7 days" frameProps={{height:'800px'}}/>
+          </AnnotatedScreen>
+          <AnnotationLegend title={A.screen3.label} items={A.screen3.items}/>
+        </div>
+      </div>
+    </WireframeSheet>
+  );
+}
+
+function Prototype(){
+  const [step,setStep]=React.useState(0);
+  const [gen,setGen]=React.useState(null);
+  const [d1,setD1]=React.useState({});
+  const [d2,setD2]=React.useState({});
+  const [steps,setSteps]=React.useState(DEFAULT_STEPS);
+  const [queue,setQueue]=React.useState('unload');
+  const [bucket,setBucket]=React.useState('Last 7 days');
+  const set1=(k,v)=>setD1(p=>({...p,[k]:v}));
+  const set2=(k,v)=>setD2(p=>({...p,[k]:v}));
+  const ready=!!(d1.person&&d1.contact);
+  const create=()=>{ if(!ready) return; const n='GEN-2026-08-12-'+String(Math.floor(Math.random()*9000)+1000); setGen(n); set2('gen',n); };
+  const toggle=id=>setSteps(p=>p.map(s=>s.id===id?{...s,checked:!s.checked}:s));
+  const tabs=['Screen 1 · Gate Entry','Screen 2 · Consignment Details','Screen 3 · Dashboard'];
+  return (
+    <div style={{padding:'var(--sp-4)',minHeight:'100vh',display:'flex',flexDirection:'column',alignItems:'center',gap:'var(--sp-3)'}}>
+      <div style={{display:'flex',gap:'10px',alignItems:'center',flexWrap:'wrap',justifyContent:'center'}}>
+        {tabs.map((l,i)=>(
+          <button key={l} onClick={()=>setStep(i)} aria-pressed={step===i}
+            style={{font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'7px 13px',borderRadius:'var(--r-pill)',cursor:'pointer',border:'1px solid '+(step===i?'var(--sc-teal)':'var(--border-default)'),background:step===i?'var(--sc-teal-deep)':'var(--surface-card)',color:step===i?'#fff':'var(--sc-grey-600)'}}>{l}</button>
+        ))}
+      </div>
+      {step===0&&<div style={{maxWidth:'420px',width:'100%'}}>
+        {!gen&&<div style={{marginBottom:'12px'}}><InfoNote tone={ready?'info':'warn'}>{ready?'Tap Next to generate the Gate Entry Number.':"Enter the driver's name and contact number to create a Gate Entry Number."}</InfoNote></div>}
+        <window.Screen1GateEntry state={d1} set={set1} gen={gen}
+          onNext={()=>{ if(!gen) create(); else setStep(1); }}
+          onCancel={()=>{setD1({});setGen(null);}} frameProps={{height:'720px'}}/>
+      </div>}
+      {step===1&&<window.Screen2ConsignmentDetails state={d2} set={set2} steps={steps} onToggle={toggle}
+        genOptions={gen?[gen]:['GEN-2025-05-20-0012']} onNext={()=>setStep(2)} onBack={()=>setStep(0)} frameProps={{height:'720px'}}/>}
+      {step===2&&<window.Screen3Dashboard queue={queue} setQueue={setQueue} bucket={bucket} setBucket={setBucket} frameProps={{height:'720px'}}/>}
+    </div>
+  );
+}
+
+function App(){
+  const [mode,setMode]=React.useState('sheet');
+  return (<div>
+    <div style={{position:'sticky',top:0,zIndex:20,background:'rgba(220,220,222,0.94)',backdropFilter:'blur(8px)',borderBottom:'1px solid rgba(4,1,1,0.16)',padding:'12px var(--sp-4)',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'var(--sp-3)',flexWrap:'wrap'}}>
+      <div style={{display:'flex',alignItems:'center',gap:'10px'}}>
+        <img src="../../assets/logo-mark.png" alt="" style={{height:'24px'}}/>
+        <span style={{fontFamily:'var(--font-display)',fontWeight:'var(--fw-bold)',fontSize:'17px',letterSpacing:'var(--ls-lock)',color:'var(--sc-ink)'}}>SpareCare</span>
+        <span style={{font:'var(--type-caption)',color:'var(--sc-grey-600)'}}>WMS · Inward · Screens 1–3</span>
+      </div>
+      <div className="seg">
+        <button aria-pressed={mode==='sheet'} onClick={()=>setMode('sheet')}>Annotated wireframes</button>
+        <button aria-pressed={mode==='proto'} onClick={()=>setMode('proto')}>Click-through prototype</button>
+      </div>
+    </div>
+    {mode==='sheet'?<Sheet/>:<Prototype/>}
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

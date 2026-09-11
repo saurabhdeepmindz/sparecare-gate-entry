@@ -1,0 +1,174 @@
+<!-- @dsCard group="WMS Inward" viewport="1480x900" name="Wireframe portal" subtitle="Browsable catalogue — left menu of screens, wireframe or annotated wireframe on the right" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SpareCare WMS — Inward Wireframes</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+html,body{height:100%;margin:0}
+body{background:var(--surface-page);display:grid;grid-template-columns:340px 1fr;overflow:hidden}
+a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}
+/* ---- left menu ---- */
+.menu{background:var(--surface-card);border-right:1px solid var(--border-default);display:flex;flex-direction:column;overflow:hidden}
+.lock{display:flex;align-items:center;gap:11px;padding:var(--sp-3) var(--sp-3) var(--sp-2)}
+.lock img{height:34px;width:auto}
+.lock b{display:block;font:var(--type-label);color:var(--text-body);line-height:1.25}
+.lock span{display:block;font-size:var(--fs-micro);color:var(--sc-grey-500)}
+.titleblock{padding:0 var(--sp-3) var(--sp-2)}
+.titleblock h1{font-family:var(--font-display);font-weight:var(--fw-bold);font-size:25px;letter-spacing:var(--ls-display);color:var(--text-heading);line-height:1.1}
+.titleblock p{margin:6px 0 0;font:var(--type-caption);color:var(--sc-grey-600)}
+.titleblock .back{display:inline-block;margin-top:12px;font:var(--type-caption);color:var(--sc-teal-deep);text-decoration:none}
+.titleblock .back:hover{text-decoration:underline}
+.search{padding:var(--sp-2) var(--sp-3);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
+.search input{width:100%;border:1.5px solid var(--border-strong);border-radius:var(--radius-button);padding:10px 12px;font-family:var(--font-body);font-size:var(--fs-label);color:var(--text-body);background:var(--surface-card);outline:none}
+.search input:focus{border-color:var(--border-focus)}
+.nav{flex:1;overflow-y:auto;padding-bottom:var(--sp-4)}
+.grp{font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:600;letter-spacing:.07em;color:var(--sc-grey-500);padding:var(--sp-3) var(--sp-3) 7px}
+.grp em{font-style:normal;color:var(--sc-teal-deep);margin-right:8px}
+.item{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;width:100%;text-align:left;background:none;border:none;border-left:3px solid transparent;padding:9px var(--sp-3);cursor:pointer;font-family:var(--font-body);transition:var(--transition-interactive);min-height:var(--hit-min)}
+.item:hover{background:var(--surface-sunken)}
+.item .n{font-family:var(--font-mono);font-size:var(--fs-micro);color:var(--sc-grey-500);padding-top:2px}
+.item .t{font-size:var(--fs-label);font-weight:var(--fw-medium);color:var(--text-body);line-height:1.35}
+.item .t i{font-style:normal;font-family:var(--font-mono);font-size:var(--fs-micro);color:var(--sc-grey-500);display:block;margin-top:2px}
+.item[aria-current="true"]{background:var(--surface-sunken);border-left-color:var(--sc-teal)}
+.item[aria-current="true"] .t{color:var(--sc-teal-deep);font-weight:var(--fw-semibold)}
+.item[aria-current="true"] .n{color:var(--sc-teal-deep)}
+.empty{font:var(--type-caption);color:var(--sc-grey-500);padding:var(--sp-3)}
+/* ---- right pane ---- */
+.pane{display:flex;flex-direction:column;overflow:hidden;background:var(--anno-canvas)}
+.pbar{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4) var(--sp-2);background:var(--surface-card);border-bottom:1px solid var(--border-default);flex:0 0 auto;flex-wrap:wrap}
+.pbar .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:5px}
+.pbar .code{font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:600;white-space:nowrap;color:var(--sc-teal-deep);background:var(--surface-sunken);border:1px solid var(--border-field);border-radius:var(--r-sharp);padding:2px 7px}
+.pbar .gname{font:var(--type-caption);font-weight:var(--fw-semibold);letter-spacing:.06em;color:var(--sc-grey-600)}
+.pbar h2{font-family:var(--font-display);font-weight:var(--fw-bold);font-size:26px;letter-spacing:var(--ls-display);color:var(--text-heading);line-height:1.15}
+.pbar h2 span{font-family:var(--font-mono);font-size:19px;font-weight:var(--fw-semibold);color:var(--sc-teal);margin-right:10px}
+.right{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.seg{display:flex;border:1px solid var(--border-default);border-radius:var(--r-sharp);overflow:hidden;background:var(--surface-card)}
+.seg button{font:var(--type-label);white-space:nowrap;padding:9px 15px;border:none;background:none;cursor:pointer;color:var(--sc-grey-600);transition:var(--transition-interactive)}
+.seg button:hover{background:var(--surface-sunken);color:var(--sc-teal-deep)}
+.seg button[aria-pressed="true"]{background:var(--sc-teal-deep);color:#fff}
+.seg button[aria-pressed="true"]:hover{background:var(--action-primary-hover);color:#fff}
+.open{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:var(--fw-semibold);font-size:var(--fs-body-sm);padding:12px 22px;border-radius:var(--r-sharp);border:none;background:var(--action-primary);color:#fff;text-decoration:none;cursor:pointer;white-space:nowrap;transition:var(--transition-interactive)}
+.open:hover{background:var(--action-primary-hover);color:#fff}
+.frame{flex:1;min-height:0;position:relative}
+.frame iframe{width:100%;height:100%;border:none;display:block;background:var(--anno-canvas)}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);padding:9px var(--sp-4);background:var(--surface-card);border-top:1px solid var(--border-default);flex:0 0 auto;flex-wrap:wrap}
+.foot .l{font:var(--type-caption);color:var(--sc-grey-600)}
+.foot .l b{font-family:var(--font-mono);font-size:var(--fs-caption);font-weight:600;color:var(--sc-teal-deep)}
+.foot .r{font:var(--type-caption);color:var(--sc-grey-500)}
+.foot nav{display:flex;gap:8px}
+.foot nav button{font:var(--type-caption);font-weight:var(--fw-semibold);white-space:nowrap;padding:5px 11px;border:1px solid var(--border-default);border-radius:var(--r-sharp);background:var(--surface-card);color:var(--sc-grey-600);cursor:pointer;transition:var(--transition-interactive)}
+.foot nav button:hover:not(:disabled){border-color:var(--sc-teal);color:var(--sc-teal-deep)}
+.foot nav button:disabled{opacity:.4;cursor:not-allowed}
+</style>
+</head><body>
+<aside class="menu">
+  <div class="lock"><img src="../assets/deepmindz-logo.png" alt="Deepmindz Innovations"><div><b>Deepmindz Innovations</b><span>Pvt Ltd &middot; prepared for SpareCare</span></div></div>
+  <div class="titleblock">
+    <h1 id="pTitle">WMS Inward Wireframes</h1>
+    <p id="pSub">Administration and Operations</p>
+    <a class="back" id="pBack" href="#">&larr; Back to SpareCare overview</a>
+  </div>
+  <div class="search"><input id="q" type="search" placeholder="Search screens…" aria-label="Search screens"></div>
+  <div class="nav" id="nav"></div>
+</aside>
+<section class="pane">
+  <div class="pbar">
+    <div style="min-width:0">
+      <div class="eyebrow"><span class="code" id="hCode">IN-A</span><span class="gname" id="hGroup"></span></div>
+      <h2 id="hTitle"></h2>
+    </div>
+    <div class="right">
+      <div class="seg" id="seg">
+        <button type="button" data-view="wireframe">Wireframe</button>
+        <button type="button" data-view="annotated">Annotated wireframe</button>
+      </div>
+      <a class="open" id="openDoc" target="_blank" rel="noopener">Open Document &#8599;</a>
+    </div>
+  </div>
+  <div class="frame"><iframe id="frame" title="Wireframe"></iframe></div>
+  <div class="foot">
+    <div class="l" id="fPos"></div>
+    <nav><button type="button" id="prev">&larr; Previous</button><button type="button" id="next">Next &rarr;</button></nav>
+    <div class="r" id="fHint">Scroll inside the frame if the wireframe exceeds your viewport &rarr;</div>
+  </div>
+</section>
+<script src="./screens.js"></script>
+<script>
+const P=window.SC_PORTAL;
+const flat=P.groups.flatMap(g=>g.items.map(it=>({...it,group:g})));
+const VIEW_KEY='sc-wireframe-view';
+let view=localStorage.getItem(VIEW_KEY)||'wireframe';
+let currentId=null;
+
+document.getElementById('pTitle').textContent=P.title;
+document.getElementById('pSub').textContent=P.subtitle+' · '+flat.filter(i=>i.modes).length+' screens · '+P.version;
+document.getElementById('pBack').textContent=P.backLabel;
+document.getElementById('pBack').href=P.backHref;
+
+function buildNav(filter){
+  const nav=document.getElementById('nav');nav.innerHTML='';
+  const f=(filter||'').trim().toLowerCase();
+  let shown=0;
+  P.groups.forEach(g=>{
+    const items=g.items.filter(it=>!f||(it.name+' '+(it.ref||'')+' '+(it.fr||'')).toLowerCase().includes(f));
+    if(!items.length) return;
+    const h=document.createElement('div');h.className='grp';
+    h.innerHTML='<em>'+g.code+'</em>'+g.name;nav.appendChild(h);
+    items.forEach(it=>{
+      shown++;
+      const b=document.createElement('button');b.className='item';b.type='button';
+      b.setAttribute('aria-current',String(it.id===currentId));
+      b.innerHTML='<span class="n">'+(it.idx||'·')+'</span><span class="t">'+(it.ref?it.ref+' – ':'')+it.name+(it.fr?'<i>'+it.fr+'</i>':'')+'</span>';
+      b.onclick=()=>{location.hash=it.id};
+      nav.appendChild(b);
+    });
+  });
+  if(!shown){const e=document.createElement('div');e.className='empty';e.textContent='No screens match “'+filter+'”.';nav.appendChild(e)}
+}
+
+function srcFor(it){return it.file+(it.modes?'?view='+view:'')}
+
+function render(){
+  const it=flat.find(i=>i.id===currentId)||flat[0];
+  currentId=it.id;
+  document.getElementById('hCode').textContent=it.group.code;
+  document.getElementById('hGroup').textContent=it.group.name;
+  document.getElementById('hTitle').innerHTML=(it.ref?'<span>'+it.ref+'</span>':'')+it.name;
+  document.getElementById('seg').style.display=it.modes?'flex':'none';
+  [...document.querySelectorAll('#seg button')].forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));
+  const src=srcFor(it);
+  const fr=document.getElementById('frame');
+  if(fr.getAttribute('src')!==src) fr.setAttribute('src',src);
+  document.getElementById('openDoc').href=src;
+  const screens=flat.filter(i=>i.modes);
+  const n=screens.findIndex(i=>i.id===it.id);
+  document.getElementById('fPos').innerHTML=it.modes
+    ? '<b>'+it.ref+'</b> — '+(n+1)+' of '+screens.length+' in the Inward module'
+    : '<b>'+it.name+'</b> — reference';
+  document.getElementById('fHint').textContent=it.modes&&view==='annotated'
+    ? 'Callout numbers key to the descriptions beneath the wireframe'
+    : 'Scroll inside the frame if the wireframe exceeds your viewport →';
+  const i=flat.findIndex(x=>x.id===it.id);
+  document.getElementById('prev').disabled=i<=0;
+  document.getElementById('next').disabled=i>=flat.length-1;
+  buildNav(document.getElementById('q').value);
+}
+
+document.querySelectorAll('#seg button').forEach(b=>{
+  b.onclick=()=>{view=b.dataset.view;localStorage.setItem(VIEW_KEY,view);render()};
+});
+document.getElementById('q').oninput=e=>buildNav(e.target.value);
+document.getElementById('prev').onclick=()=>{const i=flat.findIndex(x=>x.id===currentId);if(i>0)location.hash=flat[i-1].id};
+document.getElementById('next').onclick=()=>{const i=flat.findIndex(x=>x.id===currentId);if(i<flat.length-1)location.hash=flat[i+1].id};
+window.addEventListener('hashmessage',()=>{});
+window.addEventListener('message',e=>{
+  if(e.data&&e.data.scNavigate&&flat.some(i=>i.id===e.data.scNavigate)) location.hash=e.data.scNavigate;
+});
+function fromHash(){
+  const id=location.hash.replace('#','');
+  currentId=flat.some(i=>i.id===id)?id:flat[0].id;
+  render();
+}
+window.addEventListener('hashchange',fromHash);
+fromHash();
+</script>
+</body></html>

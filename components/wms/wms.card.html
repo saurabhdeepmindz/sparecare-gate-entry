@@ -1,0 +1,37 @@
+<!-- @dsCard group="Components" viewport="700x400" name="WMS handheld" subtitle="Screen header, form fields, workflow checklist, KPI tiles and queue tables" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.446.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--surface-card);margin:0;padding:18px 20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.lbl{font:var(--type-caption);font-weight:var(--fw-semibold);color:var(--sc-grey-500);margin-bottom:8px}.blk{margin-bottom:16px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const {ScreenHeader,Field,TextInput,SelectInput,CameraButton,GenBanner,WorkflowChecklist,KpiTile,QueueTable,ActionBar,InfoNote,Button}=window.SpareCareDesignSystem_556483;
+function Card(){return (<div className="grid">
+  <div>
+    <div className="blk"><div className="lbl">Screen header</div>
+      <div style={{border:'1px solid var(--border-soft)'}}><ScreenHeader title="Create GEN"/></div></div>
+    <div className="blk"><div className="lbl">Fields</div>
+      <Field label="Name of the person" required><TextInput placeholder="Enter Person's Name"/></Field>
+      <Field label="Primary Document Type" required adjacent={<CameraButton/>}><SelectInput placeholder="Primary Document Type" options={['GRN','Tax Invoice','Challan','Ship List','Delivery Challan']}/></Field>
+      <Field label="Date & Time of Receipt" hint="Captured by the system; not editable."><TextInput readOnly value="12 Aug 2026, 09:40"/></Field></div>
+    <div className="blk"><div className="lbl">Action bar</div>
+      <ActionBar style={{border:'1px solid var(--border-soft)'}}><Button variant="quiet" block>Cancel</Button><Button variant="accent" block>Next</Button></ActionBar></div>
+  </div>
+  <div>
+    <div className="blk"><div className="lbl">Workflow applicability</div>
+      <WorkflowChecklist steps={[{id:'a',label:'Unload Truck & Check Primary Boxes',checked:true},{id:'b',label:'Check Secondary Boxes',checked:true},{id:'c',label:'Binning',checked:true},{id:'d',label:'Receipt Confirmation',checked:true}]}/></div>
+    <div className="blk"><div className="lbl">KPI tiles</div>
+      <div style={{display:'flex',gap:'8px'}}><KpiTile label="Pending for Unload" value={5} unit="Trucks" active/><KpiTile label="Pending for Checking" value={5} unit="GENs"/><KpiTile label="Pending for Binning" value={5} unit="GENs"/></div></div>
+    <div className="blk"><div className="lbl">Queue table</div>
+      <QueueTable columns={[{key:'gen',label:'GEN',link:true,mono:true},{key:'date',label:'Date'},{key:'supplier',label:'Supplier'},{key:'value',label:'Value',align:'right'}]} rows={[{gen:'IC001234',date:'22-10-2023',supplier:'ABC',value:'100,000'},{gen:'IC001235',date:'11-11-2023',supplier:'XYZ',value:'12,345,679'}]} minRows={3}/></div>
+    <div className="blk"><div className="lbl">GEN banner & notes</div>
+      <GenBanner gen="GEN-2025-05-20-0012"/>
+      <div style={{height:'8px'}}></div>
+      <InfoNote tone="warn">Shipment document not available.</InfoNote></div>
+  </div>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Card/>);
+</script></body></html>

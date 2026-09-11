@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Open issues on Screens 1–3 · SpareCare WMS Inward</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>html,body{margin:0}body{background:var(--anno-canvas);padding:var(--sp-4)}a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}
+.wrap{max-width:1100px;margin:0 auto}
+h1{font-family:var(--font-display);font-weight:var(--fw-bold);font-size:40px;line-height:1.08;letter-spacing:var(--ls-display);color:var(--text-heading);max-width:28ch}
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:var(--sp-2)}
+.eyebrow i{font-style:normal;width:26px;height:2px;background:var(--sc-teal)}
+.eyebrow span{font:var(--type-caption);font-weight:var(--fw-semibold);letter-spacing:.08em;text-transform:uppercase;color:var(--sc-teal-deep)}
+.lead{font:var(--type-body);color:var(--text-secondary);max-width:78ch;margin:var(--sp-2) 0 0}
+.rule{height:2px;background:var(--sc-teal-deep);margin:var(--sp-3) 0 var(--sp-4)}
+.card{background:var(--surface-card);border:1px solid var(--border-default);padding:var(--pad-card-tight);margin-bottom:var(--sp-3)}
+h2{font-family:var(--font-display);font-weight:var(--fw-bold);font-size:22px;color:var(--text-heading);margin-bottom:var(--sp-2)}
+table{width:100%;border-collapse:collapse}
+th{font:var(--type-label);text-align:left;padding:0 10px 9px;color:var(--sc-grey-500);border-bottom:1px solid var(--border-default);white-space:nowrap}
+td{font:var(--type-caption);padding:10px;border-bottom:1px solid var(--border-soft);vertical-align:top;line-height:1.5;color:var(--text-secondary)}
+tr:last-child td{border-bottom:none}
+.id{font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:600;color:var(--sc-teal-deep);white-space:nowrap}
+.p{font-weight:600;white-space:nowrap}
+.hi{color:var(--status-error)}.me{color:var(--sc-amber-fg)}.lo{color:var(--sc-grey-500)}
+.sc{font-family:var(--font-mono);font-size:var(--fs-micro);color:var(--sc-grey-600);white-space:nowrap}
+.own{font-size:var(--fs-micro);color:var(--sc-grey-500);white-space:nowrap}
+.note{font:var(--type-caption);color:var(--sc-grey-600);line-height:1.55;max-width:78ch;margin:0}
+</style>
+</head><body>
+<div class="wrap">
+<div class="eyebrow"><i></i><span>IN-C · Reference</span></div>
+<h1>Open issues on Screens 1 to 3</h1>
+<p class="lead">Eight of the FRD's open items bear directly on these three screens. Four are High priority, and each one is a place where the specification records the behaviour as undecided rather than defined. The wireframes mark them with amber callouts; they should be settled before build rather than resolved by whoever writes the code first.</p>
+<div class="rule"></div>
+
+<div class="card">
+<h2>High priority</h2>
+<table>
+<tr><th>ID</th><th>Affects</th><th>Issue</th><th>Owner</th></tr>
+<tr><td class="id">OI-047</td><td class="sc">1, 2, 3</td><td>Mobile and web surface assignment. Each screen in the inward module is to be assigned to a delivery surface before build. The FRD as written describes a handheld application only, against a BRD that mandates both mobile and web for gate entry. <b>These wireframes proceed on the reading given by FR-032.5 and FR-032.6</b> — Screens 1 and 2 on both surfaces, Screen 3 as a desk activity.</td><td class="own">Naveen / Santosh</td></tr>
+<tr><td class="id">OI-048</td><td class="sc">1</td><td>Gate Entry Number generation logic is not yet defined. The format, the sequence, and whether the number is unique per business unit or across the business are all to be confirmed. The wireframes show <span class="id">GEN-2025-05-20-0012</span> as an illustrative format only.</td><td class="own">Sparecare Product Team</td></tr>
+<tr><td class="id">OI-059</td><td class="sc">1, 3</td><td>Wireframes carry the withdrawn label 'GEN / Inward Code' on several boards. The term Inward Code is withdrawn in favour of Gate Entry Number (GEN) per FR-036, and the boards are to be updated so the wireframes and the FRD agree. <b>Applied here</b> — all queue columns read Gate Entry Number.</td><td class="own">Santosh</td></tr>
+<tr><td class="id">OI-066</td><td class="sc">1</td><td>Precedence between the three box counts is unstated: an indicative count at gate entry (FR-001.12, FR-001.21), an expected count at Receipt Details (FR-004.2) and an extracted ship list count (FR-033.7). Where two or three are present and disagree, which governs reconciliation — and what is recorded against the others — is to be decided.</td><td class="own">Sparecare Product Team</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>Medium and low priority</h2>
+<table>
+<tr><th>ID</th><th>Priority</th><th>Affects</th><th>Issue</th><th>Owner</th></tr>
+<tr><td class="id">OI-001</td><td class="p me">Medium</td><td class="sc">1, 2</td><td>Field-level mandatory versus optional configuration mechanism to be confirmed — whether set at dealer-admin level via a settings screen, or per OEM brand profile.</td><td class="own">Sparecare Product Team</td></tr>
+<tr><td class="id">OI-002</td><td class="p me">Medium</td><td class="sc">2</td><td>Full list of OEM-specific document types (ship list variants, GRN formats) to be compiled for brand-level configuration mapping.</td><td class="own">Naveen / Santosh</td></tr>
+<tr><td class="id">OI-041</td><td class="p me">Medium</td><td class="sc">3</td><td>Workflow stepper showing the stage a consignment has reached, with time spent at each stage. Agreed as desirable rather than mandatory; to be scoped for a later release. The Waiting column on the dashboard is the minimum form of this.</td><td class="own">Sparecare Product Team</td></tr>
+<tr><td class="id">OI-011</td><td class="p lo">Low</td><td class="sc">3</td><td>Refresh strategy — confirm whether manual refresh is acceptable long-term or whether a push-update mechanism should be planned.</td><td class="own">Sparecare Product Team</td></tr>
+<tr><td class="id">OI-073</td><td class="p lo">Low</td><td class="sc">1</td><td>Representation of the two gate entry stages. §4.6 records that gate entry comprises admission against minimal detail followed by consignment detail capture at the unloading dock. Whether the Inward Process Steps list should show these as distinct sub-stages is to be decided. <b>The two-step stepper on Screens 1 and 2 assumes it should.</b></td><td class="own">Sparecare Product Team</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>Decisions taken in these wireframes</h2>
+<p class="note">Three things were designed rather than specified, and are flagged here so they can be accepted or overturned. <b>The dashboard is treated as a landing screen, not a step</b> — FR-003 describes it as the view a supervisor keeps open through the day, so work is launched from it rather than ending there. <b>Gate entry is drawn as a two-step task</b> with the Gate Entry Number pinned above the form once issued, following §4.6 and FR-001.1. <b>The web portal shell — sidebar, page header, table conventions — is a design decision</b>, since no existing SpareCare web portal was supplied to match.</p>
+</div>
+
+<div class="card">
+<h2>Fields added beyond the source artwork</h2>
+<p class="note">Three fields appear on Screen 1 that are not in the FRD's own wireframe images, because the Session 07 amendments require them and post-date that artwork. <b>Date &amp; Time of Receipt</b> (FR-001.9, .10) — mandatory, system-captured, not configurable, and shown read-only precisely because §4.4 notes it must not look like an input that can be left blank. <b>Nature of Inward Transaction</b> (FR-001.11 with FR-030.1) — six values, chosen at the gate because it determines ownership and whether a payment is due. <b>No. of Boxes</b> (FR-001.12 with FR-001.21) — carried with an explicit indicative-only hint. The <b>aging bucket filter</b> on Screen 3 is likewise new: FR-003.6 and FR-003.7 require it and the artwork has no time dimension at all.</p>
+</div>
+
+</div>
+</body></html>

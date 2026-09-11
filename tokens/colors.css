@@ -1,0 +1,87 @@
+:root{
+  /* --- Brand palette: six colours, six jobs (brand identity §01) --- */
+  --sc-teal:#5A9FA3;
+  --sc-teal-deep:#3B616C;
+  --sc-graphite:#99959B;
+  --sc-chrome:#E5E5E6;
+  --sc-ink:#040101;
+  --sc-onyx:#030000;
+
+  /* Amber sits outside the six-colour palette; it is a signal colour, not a brand colour. */
+  --sc-amber:#E2963C;
+
+  /* --- Signal colours: kept deliberately outside the brand palette so that
+         green/amber/red read as a traffic light regardless of branding. --- */
+  --sc-green:#4C9A6A;
+  --sc-red:#C1503F;
+  --sc-green-bg:#E6F2EA;
+  --sc-amber-bg:#FBEDDC;
+  --sc-amber-fg:#9C6A1E;
+  --sc-red-bg:#F7E7E4;
+
+  /* --- Derived tints used by the WMS screens --- */
+  --sc-teal-tint:#EAF3F3;
+  --sc-teal-line:#A8C9CB;
+  --sc-mint-row:#F2F8F7;
+  --sc-paper-dim:rgba(4,1,1,0.055);
+  --sc-line:rgba(4,1,1,0.14);
+  --sc-line-soft:rgba(4,1,1,0.08);
+
+  /* --- Prose greys from the brand document --- */
+  --sc-grey-700:#4B5459;
+  --sc-grey-600:#6B7378;
+  --sc-grey-500:#8A9195;
+  --sc-grey-400:#9AA0A3;
+
+  /* --- Semantic aliases: use these in product code --- */
+  --text-body:var(--sc-ink);
+  --text-heading:var(--sc-teal-deep);
+  --text-muted:var(--sc-grey-500);
+  --text-secondary:var(--sc-grey-700);
+  --text-accent:var(--sc-teal);
+  --text-on-dark:#FFFFFF;
+  --text-data:var(--sc-teal-deep);
+
+  --surface-page:var(--sc-chrome);
+  --surface-card:#FFFFFF;
+  --surface-sunken:var(--sc-teal-tint);
+  --surface-row-alt:var(--sc-mint-row);
+  --surface-inverse:var(--sc-teal-deep);
+  --surface-onyx:var(--sc-onyx);
+  --surface-disabled:var(--sc-chrome);
+
+  --border-default:var(--sc-line);
+  --border-soft:var(--sc-line-soft);
+  --border-field:var(--sc-teal-line);
+  --border-strong:var(--sc-graphite);
+  --border-focus:var(--sc-teal);
+
+  --action-primary:var(--sc-teal-deep);
+  --action-primary-hover:#0A2C2F;
+  --action-accent:var(--sc-teal);
+  --action-secondary-border:var(--sc-graphite);
+  --action-disabled-bg:var(--sc-chrome);
+  --action-disabled-fg:var(--sc-grey-400);
+
+  --status-ok:var(--sc-green);
+  --status-ok-bg:var(--sc-green-bg);
+  --status-warn:var(--sc-amber);
+  --status-warn-fg:var(--sc-amber-fg);
+  --status-warn-bg:var(--sc-amber-bg);
+  --status-error:var(--sc-red);
+  --status-error-bg:var(--sc-red-bg);
+  --status-success-banner:var(--sc-green);
+
+  /* --- Gradients (brand identity §06): depth, never decoration --- */
+  --grad-hero:linear-gradient(135deg,#3B616C,#5A9FA3); /* @kind color */
+  --grad-metal:linear-gradient(135deg,#99959B,#E5E5E6); /* @kind color */
+  --grad-weight:linear-gradient(135deg,#3B616C 0%,#030000 130%); /* @kind color */
+
+  /* --- Annotation layer (wireframe documentation, not product UI) --- */
+  --anno-marker-bg:var(--sc-teal-deep);
+  --anno-marker-fg:#FFFFFF;
+  --anno-marker-ring:#FFFFFF;
+  --anno-leader:var(--sc-teal);
+  --anno-legend-bg:#FFFFFF;
+  --anno-canvas:#DCDCDE;
+}

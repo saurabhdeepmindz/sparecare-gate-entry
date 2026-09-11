@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Click-through prototype · SpareCare WMS Inward</title>
+<link rel="stylesheet" href="../../styles.css">
+<script>window.SC_ASSET_BASE='../..'</script>
+<script src="https://unpkg.com/lucide@0.446.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../boot.js"></script>
+<script src="../../ui_kits/wms-inward/web/webAnnotations.js"></script>
+<style>html,body{margin:0}body{background:var(--anno-canvas);min-width:1380px}a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel" src="../../ui_kits/wms-inward/web/WebShell.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/web/DashboardWeb.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/web/GateEntryWeb.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/web/ConsignmentWeb.jsx"></script>
+<script type="text/babel">
+SCBoot(['BrowserChrome','InfoNote','WebShell','DashboardWeb','GateEntryWeb','ConsignmentWeb'],function(NS){
+  const {BrowserChrome,InfoNote}=NS;
+  const DEFAULT_STEPS=[
+    {id:'unload',label:'Unload Truck & Check Primary Boxes',checked:true},
+    {id:'secondary',label:'Check Secondary Boxes',checked:true},
+    {id:'binning',label:'Binning',checked:true},
+    {id:'receipt',label:'Receipt Confirmation',checked:true}
+  ];
+  const URLS={dash:'wms.sparecare.in/inward/dashboard',gate:'wms.sparecare.in/inward/gate-entry',cons:'wms.sparecare.in/inward/consignment-details'};
+
+  function App(){
+    const [screen,setScreen]=React.useState('dash');
+    const [d1,setD1]=React.useState({});
+    const [d2,setD2]=React.useState({});
+    const [gen,setGen]=React.useState(null);
+    const [steps,setSteps]=React.useState(DEFAULT_STEPS);
+    const [queue,setQueue]=React.useState('unload');
+    const [bucket,setBucket]=React.useState('Last 7 days');
+    const set1=(k,v)=>setD1(p=>({...p,[k]:v}));
+    const set2=(k,v)=>setD2(p=>({...p,[k]:v}));
+    const ready=!!(d1.person&&d1.contact);
+    const create=()=>{const n='GEN-2026-08-12-'+(Math.floor(Math.random()*9000)+1000);setGen(n);setD2(p=>({...p,gen:n,supplier:d1.supplier,courier:d1.courier}));};
+    const reset=()=>{setD1({});setD2({});setGen(null);setSteps(DEFAULT_STEPS);setScreen('dash');};
+
+    return (
+      <div style={{padding:'var(--sp-4)'}}>
+        <div style={{maxWidth:'1356px',margin:'0 auto var(--sp-2)'}}>
+          <InfoNote>Walk the flow: press <b>Create Gate Entry</b> on the dashboard, enter a driver name and contact number, then continue through Consignment Details and back to the dashboard. Nothing is saved.</InfoNote>
+        </div>
+        <div style={{maxWidth:'1356px',margin:'0 auto 10px',display:'flex',justifyContent:'flex-end'}}>
+          <button type="button" onClick={reset} style={{font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'6px 13px',borderRadius:'var(--r-sharp)',border:'1px solid var(--border-default)',background:'var(--surface-card)',color:'var(--sc-grey-600)',cursor:'pointer'}}>Start over</button>
+        </div>
+        <div style={{display:'flex',justifyContent:'center'}}>
+          {screen==='dash'&&<BrowserChrome url={URLS.dash}>
+            <window.DashboardWeb queue={queue} setQueue={setQueue} bucket={bucket} setBucket={setBucket} onCreate={()=>setScreen('gate')}/>
+          </BrowserChrome>}
+          {screen==='gate'&&<BrowserChrome url={URLS.gate}>
+            <window.GateEntryWeb state={d1} set={set1} gen={gen}
+              onNext={()=>{ if(!gen){ if(ready) create(); } else setScreen('cons'); }}
+              onCancel={()=>setScreen('dash')}/>
+          </BrowserChrome>}
+          {screen==='cons'&&<BrowserChrome url={URLS.cons}>
+            <window.ConsignmentWeb state={d2} set={set2} steps={steps} gen={gen}
+              onToggle={id=>setSteps(p=>p.map(s=>s.id===id?{...s,checked:!s.checked}:s))}
+              genOptions={gen?[gen]:['GEN-2025-05-20-0012']}
+              onBack={()=>setScreen('gate')} onNext={()=>setScreen('dash')}
+              onStepClick={i=>{ if(i===0) setScreen('gate'); }}/>
+          </BrowserChrome>}
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+});
+</script></body></html>

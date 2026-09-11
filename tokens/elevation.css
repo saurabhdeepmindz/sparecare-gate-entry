@@ -1,0 +1,11 @@
+:root{
+  /* The brand does not use decorative shadow. Structure is drawn with 1px lines.
+     Only two elevations exist, both for genuinely floating surfaces. */
+  --shadow-none:none;
+  --shadow-card:0 1px 2px rgba(4,1,1,0.06);
+  --shadow-raised:0 2px 8px rgba(4,1,1,0.10);
+  --shadow-overlay:0 8px 28px rgba(4,1,1,0.18);
+
+  --border-hairline:1px solid var(--border-default); /* @kind other */
+  --border-field-width:1.5px; /* @kind spacing */
+}

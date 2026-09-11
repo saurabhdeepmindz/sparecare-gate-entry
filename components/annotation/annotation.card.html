@@ -1,0 +1,29 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Annotation" subtitle="Numbered callouts over a screen, with the legend that maps each number to an FR reference" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.446.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--anno-canvas);margin:0;padding:16px}.wrap{display:grid;grid-template-columns:190px 1fr;gap:18px;align-items:start}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const {AnnotatedScreen,AnnotationLegend,ScreenHeader,Field,TextInput,SelectInput,HandheldFrame}=window.SpareCareDesignSystem_556483;
+function Card(){return (<div className="wrap">
+  <AnnotatedScreen screenLabel="Screen 1" screenRef="FR-001" markers={[{n:1,x:50,y:6},{n:2,x:0,y:30},{n:3,x:100,y:62}]}>
+    <HandheldFrame width="150px">
+      <ScreenHeader title="Create GEN" style={{padding:'9px 10px'}}/>
+      <div style={{padding:'10px'}}>
+        <Field label="Name of the person" required><TextInput placeholder="Enter Person's Name" style={{fontSize:'10px',padding:'7px 8px',minHeight:'28px'}}/></Field>
+        <Field label="Courier Type"><SelectInput placeholder="Select the Courier Type" style={{fontSize:'10px',padding:'7px 22px 7px 8px',minHeight:'28px'}}/></Field>
+      </div>
+    </HandheldFrame>
+  </AnnotatedScreen>
+  <AnnotationLegend title="Screen 1 — Create GEN" items={[
+    {n:1,label:'Screen title',ref:'§4.3',control:'Header',description:'Gate entry is the first step in the inward process and the only screen that creates a GEN.'},
+    {n:2,label:'Name of the Person',ref:'FR-001.16',control:'Text input',description:'Mandatory. The truck driver only — gate personnel are a separate role and are not recorded here.'},
+    {n:3,label:'Courier Type',ref:'FR-001.20',control:'Dropdown',description:'Five values per the BRD: Transport, Courier, Own Vehicle, Individual (External Person), Individual (Internal Person).'},
+  ]}/>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Card/>);
+</script></body></html>

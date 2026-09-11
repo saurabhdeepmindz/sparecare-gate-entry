@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpareCare — Brand Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#5A9FA3;
+    --teal-deep:#3B616C;
+    --graphite:#99959B;
+    --chrome:#E5E5E6;
+    --amber:#E2963C;
+    --paper:#E5E5E6;
+    --paper-dim:rgba(4,1,1,0.055);
+    --onyx:#030000;
+    --ink:#040101;
+    --green:#4C9A6A;
+    --red:#C1503F;
+    --line:rgba(4,1,1,0.14);
+    --r-sharp:2px;
+    --r-soft:14px;
+    --sp-1:8px;  --sp-2:16px; --sp-3:24px; --sp-4:32px;
+    --sp-5:48px; --sp-6:64px; --sp-7:96px; --sp-8:128px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Inter',sans-serif; font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Barlow Semi Condensed',sans-serif;
+    font-weight:700; letter-spacing:-0.01em; margin:0;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace; letter-spacing:0.01em;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 var(--sp-5);}
+  section{padding:var(--sp-7) 0;}
+  section + section{border-top:1px solid var(--line);}
+  .kicker{
+    font-size:13px; font-weight:600; color:var(--teal-deep);
+    margin-bottom:var(--sp-2); display:flex; align-items:center; gap:10px;
+  }
+  .kicker::before{content:""; width:18px; height:2px; background:var(--teal); display:inline-block;}
+  .sec-title{font-size:34px; margin-bottom:var(--sp-2); color:var(--teal-deep);}
+  .sec-desc{max-width:620px; color:#4B5459; font-size:16px; margin-bottom:var(--sp-5);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:50; background:rgba(246,245,242,0.92);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:18px; padding-bottom:18px;}
+  .navlock{display:flex; align-items:center; gap:10px;}
+  .navlock img{height:30px; width:auto;}
+  .navlock span{font-family:'Barlow Semi Condensed'; font-weight:700; font-size:20px; letter-spacing:0.01em;}
+  .navlinks{display:flex; gap:var(--sp-4); font-size:14px; font-weight:500; color:var(--graphite);}
+  .navlinks a{color:inherit; text-decoration:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{padding-top:var(--sp-7); padding-bottom:var(--sp-7); border-top:none;}
+  .hero-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:var(--sp-6); align-items:center;}
+  .hero h1{font-size:68px; line-height:0.98; color:var(--teal-deep);}
+  .hero h1 em{font-style:normal; color:var(--teal);}
+  .hero p.lead{
+    font-size:18px; color:#4B5459; max-width:480px; margin-top:var(--sp-3); margin-bottom:var(--sp-4);
+  }
+  .btn-row{display:flex; gap:14px; margin-bottom:var(--sp-5);}
+  .btn{
+    font-family:'Inter'; font-weight:600; font-size:15px; padding:14px 26px;
+    border-radius:var(--r-sharp); border:1.5px solid transparent; cursor:pointer;
+    display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+  }
+  .btn-primary{background:var(--teal-deep); color:#fff;}
+  .btn-primary:hover{background:#0A2C2F;}
+  .btn-secondary{background:transparent; border-color:var(--graphite); color:var(--graphite);}
+  .btn-secondary:hover{border-color:var(--teal-deep); color:var(--teal-deep);}
+  .btn-onyx{background:var(--onyx); color:#fff;}
+  .btn-ghost{background:transparent; color:var(--teal-deep); padding-left:0; padding-right:0; border:none;}
+
+  .stat-row{display:flex; gap:var(--sp-6); padding-top:var(--sp-4); border-top:1px solid var(--line);}
+  .stat b{font-family:'Barlow Semi Condensed'; font-size:30px; color:var(--teal-deep); display:block;}
+  .stat span{font-size:13px; color:#6B7378;}
+
+  .node-art{position:relative; height:420px;}
+  .node-art svg{width:100%; height:100%;}
+
+  /* ---------- COLOR ---------- */
+  .swatch-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-3);}
+  .swatch{border:1px solid var(--line); border-radius:var(--r-sharp); overflow:hidden; background:#fff;}
+  .swatch-fill{height:100px;}
+  .swatch-info{padding:14px 16px;}
+  .swatch-info b{display:block; font-size:15px; margin-bottom:2px;}
+  .swatch-info .mono{font-size:12.5px; color:#6B7378;}
+  .swatch-info .use{font-size:12.5px; color:#8A9195; margin-top:6px; line-height:1.4;}
+
+  /* ---------- TYPE ---------- */
+  .type-block{margin-bottom:var(--sp-5);}
+  .type-label{font-size:12.5px; color:#8A9195; margin-bottom:10px; text-transform:none;}
+  .type-sample-display{font-size:64px; color:var(--teal-deep); line-height:1;}
+  .type-sample-body{font-size:18px; max-width:600px; color:var(--graphite);}
+  .type-sample-mono{font-size:18px; color:var(--teal-deep); background:var(--paper-dim); display:inline-block; padding:10px 14px; border-radius:var(--r-sharp);}
+  .type-meta{display:flex; gap:var(--sp-5); margin-top:var(--sp-3); font-size:13px; color:#8A9195;}
+
+  /* ---------- LOGO ---------- */
+  .logo-grid{display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-3);}
+  .logo-card{border:1px solid var(--line); border-radius:var(--r-sharp); padding:var(--sp-5); display:flex; align-items:center; justify-content:center; min-height:220px;}
+  .logo-card.light{background:#fff;}
+  .logo-card.dark{background:var(--teal-deep);}
+  .logo-card img{height:120px; width:auto;}
+  .clearspace-note{display:flex; align-items:center; gap:var(--sp-3); border:1px dashed var(--line); padding:var(--sp-4); border-radius:var(--r-sharp); margin-top:var(--sp-3);}
+  .clearspace-note img{height:70px;}
+  .dont-row{display:grid; grid-template-columns:repeat(4,1fr); gap:var(--sp-2); margin-top:var(--sp-3);}
+  .dont{border:1px solid var(--line); border-radius:var(--r-sharp); padding:16px; text-align:center; font-size:12.5px; color:#8A9195; background:#fff;}
+  .dont img{height:44px; width:auto; margin-bottom:10px; opacity:0.85;}
+  .dont.stretch img{transform:scaleX(1.6);}
+  .dont.recolor img{filter:sepia(1) saturate(4) hue-rotate(-30deg);}
+  .dont.shadow img{filter:drop-shadow(3px 6px 0 #D6336C);}
+  .dont.rotate img{transform:rotate(18deg);}
+
+  /* ---------- COMPONENTS ---------- */
+  .comp-card{border:1px solid var(--line); border-radius:var(--r-sharp); background:#fff; padding:var(--sp-4); margin-bottom:var(--sp-3);}
+  .comp-title{font-size:13px; font-weight:600; color:#8A9195; margin-bottom:var(--sp-3);}
+  .btn-showcase{display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
+  .btn-disabled{background:var(--chrome); color:#9AA0A3; font-family:'Inter'; font-weight:600; font-size:15px; padding:14px 26px; border-radius:var(--r-sharp); border:none;}
+
+  .tag{
+    display:inline-flex; align-items:center; gap:7px; font-size:13px; font-weight:600;
+    padding:6px 12px 6px 10px; border-radius:20px;
+  }
+  .tag .dot{width:7px; height:7px; border-radius:50%;}
+  .tag-in{background:#E6F2EA; color:var(--green);}
+  .tag-in .dot{background:var(--green);}
+  .tag-low{background:#FBEDDC; color:#9C6A1E;}
+  .tag-low .dot{background:var(--amber);}
+  .tag-out{background:#F7E7E4; color:var(--red);}
+  .tag-out .dot{background:var(--red);}
+
+  .part-row{display:grid; grid-template-columns:1fr auto auto auto; gap:var(--sp-3); align-items:center; padding:14px 0; border-bottom:1px solid var(--line);}
+  .part-row:last-child{border-bottom:none;}
+  .part-name{font-weight:600; font-size:15px;}
+  .part-sub{font-size:12.5px; color:#8A9195; margin-top:2px;}
+  .part-code{font-size:13px; color:var(--teal-deep);}
+  .part-stores{font-size:13px; color:#6B7378;}
+
+  .search-bar{display:flex; align-items:center; gap:10px; border:1.5px solid var(--graphite); border-radius:var(--r-sharp); padding:12px 16px; max-width:420px; background:#fff;}
+  .search-bar input{border:none; outline:none; font-family:'Inter'; font-size:15px; flex:1; background:none;}
+  .search-bar span{color:#8A9195; font-size:14px;}
+
+  .store-card{border:1px solid var(--line); border-radius:var(--r-sharp); padding:var(--sp-3); background:#fff; display:flex; justify-content:space-between; align-items:center;}
+  .store-card b{font-size:14.5px; display:block;}
+  .store-card .loc{font-size:12.5px; color:#8A9195;}
+
+  /* ---------- SPACING ---------- */
+  .space-row{display:flex; align-items:flex-end; gap:var(--sp-3); margin-bottom:var(--sp-2);}
+  .space-bar{background:var(--teal); border-radius:2px;}
+  .space-label{font-size:12.5px; color:#8A9195; width:110px;}
+
+  /* ---------- GRADIENT ---------- */
+  .grad-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-3);}
+  .grad-block{height:140px; border-radius:var(--r-sharp);}
+  .grad-info{margin-top:10px; font-size:12.5px; color:#8A9195;}
+  .g1{background:linear-gradient(135deg,#3B616C,#5A9FA3);}
+  .g2{background:linear-gradient(135deg,#99959B,#E5E5E6);}
+  .g3{background:linear-gradient(135deg,#3B616C 0%, #030000 130%);}
+
+  /* ---------- VOICE ---------- */
+  .voice-grid{display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-4);}
+  .voice-col h3{font-size:15px; margin-bottom:var(--sp-3); color:var(--teal-deep);}
+  .voice-col ul{margin:0; padding:0; list-style:none;}
+  .voice-col li{font-size:14.5px; padding:10px 0; border-bottom:1px solid var(--line); color:var(--graphite);}
+  .voice-col.no li{color:#A85B4C;}
+
+  footer{padding:var(--sp-5) 0; text-align:center; font-size:13px; color:#8A9195;}
+
+  @media(max-width:900px){
+    .wrap{padding:0 20px;}
+    .hero-grid{grid-template-columns:1fr;}
+    .node-art{height:260px;}
+    .hero h1{font-size:44px;}
+    .swatch-grid, .logo-grid, .dont-row, .grad-grid, .voice-grid{grid-template-columns:1fr 1fr;}
+    .part-row{grid-template-columns:1fr; gap:6px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="navlock">
+      <img src="LOGO" alt="SpareCare logo">
+      <span>SpareCare</span>
+    </div>
+    <div class="navlinks">
+      <a href="#color">Color</a>
+      <a href="#type">Typography</a>
+      <a href="#logo">Logo</a>
+      <a href="#components">Components</a>
+      <a href="#voice">Voice</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">Brand identity — sparecare.in</div>
+      <h1>Every part,<br>traceable.<br><em>Every store,<br>connected.</em></h1>
+      <p class="lead">SpareCare links automobile manufacturers and spare part stores on one shared stock ledger — so nobody orders what a neighbouring shelf already has.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#">Talk to us</a>
+        <a class="btn btn-secondary" href="#">See how it works</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b>2,400+</b><span>stores on the network</span></div>
+        <div class="stat"><b>60K</b><span>part numbers tracked</span></div>
+        <div class="stat"><b>Live</b><span>stock sync</span></div>
+      </div>
+    </div>
+    <div class="node-art">
+      <svg viewBox="0 0 420 420">
+        <defs>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#5A9FA3" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#3B616C" stop-opacity="0.15"/>
+          </linearGradient>
+        </defs>
+        <g stroke="url(#lineGrad)" stroke-width="1.5" fill="none">
+          <line x1="210" y1="210" x2="90" y2="110"/>
+          <line x1="210" y1="210" x2="330" y2="90"/>
+          <line x1="210" y1="210" x2="350" y2="230"/>
+          <line x1="210" y1="210" x2="270" y2="340"/>
+          <line x1="210" y1="210" x2="120" y2="330"/>
+          <line x1="210" y1="210" x2="60" y2="220"/>
+          <line x1="90" y1="110" x2="330" y2="90" stroke-dasharray="2 5"/>
+          <line x1="120" y1="330" x2="270" y2="340" stroke-dasharray="2 5"/>
+        </g>
+        <circle cx="210" cy="210" r="30" fill="#3B616C"/>
+        <circle cx="210" cy="210" r="30" fill="none" stroke="#5A9FA3" stroke-width="1.5"/>
+        <g fill="#5A9FA3">
+          <circle cx="90" cy="110" r="9"/>
+          <circle cx="330" cy="90" r="7"/>
+          <circle cx="350" cy="230" r="8"/>
+          <circle cx="270" cy="340" r="9"/>
+          <circle cx="120" cy="330" r="7"/>
+          <circle cx="60" cy="220" r="8"/>
+        </g>
+        <g fill="#030000">
+          <circle cx="330" cy="90" r="3"/>
+          <circle cx="120" cy="330" r="3"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="color">
+  <div class="wrap">
+    <div class="kicker">01 — Colour</div>
+    <h2 class="sec-title">Six colours, six jobs</h2>
+    <p class="sec-desc">Think of these six colours as six different tools in a mechanic's box — each one only comes out for its own job. Here's where every colour is used, and why, explained simply.</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-fill" style="background:#5A9FA3"></div><div class="swatch-info"><b>Soft Teal</b><span class="mono">#5A9FA3</span><div class="use">The colour of the brand. Used for anything the person should notice or click — links, active buttons, the little dots in the "connected stores" graphic. If a colour is "SpareCare's colour" in someone's head, it's this one.</div></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#3B616C"></div><div class="swatch-info"><b>Deep Teal</b><span class="mono">#3B616C</span><div class="use">A darker, more serious version of the teal above. Used for big headlines, the main "Talk to us" button, and any section with a dark background. This is the colour that says "this is important."</div></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#99959B"></div><div class="swatch-info"><b>Stone Grey</b><span class="mono">#99959B</span><div class="use">A quiet, in-between grey. Used for regular paragraph text, small captions, and outline buttons that aren't the main action on the page — things that should be readable but not shout for attention.</div></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#E5E5E6"></div><div class="swatch-info"><b>Cloud Grey</b><span class="mono">#E5E5E6</span><div class="use">The lightest colour in the set. Used as the background colour of the whole page, and for thin dividing lines between sections — like the wall behind everything else, never the main attraction.</div></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#040101"></div><div class="swatch-info"><b>Ink Black</b><span class="mono">#040101</span><div class="use">The colour of ordinary reading text — the closest thing to "black" a person will actually read, on things like paragraphs and part descriptions.</div></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#030000"></div><div class="swatch-info"><b>Onyx</b><span class="mono">#030000</span><div class="use">A true, solid black. Used only for large dark surfaces — the dark version of the logo, a dark footer — never for text, since Ink Black already does that job.</div></div></div>
+    </div>
+    <p class="sec-desc" style="margin-top:var(--sp-4); margin-bottom:0;">One exception: the green, amber and red used on stock tags (further down this page) are kept outside this palette on purpose. Everyone already reads green as "good," amber as "careful," and red as "stop" — like a traffic light — so those three stay standard no matter what the brand colours are.</p>
+  </div>
+</section>
+
+<section id="type">
+  <div class="wrap">
+    <div class="kicker">02 — Typography</div>
+    <h2 class="sec-title">Condensed for signage, plain for reading</h2>
+    <p class="sec-desc">Barlow Semi Condensed carries the headlines with the proportions of a number plate or dashboard gauge. Inter handles reading text. IBM Plex Mono is used only where it's functionally true to the content: part numbers and stock counts.</p>
+
+    <div class="type-block">
+      <div class="type-label">Display — Barlow Semi Condensed, 700</div>
+      <div class="type-sample-display">Stock, shared.</div>
+      <div class="type-meta"><span>Aa Bb Cc 1234</span><span>Used for headlines and large numerals only</span></div>
+    </div>
+
+    <div class="type-block">
+      <div class="type-label">Body — Inter, 400 / 500</div>
+      <p class="type-sample-body">When a mechanic in Meerut searches for a clutch plate, SpareCare shows every store within range that already has it in stock — before a single new order is placed.</p>
+    </div>
+
+    <div class="type-block">
+      <div class="type-label">Data — IBM Plex Mono, 500</div>
+      <span class="type-sample-mono mono">PART # CP-4471-TD · QTY 12 · BAY-04</span>
+    </div>
+  </div>
+</section>
+
+<section id="logo">
+  <div class="wrap">
+    <div class="kicker">03 — Logo</div>
+    <h2 class="sec-title">The gear gives way to the hand</h2>
+    <p class="sec-desc">The mark reads as a gear opening into a cupped hand — the mechanical and the caretaking sides of the same business. Keep the two elements intact and in proportion; never separate the hand from the ring.</p>
+    <div class="logo-grid">
+      <div class="logo-card light"><img src="LOGO" alt="SpareCare logo on light"></div>
+      <div class="logo-card dark"><img src="LOGO" alt="SpareCare logo on dark" style="filter:brightness(0) invert(1);"></div>
+    </div>
+    <div class="clearspace-note">
+      <img src="LOGO" alt="Clearspace example">
+      <div style="font-size:13.5px; color:#6B7378;">Minimum clear space on every side equals the height of the gear's outer tooth. Minimum display size: 24px tall in digital contexts, 12mm in print.</div>
+    </div>
+    <div class="dont-row">
+      <div class="dont stretch"><img src="LOGO">Don't stretch or distort</div>
+      <div class="dont recolor"><img src="LOGO">Don't recolour off-palette</div>
+      <div class="dont shadow"><img src="LOGO">Don't add drop shadows</div>
+      <div class="dont rotate"><img src="LOGO">Don't rotate or tilt</div>
+    </div>
+  </div>
+</section>
+
+<section id="components">
+  <div class="wrap">
+    <div class="kicker">04 — Components</div>
+    <h2 class="sec-title">Built like the product, not decorated over it</h2>
+    <p class="sec-desc">Interface elements borrow their edges from the two halves of the mark: sharp, near-square corners for data and structure; soft pill shapes only where a person is being told something — a status, a badge, a tag.</p>
+
+    <div class="comp-card">
+      <div class="comp-title">Buttons</div>
+      <div class="btn-showcase">
+        <a class="btn btn-primary" href="#">Request access</a>
+        <a class="btn btn-secondary" href="#">View pricing</a>
+        <button class="btn-disabled">Syncing…</button>
+        <a class="btn btn-ghost" href="#">Learn more</a>
+      </div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-title">Stock status tags</div>
+      <div class="btn-showcase">
+        <span class="tag tag-in"><span class="dot"></span>In stock — 12 units</span>
+        <span class="tag tag-low"><span class="dot"></span>Low stock — 2 units</span>
+        <span class="tag tag-out"><span class="dot"></span>Out of stock</span>
+      </div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-title">Part lookup</div>
+      <div class="search-bar"><span>⌕</span><input placeholder="Search part name or number…"></div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-title">Part record</div>
+      <div class="part-row">
+        <div><div class="part-name">Front brake pad set</div><div class="part-sub">Fits Maruti Swift 2018–22</div></div>
+        <div class="part-code mono">BP-2291-FR</div>
+        <div class="part-stores">Held at 6 nearby stores</div>
+        <span class="tag tag-in"><span class="dot"></span>In stock</span>
+      </div>
+      <div class="part-row">
+        <div><div class="part-name">Clutch plate, single disc</div><div class="part-sub">Fits Tata Ace</div></div>
+        <div class="part-code mono">CP-4471-TD</div>
+        <div class="part-stores">Held at 1 nearby store</div>
+        <span class="tag tag-low"><span class="dot"></span>Low stock</span>
+      </div>
+      <div class="part-row">
+        <div><div class="part-name">Radiator fan motor</div><div class="part-sub">Fits Hyundai i20 2015–20</div></div>
+        <div class="part-code mono">RF-0087-HY</div>
+        <div class="part-stores">None nearby — request transfer</div>
+        <span class="tag tag-out"><span class="dot"></span>Out of stock</span>
+      </div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-title">Store card</div>
+      <div class="store-card">
+        <div><b>Bansal Auto Spares</b><div class="loc">Sadar Bazaar, Meerut · 2.4 km</div></div>
+        <span class="tag tag-in"><span class="dot"></span>9 matching parts</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">05 — Spacing</div>
+    <h2 class="sec-title">An 8px base, kept honest</h2>
+    <p class="sec-desc">All spacing steps from an 8px unit, the same way parts inventory is counted in whole units, not fractions.</p>
+    <div class="space-row"><div class="space-label">8 — micro</div><div class="space-bar" style="width:8px; height:16px;"></div></div>
+    <div class="space-row"><div class="space-label">16 — tight</div><div class="space-bar" style="width:16px; height:16px;"></div></div>
+    <div class="space-row"><div class="space-label">24 — default</div><div class="space-bar" style="width:24px; height:16px;"></div></div>
+    <div class="space-row"><div class="space-label">32 — component</div><div class="space-bar" style="width:32px; height:16px;"></div></div>
+    <div class="space-row"><div class="space-label">48 — section gap</div><div class="space-bar" style="width:48px; height:16px;"></div></div>
+    <div class="space-row"><div class="space-label">96 — section pad</div><div class="space-bar" style="width:96px; height:16px;"></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">06 — Gradient</div>
+    <h2 class="sec-title">Used for depth, never for decoration</h2>
+    <p class="sec-desc">Gradients appear only on large surfaces standing in for metal or motion — a hero panel, a loading state — always moving from teal toward its darker or lighter neighbour, never rainbowed.</p>
+    <div class="grad-grid">
+      <div class="grad-block g1"></div>
+      <div class="grad-block g2"></div>
+      <div class="grad-block g3"></div>
+    </div>
+    <div class="grad-grid">
+      <div class="grad-info">Deep Teal → Soft Teal. The main hero and dark-panel gradient — think of it as the teal "waking up."</div>
+      <div class="grad-info">Stone Grey → Cloud Grey. For metal-looking surfaces and quiet dividers, like brushed steel.</div>
+      <div class="grad-info">Deep Teal → Onyx, used once per screen at most, for a single moment of real weight — a dark hero panel or a full-screen takeover, never a small button.</div>
+    </div>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="wrap">
+    <div class="kicker">07 — Voice</div>
+    <h2 class="sec-title">Talk like the counter, not the boardroom</h2>
+    <p class="sec-desc">SpareCare's audience is store owners and parts managers, not procurement executives. Write the way you'd talk across a counter: plain, specific, and quick to the point.</p>
+    <div class="voice-grid">
+      <div class="voice-col yes">
+        <h3>Do</h3>
+        <ul>
+          <li>"3 stores near you already have this part."</li>
+          <li>"Your Bay-04 stock hasn't synced since 6pm."</li>
+          <li>Name real parts, brands, and store names in examples.</li>
+          <li>Say what happened and what to do next.</li>
+        </ul>
+      </div>
+      <div class="voice-col no">
+        <h3>Don't</h3>
+        <ul>
+          <li>"Leverage real-time inventory intelligence."</li>
+          <li>"Unlock synergies across your supply network."</li>
+          <li>Use jargon a counter clerk wouldn't use out loud.</li>
+          <li>Apologise or hedge in error messages — just explain.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  SpareCare — sparecare.in · Brand identity, v1
+</footer>
+
+</body>
+</html>

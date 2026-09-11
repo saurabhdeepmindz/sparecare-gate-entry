@@ -1,0 +1,11 @@
+<!-- @dsCard group="Form" viewport="700x170" name="Interaction states" subtitle="Colour change only — no lift, no glow, no bounce" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:16px 20px;background:var(--surface-card)}table{border-collapse:collapse}td{padding:6px 12px;font:var(--type-caption);border-bottom:1px solid var(--border-soft)}th{font:var(--type-label);text-align:left;padding:0 12px 7px;color:var(--sc-grey-500)}.btn{font-family:var(--font-body);font-weight:600;font-size:14px;padding:9px 18px;border-radius:var(--r-sharp);border:1.5px solid transparent;display:inline-block}</style>
+</head><body><table>
+<tr><th>State</th><th>Primary</th><th>Secondary</th><th>Rule</th></tr>
+<tr><td>Rest</td><td><span class="btn" style="background:var(--action-primary);color:#fff">Next</span></td><td><span class="btn" style="border-color:var(--action-secondary-border);color:var(--sc-graphite)">Cancel</span></td><td>—</td></tr>
+<tr><td>Hover</td><td><span class="btn" style="background:var(--action-primary-hover);color:#fff">Next</span></td><td><span class="btn" style="border-color:var(--sc-teal-deep);color:var(--sc-teal-deep)">Cancel</span></td><td>Fill darkens; outline takes on deep teal</td></tr>
+<tr><td>Press</td><td><span class="btn" style="background:var(--action-primary-hover);color:#fff;transform:scale(0.99)">Next</span></td><td><span class="btn" style="border-color:var(--sc-teal-deep);color:var(--sc-teal-deep);transform:scale(0.99)">Cancel</span></td><td>0.99 scale, nothing more</td></tr>
+<tr><td>Focus</td><td><span class="btn" style="background:var(--action-primary);color:#fff;outline:2px solid var(--border-focus);outline-offset:2px">Next</span></td><td><span class="btn" style="border-color:var(--action-secondary-border);color:var(--sc-graphite);outline:2px solid var(--border-focus);outline-offset:2px">Cancel</span></td><td>2px soft-teal ring, 2px offset</td></tr>
+<tr><td>Disabled</td><td><span class="btn" style="background:var(--action-disabled-bg);color:var(--action-disabled-fg)">Syncing…</span></td><td></td><td>Chrome on grey; never a faded teal</td></tr>
+</table></body></html>

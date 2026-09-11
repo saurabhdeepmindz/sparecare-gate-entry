@@ -1,0 +1,30 @@
+:root{
+  /* An 8px base, kept honest (brand identity §05) */
+  --sp-1:8px;    /* micro */
+  --sp-2:16px;   /* tight */
+  --sp-3:24px;   /* default */
+  --sp-4:32px;   /* component */
+  --sp-5:48px;   /* section gap */
+  --sp-6:64px;
+  --sp-7:96px;   /* section pad */
+  --sp-8:128px;
+
+  /* Sub-unit steps, used only inside dense controls and data rows */
+  --sp-half:4px;
+  --sp-quarter:2px;
+
+  --gutter-page:var(--sp-5);
+  --gutter-page-mobile:20px;
+  --gap-field:var(--sp-2);
+  --gap-card:var(--sp-3);
+  --pad-card:var(--sp-4);
+  --pad-card-tight:var(--sp-3);
+  --pad-cell:12px;
+  --measure-prose:620px;
+  --measure-wrap:1180px;
+
+  /* Handheld frame: the WMS runs on rugged devices */
+  --handheld-width:390px;
+  --handheld-safe:16px;
+  --hit-min:44px;
+}

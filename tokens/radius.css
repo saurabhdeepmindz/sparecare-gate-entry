@@ -1,0 +1,18 @@
+:root{
+  /* Two radii only. Sharp for data and structure; soft pill only where a person
+     is being told something (brand identity §04). */
+  --r-sharp:2px;
+  --r-soft:14px;
+  --r-pill:20px;
+  --r-round:50%;
+
+  /* The WMS handheld screens use a slightly softer field corner than the
+     marketing site; measured from the FRD wireframe artwork. */
+  --r-field:6px;
+
+  --radius-button:var(--r-sharp);
+  --radius-card:var(--r-sharp);
+  --radius-field:var(--r-field);
+  --radius-tag:var(--r-pill);
+  --radius-tile:var(--r-field);
+}

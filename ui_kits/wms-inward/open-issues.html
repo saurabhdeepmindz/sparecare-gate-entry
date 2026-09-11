@@ -1,0 +1,16 @@
+<!-- @dsCard group="Wireframe" viewport="700x340" name="Open issues on Screens 1–3" subtitle="Behaviour the FRD records as undefined — do not design past these without a decision" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;padding:16px 20px;background:var(--surface-card)}table{width:100%;border-collapse:collapse}th{font:var(--type-label);text-align:left;padding:0 8px 8px;color:var(--sc-grey-500);border-bottom:1px solid var(--border-default)}td{font:var(--type-caption);padding:8px;border-bottom:1px solid var(--border-soft);vertical-align:top;line-height:1.45;color:var(--text-secondary)}.id{font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:600;color:var(--sc-teal-deep);white-space:nowrap}.p{font-weight:600;white-space:nowrap}.hi{color:var(--status-error)}.me{color:var(--sc-amber-fg)}.lo{color:var(--sc-grey-500)}.sc{font-family:var(--font-mono);font-size:var(--fs-micro);color:var(--sc-grey-600);white-space:nowrap}</style>
+</head><body>
+<table>
+<tr><th>ID</th><th>Priority</th><th>Affects</th><th>Issue</th></tr>
+<tr><td class="id">OI-047</td><td class="p hi">High</td><td class="sc">1, 2, 3</td><td>Mobile and web surface assignment. Each screen is to be assigned to a delivery surface before build. The FRD describes a handheld application only, against a BRD that mandates both for gate entry.</td></tr>
+<tr><td class="id">OI-048</td><td class="p hi">High</td><td class="sc">1</td><td>Gate Entry Number generation logic is not yet defined — format, sequence, and whether the number is unique per business unit or across the business.</td></tr>
+<tr><td class="id">OI-059</td><td class="p hi">High</td><td class="sc">1, 3</td><td>Wireframes carry the withdrawn label 'GEN / Inward Code' on several boards. Boards are to read 'Gate Entry Number (GEN)' so the wireframes and the FRD agree.</td></tr>
+<tr><td class="id">OI-066</td><td class="p hi">High</td><td class="sc">1</td><td>Precedence between the three box counts is unstated: indicative at gate entry, expected at Receipt Details, and extracted from the ship list. Where they disagree, which governs reconciliation is undecided.</td></tr>
+<tr><td class="id">OI-001</td><td class="p me">Medium</td><td class="sc">1, 2</td><td>Field-level mandatory versus optional configuration mechanism — whether set at dealer-admin level via a settings screen or per OEM brand profile.</td></tr>
+<tr><td class="id">OI-002</td><td class="p me">Medium</td><td class="sc">2</td><td>Full list of OEM-specific document types (ship list variants, GRN formats) still to be compiled for brand-level configuration mapping.</td></tr>
+<tr><td class="id">OI-041</td><td class="p me">Medium</td><td class="sc">3</td><td>Workflow stepper showing the stage a consignment has reached, with time spent at each stage. Desirable rather than mandatory; scoped for a later release.</td></tr>
+<tr><td class="id">OI-073</td><td class="p lo">Low</td><td class="sc">1</td><td>Representation of the two gate entry stages — admission against minimal detail, then consignment detail capture at the dock — as distinct sub-stages in the process list.</td></tr>
+</table>
+</body></html>
