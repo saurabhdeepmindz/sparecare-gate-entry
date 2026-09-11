@@ -3,7 +3,7 @@ window.SC_PORTAL = {
   org: 'Deepmindz Innovations Pvt Ltd',
   client: 'SpareCare',
   title: 'WMS Inward Wireframes',
-  subtitle: 'Gate Entry to Unloading',
+  subtitle: 'Gate Entry to Unload Exceptions',
   version: 'v1',
   backLabel: '\u2190 Back to SpareCare overview',
   backHref: '#',
@@ -34,7 +34,17 @@ window.SC_PORTAL = {
       ]
     },
     {
-      code: 'IN-D', name: 'REFERENCE',
+      code: 'IN-D', name: 'UNLOAD EXCEPTIONS',
+      items: [
+        {idx:'11', id:'screen-6d', ref:'Screen 6d', name:'Unload without shipment document', fr:'FR-007', file:'screens/screen-6d-no-shipment-doc.html', modes:true},
+        {idx:'12', id:'screen-6e', ref:'Screen 6e', name:'Box condition \u2014 no shipment document', fr:'FR-007', file:'screens/screen-6e-box-condition-no-doc.html', modes:true},
+        {idx:'13', id:'screen-6f', ref:'Screen 6f', name:'Counter approach \u2014 boxes not scannable', fr:'FR-007', file:'screens/screen-6f-counter-unload.html', modes:true},
+        {idx:'14', id:'screen-6g', ref:'Screen 6g', name:'Print box stickers', fr:'FR-008', file:'screens/screen-6g-print-stickers.html', modes:true},
+        {idx:'15', id:'screen-6h', ref:'Screen 6h', name:'Box condition \u2014 printed sticker', fr:'FR-008', file:'screens/screen-6h-box-condition-sticker.html', modes:true}
+      ]
+    },
+    {
+      code: 'IN-E', name: 'REFERENCE',
       items: [
         {idx:'', id:'consolidated', ref:'', name:'Consolidated unloading view', fr:'\u00a79.6', file:'screens/consolidated-unloading-view.html', modes:false},
         {idx:'', id:'prototype', ref:'', name:'End-to-end click-through prototype', fr:'FR-001 \u2192 FR-006', file:'screens/prototype.html', modes:false},

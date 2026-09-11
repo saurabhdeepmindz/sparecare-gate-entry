@@ -1,12 +1,14 @@
 # Session memory — where things stand
 
-Updated 11 Sep 2026. Read `CLAUDE.md` first for rules and context; this file is the state.
+Updated 12 Sep 2026. Read `CLAUDE.md` first for rules and context; this file is the state.
 
 ## Status
 
-**Batch 1 is complete.** Ten screens in the portal: Screens 1, 2, 3 on web; 4a, 4b, 5A, 5b,
-6a, 6b, 6c on the rugged handheld. Plus the consolidated unloading view (§9.6) and a
-ten-step end-to-end prototype. Awaiting customer approval before Batch 2.
+**Batch 1 complete. Batch 2 built, awaiting review.** Fifteen screens in the portal:
+Screens 1, 2, 3 on web; 4a, 4b, 5A, 5b, 6a, 6b, 6c (Batch 1) and 6d, 6e, 6f, 6g, 6h
+(Batch 2) on the rugged handheld. Plus the consolidated unloading view (§9.6) and a
+ten-step end-to-end prototype. Batch 2 screens are NOT yet in the prototype — the
+prototype still ends at 6c.
 
 ## Built
 
@@ -23,6 +25,9 @@ ten-step end-to-end prototype. Awaiting customer approval before Batch 2.
 | Handheld screens (7) | `web-portal/screens/` — `screen-4a-receipt-details`, `screen-4b-transporter-details`, `screen-5a-unload-initiation`, `screen-5b-transporter-check`, `screen-6a-box-scanning`, `screen-6b-box-condition`, `screen-6c-check-variance` |
 | Consolidated unloading view | `web-portal/screens/consolidated-unloading-view.html` — 6a/6b/6c side by side, filled, per §9.6. No callouts of its own. |
 | Handheld screen components | `ui_kits/wms-inward/handheld/` — `Screen4aReceipt`, `Screen4bTransporter`, `Screen5aUnloadInit`, `Screen5bTransporterCheck`, `Screen6aScan`, `Screen6bCondition`, `Screen6cVariance`, `handheldAnnotations.js` |
+| Batch 2 screens (5), group IN-E | `web-portal/screens/` — `screen-6d-no-shipment-doc`, `screen-6e-box-condition-no-doc`, `screen-6f-counter-unload`, `screen-6g-print-stickers`, `screen-6h-box-condition-sticker` |
+| Batch 2 components | `ui_kits/wms-inward/handheld/` — `Screen6dNoDoc`, `Screen6eCondition` (shared by 6e and 6h via a `variant` prop), `Screen6fCounter`, `Screen6gStickers`, `UnloadApproachPanel` (shared by 6f and 6g) |
+| Batch 2 callout data | `ui_kits/wms-inward/handheld/handheldAnnotationsB2.js` — appends to `window.SC_HH_ANNO`; each page loads `handheldAnnotations.js` first, then this |
 | Handheld sheet for Screens 1–3 (secondary) | `ui_kits/wms-inward/index.html` + three screen JSX + `annotations.js` |
 | Foundations | `styles.css`, `tokens/` (8 files), 23 cards in `guidelines/` |
 | Components | `components/core/` (6), `components/wms/` (20), `components/annotation/` (9) |
@@ -30,14 +35,59 @@ ten-step end-to-end prototype. Awaiting customer approval before Batch 2.
 
 Namespace for card HTML: `window.SpareCareDesignSystem_556483`.
 
-## Next work — Batch 2, on approval
+## Next work — Batch 3, on approval
 
-Unload exceptions: Screens **6d, 6e, 6f** (unloading without a shipment document, FR-007)
-and **6g, 6h** (box sticker generation for non-scannable consignments, FR-008). Read FRD
-§10 and §11 first — neither has been read. `scraps/frd-media/image20.jpg` is the 6D/6E/6F
-composite and is the visual source.
+Consignment check and direct-to-bin: Screens **7a, 8a, 8b, 8c** (FR-009 → FR-011). §12 has
+been read as far as FR-009.2 only; read §12–§14 in full first. **Settle OI-020 (the 8a vs
+8A numbering collision) before starting** — Batch 3 is where the menu would first carry two
+screens with the same name.
 
-FRD sections read so far: §2–§9 (Screens 1 to 6c) and §33, §35, §36, §44.
+Also outstanding, not Batch 3:
+- The prototype stops at 6c. Batch 2 adds a branch (no document → 6d/6e, not scannable →
+  6f or 6g/6h) that the ten-step linear flow cannot express. Extending it needs a branch
+  point at Screen 5A, which is a design decision the user has not yet been asked about.
+- `web-portal/screens/open-issues.html` still reads "Open issues on Screens 1 to 3". It was
+  not updated for Batch 1 (4a–6c) and is not updated for Batch 2. It needs one consolidated
+  pass covering OI-079 → OI-086 (new in Batch 2) plus the Batch 1 items.
+
+FRD sections read so far: §2–§11 (Screens 1 to 6h), the head of §12, and §33, §35, §36, §44.
+
+### Batch 2 — decisions and corrections, worth not undoing
+
+- **FR-007.15 applied over the artwork.** `image20.jpg` reconciles Screen 6d against the
+  gate entry box count. Session 07 Part 3 corrected that: the baseline is No. of Boxes in
+  GEN from Receipt Details (FR-004.2). The variance strip is labelled **Expected (Screen
+  4a)** so the source of the number is visible on the screen.
+- **Terminology.** The artwork's "GEN / Inward Code" is drawn as **Gate Entry Number** per
+  FR-036 / OI-059, as in Batch 1.
+- **One component for 6e and 6h.** FR-007.5 and FR-008.7 both state the condition flow is
+  identical across approaches, so `Screen6eCondition` takes `variant="scanned"|"sticker"`.
+  Only the identification header and the standing notice differ.
+- **Record as OK / Record & check condition** on 6d is ours. FR-007.4 makes assessment
+  mandatory on every box; without a fast path the rule gets defeated on the first busy
+  morning. Flagged as a proposal.
+- **The two unused configurations are named on 6f and 6g.** FR-007.7 requires only the
+  configured approach to be shown. Naming the other two read-only is ours, so an operator
+  can tell a deliberate configuration from a default. Flagged as a proposal.
+- **FR-007.13 (plain total count entry) is deliberately not drawn.** It has no screen
+  number and no artwork; inventing one would breach the no-invented-screens rule. It is a
+  blocking OPEN QUERY on 6f instead (OI-084).
+- **QR and barcode on the sticker tiles are wireframe placeholders**, not label templates.
+  Said so in the annotation.
+
+### New open issues raised in Batch 2
+
+| ID | Screen | Issue |
+| --- | --- | --- |
+| OI-079 | 6d | A part number is not unique to a box; twenty identical filters give twenty boxes with the same fallback identifier. **Blocking.** |
+| OI-080 | 6d | Nothing provides for attaching the invoice to an already-unloaded GEN and running the comparison retrospectively, though §10.1's layman description assumes it. **Blocking.** |
+| OI-081 | 6d, 6f | 6d ends at Check Variance, 6f at Finish Unload. FR-007.11 gives Finish Unload the commit role for both. Where a scanned reduced-mode session commits is undefined. Also: temporary reference format differs between the two (BOX-001 vs BX-nnnn). |
+| OI-082 | 6e | Open Delivery override is permitted but nothing records who overrode it or why. |
+| OI-083 | 6e | Cancelling on an already-scanned box leaves it in the list with no quality recorded, which FR-007.4 forbids. |
+| OI-084 | 6f | FR-007.13 defines a third counting option no screen provides for. A screen number must be allocated. **Blocking.** |
+| OI-085 | 6f | The counter has no decrement and no per-box record, so a mis-tap cannot be undone or identified. **Blocking.** |
+| OI-086 | 6g | FR-008.2 defaults Total Boxes to Print to the gate entry count, which FR-007.15 disowns as indicative. **Blocking.** |
+| OI-013 | 6g | Re-raised. The system prints a sticker for, and accepts, a box that may belong to another consignee. FR-008.9 acknowledges and defers this. **Blocking.** |
 
 ### Corrections applied in Batch 1, worth not undoing
 

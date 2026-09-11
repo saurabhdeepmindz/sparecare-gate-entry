@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"NotDrawnHost","sourcePath":"components/annotation/NotDrawnHost.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/NotDrawnHost.jsx":"dc30f1db0ef5","components/annotation/RuggedFrame.jsx":"7a6f82bd07db","components/annotation/WireframeDoc.jsx":"496d5ec27617","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"c2a9b9ea3971","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"45cb4cd14754","ui_kits/wms-inward/handheld/Screen4bTransporter.jsx":"8131eaa913e9","ui_kits/wms-inward/handheld/Screen5aUnloadInit.jsx":"60fb56ed799b","ui_kits/wms-inward/handheld/Screen5bTransporterCheck.jsx":"909e025a5edd","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"31f259ff8711","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"97d6a4bd0d24","ui_kits/wms-inward/handheld/Screen6cVariance.jsx":"42ed382c5de2","ui_kits/wms-inward/handheld/handheldAnnotations.js":"ab28cab1e89d","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"48b4f1f5f5b8","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"341688919971","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"8ac22651ca96"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"NotDrawnHost","sourcePath":"components/annotation/NotDrawnHost.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/NotDrawnHost.jsx":"dc30f1db0ef5","components/annotation/RuggedFrame.jsx":"7a6f82bd07db","components/annotation/WireframeDoc.jsx":"496d5ec27617","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"c2a9b9ea3971","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"45cb4cd14754","ui_kits/wms-inward/handheld/Screen4bTransporter.jsx":"8131eaa913e9","ui_kits/wms-inward/handheld/Screen5aUnloadInit.jsx":"60fb56ed799b","ui_kits/wms-inward/handheld/Screen5bTransporterCheck.jsx":"909e025a5edd","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"31f259ff8711","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"97d6a4bd0d24","ui_kits/wms-inward/handheld/Screen6cVariance.jsx":"42ed382c5de2","ui_kits/wms-inward/handheld/Screen6dNoDoc.jsx":"f257569ad356","ui_kits/wms-inward/handheld/Screen6eCondition.jsx":"9c0cf9a47b48","ui_kits/wms-inward/handheld/Screen6fCounter.jsx":"c16860561030","ui_kits/wms-inward/handheld/Screen6gStickers.jsx":"cc8abdedfa1b","ui_kits/wms-inward/handheld/UnloadApproachPanel.jsx":"e36052d98548","ui_kits/wms-inward/handheld/handheldAnnotations.js":"ab28cab1e89d","ui_kits/wms-inward/handheld/handheldAnnotationsB2.js":"ad15e880804a","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"48b4f1f5f5b8","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"341688919971","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"101ee82cb34e"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -5270,6 +5270,1229 @@ Object.assign(window, {
 });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen6cVariance.jsx", error: String((e && e.message) || e) }); }
 
+// ui_kits/wms-inward/handheld/Screen6dNoDoc.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  DetailRow,
+  ScanField,
+  CounterStrip,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  QueueTable
+} = window.SpareCareDesignSystem_556483;
+function Panel({
+  title,
+  action,
+  children,
+  style
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px',
+      ...style
+    }
+  }, (title || action) && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '10px',
+      marginBottom: '9px'
+    }
+  }, title && /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, title), action), children);
+}
+const say = detail => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+  detail
+}));
+function Screen6dNoDoc({
+  box = '',
+  setBox,
+  onScan,
+  onSubmit,
+  rows = [],
+  unloaded = 18,
+  expected = 28,
+  ok = 14,
+  notOk = 4,
+  onBoxTap,
+  onSave,
+  onVariance,
+  onBack
+}) {
+  const remaining = Math.max(expected - unloaded, 0);
+  const variance = onVariance || (() => say({
+    kind: 'next',
+    title: 'Check Variance \u2014 reduced mode',
+    body: 'FR-007.6 puts a Variance Summary (Box Number Wise) on this screen and a Check Variance action beneath it. In reduced mode there is no document to compare against, so the variance view carries only boxes unloaded against the expected box count from Receipt Details, plus the quality split. Whether that view is Screen 6c re-used with its document columns suppressed, or a screen of its own, is not stated.',
+    ref: 'FR-007.6 \u00b7 FR-006.27'
+  }));
+  const save = onSave || (() => say({
+    kind: 'info',
+    title: 'Session saved',
+    body: 'FR-006.11 applies unchanged in reduced mode: every box processed, condition recorded, photograph captured and remark entered is persisted, and the operator resumes from the same state.',
+    ref: 'FR-006.11 \u00b7 FR-007.5'
+  }));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Unload Truck",
+    onBack: onBack,
+    right: /*#__PURE__*/React.createElement(Icon, {
+      name: "refresh-cw",
+      size: 17,
+      color: "var(--sc-teal)"
+    })
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "warn"
+  }, "Shipment document not available. Expected box list and ship-list comparison are suppressed for this GEN.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '4px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "file-text",
+    label: "Gate Entry Number",
+    value: "GEN-000851",
+    mono: true
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "building-2",
+    label: "Supplier",
+    value: "ABC Supplies Pvt. Ltd.",
+    last: true
+  })), /*#__PURE__*/React.createElement(Panel, {
+    title: "Scan / Enter Primary Box"
+  }, /*#__PURE__*/React.createElement(ScanField, {
+    value: box,
+    onChange: e => setBox && setBox(e.target.value),
+    onScan: onScan,
+    placeholder: "Scan primary box code"
+  }), onSubmit && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '8px',
+      marginTop: '8px'
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    size: "sm",
+    block: true,
+    onClick: () => onSubmit && onSubmit('ok')
+  }, "Record as OK"), /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    size: "sm",
+    block: true,
+    onClick: () => onSubmit && onSubmit('check')
+  }, "Record & check condition")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '7px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "Scan each box as it is unloaded. Where the code is damaged or absent, key the part number printed on the carton instead.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)',
+      marginBottom: '8px'
+    }
+  }, "Box Unloading ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontWeight: 'var(--fw-regular)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "(Box Number Wise)")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(CounterStrip, {
+    items: [{
+      label: 'Unloaded',
+      value: unloaded
+    }, {
+      label: 'OK',
+      value: ok,
+      tone: 'ok'
+    }, {
+      label: 'Not OK',
+      value: notOk,
+      tone: 'bad'
+    }]
+  })), /*#__PURE__*/React.createElement(Panel, null, /*#__PURE__*/React.createElement(QueueTable, {
+    columns: [{
+      key: 'box',
+      label: 'Box No.',
+      mono: true
+    }, {
+      key: 'quality',
+      label: 'Quality'
+    }, {
+      key: 'status',
+      label: 'Status',
+      align: 'center'
+    }],
+    rows: rows,
+    minRows: 0,
+    onRowClick: onBoxTap,
+    style: {
+      marginBottom: 0
+    }
+  }), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '8px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "Tap a box to update its condition.")), /*#__PURE__*/React.createElement(Panel, {
+    title: "Variance Summary (Box Number Wise)"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "Unloaded"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: '21px',
+      fontWeight: 'var(--fw-semibold)',
+      color: 'var(--text-data)'
+    }
+  }, unloaded)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: '1px',
+      alignSelf: 'stretch',
+      background: 'var(--border-soft)'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "Expected (Screen 4a)"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: '21px',
+      fontWeight: 'var(--fw-semibold)',
+      color: 'var(--text-data)'
+    }
+  }, expected)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: '1px',
+      alignSelf: 'stretch',
+      background: 'var(--border-soft)'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "Remaining"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: '21px',
+      fontWeight: 'var(--fw-semibold)',
+      color: remaining ? 'var(--status-warn-ink,var(--text-data))' : 'var(--text-data)'
+    }
+  }, remaining))), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '9px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "Reconciled against No. of Boxes in GEN recorded at Receipt Details. The indicative count taken at the gate is not used.")), /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "info"
+  }, "Ordered against received is not reconciled here. With no document, the shortfall is established at Consignment Check once boxes are opened.")), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: save,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "save",
+      size: 15
+    })
+  }, "Save"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: variance,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "scale",
+      size: 15
+    })
+  }, "Check Variance")));
+}
+Object.assign(window, {
+  Screen6dNoDoc
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen6dNoDoc.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/Screen6eCondition.jsx
+try { (() => {
+/* Shared by Screen 6e (scanned primary box, no shipment document) and Screen 6h (system-printed
+   sticker). FR-007.5 and FR-008.7 both state that the condition flow is identical across unload
+   approaches, so one component carries both; only the identification header and the standing
+   notice differ. */
+const {
+  ScreenHeader,
+  ConditionChips,
+  PhotoCapture,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  QueueTable,
+  Tag
+} = window.SpareCareDesignSystem_556483;
+const CONDITIONS = [{
+  id: 'ok',
+  label: 'OK',
+  icon: 'circle-check',
+  tone: 'ok'
+}, {
+  id: 'tampered',
+  label: 'Packing Tampered',
+  icon: 'triangle-alert',
+  tone: 'warn'
+}, {
+  id: 'damaged',
+  label: 'Damaged',
+  icon: 'circle-x',
+  tone: 'bad'
+}, {
+  id: 'scratch',
+  label: 'Visible Scratch',
+  icon: 'scan-line',
+  tone: 'warn'
+}, {
+  id: 'nopack',
+  label: 'Without Packing',
+  icon: 'package-open',
+  tone: 'warn'
+}, {
+  id: 'wrong',
+  label: 'Wrong Delivery',
+  icon: 'truck',
+  tone: 'bad'
+}];
+const LABEL = {
+  ok: 'OK',
+  tampered: 'Packing Tampered',
+  damaged: 'Damaged',
+  scratch: 'Visible Scratch',
+  nopack: 'Without Packing',
+  wrong: 'Wrong Delivery'
+};
+function Screen6eCondition({
+  variant = 'scanned',
+  boxNo = 'BX-00012',
+  selected = ['damaged'],
+  onToggle,
+  openDelivery = true,
+  setOpenDelivery,
+  photo = true,
+  onCapture,
+  remarks = '',
+  setRemarks,
+  recent = [],
+  onSave,
+  onCancel
+}) {
+  const sticker = variant === 'sticker';
+  const notOk = selected.some(s => s !== 'ok');
+  const trigger = LABEL[selected.find(s => s !== 'ok')] || 'the recorded condition';
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Update Box Condition",
+    onBack: onCancel
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '11px',
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '11px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: sticker ? 'tag' : 'package',
+    size: 24,
+    color: "var(--sc-teal-deep)"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 0,
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontWeight: 'var(--fw-semibold)',
+      fontSize: '17px',
+      color: 'var(--text-data)'
+    }
+  }, boxNo), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, sticker ? 'Printed sticker scanned \u00b7 system-generated reference' : 'Scanned box \u00b7 primary box code')), /*#__PURE__*/React.createElement(Tag, {
+    tone: notOk ? 'out' : 'ok'
+  }, notOk ? 'Not OK' : 'OK')), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "info"
+  }, sticker ? 'Update quality before saving. This reference was generated by the system, not issued by the supplier.' : 'No shipment details available. A quality update is required for each box, not only for exceptions.')), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)',
+      marginBottom: '8px'
+    }
+  }, "Box Condition"), /*#__PURE__*/React.createElement(ConditionChips, {
+    options: CONDITIONS,
+    selected: selected,
+    onToggle: onToggle,
+    style: {
+      marginBottom: '12px'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '11px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, "Open Delivery"), notOk && /*#__PURE__*/React.createElement(Tag, {
+    tone: "ok",
+    dot: false
+  }, "Recommended")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      marginTop: '2px'
+    }
+  }, notOk ? 'Recommended because this box is marked as ' + trigger + '.' : 'Inspection in the presence of the driver.')), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    role: "switch",
+    "aria-checked": openDelivery,
+    onClick: () => setOpenDelivery && setOpenDelivery(!openDelivery),
+    style: {
+      width: '46px',
+      height: '26px',
+      borderRadius: '13px',
+      border: 'none',
+      cursor: 'pointer',
+      flex: '0 0 auto',
+      padding: '3px',
+      display: 'flex',
+      justifyContent: openDelivery ? 'flex-end' : 'flex-start',
+      background: openDelivery ? 'var(--status-ok)' : 'var(--sc-chrome)',
+      transition: 'var(--transition-interactive)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: '20px',
+      height: '20px',
+      borderRadius: 'var(--r-round)',
+      background: '#fff',
+      display: 'block'
+    }
+  }))), /*#__PURE__*/React.createElement(PhotoCapture, {
+    required: notOk,
+    captured: photo,
+    onCapture: onCapture,
+    style: {
+      marginBottom: '12px'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'baseline',
+      justifyContent: 'space-between',
+      marginBottom: '6px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, "Remarks ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontWeight: 'var(--fw-regular)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "(Optional)")), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, remarks.length, "/250")), /*#__PURE__*/React.createElement("textarea", {
+    value: remarks,
+    onChange: e => setRemarks && setRemarks(e.target.value.slice(0, 250)),
+    rows: 2,
+    placeholder: "Corner crushed and side dented.",
+    style: {
+      width: '100%',
+      border: '1px solid var(--border-field)',
+      borderRadius: 'var(--radius-field)',
+      padding: '10px 12px',
+      fontFamily: 'var(--font-body)',
+      fontSize: 'var(--fs-body-sm)',
+      color: 'var(--text-body)',
+      background: 'var(--surface-card)',
+      outline: 'none',
+      resize: 'vertical'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      marginBottom: '9px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, "Recent Box Entries"), /*#__PURE__*/React.createElement(Button, {
+    variant: "ghost",
+    size: "sm",
+    onClick: () => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+      detail: {
+        title: 'Full session log',
+        body: 'FR-006.14 names a View All action opening the full log for the session, and FR-007.5 carries it into reduced mode unchanged. The log screen is not drawn \\u2014 its columns, filters and whether an entry can be corrected from it are unspecified.',
+        ref: 'FR-006.14 \u00b7 FR-007.5'
+      }
+    }))
+  }, "View All")), /*#__PURE__*/React.createElement(QueueTable, {
+    columns: [{
+      key: 'box',
+      label: 'Box No.',
+      mono: true
+    }, {
+      key: 'quality',
+      label: 'Quality'
+    }, {
+      key: 'status',
+      label: 'Status',
+      align: 'center'
+    }, {
+      key: 'time',
+      label: 'Time',
+      align: 'right'
+    }],
+    rows: recent,
+    minRows: 0,
+    style: {
+      marginBottom: 0
+    }
+  }))), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: onCancel
+  }, "Cancel"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: onSave,
+    disabled: notOk && !photo,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "circle-check",
+      size: 15
+    })
+  }, "Save Condition")));
+}
+Object.assign(window, {
+  Screen6eCondition
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen6eCondition.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/Screen6fCounter.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  DetailRow,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  QueueTable
+} = window.SpareCareDesignSystem_556483;
+const say = detail => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+  detail
+}));
+function Screen6fCounter({
+  count = 18,
+  expected = 28,
+  onIncrement,
+  rows = [],
+  onAddNotOk,
+  onRowTap,
+  onSave,
+  onFinish,
+  onBack
+}) {
+  const remaining = Math.max(expected - count, 0);
+  const add = onAddNotOk || (() => say({
+    kind: 'flow',
+    title: 'Add Not OK Box',
+    body: 'FR-007.9 raises an exception against a temporary box reference without scanning. The system issues the next sequential reference and opens the standard condition flow \u2014 Condition, Open Delivery, Photo, Remarks \u2014 which is Screen 6e. The format of the temporary reference under the counter approach is not stated; the artwork shows BOX-001 here and BX-nnnn on the sticker approach.',
+    ref: 'FR-007.9 \u00b7 OI-081'
+  }));
+  const finish = onFinish || (() => say({
+    kind: 'next',
+    title: 'Finish Unload',
+    body: 'FR-007.11 commits the session. Every box counted and every exception raised is carried forward to Consignment Check as the received population for this GEN. Under the counter approach the counted boxes have no individual identity, so what Consignment Check receives is a total plus a short list of exception references.',
+    ref: 'FR-007.11 \u00b7 FR-007.10'
+  }));
+  const save = onSave || (() => say({
+    kind: 'info',
+    title: 'Session saved',
+    body: 'FR-006.11 persists the running count and every exception raised, and allows the operator to resume from the same state.',
+    ref: 'FR-006.11'
+  }));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Unload Truck",
+    onBack: onBack,
+    right: /*#__PURE__*/React.createElement(Icon, {
+      name: "refresh-cw",
+      size: 17,
+      color: "var(--sc-teal)"
+    })
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "warn"
+  }, "No shipment details and boxes are not scannable.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '4px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "file-text",
+    label: "Gate Entry Number",
+    value: "GEN-000853",
+    mono: true
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "building-2",
+    label: "Supplier",
+    value: "ABC Supplies Pvt. Ltd.",
+    last: true
+  })), /*#__PURE__*/React.createElement(window.UnloadApproachPanel, {
+    active: "counter"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'stretch',
+      gap: '12px',
+      background: 'var(--surface-sunken,var(--anno-canvas))',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minWidth: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-field)',
+      borderRadius: 'var(--radius-field)',
+      padding: '10px 14px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "Boxes unloaded"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: '38px',
+      lineHeight: 1.05,
+      fontWeight: 'var(--fw-semibold)',
+      color: 'var(--text-data)'
+    }
+  }, count)), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onIncrement,
+    "aria-label": "Increment box count",
+    style: {
+      flex: '0 0 76px',
+      minHeight: '76px',
+      border: '1px solid var(--sc-teal)',
+      borderRadius: 'var(--radius-field)',
+      background: 'var(--surface-card)',
+      color: 'var(--sc-teal-deep)',
+      cursor: 'pointer',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "plus",
+    size: 30,
+    color: "var(--sc-teal-deep)"
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      gap: '10px',
+      marginTop: '9px',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "Expected (Screen 4a) ", /*#__PURE__*/React.createElement("strong", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      color: 'var(--text-data)'
+    }
+  }, expected)), /*#__PURE__*/React.createElement("span", null, "Remaining ", /*#__PURE__*/React.createElement("strong", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      color: 'var(--text-data)'
+    }
+  }, remaining)))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '10px',
+      marginBottom: '9px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, "Box Quality Update"), /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    size: "sm",
+    onClick: add,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "plus",
+      size: 14
+    })
+  }, "Add Not OK Box")), /*#__PURE__*/React.createElement(QueueTable, {
+    columns: [{
+      key: 'box',
+      label: 'Box Ref. (Temporary)',
+      mono: true
+    }, {
+      key: 'quality',
+      label: 'Quality'
+    }, {
+      key: 'status',
+      label: 'Status',
+      align: 'center'
+    }],
+    rows: rows,
+    minRows: 0,
+    onRowClick: onRowTap,
+    style: {
+      marginBottom: 0
+    }
+  }), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '8px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "References are issued by the system so an exception can be tracked on a box the supplier never identified.")), /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "info"
+  }, "Each exception opens the same condition flow with Condition, Open Delivery, Photo and Remarks.")), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: save,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "save",
+      size: 15
+    })
+  }, "Save"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: finish,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "circle-check",
+      size: 15
+    })
+  }, "Finish Unload")));
+}
+Object.assign(window, {
+  Screen6fCounter
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen6fCounter.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/Screen6gStickers.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  DetailRow,
+  TextInput,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote
+} = window.SpareCareDesignSystem_556483;
+const say = detail => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+  detail
+}));
+
+/* Wireframe stand-ins. The sticker carries a QR and a linear barcode per FR-008.4; neither
+   symbology is drawn to spec here — these are placeholders for a real label template. */
+function QrBlock({
+  seed = '',
+  size = 46
+}) {
+  const n = 7,
+    cells = [];
+  for (let i = 0; i < n * n; i++) {
+    const r = Math.floor(i / n),
+      c = i % n;
+    const finder = r < 3 && c < 3 || r < 3 && c > n - 4 || r > n - 4 && c < 3;
+    const h = (seed.charCodeAt(i % seed.length) || 0) + i * 37;
+    cells.push(/*#__PURE__*/React.createElement("span", {
+      key: i,
+      style: {
+        background: finder ? r % 2 === 1 && c % 2 === 1 ? 'transparent' : 'var(--text-data)' : h % 2 ? 'var(--text-data)' : 'transparent'
+      }
+    }));
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true",
+    style: {
+      width: size + 'px',
+      height: size + 'px',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(7,1fr)',
+      gridTemplateRows: 'repeat(7,1fr)',
+      gap: '1px',
+      flex: '0 0 auto'
+    }
+  }, cells);
+}
+function BarcodeBlock({
+  seed = '',
+  height = 22
+}) {
+  const bars = [];
+  for (let i = 0; i < 26; i++) {
+    const h = (seed.charCodeAt(i % seed.length) || 0) + i * 13;
+    bars.push(/*#__PURE__*/React.createElement("span", {
+      key: i,
+      style: {
+        width: (h % 3 ? 1 : 2) + 'px',
+        background: h % 4 ? 'var(--text-data)' : 'transparent'
+      }
+    }));
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true",
+    style: {
+      display: 'flex',
+      gap: '1px',
+      height: height + 'px',
+      alignItems: 'stretch'
+    }
+  }, bars);
+}
+function StickerTile({
+  ref_
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: '1px dashed var(--border-field)',
+      borderRadius: 'var(--radius-field)',
+      background: 'var(--surface-card)',
+      padding: '9px',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '7px',
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontWeight: 'var(--fw-semibold)',
+      fontSize: 'var(--fs-body-sm)',
+      color: 'var(--text-data)'
+    }
+  }, ref_), /*#__PURE__*/React.createElement(QrBlock, {
+    seed: ref_
+  }), /*#__PURE__*/React.createElement(BarcodeBlock, {
+    seed: ref_
+  }));
+}
+function Screen6gStickers({
+  total = 20,
+  setTotal,
+  refs = [],
+  onGenerate,
+  onPrint,
+  onBack
+}) {
+  const print = onPrint || (() => say({
+    kind: 'next',
+    title: 'Print ' + total + ' Stickers',
+    body: 'FR-008.5 sends the full set to the connected label printer in a single action. Which printer, how it is paired with the handheld, and what happens when the print fails part-way through a roll are not specified. The operator then pastes one sticker per box and scans it back \u2014 Screen 6h.',
+    ref: 'FR-008.5 \u00b7 FR-008.6'
+  }));
+  const generate = onGenerate || (() => say({
+    kind: 'info',
+    title: 'Generate references',
+    body: 'FR-008.3 issues a unique temporary reference per box in the format BX-nnnn, sequential within the GEN. Whether a reference can be re-issued after a misprint, and whether the sequence resets per GEN or runs per warehouse, is not stated.',
+    ref: 'FR-008.3'
+  }));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Print Box Stickers",
+    onBack: onBack
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "warn"
+  }, "No shipment details and boxes are not scannable.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '4px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "file-text",
+    label: "Gate Entry Number",
+    value: "GEN-000857",
+    mono: true
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "building-2",
+    label: "Supplier",
+    value: "Ratan Auto Parts",
+    last: true
+  })), /*#__PURE__*/React.createElement(window.UnloadApproachPanel, {
+    active: "sticker"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)',
+      marginBottom: '8px'
+    }
+  }, "Total Boxes to Print"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '8px',
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    type: "number",
+    mono: true,
+    value: total,
+    onChange: e => setTotal && setTotal(Math.max(0, Math.min(99, Number(e.target.value) || 0))),
+    style: {
+      flex: 1
+    }
+  }), /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    onClick: generate,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "refresh-cw",
+      size: 15
+    })
+  }, "Generate")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '7px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "Defaults to the box count recorded at gate entry. Editable, because the number on the truck is often not the number on the paper.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'baseline',
+      justifyContent: 'space-between',
+      marginBottom: '9px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, "Sticker Preview"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, refs.length, " of ", total)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
+      gap: '8px'
+    }
+  }, refs.slice(0, 9).map(r => /*#__PURE__*/React.createElement(StickerTile, {
+    key: r,
+    ref_: r
+  }))), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '9px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "Print and paste one sticker on each unloaded box. Each sticker carries the reference as text, a QR code and a linear barcode.")), /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "warn"
+  }, "Box ownership is unverified. With no ship list and no supplier code, the system cannot establish that a box on this vehicle belongs to this dealer. Ownership is confirmed at Consignment Check.")), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: onBack
+  }, "Back"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: print,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "printer",
+      size: 15
+    })
+  }, "Print ", total, " Stickers")));
+}
+Object.assign(window, {
+  Screen6gStickers
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen6gStickers.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/UnloadApproachPanel.jsx
+try { (() => {
+/* Configured Unload Approach panel, shared by Screens 6f and 6g.
+   FR-007.7 — read-only at the point of unloading, tagged Set by Admin.
+   FR-007.12 / .14 — three separately configurable options exist; the two not in force are
+   named in a read-only footnote so the operator can see which regime applies and why. */
+const {
+  Tag,
+  Icon
+} = window.SpareCareDesignSystem_556483;
+const SC_APPROACHES = [{
+  id: 'sticker',
+  label: 'Print Box Stickers & Scan',
+  icon: 'tag',
+  helper: 'Use printed stickers to unload and track boxes.',
+  ref: 'FR-008.1'
+}, {
+  id: 'counter',
+  label: 'Tap Counter Per Box',
+  icon: 'calculator',
+  helper: 'Press + after each box is unloaded.',
+  ref: 'FR-007.8'
+}, {
+  id: 'total',
+  label: 'Plain Total Count Entry',
+  icon: 'hash',
+  helper: 'Record a single total with no per-box tracking.',
+  ref: 'FR-007.13'
+}];
+function UnloadApproachPanel({
+  active = 'counter',
+  children
+}) {
+  const current = SC_APPROACHES.find(a => a.id === active) || SC_APPROACHES[1];
+  const others = SC_APPROACHES.filter(a => a.id !== current.id).map(a => a.label).join(' \u00b7 ');
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '10px',
+      marginBottom: '9px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, "Configured Unload Approach"), /*#__PURE__*/React.createElement(Tag, {
+    tone: "neutral",
+    dot: false
+  }, "Set by Admin")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      marginBottom: children ? '10px' : '0'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: current.icon,
+    size: 20,
+    color: "var(--sc-teal-deep)"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, current.label), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, current.helper))), children, /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '10px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "Other configurations available to the admin: ", others, ". Not changeable at the point of unloading."));
+}
+Object.assign(window, {
+  UnloadApproachPanel,
+  SC_APPROACHES
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/UnloadApproachPanel.jsx", error: String((e && e.message) || e) }); }
+
 // ui_kits/wms-inward/handheld/handheldAnnotations.js
 try { (() => {
 /* Callout data for the handheld-surface wireframes, Batch 1 showcase.
@@ -6115,6 +7338,585 @@ Object.assign(window.SC_HH_ANNO, {
   }
 });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/handheldAnnotations.js", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/handheldAnnotationsB2.js
+try { (() => {
+/* Batch 2 — FR-007 and FR-008. Unload exceptions: no shipment document (6d, 6e, 6f) and
+   box sticker generation for non-scannable consignments (6g, 6h).
+   Markers sit in the 30px gutters, as Batch 1. */
+Object.assign(window.SC_HH_ANNO, {
+  'screen-6d': {
+    group: 'IN-D · Unload Exceptions',
+    eyebrow: 'IN-D',
+    screenId: 'Screen 6d',
+    screenName: 'Unload Truck — no shipment document',
+    headline: 'Unloading with nothing to check against',
+    intro: 'A significant share of consignments arrive with no ship list. The truck cannot wait for one. This is Screen 6a with the manifest removed: the expected box list and the ship-list comparison are suppressed, the boxes are still scanned one at a time, and the only expected figure left is the box count keyed at Receipt Details. Everything after identification — condition, open delivery, photograph, remarks — behaves exactly as it does with a document.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6d', 'FR-007', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Rugged handheld, 412 \u00d7 880 dp. Reduced mode is a state of the unloading screen, not a different screen \u2014 the operator reaches it because the GEN has no document, not because he chose it.',
+    caption: 'Screen 6d \u00b7 Reduced-mode unloading',
+    markers: [{
+      n: 1,
+      x: -1,
+      y: 5
+    }, {
+      n: 2,
+      x: 101,
+      y: 15
+    }, {
+      n: 3,
+      x: -1,
+      y: 23
+    }, {
+      n: 4,
+      x: 101,
+      y: 30
+    }, {
+      n: 5,
+      x: -1,
+      y: 36
+    }, {
+      n: 6,
+      x: 101,
+      y: 47
+    }, {
+      n: 7,
+      x: -1,
+      y: 58
+    }, {
+      n: 8,
+      x: 101,
+      y: 78
+    }, {
+      n: 9,
+      x: -1,
+      y: 87
+    }, {
+      n: 10,
+      x: 101,
+      y: 95
+    }],
+    items: [{
+      n: 1,
+      label: 'Unload Truck',
+      ref: '\u00a710.1',
+      control: 'Screen header',
+      description: 'The same screen title as Screen 6a. The operator is doing the same job; only the reference data behind it has gone.'
+    }, {
+      n: 2,
+      label: 'Shipment document not available.',
+      ref: 'FR-007.1',
+      control: 'Persistent banner',
+      description: 'States why the expected-box controls are absent. Persistent rather than dismissible — an operator who scrolls past it and then finds no ship list panel would otherwise assume a fault.',
+      proposal: 'The FRD fixes the banner text but not what else is suppressed on screen. We have removed the Shipment Details (Shiplist) panel, the Mismatch with Shiplist exception strip and the Balance counter, and left the rest of Screen 6a intact.'
+    }, {
+      n: 3,
+      label: 'Gate Entry Number and Supplier',
+      ref: '\u00a710.3',
+      control: 'Read-only display',
+      description: 'Carried forward from the gate entry record. The Document Number row present on Screen 6a is absent here, because there is no document.'
+    }, {
+      n: 4,
+      label: 'Scan / Enter Primary Box',
+      ref: 'FR-007.2',
+      control: 'Scan field + keyboard toggle',
+      description: 'The primary box code printed on the outer carton identifies each box. Where that code is illegible, damaged or absent, the system accepts manual entry of the part number printed on the carton as the alternative identifier.',
+      query: {
+        text: 'A part number is not unique to a box — a consignment of twenty identical filters would produce twenty boxes carrying the same identifier. How the system distinguishes them, or whether it appends a sequence, is not stated.',
+        ref: 'OI-079',
+        blocking: true
+      }
+    }, {
+      n: 5,
+      label: 'Record as OK / Record & check condition',
+      ref: 'FR-007.4',
+      control: 'Button pair',
+      description: 'FR-007.4 requires every box to be assessed, not only the exceptions. A hundred sound cartons would otherwise mean a hundred trips through the condition screen.',
+      proposal: 'The two-button split is ours. The FRD states the assessment requirement and the condition set; it does not say how an operator records "OK" quickly. Without a fast path the mandatory assessment will be defeated in practice on the first busy morning.'
+    }, {
+      n: 6,
+      label: 'Box Unloading (Box Number Wise)',
+      ref: 'FR-007.6',
+      control: 'Summary tiles',
+      description: 'Unloaded, OK and Not OK, updated as each box is processed. Balance does not appear here as a fourth tile; it sits in the variance summary below, against the expected count.'
+    }, {
+      n: 7,
+      label: 'Box list — Box No. / Quality / Status',
+      ref: 'FR-007.3',
+      control: 'Scrollable table',
+      description: 'One row per box processed, showing the recorded quality and a status indicator. Tapping a row reopens Screen 6e so an earlier assessment can be corrected.'
+    }, {
+      n: 8,
+      label: 'Variance Summary (Box Number Wise)',
+      ref: 'FR-007.6, FR-007.15',
+      control: 'Summary strip',
+      description: 'Boxes unloaded against the expected count, with the remaining balance. This replaces the document-based variance available when a ship list exists.',
+      proposal: 'The source artwork reconciles against the gate entry count. Session 07 Part 3 corrected that: FR-007.15 makes the baseline the No. of Boxes in GEN recorded at Receipt Details on Screen 4a, because the gate figure is indicative. We have drawn the corrected version and labelled the column Expected (Screen 4a) so the source of the number is visible on the screen.'
+    }, {
+      n: 9,
+      label: 'Ordered against received is not reconciled here',
+      ref: 'FR-007.10',
+      control: 'Info note',
+      description: 'With no document there is nothing to compare the received quantity to. The shortfall is established at Consignment Check, once boxes are opened and contents counted.',
+      query: {
+        text: 'Where the invoice arrives later in the day, as it commonly does, nothing in the FRD describes attaching it to a GEN already unloaded and running the comparison retrospectively. The layman description of \u00a710.1 assumes this happens; no requirement provides for it.',
+        ref: 'OI-080',
+        blocking: true
+      }
+    }, {
+      n: 10,
+      label: 'Save and Check Variance',
+      ref: '\u00a710.3, FR-006.11',
+      control: 'Pinned action bar',
+      description: 'Save persists the session without closing it. Check Variance opens the variance view. Note that Finish Unload is not offered on this screen in the source artwork — it appears on Screen 6f — so the commit point for a scanned reduced-mode session is unstated.',
+      query: {
+        text: 'Screen 6d ends at Check Variance and Screen 6f ends at Finish Unload. FR-007.11 gives Finish Unload the commit role for both. Where the scanned reduced-mode session is committed is undefined.',
+        ref: 'OI-081'
+      }
+    }],
+    missing: {
+      intro: 'Drawn as one steady state. These are the things that would follow once the questions above are settled.',
+      statesNotDrawn: ['Empty — the screen before the first box is scanned', 'The keyboard fallback in use, with a part number keyed instead of a scan', 'A duplicate scan of a box already recorded', 'Unloaded exceeding the expected count', 'The ship list arriving mid-session, and the screen leaving reduced mode', 'Offline at the dock'],
+      detailNotSpecified: ['Whether a scanned box can be deleted from the list, as FR-006.2 allows with a document', 'Whether the part-number fallback is recorded as such, or indistinguishable from a scan', 'What the Check Variance view contains when there is no document to vary from', 'Whether the expected count can be amended from this screen when the paperwork is wrong'],
+      mostImportant: 'Reduced mode is described as a suppression of controls, but it is also a suppression of assurance. With a ship list, an unexpected box is caught the moment it is scanned. Without one, every box scanned is accepted, and the first opportunity to notice that the vehicle carried goods for another consignee is at Consignment Check — by which time the truck has gone. OI-013 records the ownership gap; nothing in FR-007 closes it.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6d \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+  'screen-6e': {
+    group: 'IN-D · Unload Exceptions',
+    eyebrow: 'IN-D',
+    screenId: 'Screen 6e',
+    screenName: 'Update Box Condition — no shipment document',
+    headline: 'The condition flow does not change when the paperwork is missing',
+    intro: 'FR-007.5 is unusually firm: where a box is assessed as anything other than OK, the open delivery recommendation, mandatory photo capture, optional remarks and the Recent Box Entries log apply without modification. An exception raised in reduced mode is handled identically to one raised against a ship-list consignment. This screen is therefore Screen 6b with two differences — a notice instead of a mismatch strip, and an assessment required on every box rather than only on exceptions.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6e', 'FR-007', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Rugged handheld, 412 \u00d7 880 dp. Drawn in the Damaged state so the conditional controls — the open delivery recommendation and the mandatory photograph — are both visible.',
+    caption: 'Screen 6e \u00b7 Condition, reduced mode',
+    markers: [{
+      n: 1,
+      x: -1,
+      y: 5
+    }, {
+      n: 2,
+      x: 101,
+      y: 21
+    }, {
+      n: 3,
+      x: -1,
+      y: 29
+    }, {
+      n: 4,
+      x: 101,
+      y: 45
+    }, {
+      n: 5,
+      x: -1,
+      y: 54
+    }, {
+      n: 6,
+      x: 101,
+      y: 68
+    }, {
+      n: 7,
+      x: -1,
+      y: 82
+    }, {
+      n: 8,
+      x: 101,
+      y: 96
+    }],
+    items: [{
+      n: 1,
+      label: 'Scanned box header',
+      ref: '\u00a710.4',
+      control: 'Read-only display',
+      description: 'The scanned box number with a Scanned Box sub-label. Identifies which box the condition is being recorded against — the only thing on this screen that ties the assessment to a physical carton.'
+    }, {
+      n: 2,
+      label: 'Quality update is required for each box',
+      ref: 'FR-007.4',
+      control: 'Static notice',
+      description: 'With no manifest to validate against, the condition assessment is mandatory for every box rather than only for exceptions. The notice explains a rule the operator would otherwise experience as the screen refusing to close.'
+    }, {
+      n: 3,
+      label: 'Box Condition',
+      ref: 'FR-007.4, FR-006.4',
+      control: 'Radio group, six options',
+      description: 'OK, Packing Tampered, Damaged, Visible Scratch, Without Packing, Wrong Delivery. Single selection. The same set as FR-006.4, unchanged — deliberately, so that reporting across the two modes is comparable.'
+    }, {
+      n: 4,
+      label: 'Open Delivery',
+      ref: 'FR-007.5',
+      control: 'Toggle with Recommended tag',
+      description: 'Recommended automatically where the selected condition indicates damage or tampering, and the explanatory line names the condition that triggered it. The operator may override.',
+      query: {
+        text: 'An override is permitted but nothing records who overrode the recommendation or why. Where a damaged box is later claimed against the supplier, the absence of an open delivery becomes the first question asked.',
+        ref: 'OI-082'
+      }
+    }, {
+      n: 5,
+      label: 'Take Photo (Mandatory)',
+      ref: 'FR-006.28, FR-007.5',
+      control: 'Camera capture with thumbnail',
+      description: 'The control is labelled Mandatory without qualification, but FR-006.28 makes the rule conditional: the photograph is required where the recorded condition is anything other than OK, and the box entry cannot be saved until it is captured. Retake / Change replaces the image.',
+      proposal: 'We have drawn Save Condition as disabled until the photograph exists, rather than letting the operator press it and receive an error. The FRD states the rule but not the enforcement.'
+    }, {
+      n: 6,
+      label: 'Remarks (Optional)',
+      ref: '\u00a710.4',
+      control: 'Multi-line text, 250 characters',
+      description: 'Free-text description of the observed condition, with a live character counter. Optional in every condition state.'
+    }, {
+      n: 7,
+      label: 'Recent Box Entries',
+      ref: 'FR-006.14, FR-007.5',
+      control: 'Scrollable log',
+      description: 'Recently processed boxes with box number, quality, status and timestamp. Carried into reduced mode unchanged. View All opens the full session log, which is not drawn.'
+    }, {
+      n: 8,
+      label: 'Cancel and Save Condition',
+      ref: '\u00a710.4',
+      control: 'Pinned action bar',
+      description: 'Cancel discards the assessment for this box; Save Condition commits it and returns to Screen 6d.',
+      query: {
+        text: 'Cancelling on a box that has already been scanned leaves a box in the unloaded list with no quality recorded, which FR-007.4 forbids. Whether Cancel also removes the scan is not stated.',
+        ref: 'OI-083'
+      }
+    }],
+    missing: {
+      intro: 'One condition state is drawn. The rest of the matrix is not.',
+      statesNotDrawn: ['OK selected — open delivery and photograph both collapsed away', 'Wrong Delivery, where the box belongs to another consignee entirely', 'Photograph not yet captured, with Save Condition disabled', 'A box reopened from the list to correct an earlier assessment', 'The camera view itself, and a failed capture'],
+      detailNotSpecified: ['Whether more than one photograph can be attached to a box', 'Whether a saved condition can be changed after Finish Unload', 'Whether remarks are visible downstream at Consignment Check', 'Image resolution, storage and retention for claim evidence'],
+      mostImportant: 'Wrong Delivery is in the condition set, but in reduced mode it cannot be established. Deciding a box was wrongly delivered requires knowing what was expected, and there is no document. The operator can select it, and the system will record it, on the basis of nothing.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6e \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+  'screen-6f': {
+    group: 'IN-D · Unload Exceptions',
+    eyebrow: 'IN-D',
+    screenId: 'Screen 6f',
+    screenName: 'Unload Truck — counter approach',
+    headline: 'When there is nothing to scan, count',
+    intro: 'The second reduced-mode sub-scenario: no document, and boxes that carry no readable code. The operator increments a counter once per box and raises exceptions separately against references the system issues. It is the cheapest of the three configured approaches and the least traceable — a total, plus a short list of the boxes that were not right.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6f', 'FR-007', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Rugged handheld, 412 \u00d7 880 dp. The counter is sized for a gloved thumb on a moving dock; it is the only control the operator touches for most of the session.',
+    caption: 'Screen 6f \u00b7 Counter approach',
+    markers: [{
+      n: 1,
+      x: -1,
+      y: 13
+    }, {
+      n: 2,
+      x: 101,
+      y: 22
+    }, {
+      n: 3,
+      x: -1,
+      y: 31
+    }, {
+      n: 4,
+      x: 101,
+      y: 41
+    }, {
+      n: 5,
+      x: -1,
+      y: 48
+    }, {
+      n: 6,
+      x: 101,
+      y: 54
+    }, {
+      n: 7,
+      x: -1,
+      y: 60
+    }, {
+      n: 8,
+      x: 101,
+      y: 76
+    }, {
+      n: 9,
+      x: -1,
+      y: 95
+    }],
+    items: [{
+      n: 1,
+      label: 'No shipment details and boxes are not scannable.',
+      ref: 'FR-007.8, \u00a710.5',
+      control: 'Static banner',
+      description: 'Confirms the two conditions that together caused the counter approach to be applied. Both must hold: a missing document alone routes to Screen 6d, where boxes are still scanned.'
+    }, {
+      n: 2,
+      label: 'Gate Entry Number and Supplier',
+      ref: '\u00a710.5',
+      control: 'Read-only display',
+      description: 'Consignment identification carried forward from the gate entry record.'
+    }, {
+      n: 3,
+      label: 'Configured Unload Approach',
+      ref: 'FR-007.7',
+      control: 'Read-only panel with Set by Admin tag',
+      description: 'The method configured for this scenario by the dealer admin. Not editable at the point of unloading — the operator sees which regime applies but cannot switch to another because it would be quicker.'
+    }, {
+      n: 4,
+      label: 'Use Counter',
+      ref: 'FR-007.8, FR-007.15',
+      control: 'Numeric display with increment control',
+      description: 'Incremented once per box unloaded, with the running count displayed large. This figure is the received box count for the session, reconcilable against the expected count recorded at Receipt Details.',
+      query: {
+        text: 'There is no decrement. A double-tap, or a tap on a box that is then set aside, cannot be undone. With no per-box record there is also no way to identify which increment was wrong.',
+        ref: 'OI-085',
+        blocking: true
+      }
+    }, {
+      n: 5,
+      label: 'The two configurations not in force',
+      ref: 'FR-007.12, FR-007.14',
+      control: 'Read-only footnote',
+      description: 'Session 07 established three separately configurable options, not two: print and scan back stickers, tap counter per box, and plain total count entry.',
+      proposal: 'Naming the other two on screen is ours. FR-007.7 requires only that the configured approach be displayed. An operator who cannot see that alternatives exist has no way to tell a deliberate configuration from a system default, and no vocabulary to raise it with the admin.'
+    }, {
+      n: 6,
+      label: 'Plain total count entry is not drawn',
+      ref: 'FR-007.13',
+      control: 'Not drawn',
+      tone: 'open',
+      description: 'The third option records a single manual total with no per-box tracking, no scanning and no incrementing. It has no screen number in the FRD and no artwork.',
+      query: {
+        text: 'FR-007.13 defines a third counting option that no screen in the document provides for. Either it is a variant of Screen 6f with the counter replaced by a numeric field and the Box Quality Update section removed, or it needs a screen of its own. A screen number must be allocated before it can be drawn.',
+        ref: 'OI-084',
+        blocking: true
+      }
+    }, {
+      n: 7,
+      label: 'Box Quality Update and Add Not OK Box',
+      ref: 'FR-007.9',
+      control: 'Table with action',
+      description: 'Raises an exception without scanning. The system issues a temporary box reference so the exception can be tracked even though the box carries no supplier identifier, and the remaining boxes continue to be counted in bulk.'
+    }, {
+      n: 8,
+      label: 'Each exception opens the same condition flow',
+      ref: 'FR-007.5, \u00a710.5',
+      control: 'Static helper note',
+      description: 'Condition, Open Delivery, Photo and Remarks are identical across all three unload approaches. The note is on the screen because the operator arriving here from a scanned consignment needs to know nothing else has changed.'
+    }, {
+      n: 9,
+      label: 'Save and Finish Unload',
+      ref: 'FR-007.11',
+      control: 'Pinned action bar',
+      description: 'Finish Unload commits the session. Every box counted and every exception raised is carried forward to Consignment Check as the received population for this GEN.'
+    }],
+    missing: {
+      intro: 'The steady state of a counting session. What is not here:',
+      statesNotDrawn: ['Counter at zero, before unloading starts', 'Count exceeding the expected figure from Receipt Details', 'No exceptions raised — the Box Quality Update table empty', 'The plain total count entry configuration (FR-007.13)', 'The confirmation shown when Finish Unload is pressed with a remaining balance'],
+      detailNotSpecified: ['The format of the temporary box reference — the artwork shows BOX-001 here and BX-nnnn on the sticker approach', 'Whether the counter can be corrected, and by whom', 'Whether an exception box is included in the counter total or counted separately', 'What Consignment Check receives when boxes have no individual identity'],
+      mostImportant: 'The counter produces a number nobody can audit. If the count is 48 and the invoice later says 50, there is no record of which boxes were counted, so the two missing boxes cannot be described, photographed or claimed — only asserted. That is the trade the configuration makes, and it should be made with the finance team in the room, not by the admin alone.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6f \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+  'screen-6g': {
+    group: 'IN-D · Unload Exceptions',
+    eyebrow: 'IN-D',
+    screenId: 'Screen 6g',
+    screenName: 'Print Box Stickers',
+    headline: 'Giving a box an identity it did not arrive with',
+    intro: 'The most constrained scenario: no shipment document and no scannable code on the carton. Counting alone gives a total but leaves no way to attach a condition, a photograph or a remark to a specific physical box. The system generates its own references, prints them, and the operator pastes one on each box as it comes off. From that point the boxes are scannable and the standard flow resumes.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6g', 'FR-008', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Rugged handheld, 412 \u00d7 880 dp, paired with a label printer at the bay. Whether that printer exists at every dock is the first question this approach raises.',
+    caption: 'Screen 6g \u00b7 Print Box Stickers',
+    markers: [{
+      n: 1,
+      x: -1,
+      y: 12
+    }, {
+      n: 2,
+      x: 101,
+      y: 22
+    }, {
+      n: 3,
+      x: -1,
+      y: 29
+    }, {
+      n: 4,
+      x: 101,
+      y: 37
+    }, {
+      n: 5,
+      x: -1,
+      y: 52
+    }, {
+      n: 6,
+      x: 101,
+      y: 70
+    }, {
+      n: 7,
+      x: -1,
+      y: 84
+    }, {
+      n: 8,
+      x: 101,
+      y: 95
+    }],
+    items: [{
+      n: 1,
+      label: 'No shipment details and boxes are not scannable.',
+      ref: '\u00a711.3',
+      control: 'Static banner',
+      description: 'The same two conditions that route to the counter approach. Which of the two the dealer gets is a configuration decision, not an operator one.'
+    }, {
+      n: 2,
+      label: 'Gate Entry Number and Supplier',
+      ref: '\u00a711.3',
+      control: 'Read-only display',
+      description: 'Consignment identification carried forward from the gate entry record. The references generated below are sequential within this GEN.'
+    }, {
+      n: 3,
+      label: 'Print Box Stickers & Scan',
+      ref: 'FR-008.1',
+      control: 'Read-only panel with Set by Admin tag',
+      description: 'The sticker approach as configured by the dealer admin, with the helper text specified by FR-008.1: use printed stickers to unload and track boxes.'
+    }, {
+      n: 4,
+      label: 'Total Boxes to Print',
+      ref: 'FR-008.2',
+      control: 'Numeric field with generate control',
+      description: 'Defaults to the box count recorded at gate entry and remains editable, so a discrepancy discovered at the dock can be accommodated without going back.',
+      query: {
+        text: 'FR-008.2 defaults this to the gate entry count, but FR-007.15 removed the gate entry count as a reconciliation baseline because it is indicative. Defaulting a printing quantity to a figure the document elsewhere disowns will produce the wrong number of stickers more often than not. Whether the default should instead be the Receipt Details count needs deciding.',
+        ref: 'OI-086',
+        blocking: true
+      }
+    }, {
+      n: 5,
+      label: 'Sticker Preview',
+      ref: 'FR-008.3, FR-008.4',
+      control: 'Preview grid',
+      description: 'Generated references in the format BX-nnnn, sequential within the GEN. Each sticker carries the reference as human-readable text, a QR code and a linear barcode, so it can be read by either scanner type in use at the dealership.',
+      proposal: 'The label layout is not specified. The tiles here are placeholders showing the three elements FR-008.4 requires, not a label template — physical size, material, adhesive and print resolution all need settling with whoever supplies the printer.'
+    }, {
+      n: 6,
+      label: 'Print and paste one sticker on each unloaded box.',
+      ref: 'FR-008.5',
+      control: 'Static helper note',
+      description: 'The operating instruction, shown beneath the preview. The whole approach depends on this step being done correctly and in order; nothing in the system can verify that it was.'
+    }, {
+      n: 7,
+      label: 'Box ownership is unverified',
+      ref: 'FR-008.9',
+      control: 'Info note',
+      description: 'With neither a ship list nor a supplier code, the system cannot establish that a given box belongs to this dealer rather than to another consignee sharing the vehicle. Ownership is confirmed at Consignment Check, when the box is opened and its contents identified.',
+      query: {
+        text: 'The system will happily print a sticker for, and accept, a box belonging to someone else. FR-008.9 acknowledges this and defers it. What happens when Consignment Check finds a box that is not the dealer\u2019s — after a sticker has been pasted on it and a reference issued against this GEN — is not described.',
+        ref: 'OI-013',
+        blocking: true
+      }
+    }, {
+      n: 8,
+      label: 'Back and Print n Stickers',
+      ref: 'FR-008.5',
+      control: 'Pinned action bar',
+      description: 'The full set prints in a single action and the button label reflects the count entered. Back returns without printing.'
+    }],
+    missing: {
+      intro: 'What a printing screen has to handle, and what is not yet described.',
+      statesNotDrawn: ['Before generation — the preview grid empty', 'A large consignment, where the preview cannot show every sticker', 'No printer paired, or the printer offline', 'A print failing part-way through the roll', 'Reprinting a single damaged or mispasted sticker'],
+      detailNotSpecified: ['Whether printing can happen at the bay or only from an office terminal', 'Whether a generated reference can be voided, and what happens to the gap in the sequence', 'Whether the count can be increased after printing when extra boxes appear', 'The physical label specification — size, material, adhesive, print resolution'],
+      mostImportant: 'Nothing verifies that sticker BX-0006 went onto the sixth box rather than the ninth. The reference is meaningful only if the paste order is correct, and the paste is done by hand on a moving dock. Every downstream claim that names a box depends on an unverifiable manual step, which is worth stating plainly before the approach is configured for a warehouse.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6g \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+  'screen-6h': {
+    group: 'IN-D · Unload Exceptions',
+    eyebrow: 'IN-D',
+    screenId: 'Screen 6h',
+    screenName: 'Update Box Condition — printed sticker',
+    headline: 'The sticker changes how a box is identified, never how it is handled',
+    intro: 'FR-008.7 states it directly: condition assessment, the open delivery recommendation, mandatory photo capture, remarks and the Recent Box Entries log behave identically to FR-006 and FR-007. This screen is Screen 6e with one change — the reference in the header was issued by the system, not by the supplier, and the screen says so.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6h', 'FR-008', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Rugged handheld, 412 \u00d7 880 dp. Drawn in the Damaged state, matching Screen 6e, so the two can be compared directly.',
+    caption: 'Screen 6h \u00b7 Condition, printed sticker',
+    markers: [{
+      n: 1,
+      x: -1,
+      y: 5
+    }, {
+      n: 2,
+      x: 101,
+      y: 9
+    }, {
+      n: 3,
+      x: -1,
+      y: 21
+    }, {
+      n: 4,
+      x: 101,
+      y: 30
+    }, {
+      n: 5,
+      x: -1,
+      y: 56
+    }, {
+      n: 6,
+      x: 101,
+      y: 82
+    }, {
+      n: 7,
+      x: -1,
+      y: 96
+    }],
+    items: [{
+      n: 1,
+      label: 'Printed Sticker Scanned',
+      ref: 'FR-008.6, \u00a711.4',
+      control: 'Read-only header',
+      description: 'The temporary box reference with a sub-label distinguishing it from a supplier-issued box number. The scan confirms the sticker was pasted and read back successfully — the moment the box acquires an identity.'
+    }, {
+      n: 2,
+      label: 'System-generated, not supplier-issued',
+      ref: 'FR-008.8',
+      control: 'Sub-label',
+      description: 'Each temporary reference is flagged as system-generated so that reconciliation, returns and any subsequent claim against the supplier do not treat it as a manifest reference. A supplier told "carton BX-0006 was crushed" will not recognise the number, and the claim has to describe the box some other way.',
+      proposal: 'Stating it on the condition screen is ours. FR-008.8 requires the flag in the data; it does not require it to be visible. The operator raising the exception is the person who will later be asked what the number means.'
+    }, {
+      n: 3,
+      label: 'Update quality before saving.',
+      ref: 'FR-008.6',
+      control: 'Static notice',
+      description: 'A condition assessment is required for every box under this approach, as it is under FR-007.4 — the sticker gives the box an identity, which is precisely what makes a per-box assessment possible.'
+    }, {
+      n: 4,
+      label: 'Box Condition',
+      ref: 'FR-008.7, FR-006.4',
+      control: 'Radio group, six options',
+      description: 'The same six conditions, unchanged: OK, Packing Tampered, Damaged, Visible Scratch, Without Packing, Wrong Delivery.'
+    }, {
+      n: 5,
+      label: 'Open Delivery, Photo, Remarks',
+      ref: 'FR-008.7',
+      control: 'Toggle, camera capture, text',
+      description: 'Identical to Screen 6e and Screen 6b. The recommendation fires on a damaging condition, the photograph is mandatory where the condition is other than OK, and remarks stay optional at 250 characters.'
+    }, {
+      n: 6,
+      label: 'Recent Box Entries',
+      ref: '\u00a711.4',
+      control: 'Scrollable log',
+      description: 'Processed boxes with reference, quality, status and timestamp. Under this approach every entry carries a system-generated reference, so the log is a record of the identities the system created rather than of identities it read.'
+    }, {
+      n: 7,
+      label: 'Cancel and Save Condition',
+      ref: '\u00a711.4',
+      control: 'Pinned action bar',
+      description: 'Cancel discards the assessment; Save Condition commits it and returns to scanning.'
+    }],
+    missing: {
+      intro: 'Only the Damaged state is drawn. What follows from the sticker approach specifically:',
+      statesNotDrawn: ['A sticker scanned that was never generated for this GEN', 'The same sticker scanned twice', 'A box found with no sticker after unloading finished', 'OK selected, with the conditional controls collapsed'],
+      detailNotSpecified: ['Whether a temporary reference persists beyond the inward process, onto the bin and into stock records', 'Whether the reference appears on a claim document, and how it is explained to the supplier', 'What links a temporary reference to the part it eventually turns out to contain', 'Whether two consignments from the same supplier can reuse a reference'],
+      mostImportant: 'FR-008.9 says the reference lives for the rest of the box\u2019s life in the warehouse, but the FRD does not follow it past Consignment Check. If the reference stops there, the traceability the whole approach was built for ends at the point the box is opened — which is the point most inward disputes actually begin.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6h \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  }
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/handheldAnnotationsB2.js", error: String((e && e.message) || e) }); }
 
 // ui_kits/wms-inward/web/ConsignmentWeb.jsx
 try { (() => {
@@ -7587,7 +9389,7 @@ window.SC_PORTAL = {
   org: 'Deepmindz Innovations Pvt Ltd',
   client: 'SpareCare',
   title: 'WMS Inward Wireframes',
-  subtitle: 'Gate Entry to Unloading',
+  subtitle: 'Gate Entry to Unload Exceptions',
   version: 'v1',
   backLabel: '\u2190 Back to SpareCare overview',
   backHref: '#',
@@ -7685,6 +9487,50 @@ window.SC_PORTAL = {
     }]
   }, {
     code: 'IN-D',
+    name: 'UNLOAD EXCEPTIONS',
+    items: [{
+      idx: '11',
+      id: 'screen-6d',
+      ref: 'Screen 6d',
+      name: 'Unload without shipment document',
+      fr: 'FR-007',
+      file: 'screens/screen-6d-no-shipment-doc.html',
+      modes: true
+    }, {
+      idx: '12',
+      id: 'screen-6e',
+      ref: 'Screen 6e',
+      name: 'Box condition \u2014 no shipment document',
+      fr: 'FR-007',
+      file: 'screens/screen-6e-box-condition-no-doc.html',
+      modes: true
+    }, {
+      idx: '13',
+      id: 'screen-6f',
+      ref: 'Screen 6f',
+      name: 'Counter approach \u2014 boxes not scannable',
+      fr: 'FR-007',
+      file: 'screens/screen-6f-counter-unload.html',
+      modes: true
+    }, {
+      idx: '14',
+      id: 'screen-6g',
+      ref: 'Screen 6g',
+      name: 'Print box stickers',
+      fr: 'FR-008',
+      file: 'screens/screen-6g-print-stickers.html',
+      modes: true
+    }, {
+      idx: '15',
+      id: 'screen-6h',
+      ref: 'Screen 6h',
+      name: 'Box condition \u2014 printed sticker',
+      fr: 'FR-008',
+      file: 'screens/screen-6h-box-condition-sticker.html',
+      modes: true
+    }]
+  }, {
+    code: 'IN-E',
     name: 'REFERENCE',
     items: [{
       idx: '',
