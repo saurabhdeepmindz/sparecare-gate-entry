@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Click-through prototype · SpareCare WMS Inward</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>End-to-end prototype · SpareCare WMS Inward</title>
 <link rel="stylesheet" href="../../styles.css">
 <script>window.SC_ASSET_BASE='../..'</script>
 <script src="https://unpkg.com/lucide@0.446.0/dist/umd/lucide.min.js"></script>
@@ -7,66 +7,199 @@
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <script src="../../_ds_bundle.js"></script>
 <script src="../boot.js"></script>
-<script src="../../ui_kits/wms-inward/web/webAnnotations.js"></script>
-<style>html,body{margin:0}body{background:var(--anno-canvas);min-width:1380px}a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}</style>
+<style>
+html,body{margin:0}body{background:var(--anno-canvas);min-width:1380px}a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}
+@keyframes scPulse{0%{box-shadow:0 0 0 0 rgba(90,159,163,.55)}70%{box-shadow:0 0 0 8px rgba(90,159,163,0)}100%{box-shadow:0 0 0 0 rgba(90,159,163,0)}}
+.sc-stage :is(button,a[href],input,select,textarea,[role="switch"]){transition:outline-color var(--dur-fast) var(--ease-standard)}
+.sc-rail button,.sc-bar button{white-space:nowrap}
+.sc-hot :is(button,a[href],input,select,textarea,[role="switch"]):not([disabled]){outline:2px solid rgba(90,159,163,.8);outline-offset:2px}
+.sc-flash :is(button,a[href],input,select,textarea,[role="switch"]):not([disabled]){animation:scPulse 1100ms var(--ease-standard) 2}
+.sc-next{outline:2.5px solid var(--sc-teal-deep)!important;outline-offset:3px!important;animation:scPulse 1300ms var(--ease-standard) infinite!important}
+</style>
 </head><body><div id="root"></div>
 <script type="text/babel" src="../../ui_kits/wms-inward/web/WebShell.jsx"></script>
 <script type="text/babel" src="../../ui_kits/wms-inward/web/DashboardWeb.jsx"></script>
 <script type="text/babel" src="../../ui_kits/wms-inward/web/GateEntryWeb.jsx"></script>
 <script type="text/babel" src="../../ui_kits/wms-inward/web/ConsignmentWeb.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen4aReceipt.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6aScan.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6bCondition.jsx"></script>
 <script type="text/babel">
-SCBoot(['BrowserChrome','InfoNote','WebShell','DashboardWeb','GateEntryWeb','ConsignmentWeb'],function(NS){
-  const {BrowserChrome,InfoNote}=NS;
-  const DEFAULT_STEPS=[
-    {id:'unload',label:'Unload Truck & Check Primary Boxes',checked:true},
-    {id:'secondary',label:'Check Secondary Boxes',checked:true},
-    {id:'binning',label:'Binning',checked:true},
-    {id:'receipt',label:'Receipt Confirmation',checked:true}
-  ];
-  const URLS={dash:'wms.sparecare.in/inward/dashboard',gate:'wms.sparecare.in/inward/gate-entry',cons:'wms.sparecare.in/inward/consignment-details'};
+SCBoot(['BrowserChrome','RuggedFrame','InfoNote','Button','Icon','WebShell','DashboardWeb','GateEntryWeb','ConsignmentWeb','Screen4aReceipt','Screen6aScan','Screen6bCondition'],function(NS){
+const {BrowserChrome,RuggedFrame,InfoNote,Button,Icon}=NS;
 
-  function App(){
-    const [screen,setScreen]=React.useState('dash');
-    const [d1,setD1]=React.useState({});
-    const [d2,setD2]=React.useState({});
-    const [gen,setGen]=React.useState(null);
-    const [steps,setSteps]=React.useState(DEFAULT_STEPS);
-    const [queue,setQueue]=React.useState('unload');
-    const [bucket,setBucket]=React.useState('Last 7 days');
-    const set1=(k,v)=>setD1(p=>({...p,[k]:v}));
-    const set2=(k,v)=>setD2(p=>({...p,[k]:v}));
-    const ready=!!(d1.person&&d1.contact);
-    const create=()=>{const n='GEN-2026-08-12-'+(Math.floor(Math.random()*9000)+1000);setGen(n);setD2(p=>({...p,gen:n,supplier:d1.supplier,courier:d1.courier}));};
-    const reset=()=>{setD1({});setD2({});setGen(null);setSteps(DEFAULT_STEPS);setScreen('dash');};
+const STEPS=[
+  {id:'dash',  surface:'web', label:'Inward Dashboard',   ref:'Screen 3',  url:'wms.sparecare.in/inward/dashboard',            next:'Create Gate Entry',      caption:null},
+  {id:'gate',  surface:'web', label:'Gate Entry',         ref:'Screen 1',  url:'wms.sparecare.in/inward/gate-entry',           next:'Create Gate Entry',      caption:null},
+  {id:'cons',  surface:'web', label:'Consignment Details',ref:'Screen 2',  url:'wms.sparecare.in/inward/consignment-details',  next:'Start receipt process',  caption:null},
+  {id:'receipt',surface:'hh', label:'Receipt Details',    ref:'Screen 4a', url:null, next:'Next',            caption:'Screen 4a · Receipt Details'},
+  {id:'scan',  surface:'hh',  label:'Box scanning',       ref:'Screen 6a', url:null, next:null,              caption:'Screen 6a · Box scanning'},
+  {id:'cond',  surface:'hh',  label:'Box condition',      ref:'Screen 6b', url:null, next:'Save Condition',  caption:'Screen 6b · Box condition'}
+];
+const DEFAULT_STEPS=[
+  {id:'unload',label:'Unload Truck & Check Primary Boxes',checked:true},
+  {id:'secondary',label:'Check Secondary Boxes',checked:true},
+  {id:'binning',label:'Binning',checked:true},
+  {id:'receipt',label:'Receipt Confirmation',checked:true}
+];
+const BOX_ROWS=[
+  {box:'BX-00015',quality:'Visible Scratch',status:'\u26A0',time:'09:41'},
+  {box:'BX-00014',quality:'OK',status:'\u2713',time:'09:38'},
+  {box:'BX-00013',quality:'Packing Tampered',status:'\u26A0',time:'09:28'},
+  {box:'BX-00012',quality:'Damaged',status:'\u2715',time:'09:24'},
+  {box:'BX-00011',quality:'OK',status:'\u2713',time:'09:12'}
+];
+const INVOICES=[
+  {no:'INV1001',date:'11-08-2026',amount:'45,000',received:'\u2713',amountValue:45000},
+  {no:'INV1002',date:'11-08-2026',amount:'52,500',received:'\u2713',amountValue:52500},
+  {no:'INV1003',date:'12-08-2026',amount:'27,500',received:'\u2014',amountValue:27500}
+];
 
-    return (
-      <div style={{padding:'var(--sp-4)'}}>
-        <div style={{maxWidth:'1356px',margin:'0 auto var(--sp-2)'}}>
-          <InfoNote>Walk the flow: press <b>Create Gate Entry</b> on the dashboard, enter a driver name and contact number, then continue through Consignment Details and back to the dashboard. Nothing is saved.</InfoNote>
+function Rail({index,onJump}){
+  return (
+    <ol className="sc-rail" style={{display:'flex',flexWrap:'wrap',gap:'6px',listStyle:'none',margin:0,padding:0,justifyContent:'center'}}>
+      {STEPS.map((s,i)=>{
+        const done=i<index,active=i===index;
+        return (
+          <li key={s.id} style={{display:'flex',alignItems:'center',gap:'6px'}}>
+            {i===3&&<span style={{display:'inline-flex',alignItems:'center',gap:'5px',font:'var(--type-caption)',color:'var(--sc-grey-500)',padding:'0 6px'}}>
+              <Icon name="arrow-right" size={13}/>desk to dock<Icon name="arrow-right" size={13}/>
+            </span>}
+            <button type="button" onClick={()=>onJump(i)}
+              style={{display:'inline-flex',alignItems:'center',gap:'7px',font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'6px 12px',borderRadius:'var(--r-pill)',cursor:'pointer',transition:'var(--transition-interactive)',
+                border:'1px solid '+(active?'var(--sc-teal)':done?'var(--border-field)':'var(--border-default)'),
+                background:active?'var(--sc-teal-deep)':done?'var(--surface-sunken)':'var(--surface-card)',
+                color:active?'#fff':done?'var(--sc-teal-deep)':'var(--sc-grey-600)'}}>
+              <Icon name={s.surface==='web'?'monitor':'smartphone'} size={13}/>
+              <span style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-micro)',opacity:.85}}>{s.ref}</span>
+              {s.label}
+            </button>
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+function App(){
+  const [i,setI]=React.useState(0);
+  const [hot,setHot]=React.useState(false);
+  const [flash,setFlash]=React.useState(false);
+  const [gen,setGen]=React.useState(null);
+  const [d1,setD1]=React.useState({});
+  const [d2,setD2]=React.useState({});
+  const [d4,setD4]=React.useState({});
+  const [invOpen,setInvOpen]=React.useState(false);
+  const [invoices,setInvoices]=React.useState([]);
+  const [steps,setSteps]=React.useState(DEFAULT_STEPS);
+  const [queue,setQueue]=React.useState('unload');
+  const [bucket,setBucket]=React.useState('Last 7 days');
+  const [box,setBox]=React.useState('');
+  const [activeBox,setActiveBox]=React.useState('BX-00012');
+  const [sel,setSel]=React.useState(['damaged']);
+  const [od,setOd]=React.useState(true);
+  const [photo,setPhoto]=React.useState(false);
+  const [remarks,setRemarks]=React.useState('');
+  const stage=React.useRef(null);
+
+  const step=STEPS[i];
+  const set1=(k,v)=>setD1(p=>({...p,[k]:v}));
+  const set2=(k,v)=>setD2(p=>({...p,[k]:v}));
+  const set4=(k,v)=>setD4(p=>({...p,[k]:v}));
+  const ready=!!(d1.person&&d1.contact);
+  const notOk=sel.some(s=>s!=='ok');
+
+  /* Mark the next action in the flow, so hotspots suggest a path rather than
+     offering a dozen equal targets. */
+  React.useEffect(()=>{
+    const el=stage.current; if(!el) return;
+    el.querySelectorAll('.sc-next').forEach(n=>n.classList.remove('sc-next'));
+    if(!(hot||flash)||!step.next) return;
+    const btn=[...el.querySelectorAll('button,a[href]')].find(b=>(b.textContent||'').trim().indexOf(step.next)>-1);
+    if(btn) btn.classList.add('sc-next');
+  },[hot,flash,i,gen,ready,notOk,photo]);
+
+  const onStageClick=e=>{
+    if(e.target.closest('button,a[href],input,select,textarea,[role="switch"],tr')) return;
+    setFlash(true); window.setTimeout(()=>setFlash(false),2300);
+  };
+
+  const reset=()=>{setI(0);setGen(null);setD1({});setD2({});setD4({});setInvoices([]);setSteps(DEFAULT_STEPS);setSel(['damaged']);setPhoto(false);setRemarks('');setBox('');};
+  const create=()=>{const n='GEN-2026-08-12-'+(Math.floor(Math.random()*9000)+1000);setGen(n);setD2(p=>({...p,gen:n,supplier:d1.supplier,courier:d1.courier}));};
+
+  const chrome=(child)=>step.surface==='web'
+    ? <BrowserChrome url={step.url}>{child}</BrowserChrome>
+    : <RuggedFrame caption={step.caption}>{child}</RuggedFrame>;
+
+  let screen=null;
+  if(step.id==='dash') screen=<window.DashboardWeb queue={queue} setQueue={setQueue} bucket={bucket} setBucket={setBucket} onCreate={()=>setI(1)}/>;
+  if(step.id==='gate') screen=<window.GateEntryWeb state={d1} set={set1} gen={gen}
+      onNext={()=>{ if(!gen){ if(ready) create(); } else setI(2); }} onCancel={()=>setI(0)}/>;
+  if(step.id==='cons') screen=<window.ConsignmentWeb state={d2} set={set2} steps={steps} gen={gen}
+      onToggle={id=>setSteps(p=>p.map(s=>s.id===id?{...s,checked:!s.checked}:s))}
+      genOptions={gen?[gen]:['GEN-2025-05-20-0012']}
+      onBack={()=>setI(1)} onNext={()=>setI(3)} onStepClick={n=>{ if(n===0) setI(1); }}/>;
+  if(step.id==='receipt') screen=<window.Screen4aReceipt state={d4} set={set4} invoices={invoices}
+      openInvoice={invOpen} onToggleInvoice={()=>setInvOpen(o=>!o)}
+      onAddNext={()=>setInvoices(INVOICES.slice(0,invoices.length+1))}
+      onBack={()=>setI(2)} onNext={()=>setI(4)}/>;
+  if(step.id==='scan') screen=<window.Screen6aScan box={box} setBox={setBox} rows={BOX_ROWS}
+      unloaded={18} expected={Number(d4.boxes)||50} ok={14} notOk={4}
+      onBoxTap={r=>{setActiveBox(r.box);setI(5);}} onSave={()=>setI(0)} onFinish={()=>setI(0)} onBack={()=>setI(3)}/>;
+  if(step.id==='cond') screen=<window.Screen6bCondition boxNo={activeBox} selected={sel}
+      onToggle={id=>setSel(p=>id==='ok'?['ok']:(p.includes(id)?p.filter(x=>x!==id):[...p.filter(x=>x!=='ok'),id]))}
+      openDelivery={od} setOpenDelivery={setOd} photo={photo} onCapture={()=>setPhoto(p=>!p)}
+      remarks={remarks} setRemarks={setRemarks} recent={BOX_ROWS.slice(2)}
+      onSave={()=>setI(4)} onCancel={()=>setI(4)}/>;
+
+  const hint=step.id==='gate'&&!gen
+    ? (ready?'Press Create Gate Entry to generate the GEN.':"Enter a driver name and contact number \u2014 they are the only mandatory fields.")
+    : step.id==='scan' ? 'Tap any row in Recent Box Entries to open its condition record.'
+    : step.id==='cond' ? (notOk&&!photo?'Save is blocked until a photograph is captured \u2014 FR-006.5 requires it for any non-OK condition.':'Condition recorded. Save returns to scanning.')
+    : step.id==='receipt' ? 'Open Capture Invoice Details and press Add Next to build the invoice summary.'
+    : step.id==='dash' ? 'Work starts here. Press Create Gate Entry, top right.'
+    : null;
+
+  return (
+    <div style={{padding:'var(--sp-3) var(--sp-4) var(--sp-5)'}}>
+      <div style={{maxWidth:'1380px',margin:'0 auto'}}>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:'var(--sp-3)',flexWrap:'wrap',marginBottom:'var(--sp-2)'}}>
+          <div style={{display:'flex',alignItems:'center',gap:'10px'}}>
+            <span style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-micro)',fontWeight:'var(--fw-semibold)',letterSpacing:'.06em',color:'var(--sc-teal-deep)',background:'var(--surface-sunken)',border:'1px solid var(--border-field)',borderRadius:'var(--r-sharp)',padding:'3px 8px'}}>{step.surface==='web'?'WEB SURFACE':'HANDHELD SURFACE'}</span>
+            <span style={{font:'var(--type-caption)',color:'var(--sc-grey-600)'}}>{step.surface==='web'?'Desk work \u2014 no scanning (FR-032.5)':'Rugged terminal, 412 \u00d7 880 dp \u2014 scanning and physical handling (FR-032.6)'}</span>
+          </div>
+          <div className="sc-bar" style={{display:'flex',gap:'10px',alignItems:'center'}}>
+            <button type="button" onClick={()=>setHot(h=>!h)} aria-pressed={hot}
+              style={{display:'inline-flex',alignItems:'center',gap:'7px',font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'7px 13px',borderRadius:'var(--r-sharp)',cursor:'pointer',transition:'var(--transition-interactive)',
+                border:'1px solid '+(hot?'var(--sc-teal)':'var(--border-default)'),
+                background:hot?'var(--sc-teal-deep)':'var(--surface-card)',color:hot?'#fff':'var(--sc-grey-600)'}}>
+              <Icon name="mouse-pointer-click" size={14}/>{hot?'Hotspots on':'Show hotspots'}
+            </button>
+            <button type="button" onClick={reset}
+              style={{font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'7px 13px',borderRadius:'var(--r-sharp)',border:'1px solid var(--border-default)',background:'var(--surface-card)',color:'var(--sc-grey-600)',cursor:'pointer'}}>Start over</button>
+          </div>
         </div>
-        <div style={{maxWidth:'1356px',margin:'0 auto 10px',display:'flex',justifyContent:'flex-end'}}>
-          <button type="button" onClick={reset} style={{font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'6px 13px',borderRadius:'var(--r-sharp)',border:'1px solid var(--border-default)',background:'var(--surface-card)',color:'var(--sc-grey-600)',cursor:'pointer'}}>Start over</button>
+
+        <div style={{marginBottom:'var(--sp-2)'}}><Rail index={i} onJump={setI}/></div>
+
+        {(hint||hot)&&<div style={{maxWidth:'820px',margin:'0 auto var(--sp-2)'}}>
+          <InfoNote tone={step.id==='cond'&&notOk&&!photo?'warn':'info'}>
+            {hot?'Everything outlined is clickable. The strongest outline is the next step in the flow. ':''}{hint}
+          </InfoNote>
+        </div>}
+
+        <div ref={stage} className={'sc-stage'+(hot?' sc-hot':'')+(flash?' sc-flash':'')} onClick={onStageClick}
+          style={{display:'flex',justifyContent:'center',cursor:hot?'default':'pointer'}}>
+          {chrome(screen)}
         </div>
-        <div style={{display:'flex',justifyContent:'center'}}>
-          {screen==='dash'&&<BrowserChrome url={URLS.dash}>
-            <window.DashboardWeb queue={queue} setQueue={setQueue} bucket={bucket} setBucket={setBucket} onCreate={()=>setScreen('gate')}/>
-          </BrowserChrome>}
-          {screen==='gate'&&<BrowserChrome url={URLS.gate}>
-            <window.GateEntryWeb state={d1} set={set1} gen={gen}
-              onNext={()=>{ if(!gen){ if(ready) create(); } else setScreen('cons'); }}
-              onCancel={()=>setScreen('dash')}/>
-          </BrowserChrome>}
-          {screen==='cons'&&<BrowserChrome url={URLS.cons}>
-            <window.ConsignmentWeb state={d2} set={set2} steps={steps} gen={gen}
-              onToggle={id=>setSteps(p=>p.map(s=>s.id===id?{...s,checked:!s.checked}:s))}
-              genOptions={gen?[gen]:['GEN-2025-05-20-0012']}
-              onBack={()=>setScreen('gate')} onNext={()=>setScreen('dash')}
-              onStepClick={i=>{ if(i===0) setScreen('gate'); }}/>
-          </BrowserChrome>}
-        </div>
+
+        <p style={{textAlign:'center',font:'var(--type-caption)',color:'var(--sc-grey-500)',marginTop:'var(--sp-3)',maxWidth:'70ch',marginLeft:'auto',marginRight:'auto',lineHeight:1.55}}>
+          Click anywhere on the screen to flash the clickable areas. Nothing is saved. Illustrative and pre-approval &mdash; not agreed scope, and not a visual design.
+        </p>
       </div>
-    );
-  }
-  ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
 });
 </script></body></html>

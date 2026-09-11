@@ -32,7 +32,7 @@ window.SC_PORTAL = {
     {
       code: 'IN-D', name: 'REFERENCE',
       items: [
-        {idx:'', id:'prototype', ref:'', name:'Click-through prototype', fr:'FR-001 \u2192 FR-003', file:'screens/prototype.html', modes:false},
+        {idx:'', id:'prototype', ref:'', name:'End-to-end click-through prototype', fr:'FR-001 \u2192 FR-006', file:'screens/prototype.html', modes:false},
         {idx:'', id:'open-issues', ref:'', name:'Open issues on these screens', fr:'\u00a744', file:'screens/open-issues.html', modes:false}
       ]
     }

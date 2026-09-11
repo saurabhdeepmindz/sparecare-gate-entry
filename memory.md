@@ -16,7 +16,7 @@ before the rest of Batch 1 (4b, 5A, 5b, 6c, Consolidated Unloading View).
 | Screen 1 — Gate Entry, web | `web-portal/screens/screen-1-gate-entry.html` |
 | Screen 2 — Consignment Details, web | `web-portal/screens/screen-2-consignment-details.html` |
 | Screen 3 — Inward Dashboard, web | `web-portal/screens/screen-3-inward-dashboard.html` |
-| Click-through prototype | `web-portal/screens/prototype.html` |
+| End-to-end prototype | `web-portal/screens/prototype.html` — six steps, switches from browser chrome to rugged frame at the desk-to-dock handover; hotspots toggle plus click-anywhere flash |
 | Open issues page | `web-portal/screens/open-issues.html` |
 | Web screen components | `ui_kits/wms-inward/web/` — `WebShell`, `GateEntryWeb`, `ConsignmentWeb`, `DashboardWeb` |
 | Web callout data | `ui_kits/wms-inward/web/webAnnotations.js` |
@@ -95,6 +95,9 @@ suggested for `.gitignore`.
 - Handheld showcase (4a, 6a, 6b): **built**, awaiting review.
 - Retrofit of Screens 1–3: **done**.
 - Customer approval of Screens 1–3: **not yet given**.
+- Prototype: user chose **one end-to-end flow only**. Separate web-only and handheld-only
+  modes were discussed and deferred — add them as modes of the same file if asked, never as
+  separate files (they would drift).
 
 ### Raised in the Screen 6b annotations, needs an answer
 
