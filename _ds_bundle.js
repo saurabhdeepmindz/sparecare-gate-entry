@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/RuggedFrame.jsx":"1e86457d4cb4","components/annotation/WireframeDoc.jsx":"d5dccb947ef9","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"b325f3aae20e","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"8cc1e7835bcc","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"275cfe6856e4","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"6e0a5e88bf52","ui_kits/wms-inward/handheld/handheldAnnotations.js":"88dc1e02f4fd","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"58d256a9b8e3","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"3fca7faa6103","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"203557b66f59"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/RuggedFrame.jsx":"1e86457d4cb4","components/annotation/WireframeDoc.jsx":"d5dccb947ef9","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"b325f3aae20e","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"8cc1e7835bcc","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"275cfe6856e4","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"6e0a5e88bf52","ui_kits/wms-inward/handheld/handheldAnnotations.js":"88dc1e02f4fd","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"48b4f1f5f5b8","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"198cb65106d1","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"203557b66f59"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -4661,29 +4661,174 @@ const {
   Icon
 } = window.SpareCareDesignSystem_556483;
 const BUCKETS = ['Last 7 days', 'Last 15 days', 'Last 30 days', '60 days and over'];
-const ROWS = {
+
+/* Synthetic consignments with an age in days, so the aging buckets filter real rows.
+   FR-003.7 defines the buckets as last 7 / 15 / 30 days and 60 days and over — the first
+   three are cumulative windows, the fourth is the overdue tail. The binning queue carries
+   the backlog deliberately: FR-003.6 exists because a large warehouse accumulates
+   un-binned consignments that a flat count never surfaces. */
+const POOL = {
   unload: [{
-    gen: 'GEN001234',
-    date: '22-10-2023',
+    days: 0,
+    gen: 'GEN-000851',
+    date: '12-08-2026',
     supplier: 'ABC Supplies Pvt. Ltd.',
-    age: '4 h 20 m',
-    value: '100,000'
-  }, {
-    gen: 'GEN001235',
-    date: '11-11-2023',
-    supplier: 'XYZ Auto Components',
     age: '1 h 05 m',
-    value: '12,345,679'
-  }],
-  check: [{
-    gen: 'GEN001335',
-    date: '01-11-2023',
+    value: '1,25,000'
+  }, {
+    days: 0,
+    gen: 'GEN-000850',
+    date: '12-08-2026',
+    supplier: 'Sundaram Brake Linings',
+    age: '4 h 20 m',
+    value: '3,42,600'
+  }, {
+    days: 2,
+    gen: 'GEN-000846',
+    date: '10-08-2026',
     supplier: 'XYZ Auto Components',
     age: '2 d 03 h',
-    boxes: '48'
+    value: '87,400'
+  }, {
+    days: 6,
+    gen: 'GEN-000839',
+    date: '06-08-2026',
+    supplier: 'Rane Madras Ltd.',
+    age: '6 d 11 h',
+    value: '12,34,500'
+  }, {
+    days: 11,
+    gen: 'GEN-000822',
+    date: '01-08-2026',
+    supplier: 'Bansal Auto Spares',
+    age: '11 d',
+    value: '64,200'
+  }, {
+    days: 24,
+    gen: 'GEN-000778',
+    date: '19-07-2026',
+    supplier: 'Lucas TVS',
+    age: '24 d',
+    value: '2,10,000'
+  }, {
+    days: 71,
+    gen: 'GEN-000612',
+    date: '02-06-2026',
+    supplier: 'Minda Industries',
+    age: '71 d',
+    value: '45,900'
   }],
-  bin: []
+  check: [{
+    days: 1,
+    gen: 'GEN-000849',
+    date: '11-08-2026',
+    supplier: 'ABC Supplies Pvt. Ltd.',
+    age: '1 d 02 h',
+    boxes: '48'
+  }, {
+    days: 4,
+    gen: 'GEN-000842',
+    date: '08-08-2026',
+    supplier: 'Sundaram Brake Linings',
+    age: '4 d 07 h',
+    boxes: '126'
+  }, {
+    days: 9,
+    gen: 'GEN-000831',
+    date: '03-08-2026',
+    supplier: 'Rane Madras Ltd.',
+    age: '9 d',
+    boxes: '22'
+  }, {
+    days: 13,
+    gen: 'GEN-000818',
+    date: '30-07-2026',
+    supplier: 'XYZ Auto Components',
+    age: '13 d',
+    boxes: '64'
+  }, {
+    days: 27,
+    gen: 'GEN-000771',
+    date: '16-07-2026',
+    supplier: 'Lucas TVS',
+    age: '27 d',
+    boxes: '9'
+  }, {
+    days: 63,
+    gen: 'GEN-000629',
+    date: '10-06-2026',
+    supplier: 'Bansal Auto Spares',
+    age: '63 d',
+    boxes: '31'
+  }, {
+    days: 88,
+    gen: 'GEN-000544',
+    date: '16-05-2026',
+    supplier: 'Minda Industries',
+    age: '88 d',
+    boxes: '7'
+  }],
+  bin: [{
+    days: 3,
+    gen: 'GEN-000844',
+    date: '09-08-2026',
+    supplier: 'Sundaram Brake Linings',
+    age: '3 d 04 h',
+    units: '1,240'
+  }, {
+    days: 12,
+    gen: 'GEN-000820',
+    date: '31-07-2026',
+    supplier: 'Rane Madras Ltd.',
+    age: '12 d',
+    units: '318'
+  }, {
+    days: 19,
+    gen: 'GEN-000801',
+    date: '24-07-2026',
+    supplier: 'ABC Supplies Pvt. Ltd.',
+    age: '19 d',
+    units: '2,905'
+  }, {
+    days: 29,
+    gen: 'GEN-000764',
+    date: '14-07-2026',
+    supplier: 'Lucas TVS',
+    age: '29 d',
+    units: '76'
+  }, {
+    days: 66,
+    gen: 'GEN-000620',
+    date: '07-06-2026',
+    supplier: 'Minda Industries',
+    age: '66 d',
+    units: '488'
+  }, {
+    days: 94,
+    gen: 'GEN-000521',
+    date: '10-05-2026',
+    supplier: 'Bansal Auto Spares',
+    age: '94 d',
+    units: '1,102'
+  }, {
+    days: 120,
+    gen: 'GEN-000447',
+    date: '14-04-2026',
+    supplier: 'XYZ Auto Components',
+    age: '120 d',
+    units: '233'
+  }]
 };
+const WINDOW = {
+  'Last 7 days': 7,
+  'Last 15 days': 15,
+  'Last 30 days': 30
+};
+function inBucket(row, bucket) {
+  if (bucket === '60 days and over') return row.days >= 60;
+  const max = WINDOW[bucket];
+  return max === undefined ? true : row.days <= max;
+}
 function AgingFilter({
   value,
   onChange
@@ -4709,6 +4854,7 @@ function AgingFilter({
     style: {
       font: 'var(--type-caption)',
       fontWeight: 'var(--fw-semibold)',
+      whiteSpace: 'nowrap',
       padding: '6px 13px',
       borderRadius: 'var(--r-pill)',
       cursor: 'pointer',
@@ -4740,6 +4886,13 @@ function DashboardWeb({
   onOpenRow,
   shellProps = {}
 }) {
+  const rows = {
+    unload: POOL.unload.filter(r => inBucket(r, bucket)),
+    check: POOL.check.filter(r => inBucket(r, bucket)),
+    bin: POOL.bin.filter(r => inBucket(r, bucket))
+  };
+  const overdue = bucket === '60 days and over';
+  const empty = t => overdue ? 'Nothing outstanding 60 days or more at this stage.' : 'Nothing ' + t + ' within ' + bucket.toLowerCase() + '.';
   return /*#__PURE__*/React.createElement(window.WebShell, _extends({
     active: 0,
     title: "Inward Operations Dashboard",
@@ -4769,7 +4922,7 @@ function DashboardWeb({
     }
   }, /*#__PURE__*/React.createElement(KpiTile, {
     label: "Pending for Unload",
-    value: 5,
+    value: rows.unload.length,
     unit: "Trucks",
     active: queue === 'unload',
     onClick: () => setQueue && setQueue('unload'),
@@ -4778,7 +4931,7 @@ function DashboardWeb({
     }
   }), /*#__PURE__*/React.createElement(KpiTile, {
     label: "Pending for Checking",
-    value: 5,
+    value: rows.check.length,
     unit: "GENs",
     active: queue === 'check',
     onClick: () => setQueue && setQueue('check'),
@@ -4787,7 +4940,7 @@ function DashboardWeb({
     }
   }), /*#__PURE__*/React.createElement(KpiTile, {
     label: "Pending for Binning",
-    value: 5,
+    value: rows.bin.length,
     unit: "GENs",
     active: queue === 'bin',
     onClick: () => setQueue && setQueue('bin'),
@@ -4819,9 +4972,10 @@ function DashboardWeb({
       label: 'Value',
       align: 'right'
     }],
-    rows: ROWS.unload,
-    minRows: 3,
+    rows: rows.unload,
+    minRows: Math.max(0, 3 - rows.unload.length),
     onRowClick: onOpenRow,
+    emptyLabel: empty('waiting to unload'),
     style: {
       marginBottom: 0
     }
@@ -4847,9 +5001,10 @@ function DashboardWeb({
       label: 'No. of Boxes',
       align: 'right'
     }],
-    rows: ROWS.check,
-    minRows: 3,
+    rows: rows.check,
+    minRows: Math.max(0, 3 - rows.check.length),
     onRowClick: onOpenRow,
+    emptyLabel: empty('awaiting consignment check'),
     style: {
       marginBottom: 0
     }
@@ -4875,9 +5030,9 @@ function DashboardWeb({
       label: 'No. of Units',
       align: 'right'
     }],
-    rows: ROWS.bin,
-    minRows: 3,
-    emptyLabel: "Nothing pending for binning at this location.",
+    rows: rows.bin,
+    minRows: Math.max(0, 3 - rows.bin.length),
+    emptyLabel: empty('awaiting binning'),
     style: {
       marginBottom: 0
     }
@@ -4885,7 +5040,8 @@ function DashboardWeb({
 }
 Object.assign(window, {
   DashboardWeb,
-  SC_AGING_BUCKETS: BUCKETS
+  SC_AGING_BUCKETS: BUCKETS,
+  SC_QUEUE_POOL: POOL
 });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/web/DashboardWeb.jsx", error: String((e && e.message) || e) }); }
 
@@ -5683,7 +5839,8 @@ window.SC_WEB_ANNO = {
       label: 'Aging buckets',
       ref: 'FR-003.6, .7, .8',
       control: 'Filter row',
-      description: 'Last 7 days, last 15 days, last 30 days, and 60 days and over. A filter over the existing pending queues rather than a new queue, so the operator can move from what is pending to what is pending and overdue. A large warehouse may carry a substantial binning backlog, and a flat count gives no indication which item has waited longest.'
+      description: 'Last 7 days, last 15 days, last 30 days, and 60 days and over. A filter over the existing pending queues rather than a new queue, so the operator can move from what is pending to what is pending and overdue. The tile counts move with the filter \u2014 they are counts of the filtered queue, not of everything.',
+      proposal: 'FR-003.7 names the four buckets but does not say how they behave. We have read the first three as cumulative windows \u2014 last 7 days includes the last 2 \u2014 and the fourth as the overdue tail, everything 60 days or older. Read the other way, each bucket would be an exclusive band and the counts would not add up the same. Worth confirming.'
     }, {
       n: 5,
       label: 'Waiting column',
