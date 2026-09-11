@@ -4,9 +4,9 @@ Updated 11 Sep 2026. Read `CLAUDE.md` first for rules and context; this file is 
 
 ## Status
 
-**Screens 1–3 (web) and the first three handheld screens (4a, 6a, 6b) are built.**
-Screens 1–3 have been retrofitted to the OCM annotation pattern. Awaiting customer approval
-before the rest of Batch 1 (4b, 5A, 5b, 6c, Consolidated Unloading View).
+**Batch 1 is complete.** Ten screens in the portal: Screens 1, 2, 3 on web; 4a, 4b, 5A, 5b,
+6a, 6b, 6c on the rugged handheld. Plus the consolidated unloading view (§9.6) and a
+ten-step end-to-end prototype. Awaiting customer approval before Batch 2.
 
 ## Built
 
@@ -20,8 +20,9 @@ before the rest of Batch 1 (4b, 5A, 5b, 6c, Consolidated Unloading View).
 | Open issues page | `web-portal/screens/open-issues.html` |
 | Web screen components | `ui_kits/wms-inward/web/` — `WebShell`, `GateEntryWeb`, `ConsignmentWeb`, `DashboardWeb` |
 | Web callout data | `ui_kits/wms-inward/web/webAnnotations.js` |
-| Handheld screens 4a / 6a / 6b | `web-portal/screens/screen-4a-receipt-details.html`, `screen-6a-box-scanning.html`, `screen-6b-box-condition.html` |
-| Handheld screen components | `ui_kits/wms-inward/handheld/` — `Screen4aReceipt`, `Screen6aScan`, `Screen6bCondition`, `handheldAnnotations.js` |
+| Handheld screens (7) | `web-portal/screens/` — `screen-4a-receipt-details`, `screen-4b-transporter-details`, `screen-5a-unload-initiation`, `screen-5b-transporter-check`, `screen-6a-box-scanning`, `screen-6b-box-condition`, `screen-6c-check-variance` |
+| Consolidated unloading view | `web-portal/screens/consolidated-unloading-view.html` — 6a/6b/6c side by side, filled, per §9.6. No callouts of its own. |
+| Handheld screen components | `ui_kits/wms-inward/handheld/` — `Screen4aReceipt`, `Screen4bTransporter`, `Screen5aUnloadInit`, `Screen5bTransporterCheck`, `Screen6aScan`, `Screen6bCondition`, `Screen6cVariance`, `handheldAnnotations.js` |
 | Handheld sheet for Screens 1–3 (secondary) | `ui_kits/wms-inward/index.html` + three screen JSX + `annotations.js` |
 | Foundations | `styles.css`, `tokens/` (8 files), 23 cards in `guidelines/` |
 | Components | `components/core/` (6), `components/wms/` (20), `components/annotation/` (9) |
@@ -29,11 +30,24 @@ before the rest of Batch 1 (4b, 5A, 5b, 6c, Consolidated Unloading View).
 
 Namespace for card HTML: `window.SpareCareDesignSystem_556483`.
 
-## Next work — awaiting approval of the three handheld screens
+## Next work — Batch 2, on approval
 
-The rest of Batch 1: **4b** (transporter details), **5A** (truck unload initiation),
-**5b** (Select GEN), **6c** (variance check), and the **Consolidated Unloading View**
-from §9.6. FRD §7 and §9 have been read; **§8 has not** — read it before drawing 5A/5b.
+Unload exceptions: Screens **6d, 6e, 6f** (unloading without a shipment document, FR-007)
+and **6g, 6h** (box sticker generation for non-scannable consignments, FR-008). Read FRD
+§10 and §11 first — neither has been read. `scraps/frd-media/image20.jpg` is the 6D/6E/6F
+composite and is the visual source.
+
+FRD sections read so far: §2–§9 (Screens 1 to 6c) and §33, §35, §36, §44.
+
+### Corrections applied in Batch 1, worth not undoing
+
+- **FR-004.5 / §7.5** — there is ONE invoice summary table and it lives on Screen 4b.
+  Screen 4a carries only a count-and-total strip.
+- **FR-005.10 / FR-005.11 / OI-070** — Find GEN Using Other Details is an in-screen panel
+  offering search criteria ONLY. The source board draws it as a separate screen carrying
+  supplier and invoice fields; that is wrong and was redrawn.
+- **FR-006.18** — unloading captures variance at primary box level only. Units on Screen 6c
+  come from document data, never from counting.
 
 ### Controls whose destination the FRD does not specify
 
@@ -68,9 +82,23 @@ disclaimer. Legend entries may carry `query` (amber OPEN QUERY box with an `OI-x
 optional `blocking`) and `proposal` (tinted OUR PROPOSAL — NOT STATED box). `ref` remains
 mandatory on every entry.
 
-Web screens put markers in the gutters (`x: -1` / `x: 101`). Handheld screens put them on
-the content, and the frame uses `fit` in annotated mode so it expands to full content
-height and every marker lands correctly.
+**All markers go in the gutters — web AND handheld — at `x: -1` / `x: 101`, alternating
+sides in reading order with `y` set to the row they name.** On-content placement was tried
+for handheld and withdrawn: markers landed on the very labels they annotated (the ship list
+filename, the Quality Variance row labels, the Document-wise Breakdown heading). Gutter
+placement makes the collision structurally impossible. There is ~48px of clear space each
+side of the handheld frame (30px `AnnotatedScreen` gutter + 18px `RuggedFrame` bezel),
+which comfortably holds a 26px circle.
+
+In annotated mode `RuggedFrame` takes `fit` so it expands to full content height and every
+marker is visible without scrolling.
+
+The lead sentence above the annotations is **derived** in `WireframeDoc` from
+`items.filter(i=>i.query)` and `items.filter(i=>i.proposal)` — never written by hand. Five
+screens once carried hand-written counts that disagreed with their own lists.
+
+`WireframeDoc` strips a leading copy of `eyebrow` from `group`, so the data can keep
+carrying `group:'IN-C · Receipt & Unload'` while the header renders the code once.
 
 ## Two FRD corrections to apply in Batch 1
 

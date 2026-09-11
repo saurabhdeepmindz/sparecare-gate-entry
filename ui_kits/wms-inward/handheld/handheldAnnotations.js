@@ -13,18 +13,17 @@ window.SC_HH_ANNO = {
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 4a', 'FR-004', 'Surface Handheld + Web', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Drawn for a rugged handheld in portrait, 412 \u00d7 880 dp \u2014 the 6-inch Android class (Zebra TC53/TC58, Honeywell CT45, Datalogic Memor 11). The full screen is shown here; the device crops at 880 dp and the operator scrolls.',
     caption: 'Screen 4a \u00b7 Receipt Details',
-    annotationsIntro: 'Ten decisions, each traced to a requirement. Two carry an open question, and one is a reading of the FRD we have made on your behalf.',
     markers: [
-      {n:1,  x:50,  y:6},
-      {n:2,  x:12,  y:12},
-      {n:3,  x:78,  y:20},
-      {n:4,  x:14,  y:28},
-      {n:5,  x:24,  y:37},
-      {n:6,  x:74,  y:37},
-      {n:7,  x:50,  y:44},
-      {n:8,  x:20,  y:51},
-      {n:9,  x:76,  y:66},
-      {n:10, x:50,  y:83}
+      {n:1, x:-1, y:6},
+      {n:2, x:101, y:12},
+      {n:3, x:-1, y:20},
+      {n:4, x:101, y:28},
+      {n:5, x:-1, y:37},
+      {n:6, x:101, y:37},
+      {n:7, x:-1, y:44},
+      {n:8, x:101, y:51},
+      {n:9, x:-1, y:66},
+      {n:10, x:101, y:83}
     ],
     items: [
       {n:1, label:'Receipt Details', ref:'\u00a77.1', control:'Screen header',
@@ -46,9 +45,9 @@ window.SC_HH_ANNO = {
        proposal:'The FRD establishes the precedence but does not require it to be surfaced in the interface. Putting it in front of the storekeeper at the moment he types the number is ours.'},
       {n:8, label:'Capture Invoice Details', ref:'\u00a77.3', control:'Collapsible accordion',
        description:'Invoice Number, Invoice Date and Total Invoice Amount, with an Add Next control to capture multiple invoices in sequence. Collapsed by default, because the operator should see the whole task before opening one part of it.'},
-      {n:9, label:'Details of the Invoices Added', ref:'FR-004.5, \u00a77.5', control:'Read-only summary table',
-       description:'Auto-populated from each invoice keyed above. Columns: Invoice No., Date, Amount, Received. The Total row sums all invoice amounts.',
-       proposal:'The walkthrough found this table described in two places and read as two tables. There is one. On the web surface the FRD puts it on the right-hand panel (Screen 4b); on a handheld there is no right-hand panel, so it renders once here beneath the entry it summarises.'},
+      {n:9, label:'Running invoice count', ref:'FR-004.5, \u00a77.5', control:'Summary strip',
+       description:'A count and running total only. The summary table itself renders on Screen 4b.',
+       proposal:'The walkthrough found the table described in two places and read as two tables. There is one, and FR-004.5 was corrected to place it on Screen 4b. We have followed that and left only a confirmation strip here, so the operator keying invoices can see the count without the table appearing twice.'},
       {n:10, label:'Save and Next', ref:'FR-004.5', control:'Pinned action bar',
        description:'Pressing Next without any invoice detail raises the confirmation "You have not added details of the invoices. Are you sure?" rather than blocking \u2014 invoices sometimes follow the goods.'}
     ],
@@ -84,19 +83,18 @@ window.SC_HH_ANNO = {
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6a', 'FR-006', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Rugged handheld, 412 \u00d7 880 dp. The scan field and the action bar are the two things reachable with a thumb; everything between them is read, not touched.',
     caption: 'Screen 6a \u00b7 Box scanning',
-    annotationsIntro: 'Eleven decisions. Three carry an open question, and two are readings of the FRD we have made on your behalf.',
     markers: [
-      {n:1,  x:50,  y:4},
-      {n:2,  x:16,  y:10},
-      {n:3,  x:78,  y:19},
-      {n:4,  x:30,  y:29},
-      {n:5,  x:88,  y:29},
-      {n:6,  x:16,  y:40},
-      {n:7,  x:68,  y:40},
-      {n:8,  x:50,  y:49},
-      {n:9,  x:50,  y:58},
-      {n:10, x:20,  y:70},
-      {n:11, x:50,  y:95}
+      {n:1, x:-1, y:4},
+      {n:2, x:101, y:10},
+      {n:3, x:-1, y:19},
+      {n:4, x:101, y:29},
+      {n:5, x:-1, y:29},
+      {n:6, x:101, y:40},
+      {n:7, x:-1, y:40},
+      {n:8, x:101, y:49},
+      {n:9, x:-1, y:58},
+      {n:10, x:101, y:70},
+      {n:11, x:-1, y:95}
     ],
     items: [
       {n:1, label:'Unload Truck', ref:'\u00a79.1', control:'Screen header',
@@ -158,17 +156,16 @@ window.SC_HH_ANNO = {
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6b', 'FR-006', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'The condition options are the six named in FR-006.4 and are multi-select \u2014 a box can be both tampered and scratched.',
     caption: 'Screen 6b \u00b7 Box condition',
-    annotationsIntro: 'Nine decisions. Two carry an open question, and two \u2014 including which screen number this is \u2014 are readings we have made on your behalf.',
     markers: [
-      {n:1,  x:50,  y:4},
-      {n:2,  x:20,  y:11},
-      {n:3,  x:50,  y:21},
-      {n:4,  x:24,  y:34},
-      {n:5,  x:76,  y:42},
-      {n:6,  x:50,  y:53},
-      {n:7,  x:76,  y:64},
-      {n:8,  x:20,  y:76},
-      {n:9,  x:50,  y:96}
+      {n:1, x:-1, y:4},
+      {n:2, x:101, y:11},
+      {n:3, x:-1, y:21},
+      {n:4, x:101, y:34},
+      {n:5, x:-1, y:42},
+      {n:6, x:101, y:53},
+      {n:7, x:-1, y:64},
+      {n:8, x:101, y:76},
+      {n:9, x:-1, y:96}
     ],
     items: [
       {n:1, label:'Update Box Condition', ref:'\u00a79.4, \u00a79.6', control:'Screen header', tone:'open',
@@ -215,3 +212,161 @@ window.SC_HH_ANNO = {
     footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6b \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
   }
 };
+
+/* ---- Batch 1, remainder: Screens 4b, 5A, 5b, 6c ---- */
+Object.assign(window.SC_HH_ANNO, {
+  'screen-4b': {
+    group:'IN-C · Receipt & Unload', eyebrow:'IN-C', screenId:'Screen 4b',
+    screenName:'Receipt Details — transporter and invoice summary',
+    headline:'Transporter Details — the number to call when something is wrong',
+    intro:'The second half of Receipt Details. It records who carried the consignment and holds the one invoice summary table, and it is the screen that matters weeks later when a damaged part turns up and somebody asks which vehicle brought it.',
+    chips:['Prepared by Deepmindz Innovations Pvt Ltd','Screen 4b','FR-004','Surface Handheld + Web','FRD v0.11','Illustrative only'],
+    sectionNote:'On the web surface the FRD draws 4a and 4b as the left and right panels of one board. A handheld has no right-hand panel, so the pair becomes a sequence.',
+    caption:'Screen 4b · Transporter Details',
+    markers: [{n:1, x:-1, y:5},{n:2, x:101, y:13},{n:3, x:-1, y:22},{n:4, x:101, y:33},{n:5, x:-1, y:44},{n:6, x:101, y:62},{n:7, x:-1, y:80},{n:8, x:101, y:95}],
+    items:[
+      {n:1,label:'Transporter Details',ref:'\u00a77.4',control:'Screen header',
+       description:'Reached from Receipt Details. Captures logistics and vehicle identification, and carries the invoice summary.'},
+      {n:2,label:'GEN and Document Number',ref:'\u00a77.3',control:'Read-only display',
+       description:'Carried forward from the previous screen so the operator knows which consignment is being recorded against.'},
+      {n:3,label:'Optional-by-design advisory',ref:'\u00a77.4',control:'Info note',
+       description:'The whole transporter block can be left blank if the details are not available at this stage, and completed at Truck Unload instead.'},
+      {n:4,label:'Capture Transporter Details',ref:'\u00a77.4',control:'Collapsible accordion',
+       description:'Transporter name from the registered list, with pre-registered transporters auto-filling related fields. Vehicle number as per GR documents, driver name and driver contact.'},
+      {n:5,label:'Vehicle Number as per GR Documents',ref:'\u00a77.4',control:'Text input',
+       description:'The number stated on the goods receipt. It may differ from the vehicle that actually arrives if the truck was changed en route, which is why Screen 5b captures the observed number separately.'},
+      {n:6,label:'Details of the Invoices Added',ref:'FR-004.5, \u00a77.5',control:'Read-only summary table',
+       description:'Auto-populated from the invoices keyed on Screen 4a. Columns: Invoice No., Date, Amount, Received. The Received checkbox marks each invoice as confirmed received, and the Total row sums the amounts.',
+       proposal:'The walkthrough found this table described in two places and read as two tables. There is one, and FR-004.5 was corrected to place it here. We have followed that and left only a one-line count on Screen 4a, rather than repeating the table.'},
+      {n:7,label:'GRN and Invoice uploads',ref:'\u00a77.4',control:'Image upload', tone:'open',
+       description:'Photographs of the goods receipt note and of one or more invoice documents.',
+       query:{text:'The picker is not specified \u2014 how many images may be attached, whether an upload can be replaced, and what happens when a capture fails.',ref:'\u00a77.4'}},
+      {n:8,label:'Validation states',ref:'\u00a77.4',control:'Toast and dialog',
+       description:'Three states are specified: Details Added Successfully in green, Failed! Please Try Again in red, and an amber confirmation when Next is pressed with no invoice details.',
+       proposal:'None of the three is drawn on this board. Pressing Next with no invoices should confirm rather than block \u2014 invoices sometimes follow the goods \u2014 but the wording and the recovery path are ours to propose.'}
+    ],
+    missing:{
+      intro:'What a build would still need to be told.',
+      statesNotDrawn:['The three validation states named in the field reference','A transporter not on the registered list','Received ticked on some invoices but not others','Offline \u2014 uploads queued rather than sent'],
+      detailNotSpecified:['Whether a new transporter can be created here or only chosen','Who may untick a Received invoice once ticked','Whether the GR vehicle number is validated in any way','File size and format limits on the uploads'],
+      mostImportant:'Nothing connects this record to the claim that eventually depends on it. The driver name, the phone number and the vehicle photograph exist precisely so that a damaged carton found the next morning can be traced to somebody. No screen in the specified set consumes that trail.'
+    },
+    footer:'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 4b \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+
+  'screen-5a': {
+    group:'IN-C · Receipt & Unload', eyebrow:'IN-C', screenId:'Screen 5A',
+    screenName:'Truck unload initiation and GEN selection',
+    headline:'Unload Truck — find the right consignment before touching the truck',
+    intro:'Nothing is unloaded until the system knows which consignment is being unloaded. The operator selects the gate entry, the consignment fills itself in, and the invoices being unloaded in this session are chosen. Getting this wrong puts the wrong goods against the wrong number, and that is difficult to unpick once the boxes are on the floor.',
+    chips:['Prepared by Deepmindz Innovations Pvt Ltd','Screen 5A','FR-005','Surface Handheld','FRD v0.11','Illustrative only'],
+    sectionNote:'Drawn per the Session 07 correction: the GEN lookup is a panel within this screen, not a screen of its own, and it offers search criteria only.',
+    caption:'Screen 5A · Unload Truck',
+    markers: [{n:1, x:-1, y:4},{n:2, x:101, y:10},{n:3, x:-1, y:17},{n:4, x:101, y:26},{n:5, x:-1, y:40},{n:6, x:101, y:54},{n:7, x:-1, y:70},{n:8, x:101, y:80},{n:9, x:-1, y:95}],
+    items:[
+      {n:1,label:'Unload Truck',ref:'\u00a78.1',control:'Screen header',
+       description:'The first unloading screen. Identifies the correct consignment before unloading commences.'},
+      {n:2,label:'Gate Entry Number',ref:'FR-005.1, FR-005.3',control:'Search dropdown with clear',
+       description:'Enter or select the GEN. On selection the system auto-populates GEN Date, Supplier Category, Supplier, Product Category, Primary Document Type, Document Number, Document Date and the associated invoices. The clear control resets the selection.'},
+      {n:3,label:'Find GEN Using Other Details',ref:'FR-005.10, FR-005.11, OI-070',control:'In-screen search panel',
+       description:'Opens over this screen. Search criteria only \u2014 Supplier Name, Supplier Category, Product Category, Document Number, Document Date and Status.',
+       proposal:'The source board draws this as a separate screen carrying supplier name, receipt date and invoice capture fields, none of which belongs to a search. We have redrawn it as an in-screen panel with criteria only, which is what FR-005.10 and FR-005.11 require. OI-070 records the board as still to be corrected.'},
+      {n:4,label:'Matching gate entries',ref:'FR-005.2',control:'Radio-button list',
+       description:'Each result shows the GEN code, supplier, date, document number and a Pending Docs count. The operator picks one and the panel closes with the consignment loaded.'},
+      {n:5,label:'Auto-populated consignment',ref:'FR-005.3',control:'Read-only display',
+       description:'Seven values fill themselves from the gate entry record. None is editable here \u2014 they were captured at Receipt Details, and this screen reads them rather than re-asking.'},
+      {n:6,label:'Select Documents to Unload',ref:'FR-005.4',control:'Multi-select dropdown',
+       description:'Specific invoices within the GEN may be unloaded in this session. A consignment does not have to arrive on one vehicle.'},
+      {n:7,label:'Document eligibility check',ref:'FR-005.7, FR-005.8, FR-005.9',control:'Rejection message',
+       description:'A document number that is not eligible for the selected gate entry is refused outright rather than accepted and reconciled later. The operator must enter or select the correct document before the unload can proceed.'},
+      {n:8,label:'Expected Boxes and Units',ref:'FR-005.4',control:'Counter strip', tone:'open',
+       description:'The expected counts for the selected invoices, which become the baseline for the unload.',
+       query:{text:'Where several invoices are selected, whether the expected box count is the sum of the invoices or the No. of Boxes in GEN recorded at Receipt Details is unstated \u2014 the same precedence problem as OI-066, one stage later.',ref:'OI-066',blocking:true}},
+      {n:9,label:'Next',ref:'FR-005.5',control:'Action bar',
+       description:'Proceeds to the transporter check. Disabled until a gate entry is selected \u2014 there is nothing to unload against without one.'}
+    ],
+    missing:{
+      intro:'What this board does not answer.',
+      statesNotDrawn:['No GEN selected \u2014 the screen before anything is chosen','The search returning no results','A GEN already partially unloaded in an earlier session','The rejection dialog for an ineligible document'],
+      detailNotSpecified:['Whether search results are limited to this warehouse or the whole business','What the Pending Docs count counts','Whether a GEN can be unloaded across two sessions and how the second one opens','Sort order of the search results'],
+      mostImportant:'Partial unloading is implied but never specified. FR-005.4 lets the operator unload specific invoices in this session, which means a consignment can be half received \u2014 but no screen shows what the second session looks like, what it treats as expected, or how the two reconcile against one GEN.'
+    },
+    footer:'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 5A \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+
+  'screen-5b': {
+    group:'IN-C · Receipt & Unload', eyebrow:'IN-C', screenId:'Screen 5b',
+    screenName:'Check transporter details before scanning',
+    headline:'Check Transporter Details — the vehicle that actually turned up',
+    intro:'The last screen before scanning starts. Everything is pre-filled from Receipt Details and everything is editable, because the truck on the paperwork and the truck at the dock are not always the same truck. The number plate is photographed for the same reason.',
+    chips:['Prepared by Deepmindz Innovations Pvt Ltd','Screen 5b','FR-005','Surface Handheld','FRD v0.11','Illustrative only'],
+    sectionNote:'Short by design. An operator standing at a truck should confirm four things and start scanning.',
+    caption:'Screen 5b · Transporter check',
+    markers: [{n:1, x:-1, y:5},{n:2, x:101, y:14},{n:3, x:-1, y:24},{n:4, x:101, y:38},{n:5, x:-1, y:50},{n:6, x:101, y:66},{n:7, x:-1, y:78}],
+    items:[
+      {n:1,label:'Check Transporter Details',ref:'\u00a78.4',control:'Screen header',
+       description:'The final step before box scanning begins.'},
+      {n:2,label:'Consignment context',ref:'FR-005.3',control:'Read-only display',
+       description:'GEN and supplier carried through from the selection made on Screen 5A.'},
+      {n:3,label:'Everything is editable',ref:'FR-005.5',control:'Info note',
+       description:'All fields are pre-filled from Screen 4b and all remain editable, to accommodate changes at the time of physical truck arrival.'},
+      {n:4,label:'Transporter and driver',ref:'\u00a78.4',control:'Dropdown and text inputs',
+       description:'Transporter name, driver name and driver contact number, each pre-filled if captured earlier.'},
+      {n:5,label:'Call the driver',ref:'\u00a78.4',control:'Phone action', tone:'open',
+       description:'A phone control beside the number so the operator can call from the terminal.',
+       query:{text:'Whether the call is placed by the device dialler, a softphone, or a masked number that protects the driver\u2019s privacy is not specified.',ref:'\u00a78.4'}},
+      {n:6,label:'Truck / Vehicle No. Reported',ref:'FR-005.6',control:'Text input + camera',
+       description:'The registration number as physically observed at the gate during unloading. This may differ from the number in the GR documents if the truck was changed en route, and both are kept.'},
+      {n:7,label:'Number plate photograph',ref:'FR-005.6',control:'Camera capture',
+       description:'Evidence of the actual vehicle present during unloading.',
+       proposal:'FR-005.6 supports the capture but does not require it. We have surfaced a mismatch warning when the reported number differs from the GR document, and made the photograph prominent rather than optional-looking, because a mismatch recorded without evidence is worth little in a claim.'}
+    ],
+    missing:{
+      intro:'What a build would still need.',
+      statesNotDrawn:['Nothing pre-filled \u2014 transporter never captured at Receipt Details','The camera view and a failed capture','Mismatch acknowledged and the unload proceeding anyway'],
+      detailNotSpecified:['Whether a vehicle mismatch requires a reason or an approval','Whether the photograph is mandatory when the numbers differ','Format validation on the registration number','Who is notified when the vehicle differs from the document'],
+      mostImportant:'A vehicle mismatch is drawn as a warning and nothing more. If the truck at the dock is not the truck on the paperwork, that is either routine or the beginning of a problem, and the specification does not say which \u2014 nor who decides.'
+    },
+    footer:'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 5b \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+
+  'screen-6c': {
+    group:'IN-C · Receipt & Unload', eyebrow:'IN-C', screenId:'Screen 6c',
+    screenName:'Check variance',
+    headline:'Check Variance — what came off the truck against what should have',
+    intro:'The close of the unloading session. Two boxes short of the document is a fact that has to exist somewhere before the vehicle leaves and the paperwork is filed. This screen is where it does, along with the condition of everything received and a printable record of both.',
+    chips:['Prepared by Deepmindz Innovations Pvt Ltd','Screen 6c','FR-006','Surface Handheld + Web','FRD v0.11','Illustrative only'],
+    sectionNote:'Specified for the handheld, but read by warehouse operations as much as by the operator who produced it \u2014 FR-032 notes that a report which only exists on a handheld is difficult to review.',
+    caption:'Screen 6c · Check Variance',
+    markers: [{n:1, x:-1, y:4},{n:2, x:101, y:13},{n:3, x:-1, y:26},{n:4, x:101, y:36},{n:5, x:-1, y:50},{n:6, x:101, y:64},{n:7, x:-1, y:80},{n:8, x:101, y:95}],
+    items:[
+      {n:1,label:'Check Variance',ref:'FR-006.9',control:'Screen header',
+       description:'Reached from Finish Truck Unload, which commits the session and flags any unscanned boxes as Balance.'},
+      {n:2,label:'Shortfall statement',ref:'FR-006.10',control:'Info note',
+       description:'States plainly how many boxes the session closed short, and that the shortfall is recorded against this GEN.',
+       proposal:'The FRD specifies the variance tables but not a plain statement above them. A storekeeper closing a truck at six in the morning should not have to read a table to learn there is a problem.'},
+      {n:3,label:'Quantity Variance',ref:'FR-006.9',control:'Read-only comparison table',
+       description:'As Per Document, Actual and Variance, at box level. A negative variance is red, a positive one amber, and zero green \u2014 traffic-light colours, outside the brand palette on purpose.'},
+      {n:4,label:'Units are not counted here',ref:'FR-006.18',control:'Explanatory note',
+       description:'Where a Units column appears it is derived from document data, not from physical counting. Unit-level verification and the resulting reconciliation happen at Consignment Check, because the transport vehicle cannot be held while every carton is opened.'},
+      {n:5,label:'Quality Variance',ref:'FR-006.9',control:'Summary table',
+       description:'Condition issues tabulated across all boxes in the consignment: Damage, Tampered Packaging, Scratch, Broken, Wrong Delivery, and a Total.'},
+      {n:6,label:'Unload Completion and Exception Summary',ref:'FR-006.16',control:'Status block',
+       description:'States whether the unload completed, how many boxes were marked as exceptions, and confirms that the associated open delivery actions have been enabled and handled.'},
+      {n:7,label:'Document-wise breakdown',ref:'FR-006.17, \u00a79.6',control:'Summary table', tone:'open',
+       description:'Expected, received and variance per invoice \u2014 named in the Print Summary contents and in the filled-state composite.',
+       query:{text:'The FRD names a document-wise breakdown in the printed record but gives it no field reference, so its columns are inferred. Confirm what it should carry.',ref:'FR-006.17'}},
+      {n:8,label:'Print Summary and Proceed',ref:'FR-006.17',control:'Action bar', tone:'open',
+       description:'Print Summary produces a printable record covering quantity variance, the document-wise breakdown, quality variance and the exception summary. Proceed moves the consignment to Consignment Check.',
+       query:{text:'Reconciliation of ordered quantity against quantity actually received is not captured during unloading. Confirm that the delta is established at Consignment Check when boxes are opened, and define where the shortfall is reported and to whom.',ref:'OI-012',blocking:true},
+       proposal:'The layout of the printed record is not specified. We have assumed it mirrors this screen.'}
+    ],
+    missing:{
+      intro:'What this board does not answer.',
+      statesNotDrawn:['Zero variance \u2014 everything received, nothing flagged','A positive variance, where more boxes arrived than the document lists','No exceptions at all','The printed record itself','The same report on the web surface'],
+      detailNotSpecified:['Who is notified of a shortfall, and when','Whether the variance can be disputed or amended after the session closes','Whether a shortfall blocks the consignment from proceeding','How a Set Aside box is represented in these counts'],
+      mostImportant:'Nothing here raises a claim. The screen establishes that two boxes are missing and that four arrived damaged, and then the flow moves on to Consignment Check. OI-023 records that the insurance claim workflow is undefined beyond the point of segregation \u2014 which means the most valuable output of the whole unloading process currently has no consumer.'
+    },
+    footer:'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6c \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  }
+});

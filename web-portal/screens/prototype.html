@@ -26,17 +26,25 @@ html,body{margin:0;height:100%}body{background:var(--anno-canvas);min-width:760p
 <script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen4aReceipt.jsx"></script>
 <script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6aScan.jsx"></script>
 <script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6bCondition.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen4bTransporter.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen5aUnloadInit.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen5bTransporterCheck.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6cVariance.jsx"></script>
 <script type="text/babel">
-SCBoot(['BrowserChrome','RuggedFrame','NotDrawnHost','InfoNote','Button','Icon','WebShell','DashboardWeb','GateEntryWeb','ConsignmentWeb','Screen4aReceipt','Screen6aScan','Screen6bCondition'],function(NS){
+SCBoot(['BrowserChrome','RuggedFrame','NotDrawnHost','InfoNote','Button','Icon','WebShell','DashboardWeb','GateEntryWeb','ConsignmentWeb','Screen4aReceipt','Screen4bTransporter','Screen5aUnloadInit','Screen5bTransporterCheck','Screen6aScan','Screen6bCondition','Screen6cVariance'],function(NS){
 const {BrowserChrome,RuggedFrame,NotDrawnHost,InfoNote,Button,Icon}=NS;
 
 const STEPS=[
   {id:'dash',  surface:'web', label:'Inward Dashboard',   ref:'Screen 3',  url:'wms.sparecare.in/inward/dashboard',            next:'Create Gate Entry',      caption:null},
   {id:'gate',  surface:'web', label:'Gate Entry',         ref:'Screen 1',  url:'wms.sparecare.in/inward/gate-entry',           next:'Create Gate Entry',      caption:null},
   {id:'cons',  surface:'web', label:'Consignment Details',ref:'Screen 2',  url:'wms.sparecare.in/inward/consignment-details',  next:'Start receipt process',  caption:null},
-  {id:'receipt',surface:'hh', label:'Receipt Details',    ref:'Screen 4a', url:null, next:'Next',            caption:'Screen 4a · Receipt Details'},
-  {id:'scan',  surface:'hh',  label:'Box scanning',       ref:'Screen 6a', url:null, next:null,              caption:'Screen 6a · Box scanning'},
-  {id:'cond',  surface:'hh',  label:'Box condition',      ref:'Screen 6b', url:null, next:'Save Condition',  caption:'Screen 6b · Box condition'}
+  {id:'receipt',surface:'hh', label:'Receipt Details',    ref:'Screen 4a', url:null, next:'Next',             caption:'Screen 4a · Receipt Details'},
+  {id:'transp',surface:'hh',  label:'Transporter Details',ref:'Screen 4b', url:null, next:'Next',             caption:'Screen 4b · Transporter Details'},
+  {id:'init',  surface:'hh',  label:'Unload initiation',  ref:'Screen 5A', url:null, next:'Next',             caption:'Screen 5A · Unload Truck'},
+  {id:'check', surface:'hh',  label:'Transporter check',  ref:'Screen 5b', url:null, next:'Start Unloading',  caption:'Screen 5b · Transporter check'},
+  {id:'scan',  surface:'hh',  label:'Box scanning',       ref:'Screen 6a', url:null, next:'Finish Unload',    caption:'Screen 6a · Box scanning'},
+  {id:'cond',  surface:'hh',  label:'Box condition',      ref:'Screen 6b', url:null, next:'Save Condition',   caption:'Screen 6b · Box condition'},
+  {id:'var',   surface:'hh',  label:'Check Variance',     ref:'Screen 6c', url:null, next:'Proceed to Check', caption:'Screen 6c · Check Variance'}
 ];
 const DEFAULT_STEPS=[
   {id:'unload',label:'Unload Truck & Check Primary Boxes',checked:true},
@@ -131,6 +139,14 @@ function App(){
   const [tally,setTally]=React.useState({unloaded:18,ok:14,notOk:4});
   const [activeBox,setActiveBox]=React.useState('BX-00012');
   const [pending,setPending]=React.useState(null);
+  const [d4b,setD4b]=React.useState({});
+  const [d5b,setD5b]=React.useState({});
+  const [invList,setInvList]=React.useState([]);
+  const [unloadGen,setUnloadGen]=React.useState('GEN-000845');
+  const [lookup,setLookup]=React.useState(false);
+  const [plate,setPlate]=React.useState(false);
+  const [transpOpen,setTranspOpen]=React.useState(true);
+  const QUALITY=[{label:'Damage',count:2},{label:'Tampered Packaging',count:1},{label:'Scratch',count:1},{label:'Broken',count:0},{label:'Wrong Delivery',count:0}];
 
   /* Pressing the reader fills the field with the next box number, exactly as the device
      would. FR-006.2 keeps manual entry available, so the field stays editable. */
@@ -139,7 +155,7 @@ function App(){
   const recordBox=mode=>{
     const code=(box||'').trim(); if(!code) return;
     const t=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-    if(mode==='check'){ setPending({code,time:t}); setActiveBox(code); setSel([]); setPhoto(false); setRemarks(''); setI(5); setBox(''); return; }
+    if(mode==='check'){ setPending({code,time:t}); setActiveBox(code); setSel([]); setPhoto(false); setRemarks(''); setI(8); setBox(''); return; }
     setRows(r=>[{box:code,quality:'OK',status:'\u2713',time:t},...r]);
     setTally(v=>({unloaded:v.unloaded+1,ok:v.ok+1,notOk:v.notOk}));
     setBox('');
@@ -194,7 +210,7 @@ function App(){
     setFlash(true); window.setTimeout(()=>setFlash(false),2300);
   };
 
-  const reset=()=>{setI(0);setGen(null);setD1({});setD2({});setD4({});setInvoices([]);setSteps(DEFAULT_STEPS);setSel(['damaged']);setPhoto(false);setRemarks('');setBox('');setRows(BOX_ROWS);setTally({unloaded:18,ok:14,notOk:4});setPending(null);};
+  const reset=()=>{setI(0);setGen(null);setD1({});setD2({});setD4({});setD4b({});setD5b({});setInvoices([]);setInvList([]);setSteps(DEFAULT_STEPS);setSel(['damaged']);setPhoto(false);setRemarks('');setBox('');setRows(BOX_ROWS);setTally({unloaded:18,ok:14,notOk:4});setPending(null);setPlate(false);setLookup(false);setUnloadGen('GEN-000845');};
   const create=()=>{const n='GEN-2026-08-12-'+(Math.floor(Math.random()*9000)+1000);setGen(n);setD2(p=>({...p,gen:n,supplier:d1.supplier,courier:d1.courier}));};
 
   /* The terminal is 412 x 880 dp by design. Here it is sized to the window instead, so the
@@ -215,12 +231,25 @@ function App(){
       onBack={()=>setI(1)} onNext={()=>setI(3)} onStepClick={n=>{ if(n===0) setI(1); }}/>;
   if(step.id==='receipt') screen=<window.Screen4aReceipt state={d4} set={set4} invoices={invoices}
       openInvoice={invOpen} onToggleInvoice={()=>setInvOpen(o=>!o)}
-      onAddNext={()=>setInvoices(INVOICES.slice(0,invoices.length+1))}
+      onAddNext={()=>{const n=INVOICES.slice(0,invoices.length+1);setInvoices(n);setInvList(n);}}
       onBack={()=>setI(2)} onNext={()=>setI(4)}/>;
+  if(step.id==='transp') screen=<window.Screen4bTransporter state={d4b} set={(k,v)=>setD4b(p=>({...p,[k]:v}))}
+      invoices={invList} onReceive={r=>setInvList(l=>l.map(x=>x.no===r.no?{...x,received:x.received==='\u2713'?'\u2014':'\u2713'}:x))}
+      openTransporter={transpOpen} onToggleTransporter={()=>setTranspOpen(o=>!o)}
+      onBack={()=>setI(3)} onNext={()=>setI(5)}/>;
+  if(step.id==='init') screen=<window.Screen5aUnloadInit gen={unloadGen} onPickGen={setUnloadGen}
+      lookupOpen={lookup} onToggleLookup={()=>setLookup(o=>!o)}
+      onBack={()=>setI(4)} onNext={()=>setI(6)}/>;
+  if(step.id==='check') screen=<window.Screen5bTransporterCheck
+      state={{transporter:d4b.transporter||'SpeedTrack Logistics',driver:d4b.driver||'Ramesh Kumar',driverPhone:d4b.driverPhone||'98xxx xxxxx',vehicleGr:d4b.vehicleGr||'KA01AB1234',...d5b}}
+      set={(k,v)=>setD5b(p=>({...p,[k]:v}))} plateCaptured={plate} onCapturePlate={()=>setPlate(v=>!v)}
+      onBack={()=>setI(5)} onNext={()=>setI(7)}/>;
+  if(step.id==='var') screen=<window.Screen6cVariance expectedBoxes={Number(d4.boxes)||50} actualBoxes={tally.unloaded}
+      expectedUnits={1240} quality={QUALITY} exceptions={tally.notOk} onBack={()=>setI(7)}/>;
   if(step.id==='scan') screen=<window.Screen6aScan box={box} setBox={setBox} rows={rows}
       onScan={simulateScan} onSubmit={recordBox}
       unloaded={tally.unloaded} expected={Number(d4.boxes)||50} ok={tally.ok} notOk={tally.notOk}
-      onBoxTap={r=>{setActiveBox(r.box);setPending(null);setI(5);}} onBack={()=>setI(3)}/>;
+      onBoxTap={r=>{setActiveBox(r.box);setPending(null);setI(8);}} onBack={()=>setI(6)} onFinish={()=>setI(9)}/>;
   if(step.id==='cond') screen=<window.Screen6bCondition boxNo={activeBox} selected={sel}
       onToggle={id=>setSel(p=>id==='ok'?['ok']:(p.includes(id)?p.filter(x=>x!==id):[...p.filter(x=>x!=='ok'),id]))}
       openDelivery={od} setOpenDelivery={setOd} photo={photo} onCapture={()=>setPhoto(p=>!p)}
@@ -234,17 +263,22 @@ function App(){
           setTally(v=>({unloaded:v.unloaded+1,ok:v.ok+(bad?0:1),notOk:v.notOk+(bad?1:0)}));
           setPending(null);
         }
-        setI(4);
-      }} onCancel={()=>{setPending(null);setI(4);}}/>;
+        setI(7);
+      }} onCancel={()=>{setPending(null);setI(7);}}/>;
 
   const jump=step.id==='scan'?{label:'Recent Box Entries',text:'Recent Box Entries'}
-            :step.id==='receipt'?{label:'the invoice summary',text:'Details of the Invoices Added'}
+            :step.id==='transp'?{label:'the invoice summary',text:'Details of the Invoices Added'}
+            :step.id==='var'?{label:'Quality Variance',text:'Quality Variance'}
             :null;
   const hint=step.id==='gate'&&!gen
     ? (ready?'Press Create Gate Entry to generate the GEN.':"Enter a driver name and contact number \u2014 they are the only mandatory fields.")
     : step.id==='scan' ? 'Press the reader to simulate a scan, then record the box as OK or send it for a condition check. Recent Box Entries is further down \u2014 tap any row to reopen its condition record.'
     : step.id==='cond' ? (notOk&&!photo?'Save is blocked until a photograph is captured \u2014 FR-006.5 requires it for any non-OK condition.':'Condition recorded. Save returns to scanning.')
-    : step.id==='receipt' ? 'Open Capture Invoice Details and press Add Next to build the invoice summary further down the screen.'
+    : step.id==='receipt' ? 'Open Capture Invoice Details and press Add Next a few times \u2014 the invoices carry through to the summary on the next screen.'
+    : step.id==='transp' ? 'The one invoice summary table lives here. Tap a row to mark an invoice received.'
+    : step.id==='init' ? 'Press Find GEN Using Other Details \u2014 it opens as a panel on this screen, not a screen of its own.'
+    : step.id==='check' ? 'Change the reported vehicle number to something other than KA01AB1234 to see the mismatch warning.'
+    : step.id==='var' ? 'The close of the unload. Variance is at box level only \u2014 units are counted at Consignment Check.'
     : step.id==='dash' ? 'Work starts here. Press Create Gate Entry, top right.'
     : null;
 

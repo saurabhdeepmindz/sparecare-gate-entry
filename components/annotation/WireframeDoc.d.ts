@@ -13,7 +13,10 @@ export interface WireframeDocProps extends React.HTMLAttributes<HTMLDivElement> 
   mode?: 'wireframe' | 'annotated';
   /** Group code, e.g. "IN-A". */
   eyebrow?: string;
-  /** Group name, e.g. "GATE ENTRY & CONSIGNMENT". */
+  /**
+   * Group name, e.g. "Gate Entry & Consignment". A leading copy of `eyebrow` is stripped,
+   * so passing "IN-A · Gate Entry & Consignment" renders the code once.
+   */
   group?: string;
   /** FRD screen reference, e.g. "Screen 1". Rendered in mono ahead of the headline. */
   screenId?: string;
@@ -29,7 +32,11 @@ export interface WireframeDocProps extends React.HTMLAttributes<HTMLDivElement> 
   items?: AnnotationItem[];
   legendColumns?: number;
   gutter?: number;
-  /** Lead sentence above the numbered annotations, e.g. "Nine decisions made on your behalf." */
+  /**
+   * Optional extra prose appended to the lead sentence above the annotations. The counts
+   * themselves — how many decisions, how many open questions, how many proposals — are
+   * derived from `items` and must never be written by hand.
+   */
   annotationsIntro?: string;
   /** Renders the "What is deliberately missing" section beneath the annotations. */
   missing?: MissingSectionProps;

@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"NotDrawnHost","sourcePath":"components/annotation/NotDrawnHost.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/NotDrawnHost.jsx":"dc30f1db0ef5","components/annotation/RuggedFrame.jsx":"7a6f82bd07db","components/annotation/WireframeDoc.jsx":"d5dccb947ef9","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"c2a9b9ea3971","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"8cc1e7835bcc","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"31f259ff8711","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"97d6a4bd0d24","ui_kits/wms-inward/handheld/handheldAnnotations.js":"88dc1e02f4fd","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"48b4f1f5f5b8","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"198cb65106d1","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"203557b66f59"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"NotDrawnHost","sourcePath":"components/annotation/NotDrawnHost.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/NotDrawnHost.jsx":"dc30f1db0ef5","components/annotation/RuggedFrame.jsx":"7a6f82bd07db","components/annotation/WireframeDoc.jsx":"496d5ec27617","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"c2a9b9ea3971","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"45cb4cd14754","ui_kits/wms-inward/handheld/Screen4bTransporter.jsx":"8131eaa913e9","ui_kits/wms-inward/handheld/Screen5aUnloadInit.jsx":"60fb56ed799b","ui_kits/wms-inward/handheld/Screen5bTransporterCheck.jsx":"909e025a5edd","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"31f259ff8711","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"97d6a4bd0d24","ui_kits/wms-inward/handheld/Screen6cVariance.jsx":"42ed382c5de2","ui_kits/wms-inward/handheld/handheldAnnotations.js":"ab28cab1e89d","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"48b4f1f5f5b8","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"341688919971","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"8ac22651ca96"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -705,6 +705,24 @@ Object.assign(__ds_scope, { RuggedFrame });
 // components/annotation/WireframeDoc.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const WORDS = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty'];
+const word = n => WORDS[n] || String(n);
+
+/* The lead sentence is derived from the callout data, never written by hand. A document
+   whose claim is that every callout is traceable and counted cannot afford a count that
+   disagrees with its own list. */
+function tally(items) {
+  const n = items.length;
+  if (!n) return null;
+  const q = items.filter(i => i.query).length;
+  const p = items.filter(i => i.proposal).length;
+  let s = word(n) + (n === 1 ? ' decision, traced' : ' decisions, each traced') + ' to a requirement.';
+  const parts = [];
+  if (q) parts.push(word(q).toLowerCase() + (q === 1 ? ' carries an open question' : ' carry an open question'));
+  if (p) parts.push(word(p).toLowerCase() + (p === 1 ? ' is a reading of the FRD made on your behalf' : ' are readings of the FRD made on your behalf'));
+  if (parts.length) s += ' ' + parts.join(', and ').replace(/^./, c => c.toUpperCase()) + '.';
+  return s;
+}
 function Chip({
   children
 }) {
@@ -758,34 +776,47 @@ function WireframeDoc({
     style: {
       marginBottom: 'var(--sp-4)'
     }
-  }, (eyebrow || group) && /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '12px',
-      marginBottom: 'var(--sp-2)'
+  }, (eyebrow || group) && (() => {
+    /* The data carries the group as "IN-C · Receipt & Unload" and the code separately.
+       Strip the duplicated code so the eyebrow reads "IN-C  RECEIPT & UNLOAD" once. */
+    let name = group || '';
+    if (eyebrow && name) {
+      const pre = eyebrow.trim();
+      if (name.indexOf(pre) === 0) name = name.slice(pre.length).replace(/^\s*[·\u00b7\u2013\u2014-]\s*/, '');
     }
-  }, /*#__PURE__*/React.createElement("span", {
-    "aria-hidden": "true",
-    style: {
-      width: '26px',
-      height: '2px',
-      background: 'var(--sc-teal)'
-    }
-  }), /*#__PURE__*/React.createElement("span", {
-    style: {
-      font: 'var(--type-caption)',
-      fontWeight: 'var(--fw-semibold)',
-      letterSpacing: '0.08em',
-      textTransform: 'uppercase',
-      color: 'var(--sc-teal-deep)'
-    }
-  }, eyebrow), group && /*#__PURE__*/React.createElement("span", {
-    style: {
-      font: 'var(--type-caption)',
-      color: 'var(--sc-grey-600)'
-    }
-  }, group)), /*#__PURE__*/React.createElement("h1", {
+    return /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '12px',
+        marginBottom: 'var(--sp-2)',
+        flexWrap: 'wrap'
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
+      style: {
+        width: '26px',
+        height: '2px',
+        background: 'var(--sc-teal)'
+      }
+    }), eyebrow && /*#__PURE__*/React.createElement("span", {
+      style: {
+        font: 'var(--type-caption)',
+        fontWeight: 'var(--fw-semibold)',
+        letterSpacing: '0.08em',
+        textTransform: 'uppercase',
+        color: 'var(--sc-teal-deep)'
+      }
+    }, eyebrow), name && /*#__PURE__*/React.createElement("span", {
+      style: {
+        font: 'var(--type-caption)',
+        fontWeight: 'var(--fw-semibold)',
+        letterSpacing: '0.06em',
+        textTransform: 'uppercase',
+        color: 'var(--sc-grey-600)'
+      }
+    }, name));
+  })(), /*#__PURE__*/React.createElement("h1", {
     style: {
       fontFamily: 'var(--font-display)',
       fontWeight: 'var(--fw-bold)',
@@ -898,7 +929,7 @@ function WireframeDoc({
       fontSize: '24px',
       color: 'var(--text-heading)'
     }
-  }, "Annotations")), annotationsIntro && /*#__PURE__*/React.createElement("p", {
+  }, "Annotations")), /*#__PURE__*/React.createElement("p", {
     style: {
       font: 'var(--type-caption)',
       color: 'var(--text-secondary)',
@@ -906,7 +937,7 @@ function WireframeDoc({
       margin: '0 0 var(--sp-2)',
       lineHeight: 1.55
     }
-  }, annotationsIntro), /*#__PURE__*/React.createElement(__ds_scope.AnnotationLegend, {
+  }, tally(items), annotationsIntro ? ' ' + annotationsIntro : ''), /*#__PURE__*/React.createElement(__ds_scope.AnnotationLegend, {
     title: null,
     items: items,
     columns: legendColumns
@@ -3503,20 +3534,231 @@ function Screen4aReceipt({
       name: "plus",
       size: 15
     })
-  }, "Add Next")), /*#__PURE__*/React.createElement("div", {
+  }, "Add Next")), invoices.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-sunken)',
+      border: '1px solid var(--border-field)',
+      borderRadius: 'var(--radius-field)',
+      padding: '11px 12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '10px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-teal-deep)'
+    }
+  }, invoices.length, " invoices captured, ", '\u20B9 ' + total.toLocaleString('en-IN'), " total"), /*#__PURE__*/React.createElement(Tag, {
+    tone: "info",
+    dot: false
+  }, "Summary on next screen")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '6px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-600)',
+      lineHeight: 1.45
+    }
+  }, "FR-004.5 places the invoice summary table on Screen 4b. There is one table, not two."))), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: onBack,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "save",
+      size: 15
+    })
+  }, "Save"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: onNext,
+    iconRight: /*#__PURE__*/React.createElement(Icon, {
+      name: "chevron-right",
+      size: 15
+    })
+  }, "Next")));
+}
+Object.assign(window, {
+  Screen4aReceipt
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen4aReceipt.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/Screen4bTransporter.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  Field,
+  TextInput,
+  SelectInput,
+  DetailRow,
+  Accordion,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  QueueTable,
+  Tag,
+  CameraButton
+} = window.SpareCareDesignSystem_556483;
+const TRANSPORTERS = ['SpeedTrack Logistics', 'Gati Express', 'VRL Logistics', 'Own Vehicle'];
+const say = d => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+  detail: d
+}));
+function Upload({
+  label,
+  note,
+  onPick
+}) {
+  return /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onPick,
+    style: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      padding: '12px',
+      minHeight: 'var(--hit-min)',
+      borderRadius: 'var(--radius-field)',
+      border: '1px dashed var(--border-field)',
+      background: 'var(--surface-card)',
+      cursor: 'pointer',
+      textAlign: 'left'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "upload",
+    size: 18,
+    color: "var(--sc-teal-deep)"
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'block',
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, label), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'block',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, note)));
+}
+function Screen4bTransporter({
+  state = {},
+  set = () => {},
+  invoices = [],
+  onReceive,
+  openTransporter = true,
+  onToggleTransporter,
+  onNext,
+  onBack
+}) {
+  const total = invoices.reduce((s, i) => s + (i.amountValue || 0), 0);
+  const pick = () => say({
+    title: 'Document upload',
+    body: 'FR-004 carries GRN and invoice photo uploads at Receipt Details. The picker, how many images may be attached, and whether an upload can be replaced are not specified.',
+    ref: '\u00a77.4'
+  });
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Transporter Details",
+    onBack: onBack
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       background: 'var(--surface-card)',
       border: '1px solid var(--border-soft)',
       borderRadius: 'var(--radius-field)',
-      padding: '12px'
+      padding: '4px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "file-text",
+    label: "Gate Entry Number",
+    value: "GEN-000845",
+    mono: true
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "receipt",
+    label: "Document Number",
+    value: "LR-77120",
+    mono: true,
+    last: true
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, null, "Transporter details may be left blank here if the paperwork has not arrived. They can be completed at Truck Unload.")), /*#__PURE__*/React.createElement(Accordion, {
+    title: "Capture Transporter Details",
+    open: openTransporter,
+    onToggle: onToggleTransporter,
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(Field, {
+    label: "Name of the Transporter"
+  }, /*#__PURE__*/React.createElement(SelectInput, {
+    placeholder: "Select or add transporter",
+    options: TRANSPORTERS,
+    value: state.transporter,
+    onChange: e => set('transporter', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Vehicle Number as per GR Documents",
+    hint: "May differ from the vehicle that actually arrives."
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "KA01AB1234",
+    mono: true,
+    value: state.vehicleGr || '',
+    onChange: e => set('vehicleGr', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Name of the Driver"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "Enter driver name",
+    value: state.driver || '',
+    onChange: e => set('driver', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Contact Number (Driver)"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "98xxx xxxxx",
+    value: state.driverPhone || '',
+    onChange: e => set('driverPhone', e.target.value)
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      font: 'var(--type-label)',
-      color: 'var(--text-heading)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
       marginBottom: '8px'
     }
-  }, "Details of the Invoices Added"), /*#__PURE__*/React.createElement(QueueTable, {
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, "Details of the Invoices Added"), invoices.length > 0 && /*#__PURE__*/React.createElement(Tag, {
+    tone: "info",
+    dot: false
+  }, invoices.length)), /*#__PURE__*/React.createElement(QueueTable, {
     columns: [{
       key: 'no',
       label: 'Invoice No.',
@@ -3535,10 +3777,12 @@ function Screen4aReceipt({
     }],
     rows: invoices,
     minRows: 0,
+    onRowClick: onReceive,
+    emptyLabel: "No invoices captured yet. They are keyed on the previous screen.",
     style: {
       marginBottom: 0
     }
-  }), /*#__PURE__*/React.createElement("div", {
+  }), invoices.length > 0 && /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -3566,7 +3810,20 @@ function Screen4aReceipt({
       color: 'var(--sc-grey-500)',
       lineHeight: 1.45
     }
-  }, "The summary table renders once, here on the receipt record."))), /*#__PURE__*/React.createElement(ActionBar, {
+  }, "Tap a row to mark an invoice received. One summary table only \\u2014 it lives here, not on the entry screen.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gap: '8px'
+    }
+  }, /*#__PURE__*/React.createElement(Upload, {
+    label: "Upload GRN Pic",
+    note: "Photograph of the goods receipt note",
+    onPick: pick
+  }), /*#__PURE__*/React.createElement(Upload, {
+    label: "Upload Invoice Pics",
+    note: "One or more invoice documents",
+    onPick: pick
+  }))), /*#__PURE__*/React.createElement(ActionBar, {
     style: {
       position: 'sticky',
       bottom: 0
@@ -3576,10 +3833,10 @@ function Screen4aReceipt({
     block: true,
     onClick: onBack,
     iconLeft: /*#__PURE__*/React.createElement(Icon, {
-      name: "save",
+      name: "chevron-left",
       size: 15
     })
-  }, "Save"), /*#__PURE__*/React.createElement(Button, {
+  }, "Back"), /*#__PURE__*/React.createElement(Button, {
     variant: "accent",
     block: true,
     onClick: onNext,
@@ -3590,9 +3847,487 @@ function Screen4aReceipt({
   }, "Next")));
 }
 Object.assign(window, {
-  Screen4aReceipt
+  Screen4bTransporter
 });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen4aReceipt.jsx", error: String((e && e.message) || e) }); }
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen4bTransporter.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/Screen5aUnloadInit.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  Field,
+  TextInput,
+  SelectInput,
+  DetailRow,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  Tag,
+  CounterStrip
+} = window.SpareCareDesignSystem_556483;
+const RESULTS = [{
+  gen: 'GEN-000845',
+  supplier: 'ABC Supplies Pvt. Ltd.',
+  date: '12-08-2026',
+  doc: 'LR-77120',
+  pending: 2
+}, {
+  gen: 'GEN-000842',
+  supplier: 'Sundaram Brake Linings',
+  date: '08-08-2026',
+  doc: 'LR-76988',
+  pending: 0
+}, {
+  gen: 'GEN-000839',
+  supplier: 'Rane Madras Ltd.',
+  date: '06-08-2026',
+  doc: 'INV-55021',
+  pending: 1
+}];
+function Screen5aUnloadInit({
+  gen = 'GEN-000845',
+  onPickGen,
+  lookupOpen = false,
+  onToggleLookup,
+  docsSelected = 2,
+  rejected = false,
+  onNext,
+  onBack
+}) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Unload Truck",
+    onBack: onBack
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement(Field, {
+    label: "Gate Entry Number",
+    required: true,
+    adjacent: gen ? /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: () => onPickGen && onPickGen(''),
+      "aria-label": "Clear selection",
+      style: {
+        width: 'var(--hit-min)',
+        height: 'var(--hit-min)',
+        border: 'none',
+        background: 'none',
+        cursor: 'pointer',
+        color: 'var(--sc-grey-500)',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }
+    }, /*#__PURE__*/React.createElement(Icon, {
+      name: "x",
+      size: 18
+    })) : null
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "Enter or select GEN",
+    mono: true,
+    value: gen,
+    onChange: e => onPickGen && onPickGen(e.target.value)
+  })), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onToggleLookup,
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '7px',
+      border: 'none',
+      background: 'none',
+      padding: '0 0 12px',
+      cursor: 'pointer',
+      font: 'var(--type-label)',
+      color: 'var(--sc-teal-deep)',
+      textDecoration: 'underline',
+      textUnderlineOffset: '2px'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "search",
+    size: 15
+  }), "Find GEN Using Other Details"), lookupOpen && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1.5px solid var(--border-field)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      marginBottom: '9px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, "Find GEN Using Other Details"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onToggleLookup,
+    "aria-label": "Close lookup",
+    style: {
+      border: 'none',
+      background: 'none',
+      cursor: 'pointer',
+      color: 'var(--sc-grey-500)',
+      display: 'inline-flex'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "x",
+    size: 17
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '10px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, null, "Search criteria only. Supplier and document data are captured at Receipt Details and fill themselves once a GEN is chosen.")), /*#__PURE__*/React.createElement(Field, {
+    label: "Supplier Name"
+  }, /*#__PURE__*/React.createElement(SelectInput, {
+    placeholder: "Any supplier",
+    options: ['ABC Supplies Pvt. Ltd.', 'Sundaram Brake Linings', 'Rane Madras Ltd.']
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: '0 10px'
+    }
+  }, /*#__PURE__*/React.createElement(Field, {
+    label: "Supplier Category"
+  }, /*#__PURE__*/React.createElement(SelectInput, {
+    placeholder: "Any",
+    options: ['OEM', 'Manufacturer', 'Local Vendor', 'Other']
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Product Category"
+  }, /*#__PURE__*/React.createElement(SelectInput, {
+    placeholder: "Any",
+    options: ['Spare Parts', 'Lubricants', 'Accessories']
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Document Number"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "LR / INV",
+    mono: true
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Document Date"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "DD/MM/YYYY"
+  }))), /*#__PURE__*/React.createElement(Field, {
+    label: "Status"
+  }, /*#__PURE__*/React.createElement(SelectInput, {
+    placeholder: "Any",
+    options: ['Pending unload', 'Partially unloaded', 'Unloaded']
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)',
+      margin: '6px 0 8px'
+    }
+  }, "Matching gate entries"), RESULTS.map(r => /*#__PURE__*/React.createElement("label", {
+    key: r.gen,
+    style: {
+      display: 'flex',
+      alignItems: 'flex-start',
+      gap: '10px',
+      padding: '10px',
+      minHeight: 'var(--hit-min)',
+      border: '1px solid ' + (gen === r.gen ? 'var(--sc-teal)' : 'var(--border-soft)'),
+      borderRadius: 'var(--radius-field)',
+      marginBottom: '7px',
+      cursor: 'pointer',
+      background: gen === r.gen ? 'var(--surface-sunken)' : 'var(--surface-card)'
+    }
+  }, /*#__PURE__*/React.createElement("input", {
+    type: "radio",
+    name: "genpick",
+    checked: gen === r.gen,
+    onChange: () => {
+      onPickGen && onPickGen(r.gen);
+      onToggleLookup && onToggleLookup();
+    },
+    style: {
+      marginTop: '3px',
+      accentColor: 'var(--sc-teal)'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      flexWrap: 'wrap'
+    }
+  }, /*#__PURE__*/React.createElement("b", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-caption)',
+      color: 'var(--text-data)'
+    }
+  }, r.gen), r.pending > 0 && /*#__PURE__*/React.createElement(Tag, {
+    tone: "low",
+    dot: false
+  }, r.pending, " pending docs")), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'block',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-600)',
+      marginTop: '2px'
+    }
+  }, r.supplier, " \xB7 ", r.date, " \xB7 ", r.doc))))), gen && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '4px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(DetailRow, {
+    label: "GEN Date",
+    value: "12 Aug 2026"
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    label: "Supplier Category",
+    value: "OEM"
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    label: "Supplier",
+    value: "ABC Supplies Pvt. Ltd."
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    label: "Product Category",
+    value: "Spare Parts"
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    label: "Primary Document Type",
+    value: "GR / LR"
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    label: "Document Number",
+    value: "LR-77120",
+    mono: true
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    label: "Document Date",
+    value: "12 Aug 2026",
+    last: true
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Select Documents to Unload",
+    required: true,
+    hint: "Choose the invoices being unloaded in this session."
+  }, /*#__PURE__*/React.createElement(SelectInput, {
+    placeholder: docsSelected + ' of 3 invoices selected',
+    options: ['INV1001', 'INV1002', 'INV1003']
+  })), rejected && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "error"
+  }, "That document number is not eligible for this gate entry. Enter or select the correct document before unloading.")), /*#__PURE__*/React.createElement(CounterStrip, {
+    items: [{
+      label: 'Expected Boxes',
+      value: 50
+    }, {
+      label: 'Expected Units',
+      value: '1,240'
+    }],
+    style: {
+      marginBottom: '12px'
+    }
+  })), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: onBack
+  }, "Cancel"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: onNext,
+    disabled: !gen,
+    iconRight: /*#__PURE__*/React.createElement(Icon, {
+      name: "chevron-right",
+      size: 15
+    })
+  }, "Next")));
+}
+Object.assign(window, {
+  Screen5aUnloadInit,
+  SC_GEN_RESULTS: RESULTS
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen5aUnloadInit.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/Screen5bTransporterCheck.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  Field,
+  TextInput,
+  SelectInput,
+  DetailRow,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  CameraButton
+} = window.SpareCareDesignSystem_556483;
+const say = d => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+  detail: d
+}));
+function Screen5bTransporterCheck({
+  state = {},
+  set = () => {},
+  plateCaptured = false,
+  onCapturePlate,
+  onNext,
+  onBack
+}) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Check Transporter Details",
+    onBack: onBack
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '4px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "file-text",
+    label: "Gate Entry Number",
+    value: "GEN-000845",
+    mono: true
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "building-2",
+    label: "Supplier",
+    value: "ABC Supplies Pvt. Ltd.",
+    last: true
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, null, "Pre-filled from Receipt Details. Everything here is editable \\u2014 trucks get changed en route and the vehicle at the dock may not be the one on the paperwork.")), /*#__PURE__*/React.createElement(Field, {
+    label: "Name of the Transporter"
+  }, /*#__PURE__*/React.createElement(SelectInput, {
+    placeholder: "Select transporter",
+    options: ['SpeedTrack Logistics', 'Gati Express', 'VRL Logistics', 'Own Vehicle'],
+    value: state.transporter,
+    onChange: e => set('transporter', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Name of the Driver"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "Enter driver name",
+    value: state.driver || '',
+    onChange: e => set('driver', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Driver Contact Number",
+    adjacent: /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      "aria-label": "Call driver",
+      onClick: () => say({
+        title: 'Call the driver',
+        body: 'The FRD places a phone control beside the driver number so the operator can call from the terminal. Whether the call is placed by the device dialler, a softphone or a masked number is not specified.',
+        ref: '\u00a78.4'
+      }),
+      style: {
+        width: 'var(--hit-min)',
+        height: 'var(--hit-min)',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        border: '1px solid var(--border-field)',
+        borderRadius: 'var(--radius-field)',
+        background: 'var(--surface-card)',
+        cursor: 'pointer',
+        color: 'var(--sc-teal-deep)'
+      }
+    }, /*#__PURE__*/React.createElement(Icon, {
+      name: "phone",
+      size: 18
+    }))
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "98xxx xxxxx",
+    value: state.driverPhone || '',
+    onChange: e => set('driverPhone', e.target.value)
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(Field, {
+    label: "Truck / Vehicle No. Reported",
+    required: true,
+    hint: "As physically observed at the gate. May differ from the GR document.",
+    adjacent: /*#__PURE__*/React.createElement(CameraButton, {
+      onClick: onCapturePlate,
+      label: "Photograph the number plate"
+    })
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "KA01AB1234",
+    mono: true,
+    value: state.vehicleActual || '',
+    onChange: e => set('vehicleActual', e.target.value)
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '9px',
+      padding: '9px 11px',
+      borderRadius: 'var(--radius-field)',
+      background: plateCaptured ? 'var(--status-ok-bg)' : 'var(--surface-sunken)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: plateCaptured ? 'circle-check' : 'camera',
+    size: 16,
+    color: plateCaptured ? 'var(--status-ok)' : 'var(--sc-teal-deep)'
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)',
+      color: plateCaptured ? 'var(--status-ok)' : 'var(--sc-teal-deep)',
+      flex: 1
+    }
+  }, plateCaptured ? 'Number plate photographed \u2014 evidence of the vehicle actually present.' : 'Photograph the number plate as evidence of the vehicle actually present.')), state.vehicleGr && state.vehicleActual && state.vehicleGr !== state.vehicleActual && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: '10px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "warn"
+  }, "Reported vehicle differs from the GR document (", state.vehicleGr, "). The truck was changed en route \\u2014 both numbers are kept.")))), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: onBack
+  }, "Back"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: onNext,
+    iconRight: /*#__PURE__*/React.createElement(Icon, {
+      name: "scan-line",
+      size: 15
+    })
+  }, "Start Unloading")));
+}
+Object.assign(window, {
+  Screen5bTransporterCheck
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen5bTransporterCheck.jsx", error: String((e && e.message) || e) }); }
 
 // ui_kits/wms-inward/handheld/Screen6aScan.jsx
 try { (() => {
@@ -4229,6 +4964,312 @@ Object.assign(window, {
 });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen6bCondition.jsx", error: String((e && e.message) || e) }); }
 
+// ui_kits/wms-inward/handheld/Screen6cVariance.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  DetailRow,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  QueueTable,
+  Tag,
+  ProgressBar
+} = window.SpareCareDesignSystem_556483;
+const say = d => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+  detail: d
+}));
+function Panel({
+  title,
+  action,
+  children
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px'
+    }
+  }, (title || action) && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '10px',
+      marginBottom: '9px'
+    }
+  }, title && /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, title), action), children);
+}
+function VarianceRow({
+  label,
+  doc,
+  actual,
+  last
+}) {
+  const v = actual - doc;
+  const tone = v === 0 ? 'var(--status-ok)' : v < 0 ? 'var(--status-error)' : 'var(--status-warn)';
+  return /*#__PURE__*/React.createElement("tr", {
+    style: {
+      background: 'var(--surface-card)'
+    }
+  }, /*#__PURE__*/React.createElement("td", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--text-body)',
+      padding: '8px',
+      borderBottom: last ? 'none' : '1px solid var(--border-soft)'
+    }
+  }, label), /*#__PURE__*/React.createElement("td", {
+    style: {
+      font: 'var(--type-data)',
+      color: 'var(--text-body)',
+      textAlign: 'right',
+      padding: '8px',
+      borderBottom: last ? 'none' : '1px solid var(--border-soft)'
+    }
+  }, doc), /*#__PURE__*/React.createElement("td", {
+    style: {
+      font: 'var(--type-data)',
+      color: 'var(--text-body)',
+      textAlign: 'right',
+      padding: '8px',
+      borderBottom: last ? 'none' : '1px solid var(--border-soft)'
+    }
+  }, actual), /*#__PURE__*/React.createElement("td", {
+    style: {
+      font: 'var(--type-data)',
+      fontWeight: 'var(--fw-semibold)',
+      color: tone,
+      textAlign: 'right',
+      padding: '8px',
+      borderBottom: last ? 'none' : '1px solid var(--border-soft)'
+    }
+  }, v > 0 ? '+' + v : v));
+}
+function Screen6cVariance({
+  expectedBoxes = 50,
+  actualBoxes = 48,
+  expectedUnits = 1240,
+  quality = [],
+  exceptions = 2,
+  onBack,
+  onPrint,
+  onConfirm
+}) {
+  const totalQuality = quality.reduce((s, q) => s + q.count, 0);
+  const complete = actualBoxes >= expectedBoxes;
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Check Variance",
+    onBack: onBack
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '4px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "file-text",
+    label: "Gate Entry Number",
+    value: "GEN-000845",
+    mono: true
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "building-2",
+    label: "Supplier",
+    value: "ABC Supplies Pvt. Ltd.",
+    last: true
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, {
+    tone: complete ? 'info' : 'warn'
+  }, complete ? 'Unload complete. All expected boxes accounted for.' : 'Unload closed with ' + (expectedBoxes - actualBoxes) + ' boxes short of the expected count. The shortfall is recorded against this GEN.')), /*#__PURE__*/React.createElement(Panel, {
+    title: "Quantity Variance"
+  }, /*#__PURE__*/React.createElement("table", {
+    style: {
+      width: '100%',
+      borderCollapse: 'collapse',
+      tableLayout: 'fixed'
+    }
+  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, ['', 'As Per Document', 'Actual', 'Variance'].map((h, i) => /*#__PURE__*/React.createElement("th", {
+    key: i,
+    style: {
+      background: 'var(--surface-inverse)',
+      color: 'var(--text-on-dark)',
+      font: 'var(--type-caption)',
+      fontWeight: 'var(--fw-semibold)',
+      textAlign: i ? 'right' : 'left',
+      padding: '7px 8px'
+    }
+  }, h)))), /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement(VarianceRow, {
+    label: "Boxes",
+    doc: expectedBoxes,
+    actual: actualBoxes
+  }), /*#__PURE__*/React.createElement(VarianceRow, {
+    label: "Units (from document)",
+    doc: expectedUnits,
+    actual: expectedUnits,
+    last: true
+  }))), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '9px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "Units are taken from document data, not from physical counting. Unit-level verification happens at Consignment Check.")), /*#__PURE__*/React.createElement(Panel, {
+    title: "Quality Variance"
+  }, /*#__PURE__*/React.createElement(QueueTable, {
+    columns: [{
+      key: 'label',
+      label: 'Qualitative Aspect'
+    }, {
+      key: 'count',
+      label: 'No. of Boxes',
+      align: 'right'
+    }],
+    rows: quality,
+    minRows: 0,
+    style: {
+      marginBottom: 0
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'baseline',
+      paddingTop: '9px',
+      marginTop: '2px',
+      borderTop: '1.5px solid var(--border-field)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, "Total"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontWeight: 'var(--fw-semibold)',
+      fontSize: 'var(--fs-body-sm)',
+      color: 'var(--sc-teal-deep)'
+    }
+  }, totalQuality))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Unload Completion"
+  }, /*#__PURE__*/React.createElement(ProgressBar, {
+    label: "Boxes received",
+    value: actualBoxes,
+    total: expectedBoxes
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '8px',
+      flexWrap: 'wrap',
+      marginTop: '10px'
+    }
+  }, /*#__PURE__*/React.createElement(Tag, {
+    tone: complete ? 'ok' : 'low'
+  }, complete ? 'Unload complete' : 'Closed with shortfall'), /*#__PURE__*/React.createElement(Tag, {
+    tone: exceptions ? 'out' : 'ok',
+    dot: false
+  }, exceptions, " boxes marked as exceptions")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '9px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "Open delivery actions for the exception boxes have been enabled and handled.")), /*#__PURE__*/React.createElement(Panel, {
+    title: "Document-wise Breakdown"
+  }, /*#__PURE__*/React.createElement(QueueTable, {
+    columns: [{
+      key: 'doc',
+      label: 'Invoice',
+      mono: true
+    }, {
+      key: 'expected',
+      label: 'Expected',
+      align: 'right'
+    }, {
+      key: 'received',
+      label: 'Received',
+      align: 'right'
+    }, {
+      key: 'variance',
+      label: 'Variance',
+      align: 'right'
+    }],
+    rows: [{
+      doc: 'INV1001',
+      expected: '18',
+      received: '18',
+      variance: '0'
+    }, {
+      doc: 'INV1002',
+      expected: '20',
+      received: '19',
+      variance: '\u22121'
+    }, {
+      doc: 'INV1003',
+      expected: '12',
+      received: '11',
+      variance: '\u22121'
+    }],
+    minRows: 0,
+    style: {
+      marginBottom: 0
+    }
+  }))), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "printer",
+      size: 15
+    }),
+    onClick: onPrint || (() => say({
+      title: 'Print Summary',
+      body: 'FR-006.17 requires a printable record of the unloading session covering quantity variance, document-wise breakdown, quality variance and the exception summary. The layout of that printed record, and whether it prints from the terminal or a dock printer, are not specified.',
+      ref: 'FR-006.17'
+    }))
+  }, "Print Summary"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    iconRight: /*#__PURE__*/React.createElement(Icon, {
+      name: "chevron-right",
+      size: 15
+    }),
+    onClick: onConfirm || (() => say({
+      kind: 'next',
+      title: 'Consignment Check',
+      body: 'With unloading closed, the consignment moves to Consignment Check, where cartons are opened and unit-level quantities are verified. FR-006.18 defers all unit counting to that stage because the transport vehicle cannot be held while every carton is opened. Screens 7a onward are in the next batch.',
+      ref: 'FR-006.18, \u00a712'
+    }))
+  }, "Proceed to Check")));
+}
+Object.assign(window, {
+  Screen6cVariance
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen6cVariance.jsx", error: String((e && e.message) || e) }); }
+
 // ui_kits/wms-inward/handheld/handheldAnnotations.js
 try { (() => {
 /* Callout data for the handheld-surface wireframes, Batch 1 showcase.
@@ -4246,46 +5287,45 @@ window.SC_HH_ANNO = {
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 4a', 'FR-004', 'Surface Handheld + Web', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Drawn for a rugged handheld in portrait, 412 \u00d7 880 dp \u2014 the 6-inch Android class (Zebra TC53/TC58, Honeywell CT45, Datalogic Memor 11). The full screen is shown here; the device crops at 880 dp and the operator scrolls.',
     caption: 'Screen 4a \u00b7 Receipt Details',
-    annotationsIntro: 'Ten decisions, each traced to a requirement. Two carry an open question, and one is a reading of the FRD we have made on your behalf.',
     markers: [{
       n: 1,
-      x: 50,
+      x: -1,
       y: 6
     }, {
       n: 2,
-      x: 12,
+      x: 101,
       y: 12
     }, {
       n: 3,
-      x: 78,
+      x: -1,
       y: 20
     }, {
       n: 4,
-      x: 14,
+      x: 101,
       y: 28
     }, {
       n: 5,
-      x: 24,
+      x: -1,
       y: 37
     }, {
       n: 6,
-      x: 74,
+      x: 101,
       y: 37
     }, {
       n: 7,
-      x: 50,
+      x: -1,
       y: 44
     }, {
       n: 8,
-      x: 20,
+      x: 101,
       y: 51
     }, {
       n: 9,
-      x: 76,
+      x: -1,
       y: 66
     }, {
       n: 10,
-      x: 50,
+      x: 101,
       y: 83
     }],
     items: [{
@@ -4349,11 +5389,11 @@ window.SC_HH_ANNO = {
       description: 'Invoice Number, Invoice Date and Total Invoice Amount, with an Add Next control to capture multiple invoices in sequence. Collapsed by default, because the operator should see the whole task before opening one part of it.'
     }, {
       n: 9,
-      label: 'Details of the Invoices Added',
+      label: 'Running invoice count',
       ref: 'FR-004.5, \u00a77.5',
-      control: 'Read-only summary table',
-      description: 'Auto-populated from each invoice keyed above. Columns: Invoice No., Date, Amount, Received. The Total row sums all invoice amounts.',
-      proposal: 'The walkthrough found this table described in two places and read as two tables. There is one. On the web surface the FRD puts it on the right-hand panel (Screen 4b); on a handheld there is no right-hand panel, so it renders once here beneath the entry it summarises.'
+      control: 'Summary strip',
+      description: 'A count and running total only. The summary table itself renders on Screen 4b.',
+      proposal: 'The walkthrough found the table described in two places and read as two tables. There is one, and FR-004.5 was corrected to place it on Screen 4b. We have followed that and left only a confirmation strip here, so the operator keying invoices can see the count without the table appearing twice.'
     }, {
       n: 10,
       label: 'Save and Next',
@@ -4379,50 +5419,49 @@ window.SC_HH_ANNO = {
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6a', 'FR-006', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Rugged handheld, 412 \u00d7 880 dp. The scan field and the action bar are the two things reachable with a thumb; everything between them is read, not touched.',
     caption: 'Screen 6a \u00b7 Box scanning',
-    annotationsIntro: 'Eleven decisions. Three carry an open question, and two are readings of the FRD we have made on your behalf.',
     markers: [{
       n: 1,
-      x: 50,
+      x: -1,
       y: 4
     }, {
       n: 2,
-      x: 16,
+      x: 101,
       y: 10
     }, {
       n: 3,
-      x: 78,
+      x: -1,
       y: 19
     }, {
       n: 4,
-      x: 30,
+      x: 101,
       y: 29
     }, {
       n: 5,
-      x: 88,
+      x: -1,
       y: 29
     }, {
       n: 6,
-      x: 16,
+      x: 101,
       y: 40
     }, {
       n: 7,
-      x: 68,
+      x: -1,
       y: 40
     }, {
       n: 8,
-      x: 50,
+      x: 101,
       y: 49
     }, {
       n: 9,
-      x: 50,
+      x: -1,
       y: 58
     }, {
       n: 10,
-      x: 20,
+      x: 101,
       y: 70
     }, {
       n: 11,
-      x: 50,
+      x: -1,
       y: 95
     }],
     items: [{
@@ -4525,42 +5564,41 @@ window.SC_HH_ANNO = {
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6b', 'FR-006', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'The condition options are the six named in FR-006.4 and are multi-select \u2014 a box can be both tampered and scratched.',
     caption: 'Screen 6b \u00b7 Box condition',
-    annotationsIntro: 'Nine decisions. Two carry an open question, and two \u2014 including which screen number this is \u2014 are readings we have made on your behalf.',
     markers: [{
       n: 1,
-      x: 50,
+      x: -1,
       y: 4
     }, {
       n: 2,
-      x: 20,
+      x: 101,
       y: 11
     }, {
       n: 3,
-      x: 50,
+      x: -1,
       y: 21
     }, {
       n: 4,
-      x: 24,
+      x: 101,
       y: 34
     }, {
       n: 5,
-      x: 76,
+      x: -1,
       y: 42
     }, {
       n: 6,
-      x: 50,
+      x: 101,
       y: 53
     }, {
       n: 7,
-      x: 76,
+      x: -1,
       y: 64
     }, {
       n: 8,
-      x: 20,
+      x: 101,
       y: 76
     }, {
       n: 9,
-      x: 50,
+      x: -1,
       y: 96
     }],
     items: [{
@@ -4639,6 +5677,443 @@ window.SC_HH_ANNO = {
     footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6b \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
   }
 };
+
+/* ---- Batch 1, remainder: Screens 4b, 5A, 5b, 6c ---- */
+Object.assign(window.SC_HH_ANNO, {
+  'screen-4b': {
+    group: 'IN-C · Receipt & Unload',
+    eyebrow: 'IN-C',
+    screenId: 'Screen 4b',
+    screenName: 'Receipt Details — transporter and invoice summary',
+    headline: 'Transporter Details — the number to call when something is wrong',
+    intro: 'The second half of Receipt Details. It records who carried the consignment and holds the one invoice summary table, and it is the screen that matters weeks later when a damaged part turns up and somebody asks which vehicle brought it.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 4b', 'FR-004', 'Surface Handheld + Web', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'On the web surface the FRD draws 4a and 4b as the left and right panels of one board. A handheld has no right-hand panel, so the pair becomes a sequence.',
+    caption: 'Screen 4b · Transporter Details',
+    markers: [{
+      n: 1,
+      x: -1,
+      y: 5
+    }, {
+      n: 2,
+      x: 101,
+      y: 13
+    }, {
+      n: 3,
+      x: -1,
+      y: 22
+    }, {
+      n: 4,
+      x: 101,
+      y: 33
+    }, {
+      n: 5,
+      x: -1,
+      y: 44
+    }, {
+      n: 6,
+      x: 101,
+      y: 62
+    }, {
+      n: 7,
+      x: -1,
+      y: 80
+    }, {
+      n: 8,
+      x: 101,
+      y: 95
+    }],
+    items: [{
+      n: 1,
+      label: 'Transporter Details',
+      ref: '\u00a77.4',
+      control: 'Screen header',
+      description: 'Reached from Receipt Details. Captures logistics and vehicle identification, and carries the invoice summary.'
+    }, {
+      n: 2,
+      label: 'GEN and Document Number',
+      ref: '\u00a77.3',
+      control: 'Read-only display',
+      description: 'Carried forward from the previous screen so the operator knows which consignment is being recorded against.'
+    }, {
+      n: 3,
+      label: 'Optional-by-design advisory',
+      ref: '\u00a77.4',
+      control: 'Info note',
+      description: 'The whole transporter block can be left blank if the details are not available at this stage, and completed at Truck Unload instead.'
+    }, {
+      n: 4,
+      label: 'Capture Transporter Details',
+      ref: '\u00a77.4',
+      control: 'Collapsible accordion',
+      description: 'Transporter name from the registered list, with pre-registered transporters auto-filling related fields. Vehicle number as per GR documents, driver name and driver contact.'
+    }, {
+      n: 5,
+      label: 'Vehicle Number as per GR Documents',
+      ref: '\u00a77.4',
+      control: 'Text input',
+      description: 'The number stated on the goods receipt. It may differ from the vehicle that actually arrives if the truck was changed en route, which is why Screen 5b captures the observed number separately.'
+    }, {
+      n: 6,
+      label: 'Details of the Invoices Added',
+      ref: 'FR-004.5, \u00a77.5',
+      control: 'Read-only summary table',
+      description: 'Auto-populated from the invoices keyed on Screen 4a. Columns: Invoice No., Date, Amount, Received. The Received checkbox marks each invoice as confirmed received, and the Total row sums the amounts.',
+      proposal: 'The walkthrough found this table described in two places and read as two tables. There is one, and FR-004.5 was corrected to place it here. We have followed that and left only a one-line count on Screen 4a, rather than repeating the table.'
+    }, {
+      n: 7,
+      label: 'GRN and Invoice uploads',
+      ref: '\u00a77.4',
+      control: 'Image upload',
+      tone: 'open',
+      description: 'Photographs of the goods receipt note and of one or more invoice documents.',
+      query: {
+        text: 'The picker is not specified \u2014 how many images may be attached, whether an upload can be replaced, and what happens when a capture fails.',
+        ref: '\u00a77.4'
+      }
+    }, {
+      n: 8,
+      label: 'Validation states',
+      ref: '\u00a77.4',
+      control: 'Toast and dialog',
+      description: 'Three states are specified: Details Added Successfully in green, Failed! Please Try Again in red, and an amber confirmation when Next is pressed with no invoice details.',
+      proposal: 'None of the three is drawn on this board. Pressing Next with no invoices should confirm rather than block \u2014 invoices sometimes follow the goods \u2014 but the wording and the recovery path are ours to propose.'
+    }],
+    missing: {
+      intro: 'What a build would still need to be told.',
+      statesNotDrawn: ['The three validation states named in the field reference', 'A transporter not on the registered list', 'Received ticked on some invoices but not others', 'Offline \u2014 uploads queued rather than sent'],
+      detailNotSpecified: ['Whether a new transporter can be created here or only chosen', 'Who may untick a Received invoice once ticked', 'Whether the GR vehicle number is validated in any way', 'File size and format limits on the uploads'],
+      mostImportant: 'Nothing connects this record to the claim that eventually depends on it. The driver name, the phone number and the vehicle photograph exist precisely so that a damaged carton found the next morning can be traced to somebody. No screen in the specified set consumes that trail.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 4b \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+  'screen-5a': {
+    group: 'IN-C · Receipt & Unload',
+    eyebrow: 'IN-C',
+    screenId: 'Screen 5A',
+    screenName: 'Truck unload initiation and GEN selection',
+    headline: 'Unload Truck — find the right consignment before touching the truck',
+    intro: 'Nothing is unloaded until the system knows which consignment is being unloaded. The operator selects the gate entry, the consignment fills itself in, and the invoices being unloaded in this session are chosen. Getting this wrong puts the wrong goods against the wrong number, and that is difficult to unpick once the boxes are on the floor.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 5A', 'FR-005', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Drawn per the Session 07 correction: the GEN lookup is a panel within this screen, not a screen of its own, and it offers search criteria only.',
+    caption: 'Screen 5A · Unload Truck',
+    markers: [{
+      n: 1,
+      x: -1,
+      y: 4
+    }, {
+      n: 2,
+      x: 101,
+      y: 10
+    }, {
+      n: 3,
+      x: -1,
+      y: 17
+    }, {
+      n: 4,
+      x: 101,
+      y: 26
+    }, {
+      n: 5,
+      x: -1,
+      y: 40
+    }, {
+      n: 6,
+      x: 101,
+      y: 54
+    }, {
+      n: 7,
+      x: -1,
+      y: 70
+    }, {
+      n: 8,
+      x: 101,
+      y: 80
+    }, {
+      n: 9,
+      x: -1,
+      y: 95
+    }],
+    items: [{
+      n: 1,
+      label: 'Unload Truck',
+      ref: '\u00a78.1',
+      control: 'Screen header',
+      description: 'The first unloading screen. Identifies the correct consignment before unloading commences.'
+    }, {
+      n: 2,
+      label: 'Gate Entry Number',
+      ref: 'FR-005.1, FR-005.3',
+      control: 'Search dropdown with clear',
+      description: 'Enter or select the GEN. On selection the system auto-populates GEN Date, Supplier Category, Supplier, Product Category, Primary Document Type, Document Number, Document Date and the associated invoices. The clear control resets the selection.'
+    }, {
+      n: 3,
+      label: 'Find GEN Using Other Details',
+      ref: 'FR-005.10, FR-005.11, OI-070',
+      control: 'In-screen search panel',
+      description: 'Opens over this screen. Search criteria only \u2014 Supplier Name, Supplier Category, Product Category, Document Number, Document Date and Status.',
+      proposal: 'The source board draws this as a separate screen carrying supplier name, receipt date and invoice capture fields, none of which belongs to a search. We have redrawn it as an in-screen panel with criteria only, which is what FR-005.10 and FR-005.11 require. OI-070 records the board as still to be corrected.'
+    }, {
+      n: 4,
+      label: 'Matching gate entries',
+      ref: 'FR-005.2',
+      control: 'Radio-button list',
+      description: 'Each result shows the GEN code, supplier, date, document number and a Pending Docs count. The operator picks one and the panel closes with the consignment loaded.'
+    }, {
+      n: 5,
+      label: 'Auto-populated consignment',
+      ref: 'FR-005.3',
+      control: 'Read-only display',
+      description: 'Seven values fill themselves from the gate entry record. None is editable here \u2014 they were captured at Receipt Details, and this screen reads them rather than re-asking.'
+    }, {
+      n: 6,
+      label: 'Select Documents to Unload',
+      ref: 'FR-005.4',
+      control: 'Multi-select dropdown',
+      description: 'Specific invoices within the GEN may be unloaded in this session. A consignment does not have to arrive on one vehicle.'
+    }, {
+      n: 7,
+      label: 'Document eligibility check',
+      ref: 'FR-005.7, FR-005.8, FR-005.9',
+      control: 'Rejection message',
+      description: 'A document number that is not eligible for the selected gate entry is refused outright rather than accepted and reconciled later. The operator must enter or select the correct document before the unload can proceed.'
+    }, {
+      n: 8,
+      label: 'Expected Boxes and Units',
+      ref: 'FR-005.4',
+      control: 'Counter strip',
+      tone: 'open',
+      description: 'The expected counts for the selected invoices, which become the baseline for the unload.',
+      query: {
+        text: 'Where several invoices are selected, whether the expected box count is the sum of the invoices or the No. of Boxes in GEN recorded at Receipt Details is unstated \u2014 the same precedence problem as OI-066, one stage later.',
+        ref: 'OI-066',
+        blocking: true
+      }
+    }, {
+      n: 9,
+      label: 'Next',
+      ref: 'FR-005.5',
+      control: 'Action bar',
+      description: 'Proceeds to the transporter check. Disabled until a gate entry is selected \u2014 there is nothing to unload against without one.'
+    }],
+    missing: {
+      intro: 'What this board does not answer.',
+      statesNotDrawn: ['No GEN selected \u2014 the screen before anything is chosen', 'The search returning no results', 'A GEN already partially unloaded in an earlier session', 'The rejection dialog for an ineligible document'],
+      detailNotSpecified: ['Whether search results are limited to this warehouse or the whole business', 'What the Pending Docs count counts', 'Whether a GEN can be unloaded across two sessions and how the second one opens', 'Sort order of the search results'],
+      mostImportant: 'Partial unloading is implied but never specified. FR-005.4 lets the operator unload specific invoices in this session, which means a consignment can be half received \u2014 but no screen shows what the second session looks like, what it treats as expected, or how the two reconcile against one GEN.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 5A \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+  'screen-5b': {
+    group: 'IN-C · Receipt & Unload',
+    eyebrow: 'IN-C',
+    screenId: 'Screen 5b',
+    screenName: 'Check transporter details before scanning',
+    headline: 'Check Transporter Details — the vehicle that actually turned up',
+    intro: 'The last screen before scanning starts. Everything is pre-filled from Receipt Details and everything is editable, because the truck on the paperwork and the truck at the dock are not always the same truck. The number plate is photographed for the same reason.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 5b', 'FR-005', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Short by design. An operator standing at a truck should confirm four things and start scanning.',
+    caption: 'Screen 5b · Transporter check',
+    markers: [{
+      n: 1,
+      x: -1,
+      y: 5
+    }, {
+      n: 2,
+      x: 101,
+      y: 14
+    }, {
+      n: 3,
+      x: -1,
+      y: 24
+    }, {
+      n: 4,
+      x: 101,
+      y: 38
+    }, {
+      n: 5,
+      x: -1,
+      y: 50
+    }, {
+      n: 6,
+      x: 101,
+      y: 66
+    }, {
+      n: 7,
+      x: -1,
+      y: 78
+    }],
+    items: [{
+      n: 1,
+      label: 'Check Transporter Details',
+      ref: '\u00a78.4',
+      control: 'Screen header',
+      description: 'The final step before box scanning begins.'
+    }, {
+      n: 2,
+      label: 'Consignment context',
+      ref: 'FR-005.3',
+      control: 'Read-only display',
+      description: 'GEN and supplier carried through from the selection made on Screen 5A.'
+    }, {
+      n: 3,
+      label: 'Everything is editable',
+      ref: 'FR-005.5',
+      control: 'Info note',
+      description: 'All fields are pre-filled from Screen 4b and all remain editable, to accommodate changes at the time of physical truck arrival.'
+    }, {
+      n: 4,
+      label: 'Transporter and driver',
+      ref: '\u00a78.4',
+      control: 'Dropdown and text inputs',
+      description: 'Transporter name, driver name and driver contact number, each pre-filled if captured earlier.'
+    }, {
+      n: 5,
+      label: 'Call the driver',
+      ref: '\u00a78.4',
+      control: 'Phone action',
+      tone: 'open',
+      description: 'A phone control beside the number so the operator can call from the terminal.',
+      query: {
+        text: 'Whether the call is placed by the device dialler, a softphone, or a masked number that protects the driver\u2019s privacy is not specified.',
+        ref: '\u00a78.4'
+      }
+    }, {
+      n: 6,
+      label: 'Truck / Vehicle No. Reported',
+      ref: 'FR-005.6',
+      control: 'Text input + camera',
+      description: 'The registration number as physically observed at the gate during unloading. This may differ from the number in the GR documents if the truck was changed en route, and both are kept.'
+    }, {
+      n: 7,
+      label: 'Number plate photograph',
+      ref: 'FR-005.6',
+      control: 'Camera capture',
+      description: 'Evidence of the actual vehicle present during unloading.',
+      proposal: 'FR-005.6 supports the capture but does not require it. We have surfaced a mismatch warning when the reported number differs from the GR document, and made the photograph prominent rather than optional-looking, because a mismatch recorded without evidence is worth little in a claim.'
+    }],
+    missing: {
+      intro: 'What a build would still need.',
+      statesNotDrawn: ['Nothing pre-filled \u2014 transporter never captured at Receipt Details', 'The camera view and a failed capture', 'Mismatch acknowledged and the unload proceeding anyway'],
+      detailNotSpecified: ['Whether a vehicle mismatch requires a reason or an approval', 'Whether the photograph is mandatory when the numbers differ', 'Format validation on the registration number', 'Who is notified when the vehicle differs from the document'],
+      mostImportant: 'A vehicle mismatch is drawn as a warning and nothing more. If the truck at the dock is not the truck on the paperwork, that is either routine or the beginning of a problem, and the specification does not say which \u2014 nor who decides.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 5b \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+  'screen-6c': {
+    group: 'IN-C · Receipt & Unload',
+    eyebrow: 'IN-C',
+    screenId: 'Screen 6c',
+    screenName: 'Check variance',
+    headline: 'Check Variance — what came off the truck against what should have',
+    intro: 'The close of the unloading session. Two boxes short of the document is a fact that has to exist somewhere before the vehicle leaves and the paperwork is filed. This screen is where it does, along with the condition of everything received and a printable record of both.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6c', 'FR-006', 'Surface Handheld + Web', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Specified for the handheld, but read by warehouse operations as much as by the operator who produced it \u2014 FR-032 notes that a report which only exists on a handheld is difficult to review.',
+    caption: 'Screen 6c · Check Variance',
+    markers: [{
+      n: 1,
+      x: -1,
+      y: 4
+    }, {
+      n: 2,
+      x: 101,
+      y: 13
+    }, {
+      n: 3,
+      x: -1,
+      y: 26
+    }, {
+      n: 4,
+      x: 101,
+      y: 36
+    }, {
+      n: 5,
+      x: -1,
+      y: 50
+    }, {
+      n: 6,
+      x: 101,
+      y: 64
+    }, {
+      n: 7,
+      x: -1,
+      y: 80
+    }, {
+      n: 8,
+      x: 101,
+      y: 95
+    }],
+    items: [{
+      n: 1,
+      label: 'Check Variance',
+      ref: 'FR-006.9',
+      control: 'Screen header',
+      description: 'Reached from Finish Truck Unload, which commits the session and flags any unscanned boxes as Balance.'
+    }, {
+      n: 2,
+      label: 'Shortfall statement',
+      ref: 'FR-006.10',
+      control: 'Info note',
+      description: 'States plainly how many boxes the session closed short, and that the shortfall is recorded against this GEN.',
+      proposal: 'The FRD specifies the variance tables but not a plain statement above them. A storekeeper closing a truck at six in the morning should not have to read a table to learn there is a problem.'
+    }, {
+      n: 3,
+      label: 'Quantity Variance',
+      ref: 'FR-006.9',
+      control: 'Read-only comparison table',
+      description: 'As Per Document, Actual and Variance, at box level. A negative variance is red, a positive one amber, and zero green \u2014 traffic-light colours, outside the brand palette on purpose.'
+    }, {
+      n: 4,
+      label: 'Units are not counted here',
+      ref: 'FR-006.18',
+      control: 'Explanatory note',
+      description: 'Where a Units column appears it is derived from document data, not from physical counting. Unit-level verification and the resulting reconciliation happen at Consignment Check, because the transport vehicle cannot be held while every carton is opened.'
+    }, {
+      n: 5,
+      label: 'Quality Variance',
+      ref: 'FR-006.9',
+      control: 'Summary table',
+      description: 'Condition issues tabulated across all boxes in the consignment: Damage, Tampered Packaging, Scratch, Broken, Wrong Delivery, and a Total.'
+    }, {
+      n: 6,
+      label: 'Unload Completion and Exception Summary',
+      ref: 'FR-006.16',
+      control: 'Status block',
+      description: 'States whether the unload completed, how many boxes were marked as exceptions, and confirms that the associated open delivery actions have been enabled and handled.'
+    }, {
+      n: 7,
+      label: 'Document-wise breakdown',
+      ref: 'FR-006.17, \u00a79.6',
+      control: 'Summary table',
+      tone: 'open',
+      description: 'Expected, received and variance per invoice \u2014 named in the Print Summary contents and in the filled-state composite.',
+      query: {
+        text: 'The FRD names a document-wise breakdown in the printed record but gives it no field reference, so its columns are inferred. Confirm what it should carry.',
+        ref: 'FR-006.17'
+      }
+    }, {
+      n: 8,
+      label: 'Print Summary and Proceed',
+      ref: 'FR-006.17',
+      control: 'Action bar',
+      tone: 'open',
+      description: 'Print Summary produces a printable record covering quantity variance, the document-wise breakdown, quality variance and the exception summary. Proceed moves the consignment to Consignment Check.',
+      query: {
+        text: 'Reconciliation of ordered quantity against quantity actually received is not captured during unloading. Confirm that the delta is established at Consignment Check when boxes are opened, and define where the shortfall is reported and to whom.',
+        ref: 'OI-012',
+        blocking: true
+      },
+      proposal: 'The layout of the printed record is not specified. We have assumed it mirrors this screen.'
+    }],
+    missing: {
+      intro: 'What this board does not answer.',
+      statesNotDrawn: ['Zero variance \u2014 everything received, nothing flagged', 'A positive variance, where more boxes arrived than the document lists', 'No exceptions at all', 'The printed record itself', 'The same report on the web surface'],
+      detailNotSpecified: ['Who is notified of a shortfall, and when', 'Whether the variance can be disputed or amended after the session closes', 'Whether a shortfall blocks the consignment from proceeding', 'How a Set Aside box is represented in these counts'],
+      mostImportant: 'Nothing here raises a claim. The screen establishes that two boxes are missing and that four arrived damaged, and then the flow moves on to Consignment Check. OI-023 records that the insurance claim workflow is undefined beyond the point of segregation \u2014 which means the most valuable output of the whole unloading process currently has no consumer.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6c \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  }
+});
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/handheldAnnotations.js", error: String((e && e.message) || e) }); }
 
 // ui_kits/wms-inward/web/ConsignmentWeb.jsx
@@ -5830,7 +7305,6 @@ window.SC_WEB_ANNO = {
     intro: 'Accessed at the unloading dock after the gate entry exists. It classifies the consignment, completes anything not captured at the gate, and confirms which downstream steps apply. Setting this up front matters because the person unloading at six in the morning is usually not the person who knows why the load was ordered \u2014 marking it at the start means the instruction travels with the load instead of living in somebody\u2019s head.',
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 2', 'FR-002', 'Surface Web + Handheld', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Classification on the left, workflow applicability on the right \u2014 the two are separate decisions, and the workflow block is the one a supervisor overrides. The Gate Entry Number stays pinned above both.',
-    annotationsIntro: 'Eleven decisions. One carries an open question, and one is a layout reading we have made on your behalf.',
     url: 'wms.sparecare.in/inward/consignment-details',
     markers: [{
       n: 1,
@@ -5967,7 +7441,6 @@ window.SC_WEB_ANNO = {
     intro: 'One screen showing every load currently in the building and the stage each has reached, with how long it has been sitting there. The stage on its own is not worth much; almost any system can show a status. What makes this screen worth having is the time. A load at waiting-to-unload is normal. A load that has been at waiting-to-unload for six hours is a problem, and it stays invisible unless the screen puts the number in front of you.',
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 3', 'FR-003', 'Surface Web', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Treated as the landing screen rather than a step, because FR-003 describes it as the view a supervisor keeps open through the day and a manager checks to find where work is piling up. The three queues are stacked full width so all of them are visible at once.',
-    annotationsIntro: 'Nine decisions. One carries an open question, and three are readings of the FRD we have made on your behalf.',
     url: 'wms.sparecare.in/inward/dashboard',
     markers: [{
       n: 1,
@@ -6163,6 +7636,30 @@ window.SC_PORTAL = {
       modes: true
     }, {
       idx: '05',
+      id: 'screen-4b',
+      ref: 'Screen 4b',
+      name: 'Transporter details & invoice summary',
+      fr: 'FR-004',
+      file: 'screens/screen-4b-transporter-details.html',
+      modes: true
+    }, {
+      idx: '06',
+      id: 'screen-5a',
+      ref: 'Screen 5A',
+      name: 'Truck unload initiation & GEN selection',
+      fr: 'FR-005',
+      file: 'screens/screen-5a-unload-initiation.html',
+      modes: true
+    }, {
+      idx: '07',
+      id: 'screen-5b',
+      ref: 'Screen 5b',
+      name: 'Check transporter details',
+      fr: 'FR-005',
+      file: 'screens/screen-5b-transporter-check.html',
+      modes: true
+    }, {
+      idx: '08',
       id: 'screen-6a',
       ref: 'Screen 6a',
       name: 'Box scanning & unload progress',
@@ -6170,18 +7667,34 @@ window.SC_PORTAL = {
       file: 'screens/screen-6a-box-scanning.html',
       modes: true
     }, {
-      idx: '06',
+      idx: '09',
       id: 'screen-6b',
       ref: 'Screen 6b',
       name: 'Box condition assessment',
       fr: 'FR-006',
       file: 'screens/screen-6b-box-condition.html',
       modes: true
+    }, {
+      idx: '10',
+      id: 'screen-6c',
+      ref: 'Screen 6c',
+      name: 'Check variance',
+      fr: 'FR-006',
+      file: 'screens/screen-6c-check-variance.html',
+      modes: true
     }]
   }, {
     code: 'IN-D',
     name: 'REFERENCE',
     items: [{
+      idx: '',
+      id: 'consolidated',
+      ref: '',
+      name: 'Consolidated unloading view',
+      fr: '\u00a79.6',
+      file: 'screens/consolidated-unloading-view.html',
+      modes: false
+    }, {
       idx: '',
       id: 'prototype',
       ref: '',

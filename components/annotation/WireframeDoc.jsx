@@ -3,6 +3,25 @@ import {AnnotatedScreen} from './AnnotatedScreen.jsx';
 import {AnnotationLegend} from './AnnotationLegend.jsx';
 import {MissingSection} from './MissingSection.jsx';
 
+const WORDS=['No','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen','Twenty'];
+const word=n=>WORDS[n]||String(n);
+
+/* The lead sentence is derived from the callout data, never written by hand. A document
+   whose claim is that every callout is traceable and counted cannot afford a count that
+   disagrees with its own list. */
+function tally(items){
+  const n=items.length;
+  if(!n) return null;
+  const q=items.filter(i=>i.query).length;
+  const p=items.filter(i=>i.proposal).length;
+  let s=word(n)+(n===1?' decision, traced':' decisions, each traced')+' to a requirement.';
+  const parts=[];
+  if(q) parts.push(word(q).toLowerCase()+(q===1?' carries an open question':' carry an open question'));
+  if(p) parts.push(word(p).toLowerCase()+(p===1?' is a reading of the FRD made on your behalf':' are readings of the FRD made on your behalf'));
+  if(parts.length) s+=' '+parts.join(', and ').replace(/^./,c=>c.toUpperCase())+'.';
+  return s;
+}
+
 function Chip({children}){
   return <span style={{font:'var(--type-caption)',color:'var(--text-secondary)',border:'1px solid var(--border-default)',borderRadius:'var(--r-pill)',padding:'5px 12px',whiteSpace:'nowrap'}}>{children}</span>;
 }
@@ -16,11 +35,22 @@ export function WireframeDoc({mode='wireframe',eyebrow,group,screenId,screenName
     <div style={{padding:'var(--sp-4)',background:'var(--anno-canvas)',minHeight:'100%',...style}} {...rest}>
       {annotated&&
         <header style={{marginBottom:'var(--sp-4)'}}>
-          {(eyebrow||group)&&<div style={{display:'flex',alignItems:'center',gap:'12px',marginBottom:'var(--sp-2)'}}>
-            <span aria-hidden="true" style={{width:'26px',height:'2px',background:'var(--sc-teal)'}}/>
-            <span style={{font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',letterSpacing:'0.08em',textTransform:'uppercase',color:'var(--sc-teal-deep)'}}>{eyebrow}</span>
-            {group&&<span style={{font:'var(--type-caption)',color:'var(--sc-grey-600)'}}>{group}</span>}
-          </div>}
+          {(eyebrow||group)&&(()=>{
+            /* The data carries the group as "IN-C · Receipt & Unload" and the code separately.
+               Strip the duplicated code so the eyebrow reads "IN-C  RECEIPT & UNLOAD" once. */
+            let name=group||'';
+            if(eyebrow&&name){
+              const pre=eyebrow.trim();
+              if(name.indexOf(pre)===0) name=name.slice(pre.length).replace(/^\s*[·\u00b7\u2013\u2014-]\s*/,'');
+            }
+            return (
+              <div style={{display:'flex',alignItems:'center',gap:'12px',marginBottom:'var(--sp-2)',flexWrap:'wrap'}}>
+                <span aria-hidden="true" style={{width:'26px',height:'2px',background:'var(--sc-teal)'}}/>
+                {eyebrow&&<span style={{font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',letterSpacing:'0.08em',textTransform:'uppercase',color:'var(--sc-teal-deep)'}}>{eyebrow}</span>}
+                {name&&<span style={{font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',letterSpacing:'0.06em',textTransform:'uppercase',color:'var(--sc-grey-600)'}}>{name}</span>}
+              </div>
+            );
+          })()}
           <h1 style={{fontFamily:'var(--font-display)',fontWeight:'var(--fw-bold)',fontSize:'40px',lineHeight:1.08,letterSpacing:'var(--ls-display)',color:'var(--text-heading)',maxWidth:'30ch'}}>
             {screenId&&<span style={{fontFamily:'var(--font-mono)',fontSize:'26px',fontWeight:'var(--fw-semibold)',color:'var(--sc-teal)',marginRight:'12px'}}>{screenId}</span>}
             {headline||screenName}
@@ -47,7 +77,9 @@ export function WireframeDoc({mode='wireframe',eyebrow,group,screenId,screenName
             <span style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-caption)',fontWeight:'var(--fw-semibold)',color:'var(--sc-teal-deep)',border:'1px solid var(--border-field)',background:'var(--surface-sunken)',borderRadius:'var(--r-sharp)',padding:'3px 8px'}}>02</span>
             <h2 style={{fontFamily:'var(--font-display)',fontWeight:'var(--fw-bold)',fontSize:'24px',color:'var(--text-heading)'}}>Annotations</h2>
           </div>
-          {annotationsIntro&&<p style={{font:'var(--type-caption)',color:'var(--text-secondary)',maxWidth:'78ch',margin:'0 0 var(--sp-2)',lineHeight:1.55}}>{annotationsIntro}</p>}
+          <p style={{font:'var(--type-caption)',color:'var(--text-secondary)',maxWidth:'78ch',margin:'0 0 var(--sp-2)',lineHeight:1.55}}>
+            {tally(items)}{annotationsIntro?' '+annotationsIntro:''}
+          </p>
           <AnnotationLegend title={null} items={items} columns={legendColumns}/>
         </div>}
 

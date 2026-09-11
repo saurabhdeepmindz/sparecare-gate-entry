@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Consolidated unloading view · SpareCare WMS Inward</title>
+<link rel="stylesheet" href="../../styles.css">
+<script>window.SC_ASSET_BASE='../..'</script>
+<script src="https://unpkg.com/lucide@0.446.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../boot.js"></script>
+<style>html,body{margin:0}body{background:var(--anno-canvas);min-width:1500px}a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6aScan.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6bCondition.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6cVariance.jsx"></script>
+<script type="text/babel">
+SCBoot(['RuggedFrame','NotDrawnHost','WireframeSheet','InfoNote','Screen6aScan','Screen6bCondition','Screen6cVariance'],function(NS){
+const {RuggedFrame,NotDrawnHost,WireframeSheet,InfoNote}=NS;
+
+const ROWS=[
+  {box:'BX-00015',quality:'Visible Scratch',status:'\u26A0',time:'09:41'},
+  {box:'BX-00014',quality:'OK',status:'\u2713',time:'09:38'},
+  {box:'BX-00013',quality:'Packing Tampered',status:'\u26A0',time:'09:28'},
+  {box:'BX-00012',quality:'Damaged',status:'\u2715',time:'09:24'},
+  {box:'BX-00011',quality:'OK',status:'\u2713',time:'09:12'}
+];
+const QUALITY=[
+  {label:'Damage',count:2},{label:'Tampered Packaging',count:1},
+  {label:'Scratch',count:1},{label:'Broken',count:0},{label:'Wrong Delivery',count:0}
+];
+
+function Col({caption,note,children}){
+  return (
+    <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'12px',minWidth:0}}>
+      <RuggedFrame caption={caption} fit>{children}</RuggedFrame>
+      <p style={{font:'var(--type-caption)',color:'var(--text-secondary)',lineHeight:1.55,maxWidth:'420px',margin:0}}>{note}</p>
+    </div>
+  );
+}
+
+function Page(){
+  return (
+    <WireframeSheet width="1460px"
+      title="Consolidated unloading view — filled state"
+      subtitle="Screens 6a, 6b and 6c side by side, populated, as §9.6 of the FRD presents them. The purpose of the composite is to show the behaviours that only appear once a session is under way: the ship list panel, the WIP counters and progress tracker, the shiplist mismatch exception with its two actions, the recent entries log, and the variance and exception summary that close the session."
+      meta={[{label:'Module',value:'WMS / Inward'},{label:'Source',value:'FRD v0.11 §9.6'},{label:'Requirements',value:'FR-006.11 → FR-006.18'},{label:'Surface',value:'Handheld'}]}
+      footer="Prepared by Deepmindz Innovations Pvt Ltd for SpareCare · Companion to FRD v0.11 · Confidential. Illustrative and pre-approval — not agreed scope, and not a visual design. Each screen is annotated individually under IN-C in the menu; this sheet shows them together and carries no callouts of its own.">
+      <div style={{maxWidth:'900px',marginBottom:'var(--sp-3)'}}>
+        <InfoNote>Full screens are shown, not the 880 dp crop. On the device the operator scrolls.</InfoNote>
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:'var(--sp-4)',alignItems:'start'}}>
+        <Col caption="Screen 6a · Box scanning"
+          note="Mid-session. The ship list is attached and can be viewed or replaced; 18 of 50 boxes are off the truck; a box that is not on the list has raised a mismatch requiring Set Aside or Add Document before scanning continues.">
+          <window.Screen6aScan box="" rows={ROWS} unloaded={18} expected={50} ok={14} notOk={4}/>
+        </Col>
+        <Col caption="Screen 6b · Box condition"
+          note="One box open. Damaged is selected, which makes the photograph mandatory and pre-recommends open delivery. Save stays disabled until the photograph exists. Recent entries are repeated here so the operator can see the run without going back.">
+          <window.Screen6bCondition boxNo="BX-00012" selected={['damaged']} openDelivery photo remarks="Corner crushed and side dented." recent={ROWS.slice(2)}/>
+        </Col>
+        <Col caption="Screen 6c · Check Variance"
+          note="Session closed two boxes short. Quantity variance at box level only, quality variance by condition, the exception summary, and a printable record of all three. Unit counting is deferred to Consignment Check.">
+          <window.Screen6cVariance expectedBoxes={50} actualBoxes={48} expectedUnits={1240} quality={QUALITY} exceptions={2}/>
+        </Col>
+      </div>
+    </WireframeSheet>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<React.Fragment><Page/><NotDrawnHost/></React.Fragment>);
+});
+</script></body></html>

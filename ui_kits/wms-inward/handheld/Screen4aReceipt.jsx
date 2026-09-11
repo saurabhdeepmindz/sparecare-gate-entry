@@ -50,17 +50,14 @@ function Screen4aReceipt({state={},set=()=>{},invoices=[],openInvoice=true,onTog
           <Button variant="secondary" size="md" block onClick={onAddNext} iconLeft={<Icon name="plus" size={15}/>}>Add Next</Button>
         </Accordion>
 
-        <div style={{background:'var(--surface-card)',border:'1px solid var(--border-soft)',borderRadius:'var(--radius-field)',padding:'12px'}}>
-          <div style={{font:'var(--type-label)',color:'var(--text-heading)',marginBottom:'8px'}}>Details of the Invoices Added</div>
-          <QueueTable
-            columns={[{key:'no',label:'Invoice No.',mono:true},{key:'date',label:'Date'},{key:'amount',label:'Amount',align:'right'},{key:'received',label:'Recd.',align:'center'}]}
-            rows={invoices} minRows={0} style={{marginBottom:0}}/>
-          <div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline',paddingTop:'9px',marginTop:'2px',borderTop:'1.5px solid var(--border-field)'}}>
-            <span style={{font:'var(--type-label)',color:'var(--text-body)'}}>Total</span>
-            <span style={{fontFamily:'var(--font-mono)',fontWeight:'var(--fw-semibold)',fontSize:'var(--fs-body-sm)',color:'var(--sc-teal-deep)'}}>{'\u20B9 '+total.toLocaleString('en-IN')}</span>
-          </div>
-          <p style={{margin:'8px 0 0',font:'var(--type-caption)',color:'var(--sc-grey-500)',lineHeight:1.45}}>The summary table renders once, here on the receipt record.</p>
-        </div>
+        {invoices.length>0&&
+          <div style={{background:'var(--surface-sunken)',border:'1px solid var(--border-field)',borderRadius:'var(--radius-field)',padding:'11px 12px'}}>
+            <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:'10px'}}>
+              <span style={{font:'var(--type-caption)',color:'var(--sc-teal-deep)'}}>{invoices.length} invoices captured, {'\u20B9 '+total.toLocaleString('en-IN')} total</span>
+              <Tag tone="info" dot={false}>Summary on next screen</Tag>
+            </div>
+            <p style={{margin:'6px 0 0',font:'var(--type-caption)',color:'var(--sc-grey-600)',lineHeight:1.45}}>FR-004.5 places the invoice summary table on Screen 4b. There is one table, not two.</p>
+          </div>}
       </div>
       <ActionBar style={{position:'sticky',bottom:0}}>
         <Button variant="quiet" block onClick={onBack} iconLeft={<Icon name="save" size={15}/>}>Save</Button>

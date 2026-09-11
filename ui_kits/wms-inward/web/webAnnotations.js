@@ -90,7 +90,6 @@ window.SC_WEB_ANNO = {
     intro: 'Accessed at the unloading dock after the gate entry exists. It classifies the consignment, completes anything not captured at the gate, and confirms which downstream steps apply. Setting this up front matters because the person unloading at six in the morning is usually not the person who knows why the load was ordered \u2014 marking it at the start means the instruction travels with the load instead of living in somebody\u2019s head.',
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 2', 'FR-002', 'Surface Web + Handheld', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Classification on the left, workflow applicability on the right \u2014 the two are separate decisions, and the workflow block is the one a supervisor overrides. The Gate Entry Number stays pinned above both.',
-    annotationsIntro: 'Eleven decisions. One carries an open question, and one is a layout reading we have made on your behalf.',
     url: 'wms.sparecare.in/inward/consignment-details',
     markers: [
       {n:1,  x:-1,  y:6},
@@ -161,7 +160,6 @@ window.SC_WEB_ANNO = {
     intro: 'One screen showing every load currently in the building and the stage each has reached, with how long it has been sitting there. The stage on its own is not worth much; almost any system can show a status. What makes this screen worth having is the time. A load at waiting-to-unload is normal. A load that has been at waiting-to-unload for six hours is a problem, and it stays invisible unless the screen puts the number in front of you.',
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 3', 'FR-003', 'Surface Web', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Treated as the landing screen rather than a step, because FR-003 describes it as the view a supervisor keeps open through the day and a manager checks to find where work is piling up. The three queues are stacked full width so all of them are visible at once.',
-    annotationsIntro: 'Nine decisions. One carries an open question, and three are readings of the FRD we have made on your behalf.',
     url: 'wms.sparecare.in/inward/dashboard',
     markers: [
       {n:1,  x:-1,  y:6},
