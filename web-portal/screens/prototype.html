@@ -27,8 +27,8 @@ html,body{margin:0;height:100%}body{background:var(--anno-canvas);min-width:760p
 <script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6aScan.jsx"></script>
 <script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6bCondition.jsx"></script>
 <script type="text/babel">
-SCBoot(['BrowserChrome','RuggedFrame','InfoNote','Button','Icon','WebShell','DashboardWeb','GateEntryWeb','ConsignmentWeb','Screen4aReceipt','Screen6aScan','Screen6bCondition'],function(NS){
-const {BrowserChrome,RuggedFrame,InfoNote,Button,Icon}=NS;
+SCBoot(['BrowserChrome','RuggedFrame','NotDrawnHost','InfoNote','Button','Icon','WebShell','DashboardWeb','GateEntryWeb','ConsignmentWeb','Screen4aReceipt','Screen6aScan','Screen6bCondition'],function(NS){
+const {BrowserChrome,RuggedFrame,NotDrawnHost,InfoNote,Button,Icon}=NS;
 
 const STEPS=[
   {id:'dash',  surface:'web', label:'Inward Dashboard',   ref:'Screen 3',  url:'wms.sparecare.in/inward/dashboard',            next:'Create Gate Entry',      caption:null},
@@ -265,6 +265,6 @@ Click anywhere on the screen to flash the clickable areas. Nothing is saved &mda
     </div>
   );
 }
-ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+ReactDOM.createRoot(document.getElementById('root')).render(<React.Fragment><App/><NotDrawnHost/></React.Fragment>);
 });
 </script></body></html>

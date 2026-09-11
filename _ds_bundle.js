@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/RuggedFrame.jsx":"7a6f82bd07db","components/annotation/WireframeDoc.jsx":"d5dccb947ef9","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"b325f3aae20e","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"8cc1e7835bcc","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"275cfe6856e4","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"6e0a5e88bf52","ui_kits/wms-inward/handheld/handheldAnnotations.js":"88dc1e02f4fd","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"48b4f1f5f5b8","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"198cb65106d1","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"203557b66f59"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"NotDrawnHost","sourcePath":"components/annotation/NotDrawnHost.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/NotDrawnHost.jsx":"e89fdd37d2c4","components/annotation/RuggedFrame.jsx":"7a6f82bd07db","components/annotation/WireframeDoc.jsx":"d5dccb947ef9","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"c2a9b9ea3971","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"8cc1e7835bcc","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"a2fe76daa677","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"97d6a4bd0d24","ui_kits/wms-inward/handheld/handheldAnnotations.js":"88dc1e02f4fd","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"48b4f1f5f5b8","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"198cb65106d1","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"203557b66f59"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -448,6 +448,109 @@ function MissingSection({
 }
 Object.assign(__ds_scope, { MissingSection });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/annotation/MissingSection.jsx", error: String((e && e.message) || e) }); }
+
+// components/annotation/NotDrawnHost.jsx
+try { (() => {
+/* Mount once per page. Any control whose destination the FRD names but does not describe
+   dispatches 'sc:not-drawn' and this states the gap, with its requirement reference,
+   instead of doing nothing. Silence reads as a broken prototype; this reads as a question. */
+function NotDrawnHost() {
+  const [d, setD] = React.useState(null);
+  React.useEffect(() => {
+    const h = e => setD(e.detail || {});
+    window.addEventListener('sc:not-drawn', h);
+    return () => window.removeEventListener('sc:not-drawn', h);
+  }, []);
+  if (!d) return null;
+  const close = () => setD(null);
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: close,
+    role: "dialog",
+    "aria-modal": "true",
+    style: {
+      position: 'fixed',
+      inset: 0,
+      zIndex: 90,
+      background: 'rgba(4,1,1,0.45)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '24px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    onClick: e => e.stopPropagation(),
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-default)',
+      borderRadius: 'var(--radius-card)',
+      boxShadow: 'var(--shadow-overlay)',
+      maxWidth: '520px',
+      width: '100%',
+      padding: 'var(--pad-card)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      fontWeight: 'var(--fw-semibold)',
+      letterSpacing: '0.07em',
+      color: 'var(--status-warn-fg)',
+      marginBottom: '8px'
+    }
+  }, "NOT DRAWN"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 'var(--fw-bold)',
+      fontSize: '23px',
+      color: 'var(--text-heading)',
+      marginBottom: '8px'
+    }
+  }, d.title), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      font: 'var(--type-caption)',
+      color: 'var(--text-secondary)',
+      lineHeight: 1.6
+    }
+  }, d.body), d.ref && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: '12px',
+      display: 'inline-block',
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      fontWeight: 'var(--fw-semibold)',
+      color: 'var(--sc-teal-deep)',
+      background: 'var(--surface-sunken)',
+      border: '1px solid var(--border-field)',
+      borderRadius: 'var(--r-sharp)',
+      padding: '3px 8px'
+    }
+  }, d.ref), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      marginTop: 'var(--sp-3)',
+      paddingTop: 'var(--sp-2)',
+      borderTop: '1px solid var(--border-soft)'
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: close,
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 'var(--fw-semibold)',
+      fontSize: 'var(--fs-label)',
+      padding: '10px 20px',
+      borderRadius: 'var(--r-sharp)',
+      border: 'none',
+      background: 'var(--action-primary)',
+      color: '#fff',
+      cursor: 'pointer'
+    }
+  }, "Close"))));
+}
+Object.assign(__ds_scope, { NotDrawnHost });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/annotation/NotDrawnHost.jsx", error: String((e && e.message) || e) }); }
 
 // components/annotation/RuggedFrame.jsx
 try { (() => {
@@ -1409,6 +1512,13 @@ Object.assign(__ds_scope, { ActionBar });
 // components/wms/CameraButton.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const announce = () => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+  detail: {
+    title: 'Document capture',
+    body: 'The camera interface is specified to exist but is not drawn. FR-001.5 requires document capture via camera or upload at gate entry, and FR-004 carries GRN and invoice photo uploads at Receipt Details \u2014 neither describes the capture screen, how many images may be attached, or what happens when a capture fails.',
+    ref: 'FR-001.5'
+  }
+}));
 function CameraButton({
   onClick,
   label = 'Capture document photo',
@@ -1417,7 +1527,7 @@ function CameraButton({
   ...rest
 }) {
   return /*#__PURE__*/React.createElement("button", _extends({
-    onClick: onClick,
+    onClick: onClick || announce,
     "aria-label": label,
     style: {
       width: size,
@@ -3587,10 +3697,24 @@ function Screen6aScan({
       }
     }, /*#__PURE__*/React.createElement(Button, {
       variant: "ghost",
-      size: "sm"
+      size: "sm",
+      onClick: () => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+        detail: {
+          title: 'Ship list viewer',
+          body: 'FR-006.12 requires a View action that opens the uploaded ship list, but the viewer itself is not specified \\u2014 neither its columns nor whether it is readable on a handheld. OI-030 records that a sample ship list is still to be shared so the structure of the uploaded data can be defined.',
+          ref: 'FR-006.12 · OI-030'
+        }
+      }))
     }, "View"), /*#__PURE__*/React.createElement(Button, {
       variant: "secondary",
-      size: "sm"
+      size: "sm",
+      onClick: () => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+        detail: {
+          title: 'Replace ship list',
+          body: 'FR-006.12 allows a corrected or alternative ship list to be uploaded, and states that replacing it re-evaluates the expected box manifest. What happens to boxes already scanned against the previous manifest is not specified.',
+          ref: 'FR-006.12'
+        }
+      }))
     }, "Replace"))
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -3669,7 +3793,14 @@ function Screen6aScan({
     title: "Recent Box Entries",
     action: /*#__PURE__*/React.createElement(Button, {
       variant: "ghost",
-      size: "sm"
+      size: "sm",
+      onClick: () => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+        detail: {
+          title: 'Full session log',
+          body: 'FR-006.14 names a View All action opening the full log for the session. The log screen is not drawn \\u2014 its columns, filters and whether an entry can be corrected from it are unspecified.',
+          ref: 'FR-006.14'
+        }
+      }))
     }, "View All")
   }, /*#__PURE__*/React.createElement(QueueTable, {
     columns: [{
@@ -3843,11 +3974,25 @@ function Screen6bCondition({
   }, /*#__PURE__*/React.createElement(Button, {
     variant: "secondary",
     size: "sm",
-    block: true
+    block: true,
+    onClick: () => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+      detail: {
+        title: 'Set Aside',
+        body: 'FR-006.13 segregates the box for return to the transporter and excludes it from the received count. The confirmation, where the box then appears, and how the return to the transporter is tracked are not specified. OI-013 is the wider gap: where no ship list and no supplier code exist, ownership of the box cannot be established at all.',
+        ref: 'FR-006.13 · OI-013'
+      }
+    }))
   }, "Set Aside"), /*#__PURE__*/React.createElement(Button, {
     variant: "secondary",
     size: "sm",
-    block: true
+    block: true,
+    onClick: () => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+      detail: {
+        title: 'Add Document',
+        body: 'FR-006.13 attaches supporting documentation justifying acceptance of the box into the consignment. What the document may be \\u2014 photograph, file, or both \\u2014 and who may accept it are not specified.',
+        ref: 'FR-006.13'
+      }
+    }))
   }, "Add Document"))), /*#__PURE__*/React.createElement("div", {
     style: {
       font: 'var(--type-label)',
@@ -3995,7 +4140,14 @@ function Screen6bCondition({
     }
   }, "Recent Box Entries"), /*#__PURE__*/React.createElement(Button, {
     variant: "ghost",
-    size: "sm"
+    size: "sm",
+    onClick: () => window.dispatchEvent(new CustomEvent('sc:not-drawn', {
+      detail: {
+        title: 'Full session log',
+        body: 'FR-006.14 names a View All action opening the full log for the session. The log screen is not drawn.',
+        ref: 'FR-006.14'
+      }
+    }))
   }, "View All")), /*#__PURE__*/React.createElement(QueueTable, {
     columns: [{
       key: 'box',
@@ -6028,6 +6180,8 @@ __ds_ns.BrowserChrome = __ds_scope.BrowserChrome;
 __ds_ns.CalloutBox = __ds_scope.CalloutBox;
 
 __ds_ns.MissingSection = __ds_scope.MissingSection;
+
+__ds_ns.NotDrawnHost = __ds_scope.NotDrawnHost;
 
 __ds_ns.RuggedFrame = __ds_scope.RuggedFrame;
 

@@ -27,8 +27,8 @@ function Screen6bCondition({boxNo='BX-00012',selected=['damaged'],onToggle,openD
         <div style={{marginBottom:'12px'}}>
           <InfoNote tone="warn">Mismatch with shiplist. Choose Set Aside to return the box, or Add Document to justify accepting it.</InfoNote>
           <div style={{display:'flex',gap:'8px',marginTop:'8px'}}>
-            <Button variant="secondary" size="sm" block>Set Aside</Button>
-            <Button variant="secondary" size="sm" block>Add Document</Button>
+            <Button variant="secondary" size="sm" block onClick={()=>window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail:{title:'Set Aside',body:'FR-006.13 segregates the box for return to the transporter and excludes it from the received count. The confirmation, where the box then appears, and how the return to the transporter is tracked are not specified. OI-013 is the wider gap: where no ship list and no supplier code exist, ownership of the box cannot be established at all.',ref:'FR-006.13 · OI-013'}}))}>Set Aside</Button>
+            <Button variant="secondary" size="sm" block onClick={()=>window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail:{title:'Add Document',body:'FR-006.13 attaches supporting documentation justifying acceptance of the box into the consignment. What the document may be \\u2014 photograph, file, or both \\u2014 and who may accept it are not specified.',ref:'FR-006.13'}}))}>Add Document</Button>
           </div>
         </div>
 
@@ -64,7 +64,7 @@ function Screen6bCondition({boxNo='BX-00012',selected=['damaged'],onToggle,openD
         <div style={{background:'var(--surface-card)',border:'1px solid var(--border-soft)',borderRadius:'var(--radius-field)',padding:'12px'}}>
           <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:'9px'}}>
             <span style={{font:'var(--type-label)',color:'var(--text-heading)'}}>Recent Box Entries</span>
-            <Button variant="ghost" size="sm">View All</Button>
+            <Button variant="ghost" size="sm" onClick={()=>window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail:{title:'Full session log',body:'FR-006.14 names a View All action opening the full log for the session. The log screen is not drawn.',ref:'FR-006.14'}}))}>View All</Button>
           </div>
           <QueueTable
             columns={[{key:'box',label:'Box No.',mono:true},{key:'quality',label:'Quality'},{key:'status',label:'Status',align:'center'},{key:'time',label:'Time',align:'right'}]}

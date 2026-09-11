@@ -11,8 +11,8 @@
 <style>html,body{margin:0}body{background:var(--anno-canvas)}a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}</style>
 </head><body><div id="root"></div>
 <script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6bCondition.jsx"></script><script type="text/babel">
-SCBoot(['WireframeDoc','RuggedFrame','Screen6bCondition'],function(NS){
-  const {WireframeDoc,RuggedFrame}=NS;
+SCBoot(['WireframeDoc','NotDrawnHost','RuggedFrame','Screen6bCondition'],function(NS){
+  const {WireframeDoc,RuggedFrame,NotDrawnHost}=NS;
   const view=new URLSearchParams(location.search).get('view')==='annotated'?'annotated':'wireframe';
   const {caption,...props}=window.SC_HH_ANNO['screen-6b'];
 
@@ -36,6 +36,6 @@ SCBoot(['WireframeDoc','RuggedFrame','Screen6bCondition'],function(NS){
       </WireframeDoc>
     );
   }
-  ReactDOM.createRoot(document.getElementById('root')).render(<Page/>);
+  ReactDOM.createRoot(document.getElementById('root')).render(<React.Fragment><Page/><NotDrawnHost/></React.Fragment>);
 });
 </script></body></html>

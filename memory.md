@@ -35,6 +35,20 @@ The rest of Batch 1: **4b** (transporter details), **5A** (truck unload initiati
 **5b** (Select GEN), **6c** (variance check), and the **Consolidated Unloading View**
 from §9.6. FRD §7 and §9 have been read; **§8 has not** — read it before drawing 5A/5b.
 
+### Controls whose destination the FRD does not specify
+
+Do **not** leave them inert — a customer reads a dead button as a broken prototype. Fire
+the `sc:not-drawn` event instead and `NotDrawnHost` (mounted once per page) states the gap
+with its FR reference:
+
+```js
+window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail:{title,body,ref}}))
+```
+
+Already wired: the camera on Screens 1 and 4a (FR-001.5), ship list View and Replace on 6a
+(FR-006.12, OI-030), View All on 6a and 6b (FR-006.14), Set Aside and Add Document on 6b
+(FR-006.13, OI-013).
+
 ### Annotation pattern now in force
 
 Every screen page is a `WireframeDoc` with: eyebrow, screen id, headline, intro, metadata

@@ -14,8 +14,8 @@
 <script type="text/babel" src="../../ui_kits/wms-inward/web/GateEntryWeb.jsx"></script>
 <script type="text/babel" src="../../ui_kits/wms-inward/web/ConsignmentWeb.jsx"></script>
 <script type="text/babel">
-SCBoot(['WireframeDoc','BrowserChrome','WebShell','ConsignmentWeb'],function(NS){
-  const {WireframeDoc,BrowserChrome}=NS;
+SCBoot(['WireframeDoc','NotDrawnHost','BrowserChrome','WebShell','ConsignmentWeb'],function(NS){
+  const {WireframeDoc,BrowserChrome,NotDrawnHost}=NS;
   const view=new URLSearchParams(location.search).get('view')==='annotated'?'annotated':'wireframe';
   const {url,...props}=window.SC_WEB_ANNO['screen-2'];
   const DEFAULT_STEPS=[
@@ -43,6 +43,6 @@ SCBoot(['WireframeDoc','BrowserChrome','WebShell','ConsignmentWeb'],function(NS)
       </WireframeDoc>
     );
   }
-  ReactDOM.createRoot(document.getElementById('root')).render(<Page/>);
+  ReactDOM.createRoot(document.getElementById('root')).render(<React.Fragment><Page/><NotDrawnHost/></React.Fragment>);
 });
 </script></body></html>

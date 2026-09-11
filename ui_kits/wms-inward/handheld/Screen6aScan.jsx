@@ -24,7 +24,10 @@ function Screen6aScan({box='',setBox,onScan,rows=[],unloaded=18,expected=50,ok=1
         </div>
 
         <Panel title="Shipment Details (Shiplist)"
-          action={<div style={{display:'flex',gap:'7px'}}><Button variant="ghost" size="sm">View</Button><Button variant="secondary" size="sm">Replace</Button></div>}>
+          action={<div style={{display:'flex',gap:'7px'}}>
+            <Button variant="ghost" size="sm" onClick={()=>window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail:{title:'Ship list viewer',body:'FR-006.12 requires a View action that opens the uploaded ship list, but the viewer itself is not specified \\u2014 neither its columns nor whether it is readable on a handheld. OI-030 records that a sample ship list is still to be shared so the structure of the uploaded data can be defined.',ref:'FR-006.12 · OI-030'}}))}>View</Button>
+            <Button variant="secondary" size="sm" onClick={()=>window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail:{title:'Replace ship list',body:'FR-006.12 allows a corrected or alternative ship list to be uploaded, and states that replacing it re-evaluates the expected box manifest. What happens to boxes already scanned against the previous manifest is not specified.',ref:'FR-006.12'}}))}>Replace</Button>
+          </div>}>
           <div style={{display:'flex',alignItems:'center',gap:'10px'}}>
             <Icon name="file-spreadsheet" size={20} color="var(--sc-teal-deep)"/>
             <div style={{minWidth:0}}>
@@ -54,7 +57,7 @@ function Screen6aScan({box='',setBox,onScan,rows=[],unloaded=18,expected=50,ok=1
           <InfoNote tone="warn">BX-00019 is not on the uploaded ship list. Set it aside, or add a document to justify accepting it.</InfoNote>
         </div>
 
-        <Panel title="Recent Box Entries" action={<Button variant="ghost" size="sm">View All</Button>}>
+        <Panel title="Recent Box Entries" action={<Button variant="ghost" size="sm" onClick={()=>window.dispatchEvent(new CustomEvent('sc:not-drawn',{detail:{title:'Full session log',body:'FR-006.14 names a View All action opening the full log for the session. The log screen is not drawn \\u2014 its columns, filters and whether an entry can be corrected from it are unspecified.',ref:'FR-006.14'}}))}>View All</Button>}>
           <QueueTable
             columns={[{key:'box',label:'Box No.',mono:true},{key:'quality',label:'Quality'},{key:'status',label:'Status',align:'center'},{key:'time',label:'Time',align:'right'}]}
             rows={rows} minRows={0} onRowClick={onBoxTap} style={{marginBottom:0}}/>

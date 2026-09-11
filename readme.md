@@ -142,6 +142,7 @@ The WMS wireframes in the FRD use a consistent duotone line set at a light strok
 - `RuggedFrame` — rugged handheld terminal frame, 412 × 880 dp
 - `CalloutBox` — the amber OPEN QUERY and tinted OUR PROPOSAL boxes
 - `MissingSection` — "What is deliberately missing"
+- `NotDrawnHost` — states why a control leads nowhere, citing the requirement that names it
 
 **Deliverable**
 
