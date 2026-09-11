@@ -7,9 +7,10 @@ export function RuggedFrame({caption,width=412,height=880,fit=false,scrollHint=t
   return (
     <div style={{display:'inline-flex',flexDirection:'column',alignItems:'center',gap:'10px',...style}} {...rest}>
       {caption&&
-        <div style={{display:'inline-flex',alignItems:'center',gap:'10px',background:'var(--surface-card)',border:'1px solid var(--border-default)',borderRadius:'var(--r-pill)',padding:'6px 14px'}}>
+        <div style={{display:'inline-flex',alignItems:'center',gap:'10px',whiteSpace:'nowrap',background:'var(--surface-card)',border:'1px solid var(--border-default)',borderRadius:'var(--r-pill)',padding:'6px 14px'}}>
           <span style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-micro)',fontWeight:'var(--fw-semibold)',letterSpacing:'0.06em',color:'var(--sc-teal-deep)',textTransform:'uppercase'}}>{caption}</span>
           {scrollHint&&!fit&&<span style={{font:'var(--type-caption)',color:'var(--sc-grey-500)'}}>{'SCROLL INSIDE \u2195'}</span>}
+          {!scrollHint&&!fit&&<span style={{font:'var(--type-caption)',color:'var(--sc-grey-500)'}}>{'412 \u00D7 ' + height + ' dp'}</span>}
           {fit&&<span style={{font:'var(--type-caption)',color:'var(--sc-grey-500)'}}>{'FULL SCREEN SHOWN \u2014 device crops at ' + height + 'dp'}</span>}
         </div>}
       <div style={{position:'relative',padding:'22px 18px',background:'#2B2E30',borderRadius:'18px',boxShadow:'var(--shadow-overlay)'}}>

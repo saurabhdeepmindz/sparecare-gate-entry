@@ -8,7 +8,7 @@
 <script src="../../_ds_bundle.js"></script>
 <script src="../boot.js"></script>
 <style>
-html,body{margin:0}body{background:var(--anno-canvas);min-width:1380px}a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}
+html,body{margin:0;height:100%}body{background:var(--anno-canvas);min-width:760px}a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}
 @keyframes scPulse{0%{box-shadow:0 0 0 0 rgba(90,159,163,.55)}70%{box-shadow:0 0 0 8px rgba(90,159,163,0)}100%{box-shadow:0 0 0 0 rgba(90,159,163,0)}}
 .sc-stage :is(button,a[href],input,select,textarea,[role="switch"]){transition:outline-color var(--dur-fast) var(--ease-standard)}
 .sc-rail button,.sc-bar button{white-space:nowrap}
@@ -81,6 +81,37 @@ function Rail({index,onJump}){
   );
 }
 
+function FitStage({children,deps}){
+  const wrap=React.useRef(null), inner=React.useRef(null);
+  const [scale,setScale]=React.useState(1);
+  const [box,setBox]=React.useState({w:0,h:0});
+  React.useLayoutEffect(()=>{
+    const measure=()=>{
+      const el=inner.current, w=wrap.current; if(!el||!w) return;
+      const cw=el.offsetWidth, ch=el.offsetHeight;
+      if(!cw||!ch) return;
+      const availW=w.clientWidth;
+      const availH=window.innerHeight-w.getBoundingClientRect().top-56;
+      const s=Math.min(1, availW/cw, availH/ch);
+      setScale(s>0.45?s:0.45);
+      setBox({w:cw,h:ch});
+    };
+    measure();
+    const t=window.setTimeout(measure,120);
+    window.addEventListener('resize',measure);
+    return ()=>{window.clearTimeout(t);window.removeEventListener('resize',measure)};
+  },deps);
+  return (
+    <div ref={wrap} style={{width:'100%',display:'flex',justifyContent:'center'}}>
+      <div style={{height:box.h?box.h*scale+'px':'auto',width:box.w?box.w*scale+'px':'auto'}}>
+        <div ref={inner} style={{transform:'scale('+scale+')',transformOrigin:'top left',display:'inline-block'}}>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function App(){
   const [i,setI]=React.useState(0);
   const [hot,setHot]=React.useState(false);
@@ -101,6 +132,13 @@ function App(){
   const [photo,setPhoto]=React.useState(false);
   const [remarks,setRemarks]=React.useState('');
   const stage=React.useRef(null);
+  const [availH,setAvailH]=React.useState(760);
+  React.useLayoutEffect(()=>{
+    const m=()=>{const el=stage.current;if(!el)return;setAvailH(Math.round(window.innerHeight-el.getBoundingClientRect().top-56))};
+    m(); const t=window.setTimeout(m,120);
+    window.addEventListener('resize',m);
+    return ()=>{window.clearTimeout(t);window.removeEventListener('resize',m)};
+  },[i]);
 
   const step=STEPS[i];
   const set1=(k,v)=>setD1(p=>({...p,[k]:v}));
@@ -127,9 +165,13 @@ function App(){
   const reset=()=>{setI(0);setGen(null);setD1({});setD2({});setD4({});setInvoices([]);setSteps(DEFAULT_STEPS);setSel(['damaged']);setPhoto(false);setRemarks('');setBox('');};
   const create=()=>{const n='GEN-2026-08-12-'+(Math.floor(Math.random()*9000)+1000);setGen(n);setD2(p=>({...p,gen:n,supplier:d1.supplier,courier:d1.courier}));};
 
+  /* The terminal is 412 x 880 dp by design. Here it is sized to the window instead, so the
+     whole device — including the pinned action bar — is always visible and the type stays
+     full size. The caption states the real device height. */
+  const deviceH=Math.max(520,Math.min(880,availH-72));
   const chrome=(child)=>step.surface==='web'
     ? <BrowserChrome url={step.url}>{child}</BrowserChrome>
-    : <RuggedFrame caption={step.caption}>{child}</RuggedFrame>;
+    : <RuggedFrame caption={step.caption} height={deviceH} scrollHint={deviceH<880}>{child}</RuggedFrame>;
 
   let screen=null;
   if(step.id==='dash') screen=<window.DashboardWeb queue={queue} setQueue={setQueue} bucket={bucket} setBucket={setBucket} onCreate={()=>setI(1)}/>;
@@ -161,7 +203,7 @@ function App(){
     : null;
 
   return (
-    <div style={{padding:'var(--sp-3) var(--sp-4) var(--sp-5)'}}>
+    <div style={{padding:'var(--sp-2) var(--sp-3) var(--sp-3)'}}>
       <div style={{maxWidth:'1380px',margin:'0 auto'}}>
         <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:'var(--sp-3)',flexWrap:'wrap',marginBottom:'var(--sp-2)'}}>
           <div style={{display:'flex',alignItems:'center',gap:'10px'}}>
@@ -189,12 +231,12 @@ function App(){
         </div>}
 
         <div ref={stage} className={'sc-stage'+(hot?' sc-hot':'')+(flash?' sc-flash':'')} onClick={onStageClick}
-          style={{display:'flex',justifyContent:'center',cursor:hot?'default':'pointer'}}>
-          {chrome(screen)}
+          style={{cursor:hot?'default':'pointer'}}>
+          <FitStage deps={[i,deviceH]}>{chrome(screen)}</FitStage>
         </div>
 
-        <p style={{textAlign:'center',font:'var(--type-caption)',color:'var(--sc-grey-500)',marginTop:'var(--sp-3)',maxWidth:'70ch',marginLeft:'auto',marginRight:'auto',lineHeight:1.55}}>
-          Click anywhere on the screen to flash the clickable areas. Nothing is saved. Illustrative and pre-approval &mdash; not agreed scope, and not a visual design.
+        <p style={{textAlign:'center',font:'var(--type-caption)',color:'var(--sc-grey-500)',marginTop:'var(--sp-2)',maxWidth:'70ch',marginLeft:'auto',marginRight:'auto',lineHeight:1.5}}>
+          The screen is scaled to fit your window, so the action bar at the bottom is always reachable. Click anywhere to flash the clickable areas. Nothing is saved &mdash; illustrative and pre-approval, not agreed scope and not a visual design.
         </p>
       </div>
     </div>

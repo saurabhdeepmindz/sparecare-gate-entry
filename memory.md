@@ -16,7 +16,7 @@ before the rest of Batch 1 (4b, 5A, 5b, 6c, Consolidated Unloading View).
 | Screen 1 — Gate Entry, web | `web-portal/screens/screen-1-gate-entry.html` |
 | Screen 2 — Consignment Details, web | `web-portal/screens/screen-2-consignment-details.html` |
 | Screen 3 — Inward Dashboard, web | `web-portal/screens/screen-3-inward-dashboard.html` |
-| End-to-end prototype | `web-portal/screens/prototype.html` — six steps, switches from browser chrome to rugged frame at the desk-to-dock handover; hotspots toggle plus click-anywhere flash |
+| End-to-end prototype | `web-portal/screens/prototype.html` — six steps, switches from browser chrome to rugged frame at the desk-to-dock handover; hotspots toggle plus click-anywhere flash. The terminal is sized to the window (`deviceH`) so the pinned action bar is always reachable; the web frame is scaled to fit by `FitStage`. Both were unreachable before that. |
 | Open issues page | `web-portal/screens/open-issues.html` |
 | Web screen components | `ui_kits/wms-inward/web/` — `WebShell`, `GateEntryWeb`, `ConsignmentWeb`, `DashboardWeb` |
 | Web callout data | `ui_kits/wms-inward/web/webAnnotations.js` |
