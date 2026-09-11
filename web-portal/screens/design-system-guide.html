@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SpareCare Design System Guide</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+html,body{margin:0}body{background:var(--anno-canvas);font-family:var(--font-body);color:var(--text-body);-webkit-font-smoothing:antialiased}
+a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}
+.page{max-width:1000px;margin:0 auto;padding:var(--sp-5) var(--sp-4) var(--sp-7)}
+.masthead{background:var(--grad-hero);color:#fff;border-radius:var(--r-sharp);padding:var(--sp-5) var(--sp-4);margin-bottom:var(--sp-4)}
+.masthead .kick{font-family:var(--font-mono);font-size:var(--fs-micro);letter-spacing:.1em;opacity:.85;margin-bottom:10px}
+.masthead h1{font:var(--fw-bold) 42px/1.05 var(--font-display);color:var(--text-on-dark);margin:0 0 12px;letter-spacing:-.01em}
+.masthead p{margin:0;max-width:62ch;font-size:var(--fs-body);line-height:1.6;opacity:.93}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--sp-5)}
+.toc a{display:inline-flex;align-items:center;white-space:nowrap;font:var(--type-caption);font-weight:var(--fw-semibold);text-decoration:none;padding:6px 12px;border-radius:var(--r-pill);border:1px solid var(--border-default);background:var(--surface-card);color:var(--sc-grey-600)}
+.toc a:hover{border-color:var(--sc-teal);color:var(--sc-teal-deep)}
+section{background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--r-sharp);padding:var(--sp-4);margin-bottom:var(--sp-3)}
+.num{font-family:var(--font-mono);font-size:var(--fs-micro);letter-spacing:.1em;color:var(--sc-teal);margin-bottom:8px}
+h2{font:var(--fw-bold) 26px/1.15 var(--font-display);color:var(--text-heading);margin:0 0 10px}
+.two h3{color:var(--text-heading)}
+.lead{margin:0 0 var(--sp-3);max-width:70ch;font-size:var(--fs-body-sm);line-height:1.65;color:var(--sc-grey-700)}
+.pair{display:grid;grid-template-columns:1fr;gap:14px;margin-top:var(--sp-3)}
+.note{border-left:3px solid var(--sc-teal-line);padding:2px 0 2px 14px}
+.note > b{display:block;font-size:var(--fs-caption);letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-mono);font-weight:var(--fw-semibold);color:var(--sc-teal-deep);margin-bottom:5px}
+.note p{margin:0;font-size:var(--fs-body-sm);line-height:1.65;color:var(--sc-grey-700);max-width:70ch}
+.note.use{border-left-color:var(--sc-amber)}
+.note.use > b{color:var(--sc-amber-fg)}
+.note p b{font-weight:var(--fw-semibold);color:var(--text-heading)}
+.grid{display:grid;gap:10px}
+.sw{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
+.swatch{border:1px solid var(--border-soft);border-radius:var(--r-sharp);overflow:hidden;background:var(--surface-card)}
+.swatch .fill{height:62px}
+.swatch .meta{padding:9px 11px}
+.swatch b{display:block;font-size:var(--fs-caption);color:var(--text-heading)}
+.swatch code{font-family:var(--font-mono);font-size:var(--fs-micro);color:var(--sc-grey-500)}
+.swatch span{display:block;margin-top:5px;font-size:var(--fs-caption-sm);line-height:1.5;color:var(--sc-grey-600)}
+table{width:100%;border-collapse:collapse;font-size:var(--fs-caption)}
+th{text-align:left;font-family:var(--font-mono);font-size:var(--fs-micro);letter-spacing:.07em;text-transform:uppercase;color:var(--sc-grey-500);font-weight:var(--fw-semibold);padding:0 10px 7px 0;border-bottom:1px solid var(--border-default)}
+td{padding:9px 10px 9px 0;border-bottom:1px solid var(--border-soft);vertical-align:top;line-height:1.55;color:var(--sc-grey-700)}
+td.mono,code.t{font-family:var(--font-mono);font-size:var(--fs-micro);color:var(--text-data);white-space:nowrap}
+td b{color:var(--text-body)}
+.spec{background:var(--surface-sunken);border:1px solid var(--border-field);border-radius:var(--r-field);padding:var(--sp-3)}
+.bar{background:var(--sc-teal);height:16px;border-radius:2px}
+.row{display:flex;align-items:center;gap:12px;padding:7px 0}
+.row .lbl{font-family:var(--font-mono);font-size:var(--fs-micro);color:var(--sc-grey-600);width:120px;flex:0 0 auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:var(--type-caption);padding:5px 12px;border-radius:var(--r-pill);border:1px solid var(--border-field);background:var(--surface-card);color:var(--text-heading)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)}
+.two h3{font-size:var(--fs-label);margin:0 0 10px;color:var(--text-heading)}
+.two ul{margin:0;padding:0;list-style:none}
+.two li{font-size:var(--fs-body-sm);line-height:1.5;padding:9px 0;border-bottom:1px solid var(--border-soft);color:var(--sc-grey-700)}
+.two .no li{color:#A85B4C}
+.grad{height:72px;border-radius:var(--r-sharp);margin-bottom:8px}
+footer{text-align:center;font-size:var(--fs-caption);color:var(--sc-grey-500);padding-top:var(--sp-4);line-height:1.6}
+@media (max-width:740px){.two{grid-template-columns:1fr}.masthead h1{font-size:32px}}
+</style>
+</head><body>
+<div class="page">
+
+<div class="masthead">
+<div class="kick">SPARECARE · DESIGN SYSTEM GUIDE · v1 · SEPTEMBER 2026</div>
+<h1>The rules the WMS screens are drawn to</h1>
+<p>Every colour, size, corner and word in the Inward wireframes comes from this document. It exists so that two people drawing two different screens six months apart produce something that looks like one product. Each section below says what the rule is in plain language, and then names the screen where you can go and see it.</p>
+</div>
+
+<div class="toc">
+<a href="#colour">01 Colour</a><a href="#signal">02 Signal colours</a><a href="#type">03 Type</a><a href="#spacing">04 Spacing &amp; touch</a><a href="#corners">05 Corners</a><a href="#depth">06 Depth</a><a href="#motion">07 Motion</a><a href="#gradients">08 Gradients</a><a href="#icons">09 Icons</a><a href="#voice">10 Voice</a><a href="#annotation">11 Annotation layer</a><a href="#components">12 Components</a>
+</div>
+
+<section id="colour">
+<div class="num">01 — COLOUR</div>
+<h2>Six colours, six jobs</h2>
+<p class="lead">The brand runs on six colours and nothing else. Two teals carry the brand, two greys carry the background, and two near-blacks carry the text. Anything that looks like a seventh colour on a screen is either a signal colour (section 02) or a mistake.</p>
+<div class="grid sw">
+<div class="swatch"><div class="fill" style="background:#5A9FA3"></div><div class="meta"><b>Soft Teal</b><code>#5A9FA3</code><span>The colour of the brand. Used for the active state, the focus ring and anything the eye should go to first.</span></div></div>
+<div class="swatch"><div class="fill" style="background:#3B616C"></div><div class="meta"><b>Deep Teal</b><code>#3B616C</code><span>The serious version. Headings, primary buttons, and every number the operator is meant to read.</span></div></div>
+<div class="swatch"><div class="fill" style="background:#99959B"></div><div class="meta"><b>Stone Grey</b><code>#99959B</code><span>The in-between grey. Secondary button borders and anything deliberately quiet.</span></div></div>
+<div class="swatch"><div class="fill" style="background:#E5E5E6"></div><div class="meta"><b>Cloud Grey</b><code>#E5E5E6</code><span>The lightest. Page background and disabled controls.</span></div></div>
+<div class="swatch"><div class="fill" style="background:#040101"></div><div class="meta"><b>Ink Black</b><code>#040101</code><span>Ordinary reading text. Not pure black — pure black on a bright screen is tiring at a dock.</span></div></div>
+<div class="swatch"><div class="fill" style="background:#030000"></div><div class="meta"><b>Onyx</b><code>#030000</code><span>Used once per screen at most, for a single moment of weight.</span></div></div>
+</div>
+<div class="pair">
+<div class="note"><b>What this means in practice</b><p>A designer never picks a colour. They pick a job — "this is a heading", "this is a background" — and the job already has a colour attached to it. That is why the whole Inward module can be recoloured for a different dealer by changing six values.</p></div>
+<div class="note use"><b>Where to see it</b><p><b>Screen 3, Inward Operations Dashboard.</b> The page sits on Cloud Grey, the cards are white, the KPI numbers are Deep Teal, and the active queue tab is Soft Teal. Four of the six colours, doing four different jobs, on one screen.</p></div>
+</div>
+</section>
+
+<section id="signal">
+<div class="num">02 — SIGNAL COLOURS</div>
+<h2>Green, amber and red are not brand colours</h2>
+<p class="lead">Green, amber and red sit deliberately outside the six. They are a traffic light. A warehouse operator reads them without thinking, and that reflex is worth more than brand consistency — so they are never re-tinted to match the teal.</p>
+<div class="grid sw">
+<div class="swatch"><div class="fill" style="background:#4C9A6A"></div><div class="meta"><b>Green</b><code>#4C9A6A</code><span>The box is OK. Nothing to do.</span></div></div>
+<div class="swatch"><div class="fill" style="background:#E2963C"></div><div class="meta"><b>Amber</b><code>#E2963C</code><span>Look at this. A variance, a mismatch, an open question.</span></div></div>
+<div class="swatch"><div class="fill" style="background:#C1503F"></div><div class="meta"><b>Red</b><code>#C1503F</code><span>Something is wrong and it will not resolve itself.</span></div></div>
+</div>
+<div class="pair">
+<div class="note"><b>The rule</b><p>Three states, three colours, no fourth. Every status icon, tag and counter in the module uses exactly these. Amber also carries a darker text version (<code class="t">#9C6A1E</code>) because amber on white is too pale to read as a number.</p></div>
+<div class="note use"><b>Where to see it</b><p><b>Screen 6a, Box scanning.</b> The Recent Box Entries table runs green, amber, red down the Status column while the operator scans. <b>Screen 6d</b> uses the darker amber for the Remaining figure, so the one number that matters stands out from the two beside it.</p></div>
+</div>
+</section>
+
+<section id="type">
+<div class="num">03 — TYPE</div>
+<h2>Three typefaces, each with a reason</h2>
+<p class="lead">Barlow Semi Condensed for headings, because it is narrow like a number plate and fits a long screen title on a small device. Inter for reading, because it is plain and gets out of the way. IBM Plex Mono for data only — a gate entry number, a box code, a part number.</p>
+<div class="spec">
+<div style="font:var(--fw-bold) 34px/1.15 var(--font-display);color:var(--text-heading)">Unload Truck &amp; Check Boxes</div>
+<div style="font-size:15px;line-height:1.6;color:var(--sc-grey-700);margin-top:10px;max-width:60ch">Body text is Inter at 15 to 16 pixels. It is set at a comfortable line height because the people reading it are often reading it quickly, in bad light, with one hand.</div>
+<div style="font-family:var(--font-mono);font-size:15px;color:var(--text-data);margin-top:10px">GEN-000845 · BX-00012 · KA01AB1234</div>
+</div>
+<table style="margin-top:var(--sp-3)"><tr><th>Role</th><th>Size</th><th>Used for</th></tr>
+<tr><td><b>Hero</b></td><td class="mono">68px</td><td>Document covers only. Never inside the product.</td></tr>
+<tr><td><b>Section</b></td><td class="mono">34px</td><td>Section headings in documents like this one.</td></tr>
+<tr><td><b>Screen title</b></td><td class="mono">20px</td><td>The bar at the top of every handheld screen.</td></tr>
+<tr><td><b>Body</b></td><td class="mono">16px</td><td>Ordinary reading text.</td></tr>
+<tr><td><b>Label</b></td><td class="mono">14px</td><td>Field labels and panel headings.</td></tr>
+<tr><td><b>Caption</b></td><td class="mono">13px</td><td>Helper text under a field. The smallest size allowed for anything a person must read.</td></tr>
+<tr><td><b>Micro</b></td><td class="mono">11px</td><td>Timestamps and reference tags only. Never an instruction.</td></tr></table>
+<div class="pair">
+<div class="note"><b>The one rule people break</b><p>Mono is for data, not for emphasis. If a value could be typed into a search box and found again — a GEN, a box code, a vehicle number — it is mono. If it is a word, it is not.</p></div>
+<div class="note use"><b>Where to see it</b><p><b>Screen 4a, Receipt Details.</b> The title is Barlow, the field labels and helper text are Inter, and the Gate Entry Number is Plex Mono. All three families are visible in the top third of the screen.</p></div>
+</div>
+</section>
+
+<section id="spacing">
+<div class="num">04 — SPACING &amp; TOUCH</div>
+<h2>Everything is a multiple of eight</h2>
+<p class="lead">Gaps, padding and margins all come from one ladder built on eight pixels. It sounds arbitrary and it is, but the value of it is that nothing ever sits three pixels off from everything else. On top of that sits one non-negotiable number for the handheld: 44 pixels.</p>
+<div class="spec">
+<div class="row"><span class="lbl">sp-1 · 8px</span><div class="bar" style="width:8px"></div></div>
+<div class="row"><span class="lbl">sp-2 · 16px</span><div class="bar" style="width:16px"></div></div>
+<div class="row"><span class="lbl">sp-3 · 24px</span><div class="bar" style="width:24px"></div></div>
+<div class="row"><span class="lbl">sp-4 · 32px</span><div class="bar" style="width:32px"></div></div>
+<div class="row"><span class="lbl">sp-5 · 48px</span><div class="bar" style="width:48px"></div></div>
+<div class="row"><span class="lbl">sp-6 · 64px</span><div class="bar" style="width:64px"></div></div>
+<div class="row"><span class="lbl">hit-min · 44px</span><div class="bar" style="width:44px;background:var(--sc-amber)"></div></div>
+</div>
+<div class="pair">
+<div class="note"><b>Why 44 pixels</b><p>It is the smallest target a person can reliably hit wearing a glove, on a device they are holding in one hand while the other hand is on a carton. Every button, row and toggle on a handheld screen is at least that tall. This is the rule that most often forces a layout to change, and it is the one that never bends.</p></div>
+<div class="note use"><b>Where to see it</b><p><b>Screen 6b, Box condition.</b> The six condition options are drawn as large tappable tiles rather than a compact radio list, purely because of the 44-pixel rule. <b>Screen 6f</b> takes it further — the counter's plus button is 76 pixels, because it is pressed several hundred times a shift.</p></div>
+</div>
+</section>
+
+<section id="corners">
+<div class="num">05 — CORNERS</div>
+<h2>Two radii, and they mean different things</h2>
+<p class="lead">Sharp corners for structure and data — cards, tables, buttons. Soft, fully rounded corners only where the system is telling a person something rather than showing them a number. A rounded pill in this system always means "this is a label about a state", never "this is a control".</p>
+<div class="chips">
+<span class="chip" style="border-radius:2px">Card · 2px</span>
+<span class="chip" style="border-radius:2px">Button · 2px</span>
+<span class="chip" style="border-radius:6px">Input field · 6px</span>
+<span class="chip" style="border-radius:20px">Status tag · 20px</span>
+</div>
+<div class="pair">
+<div class="note"><b>The exception, and why</b><p>Input fields use 6 pixels rather than 2. That is not the marketing brand — it was measured off the FRD's own wireframe artwork, so the WMS screens match what the client has already seen and approved.</p></div>
+<div class="note use"><b>Where to see it</b><p><b>Screen 6b.</b> The <i>Recommended</i> tag beside Open Delivery is a pill, because it is the system offering an opinion. The Save Condition button next to it is sharp, because it is a control. Same screen, two shapes, two meanings.</p></div>
+</div>
+</section>
+
+<section id="depth">
+<div class="num">06 — DEPTH</div>
+<h2>Structure is drawn with lines, not shadows</h2>
+<p class="lead">There are no decorative drop shadows anywhere in this system. A card is separated from the page by a one-pixel line and a change of background, not by a glow. Shadow is reserved for things that genuinely float above the screen — a dialog, a dropdown.</p>
+<table><tr><th>Level</th><th>Value</th><th>Used for</th></tr>
+<tr><td><b>None</b></td><td class="mono">none</td><td>Cards, panels, tables. The default.</td></tr>
+<tr><td><b>Card</b></td><td class="mono">0 1px 2px / 6%</td><td>A card that must lift very slightly off a busy background.</td></tr>
+<tr><td><b>Overlay</b></td><td class="mono">0 8px 28px / 18%</td><td>Dialogs and dropdowns only — things that really are in front.</td></tr></table>
+<div class="pair">
+<div class="note"><b>Why it matters on a dock</b><p>Shadows wash out in daylight. A one-pixel line does not. On a rugged terminal held outdoors, line-based structure is the only kind that survives.</p></div>
+<div class="note use"><b>Where to see it</b><p><b>Any handheld screen.</b> Every panel is a white box with a single hairline border. The only shadow in the whole module is on the explanation dialog that opens when you press an undrawn control in the prototype.</p></div>
+</div>
+</section>
+
+<section id="motion">
+<div class="num">07 — MOTION</div>
+<h2>Colour changes, nothing moves</h2>
+<p class="lead">Transitions are limited to colour and opacity, at 120 to 280 milliseconds. Nothing bounces, nothing scales on entry, nothing slides in from the side. A button that is pressed goes to 99 percent of its size and back, which reads as a press rather than an animation.</p>
+<table><tr><th>Token</th><th>Value</th><th>Used for</th></tr>
+<tr><td><b>Fast</b></td><td class="mono">120ms</td><td>Hover and press feedback.</td></tr>
+<tr><td><b>Base</b></td><td class="mono">180ms</td><td>A panel opening or closing.</td></tr>
+<tr><td><b>Slow</b></td><td class="mono">280ms</td><td>A dialog appearing. The longest anything is allowed to take.</td></tr></table>
+<div class="pair">
+<div class="note"><b>The reasoning</b><p>An operator scanning two hundred boxes will see the same transition two hundred times. Anything with personality becomes an irritation by the fortieth repetition.</p></div>
+<div class="note use"><b>Where to see it</b><p><b>Screen 4a, Receipt Details.</b> The Capture Invoice Details accordion opens at 180 milliseconds with no slide and no easing flourish — it is simply open.</p></div>
+</div>
+</section>
+
+<section id="gradients">
+<div class="num">08 — GRADIENTS</div>
+<h2>Depth, never decoration</h2>
+<p class="lead">Three gradients exist. They are for document covers, hero panels and full-screen moments. None of them appears on a control, a button or a card inside the product.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+<div><div class="grad" style="background:linear-gradient(135deg,#3B616C,#5A9FA3)"></div><div style="font-size:var(--fs-caption);color:var(--sc-grey-600);line-height:1.5">Deep Teal to Soft Teal. The main hero gradient — the teal waking up.</div></div>
+<div><div class="grad" style="background:linear-gradient(135deg,#99959B,#E5E5E6)"></div><div style="font-size:var(--fs-caption);color:var(--sc-grey-600);line-height:1.5">Stone to Cloud. Metal-looking surfaces and quiet dividers.</div></div>
+<div><div class="grad" style="background:linear-gradient(135deg,#3B616C 0%,#030000 130%)"></div><div style="font-size:var(--fs-caption);color:var(--sc-grey-600);line-height:1.5">Deep Teal to Onyx. Once per screen at most, for real weight.</div></div>
+</div>
+<div class="pair">
+<div class="note use"><b>Where to see it</b><p>The banner at the top of this page, and the cover of every wireframe document in the portal. Nowhere inside the WMS screens themselves.</p></div>
+</div>
+</section>
+
+<section id="icons">
+<div class="num">09 — ICONS</div>
+<h2>One set, one weight</h2>
+<p class="lead">All icons come from a single library at a consistent stroke weight of 1.75. They are line icons, never filled, and they sit at 13 to 24 pixels depending on context. An icon never appears alone where it carries meaning — it is always paired with a word.</p>
+<div class="pair">
+<div class="note"><b>Flagged substitution</b><p>The FRD's own icons exist only as screenshots, so they could not be extracted. The wireframes use Lucide as a stand-in at matching weight. If SpareCare has a licensed icon set, it should replace this before build — the shapes will change, the sizes and rules will not.</p></div>
+<div class="note use"><b>Where to see it</b><p><b>Screen 4a.</b> The Gate Entry Number row carries a document icon beside the label. The icon narrows the scan; the word carries the meaning. Remove the word and the row stops working.</p></div>
+</div>
+</section>
+
+<section id="voice">
+<div class="num">10 — VOICE</div>
+<h2>Talk like the counter, not the boardroom</h2>
+<p class="lead">The audience is store owners, storekeepers and parts managers. Write the way you would talk across a counter: plain, specific, and quick to the point. Say what happened and what to do next.</p>
+<div class="two">
+<div class="yes"><h3>Do</h3><ul>
+<li>"3 stores near you already have this part."</li>
+<li>"Your Bay-04 stock hasn't synced since 6pm."</li>
+<li>Name real parts, brands and store names in examples.</li>
+<li>Say what happened and what to do next.</li>
+</ul></div>
+<div class="no"><h3>Don't</h3><ul>
+<li>"Leverage real-time inventory intelligence."</li>
+<li>"Unlock synergies across your supply network."</li>
+<li>Use jargon a counter clerk wouldn't say out loud.</li>
+<li>Apologise or hedge in an error message — just explain.</li>
+</ul></div>
+</div>
+<div class="pair">
+<div class="note use"><b>Where to see it</b><p><b>Screen 6a.</b> The mismatch warning reads "BX-00019 is not on the uploaded ship list. Set it aside, or add a document to justify accepting it." It names the box, states the problem, and gives the two things the operator can do. No apology, no jargon.</p></div>
+</div>
+</section>
+
+<section id="annotation">
+<div class="num">11 — ANNOTATION LAYER</div>
+<h2>The documentation has its own rules</h2>
+<p class="lead">The numbered circles, the callout boxes and the grey canvas behind every wireframe are not part of the product. They are a separate layer that exists only in these documents, and they are kept visually distinct so nobody mistakes a callout for a control.</p>
+<table><tr><th>Element</th><th>Meaning</th></tr>
+<tr><td><b>Numbered circle</b></td><td>A design decision, explained in the legend beneath the screen. Every one carries the FRD requirement it comes from.</td></tr>
+<tr><td><b>Open query</b> <span style="color:var(--sc-amber-fg)">(amber)</span></td><td>The FRD does not answer this. Carries an OI number and must be settled before build.</td></tr>
+<tr><td><b>Our proposal</b> (tinted)</td><td>A decision we made because the FRD is silent. Accept it or overturn it.</td></tr>
+<tr><td><b>What is deliberately missing</b></td><td>States not drawn and detail not specified, listed at the foot of every screen so the gaps are visible rather than assumed.</td></tr></table>
+<div class="pair">
+<div class="note"><b>The point of it</b><p>Every callout carries a traceable reference — an FR number where one exists, a section number otherwise. That traceability is the deliverable. A wireframe without it is a picture; with it, it is a specification you can argue with.</p></div>
+<div class="note use"><b>Where to see it</b><p>Switch any screen in the left menu to <b>Annotated wireframe</b>. <b>Screen 6g</b> is the clearest example: five numbered decisions, three open queries, and a stated most-important omission.</p></div>
+</div>
+</section>
+
+<section id="components">
+<div class="num">12 — COMPONENTS</div>
+<h2>Thirty-five parts, assembled</h2>
+<p class="lead">No screen in this module is drawn freehand. Each one is assembled from a shared set of parts, so a change to the way a scan field looks changes it on all eleven screens that use one.</p>
+<table><tr><th>Family</th><th>Parts</th><th>Used on</th></tr>
+<tr><td><b>Core</b></td><td>Button, Tag, Icon, SearchBar, PartRow, StoreCard</td><td>Everywhere.</td></tr>
+<tr><td><b>WMS form</b></td><td>TextInput, SelectInput, Field, Accordion, Stepper, WorkflowChecklist</td><td>Screens 1, 2, 4a, 4b, 5b.</td></tr>
+<tr><td><b>WMS operations</b></td><td>ScanField, ConditionChips, PhotoCapture, CounterStrip, ProgressBar, QueueTable, DetailRow, InfoNote, KpiTile, ActionBar, ScreenHeader, GenBanner, GenContextBar</td><td>Screens 3, 5A, 6a to 6h.</td></tr>
+<tr><td><b>Frames</b></td><td>HandheldFrame, RuggedFrame, BrowserChrome</td><td>The device and desktop shells around every screen.</td></tr>
+<tr><td><b>Annotation</b></td><td>WireframeDoc, AnnotationMarker, AnnotationLegend, CalloutBox, MissingSection, NotDrawnHost</td><td>The documentation layer only.</td></tr></table>
+<div class="pair">
+<div class="note use"><b>Where to see it</b><p><b>Screens 6e and 6h.</b> They are the same component with one setting changed, because the FRD states that the condition flow is identical whether the box was identified by a supplier code or by a sticker the system printed. One part, two screens, guaranteed to stay in step.</p></div>
+</div>
+</section>
+
+<footer>SpareCare Design System Guide · v1 · Prepared by Deepmindz Innovations Pvt Ltd · September 2026<br>Companion to the WMS Inward wireframes and FRD v0.11. Illustrative and pre-approval — not a visual design.</footer>
+
+</div>
+</body></html>

@@ -46,6 +46,7 @@ window.SC_PORTAL = {
     {
       code: 'IN-E', name: 'REFERENCE',
       items: [
+        {idx:'', id:'design-system-guide', ref:'', name:'SpareCare Design System guide', fr:'Brand v1', file:'screens/design-system-guide.html', modes:false},
         {idx:'', id:'consolidated', ref:'', name:'Consolidated unloading view', fr:'\u00a79.6', file:'screens/consolidated-unloading-view.html', modes:false},
         {idx:'', id:'prototype', ref:'', name:'End-to-end click-through prototype', fr:'FR-001 \u2192 FR-006', file:'screens/prototype.html', modes:false},
         {idx:'', id:'open-issues', ref:'', name:'Open issues on these screens', fr:'\u00a744', file:'screens/open-issues.html', modes:false}
