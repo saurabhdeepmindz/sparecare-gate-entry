@@ -7,8 +7,7 @@ Updated 12 Sep 2026. Read `CLAUDE.md` first for rules and context; this file is 
 **Batch 1 complete. Batch 2 built, awaiting review.** Fifteen screens in the portal:
 Screens 1, 2, 3 on web; 4a, 4b, 5A, 5b, 6a, 6b, 6c (Batch 1) and 6d, 6e, 6f, 6g, 6h
 (Batch 2) on the rugged handheld. Plus the consolidated unloading view (§9.6) and a
-ten-step end-to-end prototype. Batch 2 screens are NOT yet in the prototype — the
-prototype still ends at 6c.
+branching end-to-end prototype covering all four unload routes.
 
 ## Built
 
@@ -18,7 +17,7 @@ prototype still ends at 6c.
 | Screen 1 — Gate Entry, web | `web-portal/screens/screen-1-gate-entry.html` |
 | Screen 2 — Consignment Details, web | `web-portal/screens/screen-2-consignment-details.html` |
 | Screen 3 — Inward Dashboard, web | `web-portal/screens/screen-3-inward-dashboard.html` |
-| End-to-end prototype | `web-portal/screens/prototype.html` — six steps, switches from browser chrome to rugged frame at the desk-to-dock handover; hotspots toggle plus click-anywhere flash. The terminal is sized to the window (`deviceH`) so the pinned action bar is always reachable; the web frame is scaled to fit by `FitStage`. Both were unreachable before that. |
+| End-to-end prototype | `web-portal/screens/prototype.html` — seven shared steps then a route-dependent tail, switches from browser chrome to rugged frame at the desk-to-dock handover; hotspots toggle plus click-anywhere flash. The terminal is sized to the window (`deviceH`) so the pinned action bar is always reachable; the web frame is scaled to fit by `FitStage`. Both were unreachable before that. |
 | Open issues page | `web-portal/screens/open-issues.html` |
 | Web screen components | `ui_kits/wms-inward/web/` — `WebShell`, `GateEntryWeb`, `ConsignmentWeb`, `DashboardWeb` |
 | Web callout data | `ui_kits/wms-inward/web/webAnnotations.js` |
@@ -43,9 +42,12 @@ been read as far as FR-009.2 only; read §12–§14 in full first. **Settle OI-0
 screens with the same name.
 
 Also outstanding, not Batch 3:
-- The prototype stops at 6c. Batch 2 adds a branch (no document → 6d/6e, not scannable →
-  6f or 6g/6h) that the ten-step linear flow cannot express. Extending it needs a branch
-  point at Screen 5A, which is a design decision the user has not yet been asked about.
+- **Done 12 Sep.** The prototype now branches. `HEAD` holds the seven shared steps (Screens
+  3, 1, 2, 4a, 4b, 5A, 5b); `TAILS` holds one tail per route — shiplist (6a/6b/6c), nodoc
+  (6d/6e), counter (6f/6e), sticker (6g/6h). `ROUTES` drives a selector bar above the rail,
+  framed as the dealer-admin configuration per FR-007.7, not an operator control. The tail
+  always starts at index 7, so every existing `setI(7)` still works. Changing route clamps
+  the index back to 7.
 - `web-portal/screens/open-issues.html` still reads "Open issues on Screens 1 to 3". It was
   not updated for Batch 1 (4a–6c) and is not updated for Batch 2. It needs one consolidated
   pass covering OI-079 → OI-086 (new in Batch 2) plus the Batch 1 items.

@@ -74,7 +74,7 @@ function Screen6dNoDoc({box='',setBox,onScan,onSubmit,rows=[],unloaded=18,expect
             <div style={{width:'1px',alignSelf:'stretch',background:'var(--border-soft)'}}/>
             <div style={{flex:1}}>
               <div style={{font:'var(--type-caption)',color:'var(--sc-grey-500)'}}>Remaining</div>
-              <div style={{fontFamily:'var(--font-mono)',fontSize:'21px',fontWeight:'var(--fw-semibold)',color:remaining?'var(--status-warn-ink,var(--text-data))':'var(--text-data)'}}>{remaining}</div>
+              <div style={{fontFamily:'var(--font-mono)',fontSize:'21px',fontWeight:'var(--fw-semibold)',color:remaining?'var(--status-warn-fg)':'var(--text-data)'}}>{remaining}</div>
             </div>
           </div>
           <p style={{margin:'9px 0 0',font:'var(--type-caption)',color:'var(--sc-grey-500)',lineHeight:1.45}}>Reconciled against No. of Boxes in GEN recorded at Receipt Details. The indicative count taken at the gate is not used.</p>

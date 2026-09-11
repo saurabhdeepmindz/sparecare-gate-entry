@@ -30,21 +30,51 @@ html,body{margin:0;height:100%}body{background:var(--anno-canvas);min-width:760p
 <script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen5aUnloadInit.jsx"></script>
 <script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen5bTransporterCheck.jsx"></script>
 <script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6cVariance.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/UnloadApproachPanel.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6dNoDoc.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6eCondition.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6fCounter.jsx"></script>
+<script type="text/babel" src="../../ui_kits/wms-inward/handheld/Screen6gStickers.jsx"></script>
 <script type="text/babel">
-SCBoot(['BrowserChrome','RuggedFrame','NotDrawnHost','InfoNote','Button','Icon','WebShell','DashboardWeb','GateEntryWeb','ConsignmentWeb','Screen4aReceipt','Screen4bTransporter','Screen5aUnloadInit','Screen5bTransporterCheck','Screen6aScan','Screen6bCondition','Screen6cVariance'],function(NS){
+SCBoot(['BrowserChrome','RuggedFrame','NotDrawnHost','InfoNote','Button','Icon','WebShell','DashboardWeb','GateEntryWeb','ConsignmentWeb','Screen4aReceipt','Screen4bTransporter','Screen5aUnloadInit','Screen5bTransporterCheck','Screen6aScan','Screen6bCondition','Screen6cVariance','UnloadApproachPanel','Screen6dNoDoc','Screen6eCondition','Screen6fCounter','Screen6gStickers'],function(NS){
 const {BrowserChrome,RuggedFrame,NotDrawnHost,InfoNote,Button,Icon}=NS;
 
-const STEPS=[
+/* The flow forks once the GEN is selected at Screen 5A. Which fork applies is a
+   configuration decision, not an operator one (FR-007.7), so the route selector below
+   stands in for the dealer-admin setting rather than representing a control on screen. */
+const HEAD=[
   {id:'dash',  surface:'web', label:'Inward Dashboard',   ref:'Screen 3',  url:'wms.sparecare.in/inward/dashboard',            next:'Create Gate Entry',      caption:null},
   {id:'gate',  surface:'web', label:'Gate Entry',         ref:'Screen 1',  url:'wms.sparecare.in/inward/gate-entry',           next:'Create Gate Entry',      caption:null},
   {id:'cons',  surface:'web', label:'Consignment Details',ref:'Screen 2',  url:'wms.sparecare.in/inward/consignment-details',  next:'Start receipt process',  caption:null},
   {id:'receipt',surface:'hh', label:'Receipt Details',    ref:'Screen 4a', url:null, next:'Next',             caption:'Screen 4a · Receipt Details'},
   {id:'transp',surface:'hh',  label:'Transporter Details',ref:'Screen 4b', url:null, next:'Next',             caption:'Screen 4b · Transporter Details'},
   {id:'init',  surface:'hh',  label:'Unload initiation',  ref:'Screen 5A', url:null, next:'Next',             caption:'Screen 5A · Unload Truck'},
-  {id:'check', surface:'hh',  label:'Transporter check',  ref:'Screen 5b', url:null, next:'Start Unloading',  caption:'Screen 5b · Transporter check'},
-  {id:'scan',  surface:'hh',  label:'Box scanning',       ref:'Screen 6a', url:null, next:'Finish Unload',    caption:'Screen 6a · Box scanning'},
-  {id:'cond',  surface:'hh',  label:'Box condition',      ref:'Screen 6b', url:null, next:'Save Condition',   caption:'Screen 6b · Box condition'},
-  {id:'var',   surface:'hh',  label:'Check Variance',     ref:'Screen 6c', url:null, next:'Proceed to Check', caption:'Screen 6c · Check Variance'}
+  {id:'check', surface:'hh',  label:'Transporter check',  ref:'Screen 5b', url:null, next:'Start Unloading',  caption:'Screen 5b · Transporter check'}
+];
+const TAILS={
+  shiplist:[
+    {id:'scan',  surface:'hh', label:'Box scanning',   ref:'Screen 6a', url:null, next:'Finish Unload',    caption:'Screen 6a · Box scanning'},
+    {id:'cond',  surface:'hh', label:'Box condition',  ref:'Screen 6b', url:null, next:'Save Condition',   caption:'Screen 6b · Box condition'},
+    {id:'var',   surface:'hh', label:'Check Variance', ref:'Screen 6c', url:null, next:'Proceed to Check', caption:'Screen 6c · Check Variance'}
+  ],
+  nodoc:[
+    {id:'nodoc',     surface:'hh', label:'Reduced-mode unload', ref:'Screen 6d', url:null, next:'Check Variance',  caption:'Screen 6d · Reduced-mode unloading'},
+    {id:'nodocCond', surface:'hh', label:'Box condition',       ref:'Screen 6e', url:null, next:'Save Condition',  caption:'Screen 6e · Condition, reduced mode'}
+  ],
+  counter:[
+    {id:'counter',     surface:'hh', label:'Counter unload', ref:'Screen 6f', url:null, next:'Finish Unload',   caption:'Screen 6f · Counter approach'},
+    {id:'counterCond', surface:'hh', label:'Exception box',  ref:'Screen 6e', url:null, next:'Save Condition',  caption:'Screen 6e · Condition, exception box'}
+  ],
+  sticker:[
+    {id:'sticker',     surface:'hh', label:'Print box stickers', ref:'Screen 6g', url:null, next:'Print',          caption:'Screen 6g · Print Box Stickers'},
+    {id:'stickerCond', surface:'hh', label:'Box condition',      ref:'Screen 6h', url:null, next:'Save Condition', caption:'Screen 6h · Condition, printed sticker'}
+  ]
+};
+const ROUTES=[
+  {id:'shiplist', short:'Ship list', label:'Ship list uploaded',              ref:'FR-006', note:'The document is present, so every box is validated against the manifest as it is scanned.'},
+  {id:'nodoc',    short:'No document', label:'No shipment document, boxes scannable', ref:'FR-007', note:'Reduced mode. No manifest to validate against, but the carton still carries a readable primary code.'},
+  {id:'counter',  short:'Counter', label:'No document, boxes not scannable',  ref:'FR-007.8', note:'The operator increments a counter once per box and raises exceptions against system-issued references.'},
+  {id:'sticker',  short:'Stickers', label:'No document, print stickers',      ref:'FR-008', note:'The system generates and prints its own box references, which are pasted on and then scanned back.'}
 ];
 const DEFAULT_STEPS=[
   {id:'unload',label:'Unload Truck & Check Primary Boxes',checked:true},
@@ -65,15 +95,18 @@ const INVOICES=[
   {no:'INV1003',date:'12-08-2026',amount:'27,500',received:'\u2014',amountValue:27500}
 ];
 
-function Rail({index,onJump}){
+function Rail({steps,index,onJump,routeLabel}){
   return (
     <ol className="sc-rail" style={{display:'flex',flexWrap:'wrap',gap:'5px',listStyle:'none',margin:0,padding:0,justifyContent:'center',alignItems:'center'}}>
-      {STEPS.map((s,i)=>{
+      {steps.map((s,i)=>{
         const done=i<index,active=i===index;
         return (
           <li key={s.id} style={{display:'flex',alignItems:'center',gap:'6px'}}>
             {i===3&&<span style={{display:'inline-flex',alignItems:'center',gap:'4px',fontSize:'var(--fs-micro)',fontFamily:'var(--font-mono)',letterSpacing:'.05em',color:'var(--sc-grey-500)',padding:'0 4px',whiteSpace:'nowrap'}}>
               <Icon name="arrow-right" size={12}/>DESK TO DOCK<Icon name="arrow-right" size={12}/>
+            </span>}
+            {i===HEAD.length&&<span style={{display:'inline-flex',alignItems:'center',gap:'4px',fontSize:'var(--fs-micro)',fontFamily:'var(--font-mono)',letterSpacing:'.05em',color:'var(--sc-teal-deep)',padding:'0 4px',whiteSpace:'nowrap'}}>
+              <Icon name="git-branch" size={12}/>{routeLabel}<Icon name="arrow-right" size={12}/>
             </span>}
             <button type="button" onClick={()=>onJump(i)}
               style={{display:'inline-flex',alignItems:'center',gap:'6px',font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'5px 10px',borderRadius:'var(--r-pill)',cursor:'pointer',transition:'var(--transition-interactive)',
@@ -146,6 +179,19 @@ function App(){
   const [lookup,setLookup]=React.useState(false);
   const [plate,setPlate]=React.useState(false);
   const [transpOpen,setTranspOpen]=React.useState(true);
+  const [route,setRoute]=React.useState('shiplist');
+  const STEPS=React.useMemo(()=>HEAD.concat(TAILS[route]),[route]);
+  const routeDef=ROUTES.find(r=>r.id===route);
+  const [box2,setBox2]=React.useState('');
+  const [rows2,setRows2]=React.useState(BOX_ROWS.map(({time,...r})=>r));
+  const [tally2,setTally2]=React.useState({unloaded:18,ok:14,notOk:4});
+  const [count,setCount]=React.useState(18);
+  const [stickerTotal,setStickerTotal]=React.useState(20);
+  const [condVariant,setCondVariant]=React.useState('scanned');
+  const [condBox,setCondBox]=React.useState('BX-00012');
+  const EXC_ROWS=[{box:'BOX-001',quality:'Damaged',status:'\u2715'},{box:'BOX-004',quality:'Visible Scratch',status:'\u26A0'},{box:'BOX-009',quality:'Packing Tampered',status:'\u26A0'}];
+  const STICKERS=React.useMemo(()=>Array.from({length:stickerTotal},(_,k)=>'BX-'+String(k+1).padStart(4,'0')),[stickerTotal]);
+  const pickRoute=id=>{ setRoute(id); setI(v=>v>=HEAD.length?HEAD.length:v); };
   const QUALITY=[{label:'Damage',count:2},{label:'Tampered Packaging',count:1},{label:'Scratch',count:1},{label:'Broken',count:0},{label:'Wrong Delivery',count:0}];
 
   /* Pressing the reader fills the field with the next box number, exactly as the device
@@ -173,7 +219,7 @@ function App(){
     return ()=>{window.clearTimeout(t);window.removeEventListener('resize',m)};
   },[i]);
 
-  const step=STEPS[i];
+  const step=STEPS[Math.min(i,STEPS.length-1)];
   const set1=(k,v)=>setD1(p=>({...p,[k]:v}));
   const set2=(k,v)=>setD2(p=>({...p,[k]:v}));
   const set4=(k,v)=>setD4(p=>({...p,[k]:v}));
@@ -210,7 +256,7 @@ function App(){
     setFlash(true); window.setTimeout(()=>setFlash(false),2300);
   };
 
-  const reset=()=>{setI(0);setGen(null);setD1({});setD2({});setD4({});setD4b({});setD5b({});setInvoices([]);setInvList([]);setSteps(DEFAULT_STEPS);setSel(['damaged']);setPhoto(false);setRemarks('');setBox('');setRows(BOX_ROWS);setTally({unloaded:18,ok:14,notOk:4});setPending(null);setPlate(false);setLookup(false);setUnloadGen('GEN-000845');};
+  const reset=()=>{setI(0);setGen(null);setD1({});setD2({});setD4({});setD4b({});setD5b({});setInvoices([]);setInvList([]);setSteps(DEFAULT_STEPS);setSel(['damaged']);setPhoto(false);setRemarks('');setBox('');setRows(BOX_ROWS);setTally({unloaded:18,ok:14,notOk:4});setPending(null);setPlate(false);setLookup(false);setUnloadGen('GEN-000845');setRoute('shiplist');setBox2('');setRows2(BOX_ROWS.map(({time,...r})=>r));setTally2({unloaded:18,ok:14,notOk:4});setCount(18);setStickerTotal(20);};
   const create=()=>{const n='GEN-2026-08-12-'+(Math.floor(Math.random()*9000)+1000);setGen(n);setD2(p=>({...p,gen:n,supplier:d1.supplier,courier:d1.courier}));};
 
   /* The terminal is 412 x 880 dp by design. Here it is sized to the window instead, so the
@@ -266,6 +312,40 @@ function App(){
         setI(7);
       }} onCancel={()=>{setPending(null);setI(7);}}/>;
 
+  if(step.id==='nodoc') screen=<window.Screen6dNoDoc box={box2} setBox={setBox2} rows={rows2}
+      onScan={()=>setBox2('BX-'+String(16+(tally2.unloaded-18)).padStart(5,'0'))}
+      onSubmit={mode=>{
+        const code=(box2||'').trim(); if(!code) return;
+        if(mode==='check'){ setCondVariant('scanned'); setCondBox(code); setSel([]); setPhoto(false); setRemarks(''); setBox2(''); setI(8); return; }
+        setRows2(r=>[{box:code,quality:'OK',status:'\u2713'},...r]);
+        setTally2(v=>({unloaded:v.unloaded+1,ok:v.ok+1,notOk:v.notOk}));
+        setBox2('');
+      }}
+      unloaded={tally2.unloaded} expected={Number(d4.boxes)||28} ok={tally2.ok} notOk={tally2.notOk}
+      onBoxTap={r=>{setCondVariant('scanned');setCondBox(r.box);setI(8);}} onBack={()=>setI(6)}/>;
+  if(step.id==='counter') screen=<window.Screen6fCounter count={count} expected={Number(d4.boxes)||28} rows={EXC_ROWS}
+      onIncrement={()=>setCount(c=>c+1)}
+      onAddNotOk={()=>{setCondVariant('scanned');setCondBox('BOX-0'+String(EXC_ROWS.length+9).padStart(2,'0'));setSel([]);setPhoto(false);setRemarks('');setI(8);}}
+      onBack={()=>setI(6)}/>;
+  if(step.id==='sticker') screen=<window.Screen6gStickers total={stickerTotal} setTotal={setStickerTotal} refs={STICKERS}
+      onPrint={()=>{setCondVariant('sticker');setCondBox('BX-0006');setSel(['damaged']);setPhoto(false);setRemarks('');setI(8);}}
+      onBack={()=>setI(6)}/>;
+  if(step.id==='nodocCond'||step.id==='counterCond'||step.id==='stickerCond') screen=<window.Screen6eCondition
+      variant={condVariant} boxNo={condBox} selected={sel}
+      onToggle={id=>setSel(p=>id==='ok'?['ok']:(p.includes(id)?p.filter(x=>x!==id):[...p.filter(x=>x!=='ok'),id]))}
+      openDelivery={od} setOpenDelivery={setOd} photo={photo} onCapture={()=>setPhoto(v=>!v)}
+      remarks={remarks} setRemarks={setRemarks}
+      recent={BOX_ROWS.slice(2)}
+      onSave={()=>{
+        if(step.id==='nodocCond'){
+          const label=sel.length?({ok:'OK',tampered:'Packing Tampered',damaged:'Damaged',scratch:'Visible Scratch',nopack:'Without Packing',wrong:'Wrong Delivery'})[sel[0]]:'OK';
+          const bad=sel.some(s=>s!=='ok');
+          setRows2(r=>[{box:condBox,quality:label,status:bad?'\u2715':'\u2713'},...r]);
+          setTally2(v=>({unloaded:v.unloaded+1,ok:v.ok+(bad?0:1),notOk:v.notOk+(bad?1:0)}));
+        }
+        setI(7);
+      }} onCancel={()=>setI(7)}/>;
+
   const jump=step.id==='scan'?{label:'Recent Box Entries',text:'Recent Box Entries'}
             :step.id==='transp'?{label:'the invoice summary',text:'Details of the Invoices Added'}
             :step.id==='var'?{label:'Quality Variance',text:'Quality Variance'}
@@ -280,6 +360,12 @@ function App(){
     : step.id==='check' ? 'Change the reported vehicle number to something other than KA01AB1234 to see the mismatch warning.'
     : step.id==='var' ? 'The close of the unload. Variance is at box level only \u2014 units are counted at Consignment Check.'
     : step.id==='dash' ? 'Work starts here. Press Create Gate Entry, top right.'
+    : step.id==='nodoc' ? 'Reduced mode \u2014 no manifest, so the expected box list and the ship-list comparison are gone. Record a box as OK, or send it for a condition check. Variance reconciles against the Receipt Details count, not the gate figure.'
+    : step.id==='counter' ? 'Press + once per box. There is no decrement and no per-box record, which is the trade this configuration makes. Add Not OK Box raises an exception against a system-issued reference.'
+    : step.id==='sticker' ? 'Change the count, then print. The stickers give boxes an identity they did not arrive with \u2014 nothing verifies that BX-0006 went on the sixth box.'
+    : step.id==='nodocCond' ? (notOk&&!photo?'Save is blocked until a photograph is captured \u2014 FR-006.28 applies unchanged in reduced mode.':'FR-007.4 requires an assessment on every box, not only on exceptions.')
+    : step.id==='counterCond' ? 'The same condition flow, opened against a temporary reference the system issued rather than a scanned code.'
+    : step.id==='stickerCond' ? 'The sticker was pasted and scanned back. Only the identification changed \u2014 FR-008.7 keeps the rest identical.'
     : null;
 
   return (
@@ -302,7 +388,25 @@ function App(){
           </div>
         </div>
 
-        <div style={{marginBottom:'10px'}}><Rail index={i} onJump={setI}/></div>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',flexWrap:'wrap',marginBottom:'10px',padding:'8px 12px',border:'1px solid var(--border-soft)',borderRadius:'var(--radius-field)',background:'var(--surface-card)'}}>
+          <span style={{font:'var(--type-caption)',color:'var(--sc-grey-600)',whiteSpace:'nowrap'}}>
+            <strong style={{color:'var(--text-heading)'}}>Unload route</strong> {'\u2014'} set by the dealer admin per FR-007.7, not chosen on the floor
+          </span>
+          <div className="sc-bar" style={{display:'flex',gap:'6px',flexWrap:'wrap'}}>
+            {ROUTES.map(r=>{
+              const on=r.id===route;
+              return <button key={r.id} type="button" onClick={()=>pickRoute(r.id)} aria-pressed={on} title={r.label}
+                style={{display:'inline-flex',alignItems:'center',gap:'6px',font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'5px 11px',borderRadius:'var(--r-pill)',cursor:'pointer',transition:'var(--transition-interactive)',
+                  border:'1px solid '+(on?'var(--sc-teal)':'var(--border-default)'),
+                  background:on?'var(--sc-teal-deep)':'var(--surface-card)',color:on?'#fff':'var(--sc-grey-600)'}}>
+                {r.short}<span style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-micro)',opacity:.8}}>{r.ref}</span>
+              </button>;
+            })}
+          </div>
+        </div>
+        <p style={{textAlign:'center',font:'var(--type-caption)',color:'var(--sc-grey-500)',margin:'0 auto 10px',maxWidth:'80ch',lineHeight:1.5}}>{routeDef.label} {'\u2014'} {routeDef.note}</p>
+
+        <div style={{marginBottom:'10px'}}><Rail steps={STEPS} index={Math.min(i,STEPS.length-1)} onJump={setI} routeLabel={routeDef.short.toUpperCase()}/></div>
 
         {(hint||hot)&&<div style={{maxWidth:'900px',margin:'0 auto 10px'}}>
           <InfoNote tone={step.id==='cond'&&notOk&&!photo?'warn':'info'} style={{padding:'7px 11px'}}>
