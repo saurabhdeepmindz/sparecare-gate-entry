@@ -124,6 +124,13 @@ The WMS wireframes in the FRD use a consistent duotone line set at a light strok
 - `InfoNote` — inline advisory strip
 - `Stepper` — numbered-dot step indicator for the web surface
 - `GenContextBar` — the pinned Gate Entry Number bar carried through a task
+- `ScanField` — box-number entry with the device reader beside it
+- `ConditionChips` — the six multi-select box conditions from FR-006.4
+- `PhotoCapture` — mandatory photo evidence tile
+- `CounterStrip` — Unloaded / Balance / OK / Not OK counters
+- `ProgressBar` — boxes unloaded against boxes expected
+- `DetailRow` — carried-forward read-only label and value
+- `Accordion` — the collapsible panels on Screens 4a, 4b and 6a
 
 `components/annotation/` — **intentional addition**, for the wireframe documentation this project exists to produce:
 - `AnnotationMarker` — one numbered callout circle
@@ -132,6 +139,9 @@ The WMS wireframes in the FRD use a consistent duotone line set at a light strok
 - `WireframeSheet` — the multi-screen sheet shell
 - `WireframeDoc` — one screen as a complete document, switchable between clean and annotated
 - `BrowserChrome` — light browser frame around a web-surface wireframe
+- `RuggedFrame` — rugged handheld terminal frame, 412 × 880 dp
+- `CalloutBox` — the amber OPEN QUERY and tinted OUR PROPOSAL boxes
+- `MissingSection` — "What is deliberately missing"
 
 **Deliverable**
 
@@ -140,6 +150,8 @@ The WMS wireframes in the FRD use a consistent duotone line set at a light strok
 **UI kits**
 
 `ui_kits/wms-inward/web/` — the web-surface screens the portal renders: `WebShell`, `DashboardWeb`, `GateEntryWeb`, `ConsignmentWeb`, and `webAnnotations.js` carrying every callout with its FR reference.
+
+`ui_kits/wms-inward/handheld/` — the rugged-terminal screens: `Screen4aReceipt`, `Screen6aScan`, `Screen6bCondition`, and `handheldAnnotations.js`. Device target 412 × 880 dp, the 6-inch Android class (Zebra TC53/TC58, Honeywell CT45, Datalogic Memor 11).
 
 `ui_kits/wms-inward/index.html` — the handheld surface, kept because the FRD artwork is the only source-verified drawing of these screens. Secondary to the web portal.
 

@@ -20,6 +20,7 @@
               "components/core/**",
               "components/wms/**",
               "ui_kits/wms-inward/**",
+              "ui_kits/wms-inward/handheld/**",
               "ui_kits/wms-inward/web/**",
               "web-portal/**"
             ],
@@ -43,6 +44,10 @@
         "message": "Font not provided by the design system. Available: Barlow Semi Condensed, Inter, IBM Plex Mono."
       },
       {
+        "selector": "JSXOpeningElement[name.name='Accordion'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|open|onToggle|badge|children|key|ref|className|style|children)$/]",
+        "message": "<Accordion> doesn't accept that prop. Declared props: title, open, onToggle, badge, children."
+      },
+      {
         "selector": "JSXOpeningElement[name.name='ActionBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|key|ref|className|style|children)$/]",
         "message": "<ActionBar> doesn't accept that prop. Declared props: children."
       },
@@ -51,8 +56,8 @@
         "message": "<AnnotatedScreen> doesn't accept that prop. Declared props: screenLabel, screenRef, gutter, markers, children."
       },
       {
-        "selector": "JSXOpeningElement[name.name='AnnotationItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:n|label|ref|control|description|tone|key|ref|className|style|children)$/]",
-        "message": "<AnnotationItem> doesn't accept that prop. Declared props: n, label, ref, control, description, tone."
+        "selector": "JSXOpeningElement[name.name='AnnotationItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:n|label|ref|control|description|tone|query|proposal|key|ref|className|style|children)$/]",
+        "message": "<AnnotationItem> doesn't accept that prop. Declared props: n, label, ref, control, description, tone, query, proposal."
       },
       {
         "selector": "JSXOpeningElement[name.name='AnnotationItem'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:primary|open)$/]",
@@ -83,8 +88,36 @@
         "message": "<Button> size must be one of 'lg' | 'md' | 'sm'."
       },
       {
+        "selector": "JSXOpeningElement[name.name='CalloutBox'] > JSXAttribute > JSXIdentifier[name!=/^(?:kind|label|ref_|blocking|children|key|ref|className|style|children)$/]",
+        "message": "<CalloutBox> doesn't accept that prop. Declared props: kind, label, ref_, blocking, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CalloutBox'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:query|proposal)$/]",
+        "message": "<CalloutBox> kind must be one of 'query' | 'proposal'."
+      },
+      {
         "selector": "JSXOpeningElement[name.name='CameraButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|size|key|ref|className|style|children)$/]",
         "message": "<CameraButton> doesn't accept that prop. Declared props: label, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ConditionOption'] > JSXAttribute > JSXIdentifier[name!=/^(?:id|label|icon|tone|key|ref|className|style|children)$/]",
+        "message": "<ConditionOption> doesn't accept that prop. Declared props: id, label, icon, tone."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ConditionOption'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:ok|warn|bad)$/]",
+        "message": "<ConditionOption> tone must be one of 'ok' | 'warn' | 'bad'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CounterItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|value|tone|key|ref|className|style|children)$/]",
+        "message": "<CounterItem> doesn't accept that prop. Declared props: label, value, tone."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CounterItem'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:ok|warn|bad|neutral)$/]",
+        "message": "<CounterItem> tone must be one of 'ok' | 'warn' | 'bad' | 'neutral'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='DetailRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|label|value|mono|last|key|ref|className|style|children)$/]",
+        "message": "<DetailRow> doesn't accept that prop. Declared props: icon, label, value, mono, last."
       },
       {
         "selector": "JSXOpeningElement[name.name='Field'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|required|hint|adjacent|children|key|ref|className|style|children)$/]",
@@ -119,6 +152,10 @@
         "message": "<KpiTile> doesn't accept that prop. Declared props: label, value, unit, active."
       },
       {
+        "selector": "JSXOpeningElement[name.name='MissingSection'] > JSXAttribute > JSXIdentifier[name!=/^(?:intro|statesNotDrawn|detailNotSpecified|mostImportant|key|ref|className|style|children)$/]",
+        "message": "<MissingSection> doesn't accept that prop. Declared props: intro, statesNotDrawn, detailNotSpecified, mostImportant."
+      },
+      {
         "selector": "JSXOpeningElement[name.name='PartRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|fitment|partNumber|availability|tone|statusLabel|last|key|ref|className|style|children)$/]",
         "message": "<PartRow> doesn't accept that prop. Declared props: name, fitment, partNumber, availability, tone, statusLabel, last."
       },
@@ -127,12 +164,28 @@
         "message": "<PartRow> tone must be one of 'ok' | 'low' | 'out'."
       },
       {
+        "selector": "JSXOpeningElement[name.name='PhotoCapture'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|required|captured|onCapture|key|ref|className|style|children)$/]",
+        "message": "<PhotoCapture> doesn't accept that prop. Declared props: label, required, captured, onCapture."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProgressBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|value|total|key|ref|className|style|children)$/]",
+        "message": "<ProgressBar> doesn't accept that prop. Declared props: label, value, total."
+      },
+      {
         "selector": "JSXOpeningElement[name.name='QueueColumn'] > JSXAttribute > JSXIdentifier[name!=/^(?:key|label|align|mono|link|key|ref|className|style|children)$/]",
         "message": "<QueueColumn> doesn't accept that prop. Declared props: key, label, align, mono, link."
       },
       {
         "selector": "JSXOpeningElement[name.name='QueueColumn'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|right|center)$/]",
         "message": "<QueueColumn> align must be one of 'left' | 'right' | 'center'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='RuggedFrame'] > JSXAttribute > JSXIdentifier[name!=/^(?:caption|width|height|scrollHint|fit|statusTime|children|key|ref|className|style|children)$/]",
+        "message": "<RuggedFrame> doesn't accept that prop. Declared props: caption, width, height, scrollHint, fit, statusTime, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ScanField'] > JSXAttribute > JSXIdentifier[name!=/^(?:placeholder|value|onChange|onScan|disabled|key|ref|className|style|children)$/]",
+        "message": "<ScanField> doesn't accept that prop. Declared props: placeholder, value, onChange, onScan, disabled."
       },
       {
         "selector": "JSXOpeningElement[name.name='ScreenHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|back|onBack|right|key|ref|className|style|children)$/]",
@@ -171,8 +224,8 @@
         "message": "<TextInput> doesn't accept that prop. Declared props: readOnly, mono."
       },
       {
-        "selector": "JSXOpeningElement[name.name='WireframeDoc'] > JSXAttribute > JSXIdentifier[name!=/^(?:mode|eyebrow|group|screenId|screenName|headline|intro|chips|sectionLabel|sectionNote|markers|items|legendColumns|gutter|children|key|ref|className|style|children)$/]",
-        "message": "<WireframeDoc> doesn't accept that prop. Declared props: mode, eyebrow, group, screenId, screenName, headline, intro, chips, sectionLabel, sectionNote, markers, items, legendColumns, gutter, children."
+        "selector": "JSXOpeningElement[name.name='WireframeDoc'] > JSXAttribute > JSXIdentifier[name!=/^(?:mode|eyebrow|group|screenId|screenName|headline|intro|chips|sectionLabel|sectionNote|markers|items|legendColumns|gutter|annotationsIntro|missing|footer|onContent|children|key|ref|className|style|children)$/]",
+        "message": "<WireframeDoc> doesn't accept that prop. Declared props: mode, eyebrow, group, screenId, screenName, headline, intro, chips, sectionLabel, sectionNote, markers, items, legendColumns, gutter, annotationsIntro, missing, footer, onContent, children."
       },
       {
         "selector": "JSXOpeningElement[name.name='WireframeDoc'] > JSXAttribute[name.name='mode'] > Literal[value!=/^(?:wireframe|annotated)$/]",
@@ -200,6 +253,9 @@
   ],
   "x-omelette": {
     "components": {
+      "Accordion": {
+        "replaces": []
+      },
       "ActionBar": {
         "replaces": []
       },
@@ -218,7 +274,19 @@
       "Button": {
         "replaces": []
       },
+      "CalloutBox": {
+        "replaces": []
+      },
       "CameraButton": {
+        "replaces": []
+      },
+      "ConditionOption": {
+        "replaces": []
+      },
+      "CounterItem": {
+        "replaces": []
+      },
+      "DetailRow": {
         "replaces": []
       },
       "Field": {
@@ -242,10 +310,25 @@
       "KpiTile": {
         "replaces": []
       },
+      "MissingSection": {
+        "replaces": []
+      },
       "PartRow": {
         "replaces": []
       },
+      "PhotoCapture": {
+        "replaces": []
+      },
+      "ProgressBar": {
+        "replaces": []
+      },
       "QueueColumn": {
+        "replaces": []
+      },
+      "RuggedFrame": {
+        "replaces": []
+      },
+      "ScanField": {
         "replaces": []
       },
       "ScreenHeader": {

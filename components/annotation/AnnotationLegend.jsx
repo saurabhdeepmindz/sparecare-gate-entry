@@ -1,4 +1,5 @@
 import React from 'react';
+import {CalloutBox} from './CalloutBox.jsx';
 
 export function AnnotationLegend({title='Annotations',items=[],columns=1,style,...rest}){
   return (
@@ -15,6 +16,8 @@ export function AnnotationLegend({title='Annotations',items=[],columns=1,style,.
                 {it.control&&<span style={{font:'var(--type-caption)',color:'var(--sc-grey-500)'}}>{it.control}</span>}
               </div>
               <p style={{margin:'3px 0 0',font:'var(--type-caption)',color:'var(--text-secondary)',lineHeight:1.5}}>{it.description}</p>
+              {it.query&&<CalloutBox kind="query" ref_={it.query.ref} blocking={it.query.blocking}>{it.query.text}</CalloutBox>}
+              {it.proposal&&<CalloutBox kind="proposal">{it.proposal}</CalloutBox>}
             </div>
           </li>
         ))}

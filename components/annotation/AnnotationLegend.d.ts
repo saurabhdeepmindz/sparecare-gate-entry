@@ -17,6 +17,10 @@ export interface AnnotationItem {
   description: string;
   /** open tints the number amber, marking an unresolved FRD open issue. */
   tone?: 'primary' | 'open';
+  /** An amber OPEN QUERY box beneath the description — something the FRD leaves undecided. */
+  query?: { text: React.ReactNode; ref?: string; blocking?: boolean };
+  /** A tinted OUR PROPOSAL — NOT STATED box, for a decision made where the FRD is silent. */
+  proposal?: React.ReactNode;
 }
 export interface AnnotationLegendProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;

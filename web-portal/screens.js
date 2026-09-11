@@ -3,7 +3,7 @@ window.SC_PORTAL = {
   org: 'Deepmindz Innovations Pvt Ltd',
   client: 'SpareCare',
   title: 'WMS Inward Wireframes',
-  subtitle: 'Administration and Operations',
+  subtitle: 'Gate Entry to Unloading',
   version: 'v1',
   backLabel: '\u2190 Back to SpareCare overview',
   backHref: '#',
@@ -22,7 +22,15 @@ window.SC_PORTAL = {
       ]
     },
     {
-      code: 'IN-C', name: 'REFERENCE',
+      code: 'IN-C', name: 'RECEIPT & UNLOAD',
+      items: [
+        {idx:'04', id:'screen-4a', ref:'Screen 4a', name:'Receipt Details — invoice capture', fr:'FR-004', file:'screens/screen-4a-receipt-details.html', modes:true},
+        {idx:'05', id:'screen-6a', ref:'Screen 6a', name:'Box scanning & unload progress', fr:'FR-006', file:'screens/screen-6a-box-scanning.html', modes:true},
+        {idx:'06', id:'screen-6b', ref:'Screen 6b', name:'Box condition assessment', fr:'FR-006', file:'screens/screen-6b-box-condition.html', modes:true}
+      ]
+    },
+    {
+      code: 'IN-D', name: 'REFERENCE',
       items: [
         {idx:'', id:'prototype', ref:'', name:'Click-through prototype', fr:'FR-001 \u2192 FR-003', file:'screens/prototype.html', modes:false},
         {idx:'', id:'open-issues', ref:'', name:'Open issues on these screens', fr:'\u00a744', file:'screens/open-issues.html', modes:false}

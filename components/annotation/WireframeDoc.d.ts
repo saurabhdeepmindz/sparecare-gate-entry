@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { AnnotationMarkerProps } from './AnnotationMarker';
 import { AnnotationItem } from './AnnotationLegend';
+import { MissingSectionProps } from './MissingSection';
 
 /**
  * One screen presented as a complete, standalone document. The mode switch is the whole
@@ -28,6 +29,14 @@ export interface WireframeDocProps extends React.HTMLAttributes<HTMLDivElement> 
   items?: AnnotationItem[];
   legendColumns?: number;
   gutter?: number;
+  /** Lead sentence above the numbered annotations, e.g. "Nine decisions made on your behalf." */
+  annotationsIntro?: string;
+  /** Renders the "What is deliberately missing" section beneath the annotations. */
+  missing?: MissingSectionProps;
+  /** Confidentiality and status line at the foot of the document. */
+  footer?: React.ReactNode;
+  /** Centre the screen rather than stretching it — true for device frames, false for full-width web screens. */
+  onContent?: boolean;
   children?: React.ReactNode;
 }
 export declare function WireframeDoc(props: WireframeDocProps): JSX.Element;

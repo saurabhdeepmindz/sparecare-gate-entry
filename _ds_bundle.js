@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"23beab06affc","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/WireframeDoc.jsx":"b42e8e982f67","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"b325f3aae20e","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"58d256a9b8e3","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"9488cc3a7255","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"11b81c63f30f"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"SpareCareDesignSystem_556483","components":[{"name":"AnnotatedScreen","sourcePath":"components/annotation/AnnotatedScreen.jsx"},{"name":"AnnotationLegend","sourcePath":"components/annotation/AnnotationLegend.jsx"},{"name":"AnnotationMarker","sourcePath":"components/annotation/AnnotationMarker.jsx"},{"name":"BrowserChrome","sourcePath":"components/annotation/BrowserChrome.jsx"},{"name":"CalloutBox","sourcePath":"components/annotation/CalloutBox.jsx"},{"name":"MissingSection","sourcePath":"components/annotation/MissingSection.jsx"},{"name":"RuggedFrame","sourcePath":"components/annotation/RuggedFrame.jsx"},{"name":"WireframeDoc","sourcePath":"components/annotation/WireframeDoc.jsx"},{"name":"WireframeSheet","sourcePath":"components/annotation/WireframeSheet.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"PartRow","sourcePath":"components/core/PartRow.jsx"},{"name":"SearchBar","sourcePath":"components/core/SearchBar.jsx"},{"name":"StoreCard","sourcePath":"components/core/StoreCard.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Accordion","sourcePath":"components/wms/Accordion.jsx"},{"name":"ActionBar","sourcePath":"components/wms/ActionBar.jsx"},{"name":"CameraButton","sourcePath":"components/wms/CameraButton.jsx"},{"name":"ConditionChips","sourcePath":"components/wms/ConditionChips.jsx"},{"name":"CounterStrip","sourcePath":"components/wms/CounterStrip.jsx"},{"name":"DetailRow","sourcePath":"components/wms/DetailRow.jsx"},{"name":"Field","sourcePath":"components/wms/Field.jsx"},{"name":"GenBanner","sourcePath":"components/wms/GenBanner.jsx"},{"name":"GenContextBar","sourcePath":"components/wms/GenContextBar.jsx"},{"name":"HandheldFrame","sourcePath":"components/wms/HandheldFrame.jsx"},{"name":"InfoNote","sourcePath":"components/wms/InfoNote.jsx"},{"name":"KpiTile","sourcePath":"components/wms/KpiTile.jsx"},{"name":"PhotoCapture","sourcePath":"components/wms/PhotoCapture.jsx"},{"name":"ProgressBar","sourcePath":"components/wms/ProgressBar.jsx"},{"name":"QueueTable","sourcePath":"components/wms/QueueTable.jsx"},{"name":"ScanField","sourcePath":"components/wms/ScanField.jsx"},{"name":"ScreenHeader","sourcePath":"components/wms/ScreenHeader.jsx"},{"name":"SelectInput","sourcePath":"components/wms/SelectInput.jsx"},{"name":"Stepper","sourcePath":"components/wms/Stepper.jsx"},{"name":"TextInput","sourcePath":"components/wms/TextInput.jsx"},{"name":"WorkflowChecklist","sourcePath":"components/wms/WorkflowChecklist.jsx"}],"sourceHashes":{"components/annotation/AnnotatedScreen.jsx":"e3eda9b27059","components/annotation/AnnotationLegend.jsx":"20ca7383d8ce","components/annotation/AnnotationMarker.jsx":"1847cf4b707a","components/annotation/BrowserChrome.jsx":"455a6f83e947","components/annotation/CalloutBox.jsx":"1e47bcb251b2","components/annotation/MissingSection.jsx":"92b2437bc915","components/annotation/RuggedFrame.jsx":"1e86457d4cb4","components/annotation/WireframeDoc.jsx":"d5dccb947ef9","components/annotation/WireframeSheet.jsx":"abd6b0ea6eee","components/core/Button.jsx":"3ba0157abd72","components/core/Icon.jsx":"5da8d81212d3","components/core/PartRow.jsx":"b9a79081d3b5","components/core/SearchBar.jsx":"b3b6e0dd1663","components/core/StoreCard.jsx":"9101fdbcb8a1","components/core/Tag.jsx":"7b22545dac46","components/wms/Accordion.jsx":"60bac93b1f83","components/wms/ActionBar.jsx":"bc99bb1e1ef8","components/wms/CameraButton.jsx":"b325f3aae20e","components/wms/ConditionChips.jsx":"18272c841276","components/wms/CounterStrip.jsx":"1f7e44e51230","components/wms/DetailRow.jsx":"3dcab09cc1f1","components/wms/Field.jsx":"a6d3a2f8ccba","components/wms/GenBanner.jsx":"3d0319d4573a","components/wms/GenContextBar.jsx":"e24a794a1bb2","components/wms/HandheldFrame.jsx":"ba17bce07acb","components/wms/InfoNote.jsx":"27fd56fb0070","components/wms/KpiTile.jsx":"f74cbd4b13a5","components/wms/PhotoCapture.jsx":"6e414b287c8c","components/wms/ProgressBar.jsx":"fbf98cfe6705","components/wms/QueueTable.jsx":"453f706e15a4","components/wms/ScanField.jsx":"966902a2fb47","components/wms/ScreenHeader.jsx":"cc1bf73b13a8","components/wms/SelectInput.jsx":"6bfbfb05231f","components/wms/Stepper.jsx":"2d8124be2055","components/wms/TextInput.jsx":"c6300ec07fe1","components/wms/WorkflowChecklist.jsx":"1d506d34582e","ui_kits/wms-inward/Screen1GateEntry.jsx":"6ac78404982f","ui_kits/wms-inward/Screen2ConsignmentDetails.jsx":"11b4318e952c","ui_kits/wms-inward/Screen3Dashboard.jsx":"fc491d2cec61","ui_kits/wms-inward/annotations.js":"dff47e6162b9","ui_kits/wms-inward/handheld/Screen4aReceipt.jsx":"8cc1e7835bcc","ui_kits/wms-inward/handheld/Screen6aScan.jsx":"275cfe6856e4","ui_kits/wms-inward/handheld/Screen6bCondition.jsx":"6e0a5e88bf52","ui_kits/wms-inward/handheld/handheldAnnotations.js":"88dc1e02f4fd","ui_kits/wms-inward/web/ConsignmentWeb.jsx":"4821c350de95","ui_kits/wms-inward/web/DashboardWeb.jsx":"58d256a9b8e3","ui_kits/wms-inward/web/GateEntryWeb.jsx":"6c9c7c3dfb59","ui_kits/wms-inward/web/WebShell.jsx":"f845afbd1f6b","ui_kits/wms-inward/web/webAnnotations.js":"3fca7faa6103","web-portal/boot.js":"9279fb6c6fd2","web-portal/screens.js":"ecdfcdadbe00"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -7,109 +7,6 @@ const __ds_ns = (window.SpareCareDesignSystem_556483 = window.SpareCareDesignSys
 const __ds_scope = {};
 
 (__ds_ns.__errors = __ds_ns.__errors || []);
-
-// components/annotation/AnnotationLegend.jsx
-try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-function AnnotationLegend({
-  title = 'Annotations',
-  items = [],
-  columns = 1,
-  style,
-  ...rest
-}) {
-  return /*#__PURE__*/React.createElement("div", _extends({
-    style: {
-      background: 'var(--anno-legend-bg)',
-      border: '1px solid var(--border-default)',
-      borderRadius: 'var(--radius-card)',
-      padding: 'var(--pad-card-tight)',
-      ...style
-    }
-  }, rest), title && /*#__PURE__*/React.createElement("div", {
-    style: {
-      font: 'var(--type-label)',
-      color: 'var(--text-heading)',
-      marginBottom: 'var(--sp-2)',
-      paddingBottom: '10px',
-      borderBottom: '1px solid var(--border-soft)'
-    }
-  }, title), /*#__PURE__*/React.createElement("ol", {
-    style: {
-      margin: 0,
-      padding: 0,
-      listStyle: 'none',
-      display: 'grid',
-      gridTemplateColumns: 'repeat(' + columns + ',minmax(0,1fr))',
-      gap: '12px var(--sp-3)'
-    }
-  }, items.map(it => /*#__PURE__*/React.createElement("li", {
-    key: it.n,
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '22px 1fr',
-      gap: '10px',
-      alignItems: 'start'
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      width: '22px',
-      height: '22px',
-      borderRadius: 'var(--r-round)',
-      background: it.tone === 'open' ? 'var(--status-warn)' : 'var(--anno-marker-bg)',
-      color: 'var(--anno-marker-fg)',
-      display: 'inline-flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontFamily: 'var(--font-display)',
-      fontWeight: 'var(--fw-bold)',
-      fontSize: '12px',
-      lineHeight: 1,
-      marginTop: '1px'
-    }
-  }, it.n), /*#__PURE__*/React.createElement("div", {
-    style: {
-      minWidth: 0
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'baseline',
-      gap: '8px'
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      font: 'var(--type-label)',
-      color: 'var(--text-body)'
-    }
-  }, it.label), it.ref && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: 'var(--font-mono)',
-      fontSize: 'var(--fs-micro)',
-      fontWeight: 'var(--fw-semibold)',
-      color: 'var(--sc-teal-deep)',
-      background: 'var(--surface-sunken)',
-      padding: '2px 6px',
-      borderRadius: 'var(--r-sharp)',
-      whiteSpace: 'nowrap'
-    }
-  }, it.ref), it.control && /*#__PURE__*/React.createElement("span", {
-    style: {
-      font: 'var(--type-caption)',
-      color: 'var(--sc-grey-500)'
-    }
-  }, it.control)), /*#__PURE__*/React.createElement("p", {
-    style: {
-      margin: '3px 0 0',
-      font: 'var(--type-caption)',
-      color: 'var(--text-secondary)',
-      lineHeight: 1.5
-    }
-  }, it.description))))));
-}
-Object.assign(__ds_scope, { AnnotationLegend });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/annotation/AnnotationLegend.jsx", error: String((e && e.message) || e) }); }
 
 // components/annotation/AnnotationMarker.jsx
 try { (() => {
@@ -291,6 +188,411 @@ function BrowserChrome({
 Object.assign(__ds_scope, { BrowserChrome });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/annotation/BrowserChrome.jsx", error: String((e && e.message) || e) }); }
 
+// components/annotation/CalloutBox.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const kinds = {
+  query: {
+    label: 'OPEN QUERY',
+    bg: 'var(--status-warn-bg)',
+    fg: 'var(--status-warn-fg)',
+    border: 'rgba(226,150,60,0.45)'
+  },
+  proposal: {
+    label: 'OUR PROPOSAL \u2014 NOT STATED',
+    bg: 'var(--surface-sunken)',
+    fg: 'var(--sc-teal-deep)',
+    border: 'var(--border-field)'
+  }
+};
+function CalloutBox({
+  kind = 'query',
+  label,
+  ref_,
+  blocking = false,
+  children,
+  style,
+  ...rest
+}) {
+  const k = kinds[kind] || kinds.query;
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      background: k.bg,
+      border: '1px solid ' + k.border,
+      borderRadius: 'var(--r-sharp)',
+      padding: '9px 11px',
+      marginTop: '8px',
+      ...style
+    }
+  }, rest), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      font: 'var(--type-caption)',
+      color: k.fg,
+      lineHeight: 1.5
+    }
+  }, /*#__PURE__*/React.createElement("b", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      fontWeight: 'var(--fw-semibold)',
+      letterSpacing: '0.05em',
+      marginRight: '7px'
+    }
+  }, label || k.label), children), ref_ && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: '5px',
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      fontWeight: 'var(--fw-semibold)',
+      color: k.fg
+    }
+  }, ref_, blocking && /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--status-error)'
+    }
+  }, " \xB7 blocking")));
+}
+Object.assign(__ds_scope, { CalloutBox });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/annotation/CalloutBox.jsx", error: String((e && e.message) || e) }); }
+
+// components/annotation/AnnotationLegend.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function AnnotationLegend({
+  title = 'Annotations',
+  items = [],
+  columns = 1,
+  style,
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      background: 'var(--anno-legend-bg)',
+      border: '1px solid var(--border-default)',
+      borderRadius: 'var(--radius-card)',
+      padding: 'var(--pad-card-tight)',
+      ...style
+    }
+  }, rest), title && /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)',
+      marginBottom: 'var(--sp-2)',
+      paddingBottom: '10px',
+      borderBottom: '1px solid var(--border-soft)'
+    }
+  }, title), /*#__PURE__*/React.createElement("ol", {
+    style: {
+      margin: 0,
+      padding: 0,
+      listStyle: 'none',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(' + columns + ',minmax(0,1fr))',
+      gap: '12px var(--sp-3)'
+    }
+  }, items.map(it => /*#__PURE__*/React.createElement("li", {
+    key: it.n,
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '22px 1fr',
+      gap: '10px',
+      alignItems: 'start'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: '22px',
+      height: '22px',
+      borderRadius: 'var(--r-round)',
+      background: it.tone === 'open' ? 'var(--status-warn)' : 'var(--anno-marker-bg)',
+      color: 'var(--anno-marker-fg)',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 'var(--fw-bold)',
+      fontSize: '12px',
+      lineHeight: 1,
+      marginTop: '1px'
+    }
+  }, it.n), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'baseline',
+      gap: '8px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, it.label), it.ref && /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      fontWeight: 'var(--fw-semibold)',
+      color: 'var(--sc-teal-deep)',
+      background: 'var(--surface-sunken)',
+      padding: '2px 6px',
+      borderRadius: 'var(--r-sharp)',
+      whiteSpace: 'nowrap'
+    }
+  }, it.ref), it.control && /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, it.control)), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '3px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--text-secondary)',
+      lineHeight: 1.5
+    }
+  }, it.description), it.query && /*#__PURE__*/React.createElement(__ds_scope.CalloutBox, {
+    kind: "query",
+    ref_: it.query.ref,
+    blocking: it.query.blocking
+  }, it.query.text), it.proposal && /*#__PURE__*/React.createElement(__ds_scope.CalloutBox, {
+    kind: "proposal"
+  }, it.proposal))))));
+}
+Object.assign(__ds_scope, { AnnotationLegend });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/annotation/AnnotationLegend.jsx", error: String((e && e.message) || e) }); }
+
+// components/annotation/MissingSection.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function MissingSection({
+  intro,
+  statesNotDrawn = [],
+  detailNotSpecified = [],
+  mostImportant,
+  style,
+  ...rest
+}) {
+  const col = (title, items) => /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-default)',
+      padding: 'var(--pad-card-tight)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      fontWeight: 'var(--fw-semibold)',
+      letterSpacing: '0.07em',
+      color: 'var(--sc-grey-500)',
+      marginBottom: '10px'
+    }
+  }, title), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      margin: 0,
+      paddingLeft: '16px'
+    }
+  }, items.map((it, i) => /*#__PURE__*/React.createElement("li", {
+    key: i,
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--text-secondary)',
+      lineHeight: 1.55,
+      marginBottom: '7px'
+    }
+  }, it))));
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: style
+  }, rest), intro && /*#__PURE__*/React.createElement("p", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--text-secondary)',
+      maxWidth: '78ch',
+      margin: '0 0 var(--sp-2)',
+      lineHeight: 1.55
+    }
+  }, intro), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))',
+      gap: 'var(--sp-2)'
+    }
+  }, statesNotDrawn.length > 0 && col('STATES NOT DRAWN HERE', statesNotDrawn), detailNotSpecified.length > 0 && col('DETAIL NOT SPECIFIED HERE', detailNotSpecified)), mostImportant && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--status-warn-bg)',
+      border: '1px solid rgba(226,150,60,0.45)',
+      padding: 'var(--pad-card-tight)',
+      marginTop: 'var(--sp-2)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      fontWeight: 'var(--fw-semibold)',
+      letterSpacing: '0.07em',
+      color: 'var(--status-warn-fg)',
+      marginBottom: '7px'
+    }
+  }, "THE MOST IMPORTANT OMISSION"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      font: 'var(--type-caption)',
+      color: 'var(--status-warn-fg)',
+      lineHeight: 1.6
+    }
+  }, mostImportant)));
+}
+Object.assign(__ds_scope, { MissingSection });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/annotation/MissingSection.jsx", error: String((e && e.message) || e) }); }
+
+// components/annotation/RuggedFrame.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+/* Rugged handheld terminal, portrait, 412x880 dp — the 6-inch Android class
+   (Zebra TC53/TC58, Honeywell CT45, Datalogic Memor 11). Squared bezel, no notch,
+   physical scan trigger on the right edge. Content scrolls inside the screen. */
+function RuggedFrame({
+  caption,
+  width = 412,
+  height = 880,
+  fit = false,
+  scrollHint = true,
+  statusTime = '09:42',
+  children,
+  style,
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      display: 'inline-flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '10px',
+      ...style
+    }
+  }, rest), caption && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '10px',
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-default)',
+      borderRadius: 'var(--r-pill)',
+      padding: '6px 14px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      fontWeight: 'var(--fw-semibold)',
+      letterSpacing: '0.06em',
+      color: 'var(--sc-teal-deep)',
+      textTransform: 'uppercase'
+    }
+  }, caption), scrollHint && !fit && /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, 'SCROLL INSIDE \u2195'), fit && /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, 'FULL SCREEN SHOWN \u2014 device crops at ' + height + 'dp')), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      padding: '22px 18px',
+      background: '#2B2E30',
+      borderRadius: '18px',
+      boxShadow: 'var(--shadow-overlay)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      right: '-3px',
+      top: '168px',
+      width: '4px',
+      height: '86px',
+      borderRadius: '2px',
+      background: '#f5a623'
+    },
+    title: "Scan trigger"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      left: '-3px',
+      top: '150px',
+      width: '4px',
+      height: '52px',
+      borderRadius: '2px',
+      background: '#4A4E50'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      top: '8px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: '46px',
+      height: '4px',
+      borderRadius: '2px',
+      background: '#4A4E50'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: width + 'px',
+      height: fit ? 'auto' : height + 'px',
+      minHeight: fit ? height + 'px' : undefined,
+      background: 'var(--surface-page)',
+      borderRadius: '4px',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: '5px 14px',
+      background: 'var(--surface-inverse)',
+      color: 'rgba(255,255,255,0.92)',
+      fontFamily: 'var(--font-mono)',
+      fontSize: '11px',
+      flex: '0 0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, statusTime), /*#__PURE__*/React.createElement("span", {
+    style: {
+      letterSpacing: '0.08em'
+    }
+  }, "WMS \xB7 INWARD"), /*#__PURE__*/React.createElement("span", null, '\u25AE\u25AE\u25AE 86%')), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minHeight: 0,
+      overflowY: fit ? 'visible' : 'auto',
+      overflowX: 'hidden'
+    }
+  }, children)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      bottom: '7px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: '84px',
+      height: '3px',
+      borderRadius: '2px',
+      background: '#4A4E50'
+    }
+  })));
+}
+Object.assign(__ds_scope, { RuggedFrame });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/annotation/RuggedFrame.jsx", error: String((e && e.message) || e) }); }
+
 // components/annotation/WireframeDoc.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -327,6 +629,10 @@ function WireframeDoc({
   items = [],
   legendColumns = 2,
   gutter = 26,
+  annotationsIntro,
+  missing,
+  footer,
+  onContent = false,
   children,
   style,
   ...rest
@@ -447,9 +753,14 @@ function WireframeDoc({
     gutter: gutter,
     markers: markers,
     style: {
-      alignItems: 'stretch'
+      alignItems: onContent ? 'center' : 'stretch'
     }
-  }, children) : /*#__PURE__*/React.createElement("div", null, children), annotated && items.length > 0 && /*#__PURE__*/React.createElement("div", {
+  }, children) : /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: onContent ? 'center' : 'stretch'
+    }
+  }, children), annotated && items.length > 0 && /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 'var(--sp-4)'
     }
@@ -478,11 +789,58 @@ function WireframeDoc({
       fontSize: '24px',
       color: 'var(--text-heading)'
     }
-  }, "Annotations")), /*#__PURE__*/React.createElement(__ds_scope.AnnotationLegend, {
+  }, "Annotations")), annotationsIntro && /*#__PURE__*/React.createElement("p", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--text-secondary)',
+      maxWidth: '78ch',
+      margin: '0 0 var(--sp-2)',
+      lineHeight: 1.55
+    }
+  }, annotationsIntro), /*#__PURE__*/React.createElement(__ds_scope.AnnotationLegend, {
     title: null,
     items: items,
     columns: legendColumns
-  })));
+  })), annotated && missing && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 'var(--sp-4)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'baseline',
+      gap: '12px',
+      marginBottom: '10px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-caption)',
+      fontWeight: 'var(--fw-semibold)',
+      color: 'var(--sc-teal-deep)',
+      border: '1px solid var(--border-field)',
+      background: 'var(--surface-sunken)',
+      borderRadius: 'var(--r-sharp)',
+      padding: '3px 8px'
+    }
+  }, "03"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 'var(--fw-bold)',
+      fontSize: '24px',
+      color: 'var(--text-heading)'
+    }
+  }, "What is deliberately missing")), /*#__PURE__*/React.createElement(__ds_scope.MissingSection, missing)), annotated && footer && /*#__PURE__*/React.createElement("footer", {
+    style: {
+      marginTop: 'var(--sp-4)',
+      paddingTop: 'var(--sp-2)',
+      borderTop: '1px solid rgba(4,1,1,0.18)',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-600)',
+      lineHeight: 1.55,
+      maxWidth: '90ch'
+    }
+  }, footer));
 }
 Object.assign(__ds_scope, { WireframeDoc });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/annotation/WireframeDoc.jsx", error: String((e && e.message) || e) }); }
@@ -961,6 +1319,64 @@ function StoreCard({
 Object.assign(__ds_scope, { StoreCard });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/StoreCard.jsx", error: String((e && e.message) || e) }); }
 
+// components/wms/Accordion.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function Accordion({
+  title,
+  open = false,
+  onToggle,
+  badge,
+  children,
+  style,
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      overflow: 'hidden',
+      background: 'var(--surface-card)',
+      ...style
+    }
+  }, rest), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onToggle,
+    "aria-expanded": open,
+    style: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      padding: '12px 14px',
+      minHeight: 'var(--hit-min)',
+      border: 'none',
+      background: open ? 'var(--surface-sunken)' : 'var(--surface-card)',
+      cursor: 'pointer',
+      textAlign: 'left',
+      transition: 'var(--transition-interactive)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)',
+      flex: 1,
+      minWidth: 0
+    }
+  }, title), badge, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: open ? 'chevron-up' : 'chevron-down',
+    size: 17,
+    color: "var(--sc-teal)"
+  })), open && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px 14px',
+      borderTop: '1px solid var(--border-soft)'
+    }
+  }, children));
+}
+Object.assign(__ds_scope, { Accordion });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/Accordion.jsx", error: String((e && e.message) || e) }); }
+
 // components/wms/ActionBar.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -1019,6 +1435,162 @@ function CameraButton({
 }
 Object.assign(__ds_scope, { CameraButton });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/CameraButton.jsx", error: String((e && e.message) || e) }); }
+
+// components/wms/ConditionChips.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const TONE = {
+  ok: 'var(--status-ok)',
+  warn: 'var(--status-warn)',
+  bad: 'var(--status-error)'
+};
+function ConditionChips({
+  options = [],
+  selected = [],
+  onToggle,
+  columns = 2,
+  style,
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(' + columns + ',minmax(0,1fr))',
+      gap: '8px',
+      ...style
+    }
+  }, rest), options.map(o => {
+    const on = selected.includes(o.id);
+    const c = TONE[o.tone] || 'var(--sc-teal)';
+    return /*#__PURE__*/React.createElement("button", {
+      key: o.id,
+      type: "button",
+      onClick: () => onToggle && onToggle(o.id),
+      "aria-pressed": on,
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '9px',
+        textAlign: 'left',
+        padding: '10px 11px',
+        minHeight: 'var(--hit-min)',
+        cursor: 'pointer',
+        borderRadius: 'var(--radius-field)',
+        transition: 'var(--transition-interactive)',
+        border: '1.5px solid ' + (on ? c : 'var(--border-soft)'),
+        background: on ? 'var(--surface-card)' : 'var(--surface-card)',
+        boxShadow: on ? 'inset 0 0 0 1px ' + c : 'none',
+        font: 'var(--type-ui)',
+        color: on ? 'var(--text-body)' : 'var(--sc-grey-600)',
+        fontWeight: on ? 'var(--fw-semibold)' : 'var(--fw-medium)'
+      }
+    }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: o.icon || 'circle',
+      size: 17,
+      color: c
+    }), /*#__PURE__*/React.createElement("span", {
+      style: {
+        minWidth: 0
+      }
+    }, o.label));
+  }));
+}
+Object.assign(__ds_scope, { ConditionChips });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/ConditionChips.jsx", error: String((e && e.message) || e) }); }
+
+// components/wms/CounterStrip.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function CounterStrip({
+  items = [],
+  style,
+  ...rest
+}) {
+  const TONE = {
+    ok: 'var(--status-ok)',
+    warn: 'var(--status-warn)',
+    bad: 'var(--status-error)',
+    neutral: 'var(--sc-teal-deep)'
+  };
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(' + items.length + ',minmax(0,1fr))',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      overflow: 'hidden',
+      background: 'var(--surface-card)',
+      ...style
+    }
+  }, rest), items.map((it, i) => /*#__PURE__*/React.createElement("div", {
+    key: it.label,
+    style: {
+      textAlign: 'center',
+      padding: '9px 6px',
+      borderLeft: i ? '1px solid var(--border-soft)' : 'none'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-600)'
+    }
+  }, it.label), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 'var(--fw-bold)',
+      fontSize: '22px',
+      lineHeight: 1.15,
+      color: TONE[it.tone] || TONE.neutral
+    }
+  }, it.value))));
+}
+Object.assign(__ds_scope, { CounterStrip });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/CounterStrip.jsx", error: String((e && e.message) || e) }); }
+
+// components/wms/DetailRow.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function DetailRow({
+  icon,
+  label,
+  value,
+  mono = false,
+  last = false,
+  style,
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      padding: '9px 0',
+      borderBottom: last ? 'none' : '1px solid var(--border-soft)',
+      ...style
+    }
+  }, rest), icon && /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: icon,
+    size: 16,
+    color: "var(--sc-teal)"
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-600)',
+      flex: 1,
+      minWidth: 0
+    }
+  }, label), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: mono ? 'var(--font-mono)' : 'var(--font-body)',
+      fontSize: 'var(--fs-caption)',
+      fontWeight: 'var(--fw-semibold)',
+      color: mono ? 'var(--text-data)' : 'var(--text-body)',
+      textAlign: 'right'
+    }
+  }, value));
+}
+Object.assign(__ds_scope, { DetailRow });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/DetailRow.jsx", error: String((e && e.message) || e) }); }
 
 // components/wms/Field.jsx
 try { (() => {
@@ -1345,6 +1917,159 @@ function KpiTile({
 Object.assign(__ds_scope, { KpiTile });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/KpiTile.jsx", error: String((e && e.message) || e) }); }
 
+// components/wms/PhotoCapture.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function PhotoCapture({
+  label = 'Take Photo',
+  required = false,
+  captured = false,
+  onCapture,
+  style,
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: style
+  }, rest), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'baseline',
+      gap: '7px',
+      marginBottom: '7px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, label), required && /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--status-error)',
+      fontWeight: 'var(--fw-semibold)'
+    }
+  }, "(Mandatory)")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '10px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      flex: '1 1 0',
+      minWidth: 0,
+      height: '78px',
+      borderRadius: 'var(--radius-field)',
+      background: captured ? 'var(--sc-graphite)' : 'var(--surface-sunken)',
+      border: '1px solid var(--border-field)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, captured ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'absolute',
+      bottom: '6px',
+      right: '6px',
+      width: '20px',
+      height: '20px',
+      borderRadius: 'var(--r-round)',
+      background: 'var(--status-ok)',
+      color: '#fff',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "check",
+    size: 12
+  })) : /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "No photo yet")), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onCapture,
+    style: {
+      flex: '1 1 0',
+      minWidth: 0,
+      height: '78px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '5px',
+      borderRadius: 'var(--radius-field)',
+      border: '1px dashed var(--border-field)',
+      background: 'var(--surface-card)',
+      cursor: 'pointer',
+      color: 'var(--sc-teal-deep)'
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "camera",
+    size: 20
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-caption)'
+    }
+  }, captured ? 'Retake / Change' : 'Capture'))));
+}
+Object.assign(__ds_scope, { PhotoCapture });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/PhotoCapture.jsx", error: String((e && e.message) || e) }); }
+
+// components/wms/ProgressBar.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function ProgressBar({
+  label,
+  value = 0,
+  total = 0,
+  style,
+  ...rest
+}) {
+  const pct = total ? Math.round(value / total * 100) : 0;
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: style
+  }, rest), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'baseline',
+      justifyContent: 'space-between',
+      gap: '10px',
+      marginBottom: '6px'
+    }
+  }, label && /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, label), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-caption)',
+      fontWeight: 'var(--fw-semibold)',
+      color: 'var(--sc-teal-deep)'
+    }
+  }, value, " / ", total, " \xB7 ", pct, "%")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: '8px',
+      borderRadius: '4px',
+      background: 'var(--sc-chrome)',
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: pct + '%',
+      height: '100%',
+      background: 'var(--action-accent)',
+      transition: 'width var(--dur-base) var(--ease-standard)'
+    }
+  })));
+}
+Object.assign(__ds_scope, { ProgressBar });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/ProgressBar.jsx", error: String((e && e.message) || e) }); }
+
 // components/wms/QueueTable.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -1433,6 +2158,69 @@ function QueueTable({
 }
 Object.assign(__ds_scope, { QueueTable });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/QueueTable.jsx", error: String((e && e.message) || e) }); }
+
+// components/wms/ScanField.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function ScanField({
+  placeholder = 'Scan box barcode',
+  value,
+  onChange,
+  onScan,
+  disabled = false,
+  style,
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      display: 'flex',
+      alignItems: 'stretch',
+      gap: '8px',
+      ...style
+    }
+  }, rest), /*#__PURE__*/React.createElement("input", {
+    value: value,
+    onChange: onChange,
+    placeholder: placeholder,
+    disabled: disabled,
+    style: {
+      flex: 1,
+      minWidth: 0,
+      border: '1px solid var(--border-field)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px 14px',
+      minHeight: 'var(--hit-min)',
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-body-sm)',
+      letterSpacing: 'var(--ls-mono)',
+      color: 'var(--text-body)',
+      background: 'var(--surface-card)',
+      outline: 'none'
+    }
+  }), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onScan,
+    "aria-label": "Scan with device reader",
+    style: {
+      flex: '0 0 auto',
+      width: 'var(--hit-min)',
+      minHeight: 'var(--hit-min)',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      border: '1px solid var(--action-accent)',
+      borderRadius: 'var(--radius-field)',
+      background: 'var(--action-accent)',
+      color: 'var(--text-on-dark)',
+      cursor: 'pointer'
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "scan-line",
+    size: 20
+  })));
+}
+Object.assign(__ds_scope, { ScanField });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/wms/ScanField.jsx", error: String((e && e.message) || e) }); }
 
 // components/wms/ScreenHeader.jsx
 try { (() => {
@@ -2462,6 +3250,1206 @@ window.SC_WMS_ANNO = {
 };
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/annotations.js", error: String((e && e.message) || e) }); }
 
+// ui_kits/wms-inward/handheld/Screen4aReceipt.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  Field,
+  TextInput,
+  SelectInput,
+  DetailRow,
+  Accordion,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  Tag,
+  QueueTable
+} = window.SpareCareDesignSystem_556483;
+const DOCS = ['GR / LR (Goods Receipt / Lorry Receipt)', 'Tax Invoice', 'Challan', 'Ship List', 'Delivery Challan'];
+function Screen4aReceipt({
+  state = {},
+  set = () => {},
+  invoices = [],
+  openInvoice = true,
+  onToggleInvoice,
+  onAddNext,
+  onNext,
+  onBack
+}) {
+  const total = invoices.reduce((s, i) => s + (i.amountValue || 0), 0);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Receipt Details",
+    onBack: onBack
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '4px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "file-text",
+    label: "Gate Entry Number",
+    value: "GEN-000845",
+    mono: true
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "calendar-clock",
+    label: "GEN Date",
+    value: "12 Aug 2026",
+    last: true
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Primary Document Type",
+    required: true
+  }, /*#__PURE__*/React.createElement(SelectInput, {
+    placeholder: "Select Primary Document Type",
+    options: DOCS,
+    value: state.docType,
+    onChange: e => set('docType', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Document Number"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "LR / Invoice / GRN number",
+    mono: true,
+    value: state.docNo || '',
+    onChange: e => set('docNo', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Document Date"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "DD/MM/YYYY",
+    value: state.docDate || '',
+    onChange: e => set('docDate', e.target.value)
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: '0 12px'
+    }
+  }, /*#__PURE__*/React.createElement(Field, {
+    label: "No. of Boxes in GEN",
+    required: true,
+    hint: "Expected count for unloading."
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "0",
+    value: state.boxes || '',
+    onChange: e => set('boxes', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "No. of Invoices in GEN"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "0",
+    value: state.invCount || '',
+    onChange: e => set('invCount', e.target.value)
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, null, "No. of Boxes in GEN is the figure unloading is reconciled against. The count taken at the gate is indicative only.")), /*#__PURE__*/React.createElement(Accordion, {
+    title: "Capture Invoice Details",
+    open: openInvoice,
+    onToggle: onToggleInvoice,
+    badge: invoices.length ? /*#__PURE__*/React.createElement(Tag, {
+      tone: "info",
+      dot: false
+    }, invoices.length, " added") : null,
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(Field, {
+    label: "Invoice Number"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "INV1004",
+    mono: true,
+    value: state.invNo || '',
+    onChange: e => set('invNo', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Invoice Date"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "DD/MM/YYYY",
+    value: state.invDate || '',
+    onChange: e => set('invDate', e.target.value)
+  })), /*#__PURE__*/React.createElement(Field, {
+    label: "Total Invoice Amount"
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    placeholder: "0.00",
+    value: state.invAmt || '',
+    onChange: e => set('invAmt', e.target.value)
+  })), /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    size: "md",
+    block: true,
+    onClick: onAddNext,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "plus",
+      size: 15
+    })
+  }, "Add Next")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)',
+      marginBottom: '8px'
+    }
+  }, "Details of the Invoices Added"), /*#__PURE__*/React.createElement(QueueTable, {
+    columns: [{
+      key: 'no',
+      label: 'Invoice No.',
+      mono: true
+    }, {
+      key: 'date',
+      label: 'Date'
+    }, {
+      key: 'amount',
+      label: 'Amount',
+      align: 'right'
+    }, {
+      key: 'received',
+      label: 'Recd.',
+      align: 'center'
+    }],
+    rows: invoices,
+    minRows: 0,
+    style: {
+      marginBottom: 0
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'baseline',
+      paddingTop: '9px',
+      marginTop: '2px',
+      borderTop: '1.5px solid var(--border-field)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, "Total"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontWeight: 'var(--fw-semibold)',
+      fontSize: 'var(--fs-body-sm)',
+      color: 'var(--sc-teal-deep)'
+    }
+  }, '\u20B9 ' + total.toLocaleString('en-IN'))), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '8px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "The summary table renders once, here on the receipt record."))), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: onBack,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "save",
+      size: 15
+    })
+  }, "Save"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: onNext,
+    iconRight: /*#__PURE__*/React.createElement(Icon, {
+      name: "chevron-right",
+      size: 15
+    })
+  }, "Next")));
+}
+Object.assign(window, {
+  Screen4aReceipt
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen4aReceipt.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/Screen6aScan.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  DetailRow,
+  ScanField,
+  CounterStrip,
+  ProgressBar,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  QueueTable,
+  Tag
+} = window.SpareCareDesignSystem_556483;
+function Panel({
+  title,
+  action,
+  children,
+  style
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px',
+      marginBottom: '12px',
+      ...style
+    }
+  }, (title || action) && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '10px',
+      marginBottom: '9px'
+    }
+  }, title && /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, title), action), children);
+}
+function Screen6aScan({
+  box = '',
+  setBox,
+  onScan,
+  rows = [],
+  unloaded = 18,
+  expected = 50,
+  ok = 14,
+  notOk = 4,
+  onBoxTap,
+  onFinish,
+  onSave,
+  onBack
+}) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Unload Truck",
+    onBack: onBack,
+    right: /*#__PURE__*/React.createElement(Icon, {
+      name: "refresh-cw",
+      size: 17,
+      color: "var(--sc-teal)"
+    })
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '4px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "file-text",
+    label: "Gate Entry Number",
+    value: "GEN-000845",
+    mono: true
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "building-2",
+    label: "Supplier",
+    value: "ABC Supplies Pvt. Ltd."
+  }), /*#__PURE__*/React.createElement(DetailRow, {
+    icon: "receipt",
+    label: "Document Number",
+    value: "LR-77120",
+    mono: true,
+    last: true
+  })), /*#__PURE__*/React.createElement(Panel, {
+    title: "Shipment Details (Shiplist)",
+    action: /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        gap: '7px'
+      }
+    }, /*#__PURE__*/React.createElement(Button, {
+      variant: "ghost",
+      size: "sm"
+    }, "View"), /*#__PURE__*/React.createElement(Button, {
+      variant: "secondary",
+      size: "sm"
+    }, "Replace"))
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "file-spreadsheet",
+    size: 20,
+    color: "var(--sc-teal-deep)"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-caption)',
+      color: 'var(--text-data)',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap'
+    }
+  }, "shiplist_GEN000845.xlsx"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "Uploaded 12 Aug 2026, 09:31")))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Scan / Enter Box No."
+  }, /*#__PURE__*/React.createElement(ScanField, {
+    value: box,
+    onChange: e => setBox && setBox(e.target.value),
+    onScan: onScan,
+    placeholder: "Scan box barcode"
+  }), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '7px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      lineHeight: 1.45
+    }
+  }, "Scan each box as it comes off the truck. Type the number if the label will not read.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(CounterStrip, {
+    items: [{
+      label: 'Unloaded',
+      value: unloaded
+    }, {
+      label: 'Balance',
+      value: expected - unloaded,
+      tone: 'warn'
+    }, {
+      label: 'OK',
+      value: ok,
+      tone: 'ok'
+    }, {
+      label: 'Not OK',
+      value: notOk,
+      tone: 'bad'
+    }]
+  })), /*#__PURE__*/React.createElement(Panel, null, /*#__PURE__*/React.createElement(ProgressBar, {
+    label: "Unload progress",
+    value: unloaded,
+    total: expected
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "warn"
+  }, "BX-00019 is not on the uploaded ship list. Set it aside, or add a document to justify accepting it.")), /*#__PURE__*/React.createElement(Panel, {
+    title: "Recent Box Entries",
+    action: /*#__PURE__*/React.createElement(Button, {
+      variant: "ghost",
+      size: "sm"
+    }, "View All")
+  }, /*#__PURE__*/React.createElement(QueueTable, {
+    columns: [{
+      key: 'box',
+      label: 'Box No.',
+      mono: true
+    }, {
+      key: 'quality',
+      label: 'Quality'
+    }, {
+      key: 'status',
+      label: 'Status',
+      align: 'center'
+    }, {
+      key: 'time',
+      label: 'Time',
+      align: 'right'
+    }],
+    rows: rows,
+    minRows: 0,
+    onRowClick: onBoxTap,
+    style: {
+      marginBottom: 0
+    }
+  }), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '8px 0 0',
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "Tap a box to update its condition."))), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: onSave,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "save",
+      size: 15
+    })
+  }, "Save"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: onFinish,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "circle-check",
+      size: 15
+    })
+  }, "Finish Unload")));
+}
+Object.assign(window, {
+  Screen6aScan
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen6aScan.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/Screen6bCondition.jsx
+try { (() => {
+const {
+  ScreenHeader,
+  ConditionChips,
+  PhotoCapture,
+  ActionBar,
+  Button,
+  Icon,
+  InfoNote,
+  QueueTable,
+  Tag
+} = window.SpareCareDesignSystem_556483;
+const OPTIONS = [{
+  id: 'ok',
+  label: 'OK',
+  icon: 'circle-check',
+  tone: 'ok'
+}, {
+  id: 'tampered',
+  label: 'Packing Tampered',
+  icon: 'triangle-alert',
+  tone: 'warn'
+}, {
+  id: 'damaged',
+  label: 'Damaged',
+  icon: 'circle-x',
+  tone: 'bad'
+}, {
+  id: 'scratch',
+  label: 'Visible Scratch',
+  icon: 'scan-line',
+  tone: 'warn'
+}, {
+  id: 'nopack',
+  label: 'Without Packing',
+  icon: 'package-open',
+  tone: 'warn'
+}, {
+  id: 'wrong',
+  label: 'Wrong Delivery',
+  icon: 'truck',
+  tone: 'bad'
+}];
+function Screen6bCondition({
+  boxNo = 'BX-00012',
+  selected = ['damaged'],
+  onToggle,
+  openDelivery = true,
+  setOpenDelivery,
+  photo = true,
+  onCapture,
+  remarks = '',
+  setRemarks,
+  recent = [],
+  onSave,
+  onCancel
+}) {
+  const notOk = selected.some(s => s !== 'ok');
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScreenHeader, {
+    title: "Update Box Condition",
+    onBack: onCancel
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '12px var(--handheld-safe) 16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '11px',
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '11px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "package",
+    size: 24,
+    color: "var(--sc-teal-deep)"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 0,
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontWeight: 'var(--fw-semibold)',
+      fontSize: '17px',
+      color: 'var(--text-data)'
+    }
+  }, boxNo), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "Scanned box \xB7 18 of 50")), /*#__PURE__*/React.createElement(Tag, {
+    tone: notOk ? 'out' : 'ok'
+  }, notOk ? 'Not OK' : 'OK')), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement(InfoNote, {
+    tone: "warn"
+  }, "Mismatch with shiplist. Choose Set Aside to return the box, or Add Document to justify accepting it."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '8px',
+      marginTop: '8px'
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    size: "sm",
+    block: true
+  }, "Set Aside"), /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    size: "sm",
+    block: true
+  }, "Add Document"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)',
+      marginBottom: '8px'
+    }
+  }, "Box Condition"), /*#__PURE__*/React.createElement(ConditionChips, {
+    options: OPTIONS,
+    selected: selected,
+    onToggle: onToggle,
+    style: {
+      marginBottom: '12px'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '11px 12px',
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, "Mark for Open Delivery"), notOk && /*#__PURE__*/React.createElement(Tag, {
+    tone: "ok",
+    dot: false
+  }, "Recommended")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      font: 'var(--type-caption)',
+      color: 'var(--sc-grey-500)',
+      marginTop: '2px'
+    }
+  }, "Inspection in the presence of the driver.")), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    role: "switch",
+    "aria-checked": openDelivery,
+    onClick: () => setOpenDelivery && setOpenDelivery(!openDelivery),
+    style: {
+      width: '46px',
+      height: '26px',
+      borderRadius: '13px',
+      border: 'none',
+      cursor: 'pointer',
+      flex: '0 0 auto',
+      padding: '3px',
+      display: 'flex',
+      justifyContent: openDelivery ? 'flex-end' : 'flex-start',
+      background: openDelivery ? 'var(--status-ok)' : 'var(--sc-chrome)',
+      transition: 'var(--transition-interactive)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: '20px',
+      height: '20px',
+      borderRadius: 'var(--r-round)',
+      background: '#fff',
+      display: 'block'
+    }
+  }))), /*#__PURE__*/React.createElement(PhotoCapture, {
+    required: notOk,
+    captured: photo,
+    onCapture: onCapture,
+    style: {
+      marginBottom: '12px'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'baseline',
+      justifyContent: 'space-between',
+      marginBottom: '6px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-body)'
+    }
+  }, "Remarks ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontWeight: 'var(--fw-regular)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, "(Optional)")), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 'var(--fs-micro)',
+      color: 'var(--sc-grey-500)'
+    }
+  }, remarks.length, "/250")), /*#__PURE__*/React.createElement("textarea", {
+    value: remarks,
+    onChange: e => setRemarks && setRemarks(e.target.value.slice(0, 250)),
+    rows: 2,
+    placeholder: "Corner crushed and side dented.",
+    style: {
+      width: '100%',
+      border: '1px solid var(--border-field)',
+      borderRadius: 'var(--radius-field)',
+      padding: '10px 12px',
+      fontFamily: 'var(--font-body)',
+      fontSize: 'var(--fs-body-sm)',
+      color: 'var(--text-body)',
+      background: 'var(--surface-card)',
+      outline: 'none',
+      resize: 'vertical'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-soft)',
+      borderRadius: 'var(--radius-field)',
+      padding: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      marginBottom: '9px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      font: 'var(--type-label)',
+      color: 'var(--text-heading)'
+    }
+  }, "Recent Box Entries"), /*#__PURE__*/React.createElement(Button, {
+    variant: "ghost",
+    size: "sm"
+  }, "View All")), /*#__PURE__*/React.createElement(QueueTable, {
+    columns: [{
+      key: 'box',
+      label: 'Box No.',
+      mono: true
+    }, {
+      key: 'quality',
+      label: 'Quality'
+    }, {
+      key: 'status',
+      label: 'Status',
+      align: 'center'
+    }, {
+      key: 'time',
+      label: 'Time',
+      align: 'right'
+    }],
+    rows: recent,
+    minRows: 0,
+    style: {
+      marginBottom: 0
+    }
+  }))), /*#__PURE__*/React.createElement(ActionBar, {
+    style: {
+      position: 'sticky',
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement(Button, {
+    variant: "quiet",
+    block: true,
+    onClick: onCancel
+  }, "Cancel"), /*#__PURE__*/React.createElement(Button, {
+    variant: "accent",
+    block: true,
+    onClick: onSave,
+    disabled: notOk && !photo,
+    iconLeft: /*#__PURE__*/React.createElement(Icon, {
+      name: "circle-check",
+      size: 15
+    })
+  }, "Save Condition")));
+}
+Object.assign(window, {
+  Screen6bCondition,
+  SC_CONDITION_OPTIONS: OPTIONS
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/Screen6bCondition.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/wms-inward/handheld/handheldAnnotations.js
+try { (() => {
+/* Callout data for the handheld-surface wireframes, Batch 1 showcase.
+   Markers sit ON the content (a scrolling device frame has no gutter). In annotated mode
+   the frame expands to full content height so every marker is visible and correctly placed.
+   Coordinates are percentages of the framed area. */
+window.SC_HH_ANNO = {
+  'screen-4a': {
+    group: 'IN-C · Receipt & Unload',
+    eyebrow: 'IN-C',
+    screenId: 'Screen 4a',
+    screenName: 'Receipt Details — invoice capture',
+    headline: 'Receipt Details — where the real numbers start',
+    intro: 'At the gate the guard took a glance at the back of a truck. Here the storekeeper has the envelope open and the boxes in front of him. This is where the document, the invoices and the box count that everything downstream is checked against are actually recorded — and where the figure taken at the gate stops mattering.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 4a', 'FR-004', 'Surface Handheld + Web', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Drawn for a rugged handheld in portrait, 412 \u00d7 880 dp \u2014 the 6-inch Android class (Zebra TC53/TC58, Honeywell CT45, Datalogic Memor 11). The full screen is shown here; the device crops at 880 dp and the operator scrolls.',
+    caption: 'Screen 4a \u00b7 Receipt Details',
+    annotationsIntro: 'Ten decisions, each traced to a requirement. Two carry an open question, and one is a reading of the FRD we have made on your behalf.',
+    markers: [{
+      n: 1,
+      x: 50,
+      y: 6
+    }, {
+      n: 2,
+      x: 12,
+      y: 12
+    }, {
+      n: 3,
+      x: 78,
+      y: 20
+    }, {
+      n: 4,
+      x: 14,
+      y: 28
+    }, {
+      n: 5,
+      x: 24,
+      y: 37
+    }, {
+      n: 6,
+      x: 74,
+      y: 37
+    }, {
+      n: 7,
+      x: 50,
+      y: 44
+    }, {
+      n: 8,
+      x: 20,
+      y: 51
+    }, {
+      n: 9,
+      x: 76,
+      y: 66
+    }, {
+      n: 10,
+      x: 50,
+      y: 83
+    }],
+    items: [{
+      n: 1,
+      label: 'Receipt Details',
+      ref: '\u00a77.1',
+      control: 'Screen header',
+      description: 'Reached at the unloading dock once the vehicle has been admitted. Captures the formal receipt document and invoice-level detail.'
+    }, {
+      n: 2,
+      label: 'GEN and GEN Date',
+      ref: '\u00a77.3',
+      control: 'Read-only display',
+      description: 'Auto-populated from the gate entry created at Screen 1 and carried forward as the master reference for this consignment detail record. Neither is editable here.'
+    }, {
+      n: 3,
+      label: 'Primary Document Type',
+      ref: '\u00a77.3',
+      control: 'Dropdown',
+      description: 'Pre-filled if captured at the gate; selected here if not. Acceptable types per OEM brand configuration: GR/LR (Goods Receipt / Lorry Receipt), Tax Invoice, Challan, Ship List and others.',
+      query: {
+        text: 'The full list of OEM-specific document types \u2014 ship list variants and GRN formats \u2014 has not been compiled, so brand-level configuration mapping cannot be built.',
+        ref: 'OI-002'
+      }
+    }, {
+      n: 4,
+      label: 'Document Number and Date',
+      ref: '\u00a77.3',
+      control: 'Text input, date picker',
+      description: 'The reference number and date shown on the primary document accompanying the consignment \u2014 an LR number, invoice number or GRN number. Date format DD/MM/YYYY.'
+    }, {
+      n: 5,
+      label: 'No. of Boxes in GEN',
+      ref: 'FR-004.2, FR-001.21',
+      control: 'Numeric input',
+      tone: 'open',
+      description: 'The total physical boxes in this consignment, and the expected count against which actual unloading is tracked on Screen 6a. This is the reconciliation baseline \u2014 the indicative figure taken at the gate explicitly is not.',
+      query: {
+        text: 'Precedence between the three box counts is unstated: indicative at gate entry, expected here, and extracted from the ship list. Where two or three are present and disagree, which governs reconciliation \u2014 and what is recorded against the others \u2014 is undecided.',
+        ref: 'OI-066',
+        blocking: true
+      }
+    }, {
+      n: 6,
+      label: 'No. of Invoices in GEN',
+      ref: '\u00a77.3',
+      control: 'Numeric input',
+      description: 'Total invoices associated with this GEN. Each invoice may cover multiple boxes or product lines, so this is not a box count and the two need not agree.'
+    }, {
+      n: 7,
+      label: 'Baseline advisory',
+      ref: 'FR-001.21',
+      control: 'Info note',
+      description: 'Stated on the screen rather than left to training. The distinction between the gate figure and this one is the difference between reporting two missing boxes and reporting none.',
+      proposal: 'The FRD establishes the precedence but does not require it to be surfaced in the interface. Putting it in front of the storekeeper at the moment he types the number is ours.'
+    }, {
+      n: 8,
+      label: 'Capture Invoice Details',
+      ref: '\u00a77.3',
+      control: 'Collapsible accordion',
+      description: 'Invoice Number, Invoice Date and Total Invoice Amount, with an Add Next control to capture multiple invoices in sequence. Collapsed by default, because the operator should see the whole task before opening one part of it.'
+    }, {
+      n: 9,
+      label: 'Details of the Invoices Added',
+      ref: 'FR-004.5, \u00a77.5',
+      control: 'Read-only summary table',
+      description: 'Auto-populated from each invoice keyed above. Columns: Invoice No., Date, Amount, Received. The Total row sums all invoice amounts.',
+      proposal: 'The walkthrough found this table described in two places and read as two tables. There is one. On the web surface the FRD puts it on the right-hand panel (Screen 4b); on a handheld there is no right-hand panel, so it renders once here beneath the entry it summarises.'
+    }, {
+      n: 10,
+      label: 'Save and Next',
+      ref: 'FR-004.5',
+      control: 'Pinned action bar',
+      description: 'Pressing Next without any invoice detail raises the confirmation "You have not added details of the invoices. Are you sure?" rather than blocking \u2014 invoices sometimes follow the goods.'
+    }],
+    missing: {
+      intro: 'A wireframe that tries to show everything shows nothing clearly. These are the things that would be added once the questions above are answered.',
+      statesNotDrawn: ['Empty \u2014 the screen before any document type is chosen', 'Validation failure \u2014 "Failed! Please Try Again", specified as a red toast', 'Success \u2014 "Details Added Successfully", specified as a green toast', 'The amber confirmation dialog when Next is pressed with no invoices', 'Offline \u2014 what remains usable at a dock with no signal', 'Resumed \u2014 the screen reopened mid-entry after a shift change'],
+      detailNotSpecified: ['Whether the GRN and invoice photo uploads belong here or only on Screen 4b', 'Whether No. of Invoices in GEN is validated against the invoices actually added', 'Currency formatting and whether amounts are inclusive of tax', 'Whether a captured invoice can be edited or only deleted and re-keyed', 'What happens when the document type changes after invoices are keyed'],
+      mostImportant: 'The web layout of this screen is not drawn here. The FRD describes 4a and 4b as the left and right panels of one board \u2014 entry on the left, transporter capture and the invoice summary on the right \u2014 which only works on a wide screen. On a handheld that split has to become a sequence, and this screen is the first half of it. Whether the handheld sequence is two screens or one long one is a decision the desk layout will settle.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 4a \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+  'screen-6a': {
+    group: 'IN-C · Receipt & Unload',
+    eyebrow: 'IN-C',
+    screenId: 'Screen 6a',
+    screenName: 'Box scanning and unload progress',
+    headline: 'Unload Truck — one scan per box, and a number you can trust',
+    intro: 'The primary unloading execution screen, and the one an operator holds for an hour at a time with the other hand on a carton. Each scan creates a record against the GEN. Everything else on the screen exists to answer one question without the operator having to ask anyone: how many boxes are left.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6a', 'FR-006', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'Rugged handheld, 412 \u00d7 880 dp. The scan field and the action bar are the two things reachable with a thumb; everything between them is read, not touched.',
+    caption: 'Screen 6a \u00b7 Box scanning',
+    annotationsIntro: 'Eleven decisions. Three carry an open question, and two are readings of the FRD we have made on your behalf.',
+    markers: [{
+      n: 1,
+      x: 50,
+      y: 4
+    }, {
+      n: 2,
+      x: 16,
+      y: 10
+    }, {
+      n: 3,
+      x: 78,
+      y: 19
+    }, {
+      n: 4,
+      x: 30,
+      y: 29
+    }, {
+      n: 5,
+      x: 88,
+      y: 29
+    }, {
+      n: 6,
+      x: 16,
+      y: 40
+    }, {
+      n: 7,
+      x: 68,
+      y: 40
+    }, {
+      n: 8,
+      x: 50,
+      y: 49
+    }, {
+      n: 9,
+      x: 50,
+      y: 58
+    }, {
+      n: 10,
+      x: 20,
+      y: 70
+    }, {
+      n: 11,
+      x: 50,
+      y: 95
+    }],
+    items: [{
+      n: 1,
+      label: 'Unload Truck',
+      ref: '\u00a79.1',
+      control: 'Screen header',
+      description: 'Operated on handheld terminals only. FR-032.6 puts scanning, condition capture and physical handling on the terminal because the operator has his hands on the stock and cannot walk to a desk.'
+    }, {
+      n: 2,
+      label: 'GEN, Supplier, Document Number',
+      ref: '\u00a79.3',
+      control: 'Read-only display',
+      description: 'Auto-filled from the GEN record, carried through from Screen 5A selection. Context the operator needs and cannot change.'
+    }, {
+      n: 3,
+      label: 'Shipment Details (Shiplist)',
+      ref: 'FR-006.12',
+      control: 'Panel with View and Replace',
+      description: 'Shows the file name and upload timestamp where a ship list has been uploaded against the GEN. Replace uploads a corrected or alternative list and re-evaluates the expected box manifest for the consignment.',
+      query: {
+        text: 'A sample ship list is still to be shared so the structure of the uploaded data and the field mapping into the system can be defined.',
+        ref: 'OI-030'
+      }
+    }, {
+      n: 4,
+      label: 'Scan / Enter Box No.',
+      ref: 'FR-006.1, FR-006.2',
+      control: 'Text input + scan trigger',
+      description: 'Each box is scanned as it is unloaded, creating a record in the tracker linked to the GEN. Scanning is by QR or barcode on the device; manual keyboard entry is a documented fallback for labels that will not decode. Delete Entry removes a mistaken scan.'
+    }, {
+      n: 5,
+      label: 'Device scan trigger',
+      ref: 'FR-032.6',
+      control: 'Hardware',
+      description: 'The physical trigger on the right edge of the terminal. The on-screen button mirrors it for one-handed use, but the hardware key is what an operator actually presses several hundred times a shift.',
+      proposal: 'The FRD does not specify the on-screen scan affordance. Drawing both is ours \u2014 a screen that offers no visible scan control is unusable on a device whose trigger has failed.'
+    }, {
+      n: 6,
+      label: 'Unloading WIP Status',
+      ref: 'FR-006.7',
+      control: 'Counter strip',
+      description: 'Unloaded (boxes scanned), Balance (expected minus scanned), OK, and Not OK. Balance is the number that matters: it is the expected count from No. of Boxes in GEN less what has come off the truck.'
+    }, {
+      n: 7,
+      label: 'Manual refresh',
+      ref: 'FR-006.7',
+      control: 'Header action',
+      tone: 'open',
+      description: 'The status bar refreshes on demand rather than live, deliberately, to avoid excessive processing load on the terminal.',
+      query: {
+        text: 'Whether manual refresh is acceptable long-term, or whether a push-update mechanism should be planned, is unconfirmed.',
+        ref: 'OI-011'
+      }
+    }, {
+      n: 8,
+      label: 'Unload Progress',
+      ref: 'FR-006.15',
+      control: 'Progress bar',
+      description: 'Boxes unloaded against total expected, with the completion percentage, updated as each box is scanned. The same information as the counters, in the form a supervisor reads from three metres away.'
+    }, {
+      n: 9,
+      label: 'Mismatch with Shiplist',
+      ref: 'FR-006.13',
+      control: 'Exception strip',
+      description: 'Raised where a scanned box is not on the uploaded ship list. The operator must choose before continuing: Set Aside, which segregates the box for return to the transporter and excludes it from the received count, or Add Document, which attaches supporting documentation justifying acceptance.',
+      query: {
+        text: 'Box ownership cannot be verified where no ship list and no supplier code exist \u2014 a part consignment may carry boxes belonging to another consignee. The process for identifying and returning such a box is undefined.',
+        ref: 'OI-013',
+        blocking: true
+      }
+    }, {
+      n: 10,
+      label: 'Recent Box Entries',
+      ref: 'FR-006.14',
+      control: 'Log with View All',
+      description: 'The most recently processed boxes with box number, recorded quality, status indicator and timestamp. Tapping a row opens its condition record. View All opens the full session log.'
+    }, {
+      n: 11,
+      label: 'Save and Finish Unload',
+      ref: 'FR-006.10, FR-006.11',
+      control: 'Pinned action bar',
+      description: 'Save persists everything scanned, every condition, photograph and remark, and allows the operator to resume from the same state \u2014 unloads span shift changes and breaks. Finish Unload commits the session and flags any unscanned boxes as Balance.'
+    }],
+    missing: {
+      intro: 'These are the things a build would need that this board does not answer.',
+      statesNotDrawn: ['Empty \u2014 the screen before the first box is scanned', 'The box-number mismatch dialog itself ("Would you like to upload it?" with YES / NO)', 'Mid-scan \u2014 the moment between trigger and decode', 'Duplicate scan \u2014 the same box read twice', 'Complete \u2014 balance at zero, before Finish is pressed', 'Offline \u2014 what a dock with no signal still permits'],
+      detailNotSpecified: ['Whether the WIP counters refresh on save or only on the refresh control', 'How many rows Recent Box Entries holds before View All is needed', 'Whether Delete Entry is available after a box has been saved', 'What Set Aside does to the progress bar and the Balance count', 'Whether the ship list panel appears at all when no list was uploaded'],
+      mostImportant: 'Unit-level counting is not on this screen, and that is deliberate. FR-006.18 confines unloading to primary box level and defers opening cartons to Consignment Check, because the transport vehicle cannot be held while every carton is opened. Any expectation that a shortage inside a box is detected here is misplaced \u2014 it is detected two stages later, and by then the vehicle has gone.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6a \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  },
+  'screen-6b': {
+    group: 'IN-C · Receipt & Unload',
+    eyebrow: 'IN-C',
+    screenId: 'Screen 6b',
+    screenName: 'Box condition assessment',
+    headline: 'Update Box Condition — the evidence, taken while the truck is still there',
+    intro: 'Opened by tapping a scanned box. A carton found wet the next morning is an argument with nobody to ask; a carton photographed at the dock with the driver standing beside it is a claim. Everything on this screen exists to make that record before the vehicle leaves.',
+    chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 6b', 'FR-006', 'Surface Handheld', 'FRD v0.11', 'Illustrative only'],
+    sectionNote: 'The condition options are the six named in FR-006.4 and are multi-select \u2014 a box can be both tampered and scratched.',
+    caption: 'Screen 6b \u00b7 Box condition',
+    annotationsIntro: 'Nine decisions. Two carry an open question, and two \u2014 including which screen number this is \u2014 are readings we have made on your behalf.',
+    markers: [{
+      n: 1,
+      x: 50,
+      y: 4
+    }, {
+      n: 2,
+      x: 20,
+      y: 11
+    }, {
+      n: 3,
+      x: 50,
+      y: 21
+    }, {
+      n: 4,
+      x: 24,
+      y: 34
+    }, {
+      n: 5,
+      x: 76,
+      y: 42
+    }, {
+      n: 6,
+      x: 50,
+      y: 53
+    }, {
+      n: 7,
+      x: 76,
+      y: 64
+    }, {
+      n: 8,
+      x: 20,
+      y: 76
+    }, {
+      n: 9,
+      x: 50,
+      y: 96
+    }],
+    items: [{
+      n: 1,
+      label: 'Update Box Condition',
+      ref: '\u00a79.4, \u00a79.6',
+      control: 'Screen header',
+      tone: 'open',
+      description: 'Opened from a box row on Screen 6a.',
+      query: {
+        text: 'The FRD is inconsistent about what Screen 6b is. The field reference at \u00a79.4 describes it as Check Unloading Status \u2014 a read-only box or part number search returning unloaded or not unloaded. The filled-state composite at \u00a79.6 describes the same number as the box condition screen, with open delivery, mandatory photo, the shiplist mismatch exception and Recent Box Entries. These are two different screens carrying one number.',
+        ref: '\u00a79.4 vs \u00a79.6',
+        blocking: true
+      },
+      proposal: 'We have drawn the condition screen, because the source artwork and the filled-state composite both show it and because \u00a79.6 is the later description. The status search is a separate, simpler screen and needs its own number.'
+    }, {
+      n: 2,
+      label: 'Box identity',
+      ref: 'FR-006.1',
+      control: 'Header card',
+      description: 'The scanned box number in mono, its position in the session, and a live OK / Not OK tag that follows the conditions selected below.'
+    }, {
+      n: 3,
+      label: 'Mismatch with Shiplist',
+      ref: 'FR-006.13',
+      control: 'Exception with two actions',
+      description: 'Where the box is not on the uploaded ship list, one of two actions must be chosen before continuing. Set Aside segregates the box for return to the transporter and excludes it from the received count. Add Document attaches supporting documentation justifying acceptance into the consignment.'
+    }, {
+      n: 4,
+      label: 'Box Condition',
+      ref: 'FR-006.4',
+      control: 'Multi-select options',
+      description: 'Six options: OK, Packing Tampered, Damaged, Visible Scratch, Without Packing, Wrong Delivery. Multiple conditions may be selected for a single box \u2014 this is not a radio group. Green, amber and red are traffic-light colours and deliberately sit outside the brand palette.'
+    }, {
+      n: 5,
+      label: 'Mark for Open Delivery',
+      ref: 'FR-006.6',
+      control: 'Toggle',
+      description: 'Available for boxes assessed as damaged, tampered or wrong delivery. Marking a box initiates the formal inspection process in the presence of the transporter or driver.',
+      proposal: 'The FRD makes this an action. Drawing it as a toggle that pre-recommends itself when a damaging condition is selected is ours \u2014 an operator under time pressure at a dock will not reliably remember to press an extra button.'
+    }, {
+      n: 6,
+      label: 'Take Photo',
+      ref: 'FR-006.5',
+      control: 'Camera capture',
+      description: 'Mandatory wherever the recorded condition is anything other than OK \u2014 the box entry cannot be saved until the photograph is captured. Not required where the condition is OK.',
+      query: {
+        text: 'Audio and video note capture is named as a planned enhancement; feasibility on handheld terminals is unconfirmed.',
+        ref: 'OI-008'
+      }
+    }, {
+      n: 7,
+      label: 'Remarks',
+      ref: '\u00a79.6',
+      control: 'Text area, 250 characters',
+      description: 'Optional free text alongside the photograph. Short by design: a dock is not where long-form notes get written.'
+    }, {
+      n: 8,
+      label: 'Recent Box Entries',
+      ref: 'FR-006.14',
+      control: 'Log',
+      description: 'Repeated here so the operator can see the run of recent boxes without returning to the scanning screen \u2014 useful when several boxes from the same pallet are damaged together.'
+    }, {
+      n: 9,
+      label: 'Save Condition',
+      ref: 'FR-006.5',
+      control: 'Pinned action bar',
+      description: 'Disabled until the photograph exists where a non-OK condition is selected. The block is the requirement, not a courtesy \u2014 an unphotographed damage record is not evidence.'
+    }],
+    missing: {
+      intro: 'What a build would still need to be told.',
+      statesNotDrawn: ['OK selected \u2014 photo not required, open delivery not offered, Save enabled', 'The camera view itself, and what happens if the capture fails', 'Several conditions selected at once, and how the tag reads then', 'The box already saved and reopened for correction', 'Set Aside confirmed \u2014 what the box row then looks like on Screen 6a'],
+      detailNotSpecified: ['Whether more than one photograph can be attached to a box', 'Whether Wrong Delivery routes differently from Damaged', 'Who may overturn a condition after the session is closed', 'Whether remarks are mandatory for any condition', 'What Add Document accepts \u2014 photograph, file, or both'],
+      mostImportant: 'The insurance claim workflow is not drawn, and is not specified beyond the point of segregation. This screen produces the evidence \u2014 a condition, a photograph, a timestamp, a driver who was standing there. What happens to that evidence afterwards, who raises the claim against the supplier and how it is tracked, is undefined. The evidence is only worth capturing if something consumes it.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 6b \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
+  }
+};
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/handheld/handheldAnnotations.js", error: String((e && e.message) || e) }); }
+
 // ui_kits/wms-inward/web/ConsignmentWeb.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -3402,7 +5390,8 @@ window.SC_WEB_ANNO = {
       label: 'Two-stage stepper',
       ref: '\u00a74.6, FR-002.14',
       control: 'Stepper',
-      description: 'Gate entry has two parts: the vehicle is admitted against minimal detail at the gate, then the document, invoices and full box detail are recorded at the unloading dock by the storekeeper. Different places, different people, different amounts of time.'
+      description: 'Gate entry has two parts: the vehicle is admitted against minimal detail at the gate, then the document, invoices and full box detail are recorded at the unloading dock by the storekeeper. Different places, different people, different amounts of time.',
+      proposal: '\u00a74.6 records the two stages but does not ask for them to be shown as a stepper. Drawing them as one two-step task is ours \u2014 and OI-073 leaves open whether the process list should show them as distinct sub-stages at all.'
     }, {
       n: 4,
       label: 'Mandatory-field advisory',
@@ -3451,21 +5440,39 @@ window.SC_WEB_ANNO = {
       ref: 'FR-001.21',
       control: 'Number input',
       tone: 'open',
-      description: 'Indicative only. At the gate this is a glance at the back of a truck, not a verified figure, and it must not serve as the value unloading is reconciled against \u2014 that baseline is the expected box count recorded at Receipt Details. OI-066: precedence between the three box counts is still unstated.'
+      description: 'Indicative only. At the gate this is a glance at the back of a truck, not a verified figure, and it must not serve as the value unloading is reconciled against \u2014 that baseline is the expected box count recorded at Receipt Details (Screen 4a).',
+      query: {
+        text: 'Precedence between the three box counts is unstated: indicative here, expected at Receipt Details, and extracted from the ship list. Where two or three are present and disagree, which governs reconciliation is undecided.',
+        ref: 'OI-066',
+        blocking: true
+      }
     }, {
       n: 12,
       label: 'Create Gate Entry',
       ref: 'FR-001.1, FR-001.14',
       control: 'Button',
       tone: 'open',
-      description: 'Generates the GEN, which becomes the master reference key for all subsequent inward steps and the reference against which the business pays the vendor. OI-048: the generation logic is not yet defined \u2014 format, sequence, and whether the number is unique per business unit or across the business.'
+      description: 'Generates the GEN, which becomes the master reference key for all subsequent inward steps and the reference against which the business pays the vendor.',
+      query: {
+        text: 'The generation logic is not yet defined \u2014 format, sequence, and whether the number is unique per business unit or across the business. The number shown here is an illustrative format only.',
+        ref: 'OI-048',
+        blocking: true
+      }
     }, {
       n: 13,
       label: 'Gate Entry Number confirmation',
       ref: 'FR-001.8',
       control: 'Banner',
-      description: 'Displayed prominently on creation and printable or shareable as a reference. Green is a signal colour here, not a brand colour. Once issued, the number is pinned to a context bar above the form so it does not scroll away.'
-    }]
+      description: 'Displayed prominently on creation and printable or shareable as a reference. Green is a signal colour here, not a brand colour.',
+      proposal: 'Pinning the GEN to a context bar above the form, so it stays visible for the rest of the task, is ours. FR-001.1 makes it the master reference for everything downstream; the FRD does not say where it should live on screen.'
+    }],
+    missing: {
+      intro: 'A wireframe that tries to show everything shows nothing clearly. These are the things that would be added once the questions above are answered.',
+      statesNotDrawn: ['Empty \u2014 the form before anything is entered', 'Validation failure \u2014 mandatory fields left blank', 'Configured down \u2014 the same screen where the admin has hidden optional fields', 'Offline \u2014 a gate hut with no signal', 'Duplicate \u2014 the same vehicle raised twice in one morning'],
+      detailNotSpecified: ['Which fields the dealer admin can hide, and where that is configured', 'Whether the GEN slip prints from the browser or a gate printer', 'What the internal arrival notification contains and who receives it', 'Whether supplier notification fires on creation or on receipt confirmation', 'Date and time format, and whether the timezone is per-location'],
+      mostImportant: 'The handheld layout of this screen is not drawn here. FR-032.2 requires gate entry on both surfaces, and a guard with a queue of trucks behind him is the more likely user than someone at a desk. If the web arrangement here is agreed, the handheld one follows from it \u2014 but the reverse is not true, and the handheld version is the one that decides how few fields the gate can realistically capture.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 1 \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
   },
   'screen-2': {
     group: 'IN-A · Gate Entry & Consignment',
@@ -3476,6 +5483,7 @@ window.SC_WEB_ANNO = {
     intro: 'Accessed at the unloading dock after the gate entry exists. It classifies the consignment, completes anything not captured at the gate, and confirms which downstream steps apply. Setting this up front matters because the person unloading at six in the morning is usually not the person who knows why the load was ordered \u2014 marking it at the start means the instruction travels with the load instead of living in somebody\u2019s head.',
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 2', 'FR-002', 'Surface Web + Handheld', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Classification on the left, workflow applicability on the right \u2014 the two are separate decisions, and the workflow block is the one a supervisor overrides. The Gate Entry Number stays pinned above both.',
+    annotationsIntro: 'Eleven decisions. One carries an open question, and one is a layout reading we have made on your behalf.',
     url: 'wms.sparecare.in/inward/consignment-details',
     markers: [{
       n: 1,
@@ -3564,7 +5572,11 @@ window.SC_WEB_ANNO = {
       ref: 'FR-002.8',
       control: 'Dropdown',
       tone: 'open',
-      description: 'Options are driven by the product and supplier category selections, reflecting variability in documentation formats across OEM brands. OI-002: the full list of OEM-specific document types is still to be compiled for brand-level configuration mapping.'
+      description: 'Options are driven by the product and supplier category selections, reflecting variability in documentation formats across OEM brands.',
+      query: {
+        text: 'The full list of OEM-specific document types \u2014 ship list variants and GRN formats \u2014 is still to be compiled for brand-level configuration mapping.',
+        ref: 'OI-002'
+      }
     }, {
       n: 8,
       label: 'Workflow defaults advisory',
@@ -3588,8 +5600,16 @@ window.SC_WEB_ANNO = {
       label: 'Start receipt process',
       ref: 'FR-002.10, .14',
       control: 'Button',
-      description: 'The override window closes here. Beyond this point the workflow for the consignment is fixed and the receipt process runs against it.'
-    }]
+      description: 'The override window closes here. Beyond this point the workflow for the consignment is fixed and the receipt process runs against it.',
+      proposal: 'Splitting the screen into classification on the left and workflow on the right is ours. The FRD lists the fields in one sequence; separating the two makes visible that the workflow block is the part a supervisor actually changes.'
+    }],
+    missing: {
+      intro: 'What a build would still need to be told.',
+      statesNotDrawn: ['Empty \u2014 before a gate entry is selected', 'Supplier chosen \u2014 the moment supplier category fills itself', 'A workflow step unchecked, and what the dashboard then shows', 'Multiple product categories selected at once', 'Reopened after the receipt process has started, with the overrides locked'],
+      detailNotSpecified: ['Whether an admin can add a fifth workflow step', 'What the multi-select control looks like with six categories chosen', 'Whether an override is logged against the user who made it', 'Who the consignment routes to when several recipients match', 'Whether unchecking Binning requires a reason'],
+      mostImportant: 'The administrator screen that defines these workflow defaults is not drawn anywhere. FR-002.9 gives the admin the factors \u2014 supplier category, nature of products, consignment carrier \u2014 and a default workflow per combination. That is a configuration matrix of real size, and every override on this screen is a departure from it. Without seeing the matrix, nobody can judge whether the defaults will be right often enough for the override to stay rare.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 2 \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
   },
   'screen-3': {
     group: 'IN-B · Operations',
@@ -3600,6 +5620,7 @@ window.SC_WEB_ANNO = {
     intro: 'One screen showing every load currently in the building and the stage each has reached, with how long it has been sitting there. The stage on its own is not worth much; almost any system can show a status. What makes this screen worth having is the time. A load at waiting-to-unload is normal. A load that has been at waiting-to-unload for six hours is a problem, and it stays invisible unless the screen puts the number in front of you.',
     chips: ['Prepared by Deepmindz Innovations Pvt Ltd', 'Screen 3', 'FR-003', 'Surface Web', 'FRD v0.11', 'Illustrative only'],
     sectionNote: 'Treated as the landing screen rather than a step, because FR-003 describes it as the view a supervisor keeps open through the day and a manager checks to find where work is piling up. The three queues are stacked full width so all of them are visible at once.',
+    annotationsIntro: 'Nine decisions. One carries an open question, and three are readings of the FRD we have made on your behalf.',
     url: 'wms.sparecare.in/inward/dashboard',
     markers: [{
       n: 1,
@@ -3643,7 +5664,8 @@ window.SC_WEB_ANNO = {
       label: 'Landing screen',
       ref: 'FR-003.9',
       control: 'Navigation',
-      description: 'The dashboard is where the day starts, not a step in a task. Each user sees the number of consignments pending at their own stage.'
+      description: 'Each user sees the number of consignments pending at their own stage.',
+      proposal: 'Treating the dashboard as the landing screen rather than the third step of gate entry is ours. FR-003 describes it as the view a supervisor keeps open through the day, which is not the behaviour of a step in a wizard.'
     }, {
       n: 2,
       label: 'Create Gate Entry',
@@ -3667,7 +5689,8 @@ window.SC_WEB_ANNO = {
       label: 'Waiting column',
       ref: 'FR-003.6',
       control: 'Elapsed time',
-      description: 'Time at the current stage, shown per row. This is the column that turns a status list into something a supervisor can act on before closing.'
+      description: 'Time at the current stage, shown per row. A load at waiting-to-unload is normal; a load six hours into it is a problem, and it stays invisible without the number.',
+      proposal: 'FR-003.6 requires aging as a filter. Also showing elapsed time per row is ours \u2014 a bucket tells you a load is old, a column tells you which one.'
     }, {
       n: 6,
       label: 'Gate Entry Number',
@@ -3685,14 +5708,26 @@ window.SC_WEB_ANNO = {
       label: 'Pending for Binning',
       ref: 'FR-003.3',
       control: 'Drill-down table',
-      description: 'Gate Entry Number, Date, Supplier, Waiting, No. of Units. Shown empty here with a plain statement rather than a blank panel \u2014 an empty queue is information.'
+      description: 'Gate Entry Number, Date, Supplier, Waiting, No. of Units.',
+      proposal: 'Showing the empty queue with a plain sentence rather than a blank panel is ours. An empty binning queue is information \u2014 it means the floor is clear, not that the screen failed to load.'
     }, {
       n: 9,
       label: 'Active steps only',
       ref: 'FR-003.4, .5',
       control: 'Behaviour',
-      description: 'The dashboard reflects only the workflow steps active for each consignment as configured on Screen 2, and updates in real time as consignments are processed through each stage. OI-011 records that the refresh strategy \u2014 manual against push \u2014 is still to be confirmed.'
-    }]
+      description: 'The dashboard reflects only the workflow steps active for each consignment as configured on Screen 2, and updates as consignments are processed through each stage.',
+      query: {
+        text: 'The refresh strategy is unconfirmed \u2014 whether manual refresh is acceptable long-term, or whether a push-update mechanism should be planned.',
+        ref: 'OI-011'
+      }
+    }],
+    missing: {
+      intro: 'What this board does not answer.',
+      statesNotDrawn: ['Empty \u2014 nothing pending at any stage', 'Loaded \u2014 forty consignments, where the tables need paging', 'An aging bucket selected, and what falls out of each queue', 'A row overdue past 60 days, and how it is marked', 'Permissions \u2014 the same screen for a user who owns one stage only'],
+      detailNotSpecified: ['Whether the queues can be sorted, and by what', 'Whether Value is invoice value or an estimate before invoices are keyed', 'Where a GEN link drills to \u2014 the consignment record or its current stage', 'How many rows before paging, and whether paging is per queue', 'Whether the aging filter persists between sessions'],
+      mostImportant: 'The workflow stepper showing where a consignment has reached, and how long it sat at each stage, is not drawn. OI-041 records it as desirable rather than mandatory and defers it to a later release. But the ageing figures on this screen only say a load is late \u2014 they do not say where it got stuck. Without the per-stage history the supervisor still has to ask three people, which is the problem the dashboard exists to remove.'
+    },
+    footer: 'Prepared by Deepmindz Innovations Pvt Ltd for SpareCare \u00b7 WMS Inward \u00b7 Screen 3 \u00b7 Companion to FRD v0.11 \u00b7 Confidential. Illustrative and pre-approval \u2014 not agreed scope, and not a visual design.'
   }
 };
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/wms-inward/web/webAnnotations.js", error: String((e && e.message) || e) }); }
@@ -3731,7 +5766,7 @@ window.SC_PORTAL = {
   org: 'Deepmindz Innovations Pvt Ltd',
   client: 'SpareCare',
   title: 'WMS Inward Wireframes',
-  subtitle: 'Administration and Operations',
+  subtitle: 'Gate Entry to Unloading',
   version: 'v1',
   backLabel: '\u2190 Back to SpareCare overview',
   backHref: '#',
@@ -3769,6 +5804,34 @@ window.SC_PORTAL = {
     }]
   }, {
     code: 'IN-C',
+    name: 'RECEIPT & UNLOAD',
+    items: [{
+      idx: '04',
+      id: 'screen-4a',
+      ref: 'Screen 4a',
+      name: 'Receipt Details — invoice capture',
+      fr: 'FR-004',
+      file: 'screens/screen-4a-receipt-details.html',
+      modes: true
+    }, {
+      idx: '05',
+      id: 'screen-6a',
+      ref: 'Screen 6a',
+      name: 'Box scanning & unload progress',
+      fr: 'FR-006',
+      file: 'screens/screen-6a-box-scanning.html',
+      modes: true
+    }, {
+      idx: '06',
+      id: 'screen-6b',
+      ref: 'Screen 6b',
+      name: 'Box condition assessment',
+      fr: 'FR-006',
+      file: 'screens/screen-6b-box-condition.html',
+      modes: true
+    }]
+  }, {
+    code: 'IN-D',
     name: 'REFERENCE',
     items: [{
       idx: '',
@@ -3799,6 +5862,12 @@ __ds_ns.AnnotationMarker = __ds_scope.AnnotationMarker;
 
 __ds_ns.BrowserChrome = __ds_scope.BrowserChrome;
 
+__ds_ns.CalloutBox = __ds_scope.CalloutBox;
+
+__ds_ns.MissingSection = __ds_scope.MissingSection;
+
+__ds_ns.RuggedFrame = __ds_scope.RuggedFrame;
+
 __ds_ns.WireframeDoc = __ds_scope.WireframeDoc;
 
 __ds_ns.WireframeSheet = __ds_scope.WireframeSheet;
@@ -3815,9 +5884,17 @@ __ds_ns.StoreCard = __ds_scope.StoreCard;
 
 __ds_ns.Tag = __ds_scope.Tag;
 
+__ds_ns.Accordion = __ds_scope.Accordion;
+
 __ds_ns.ActionBar = __ds_scope.ActionBar;
 
 __ds_ns.CameraButton = __ds_scope.CameraButton;
+
+__ds_ns.ConditionChips = __ds_scope.ConditionChips;
+
+__ds_ns.CounterStrip = __ds_scope.CounterStrip;
+
+__ds_ns.DetailRow = __ds_scope.DetailRow;
 
 __ds_ns.Field = __ds_scope.Field;
 
@@ -3831,7 +5908,13 @@ __ds_ns.InfoNote = __ds_scope.InfoNote;
 
 __ds_ns.KpiTile = __ds_scope.KpiTile;
 
+__ds_ns.PhotoCapture = __ds_scope.PhotoCapture;
+
+__ds_ns.ProgressBar = __ds_scope.ProgressBar;
+
 __ds_ns.QueueTable = __ds_scope.QueueTable;
+
+__ds_ns.ScanField = __ds_scope.ScanField;
 
 __ds_ns.ScreenHeader = __ds_scope.ScreenHeader;
 

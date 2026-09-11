@@ -1,6 +1,7 @@
 import React from 'react';
 import {AnnotatedScreen} from './AnnotatedScreen.jsx';
 import {AnnotationLegend} from './AnnotationLegend.jsx';
+import {MissingSection} from './MissingSection.jsx';
 
 function Chip({children}){
   return <span style={{font:'var(--type-caption)',color:'var(--text-secondary)',border:'1px solid var(--border-default)',borderRadius:'var(--r-pill)',padding:'5px 12px',whiteSpace:'nowrap'}}>{children}</span>;
@@ -9,7 +10,7 @@ function Chip({children}){
 /* One screen as a complete document. In 'wireframe' mode only the screen renders;
    in 'annotated' mode the surrounding specification material and the numbered
    callouts and legend render with it. */
-export function WireframeDoc({mode='wireframe',eyebrow,group,screenId,screenName,headline,intro,chips=[],sectionLabel='The wireframe',sectionNote,markers=[],items=[],legendColumns=2,gutter=26,children,style,...rest}){
+export function WireframeDoc({mode='wireframe',eyebrow,group,screenId,screenName,headline,intro,chips=[],sectionLabel='The wireframe',sectionNote,markers=[],items=[],legendColumns=2,gutter=26,annotationsIntro,missing,footer,onContent=false,children,style,...rest}){
   const annotated=mode==='annotated';
   return (
     <div style={{padding:'var(--sp-4)',background:'var(--anno-canvas)',minHeight:'100%',...style}} {...rest}>
@@ -37,8 +38,8 @@ export function WireframeDoc({mode='wireframe',eyebrow,group,screenId,screenName
       {annotated&&sectionNote&&<p style={{font:'var(--type-caption)',color:'var(--text-secondary)',maxWidth:'78ch',margin:'0 0 var(--sp-3)'}}>{sectionNote}</p>}
 
       {annotated
-        ?<AnnotatedScreen gutter={gutter} markers={markers} style={{alignItems:'stretch'}}>{children}</AnnotatedScreen>
-        :<div>{children}</div>}
+        ?<AnnotatedScreen gutter={gutter} markers={markers} style={{alignItems:onContent?'center':'stretch'}}>{children}</AnnotatedScreen>
+        :<div style={{display:'flex',justifyContent:onContent?'center':'stretch'}}>{children}</div>}
 
       {annotated&&items.length>0&&
         <div style={{marginTop:'var(--sp-4)'}}>
@@ -46,8 +47,21 @@ export function WireframeDoc({mode='wireframe',eyebrow,group,screenId,screenName
             <span style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-caption)',fontWeight:'var(--fw-semibold)',color:'var(--sc-teal-deep)',border:'1px solid var(--border-field)',background:'var(--surface-sunken)',borderRadius:'var(--r-sharp)',padding:'3px 8px'}}>02</span>
             <h2 style={{fontFamily:'var(--font-display)',fontWeight:'var(--fw-bold)',fontSize:'24px',color:'var(--text-heading)'}}>Annotations</h2>
           </div>
+          {annotationsIntro&&<p style={{font:'var(--type-caption)',color:'var(--text-secondary)',maxWidth:'78ch',margin:'0 0 var(--sp-2)',lineHeight:1.55}}>{annotationsIntro}</p>}
           <AnnotationLegend title={null} items={items} columns={legendColumns}/>
         </div>}
+
+      {annotated&&missing&&
+        <div style={{marginTop:'var(--sp-4)'}}>
+          <div style={{display:'flex',alignItems:'baseline',gap:'12px',marginBottom:'10px'}}>
+            <span style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-caption)',fontWeight:'var(--fw-semibold)',color:'var(--sc-teal-deep)',border:'1px solid var(--border-field)',background:'var(--surface-sunken)',borderRadius:'var(--r-sharp)',padding:'3px 8px'}}>03</span>
+            <h2 style={{fontFamily:'var(--font-display)',fontWeight:'var(--fw-bold)',fontSize:'24px',color:'var(--text-heading)'}}>What is deliberately missing</h2>
+          </div>
+          <MissingSection {...missing}/>
+        </div>}
+
+      {annotated&&footer&&
+        <footer style={{marginTop:'var(--sp-4)',paddingTop:'var(--sp-2)',borderTop:'1px solid rgba(4,1,1,0.18)',font:'var(--type-caption)',color:'var(--sc-grey-600)',lineHeight:1.55,maxWidth:'90ch'}}>{footer}</footer>}
     </div>
   );
 }

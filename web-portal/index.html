@@ -93,6 +93,14 @@ a{color:var(--sc-teal-deep)}a:hover{color:var(--sc-teal)}
 </section>
 <script src="./screens.js"></script>
 <script>
+if(!window.SC_PORTAL){
+  document.querySelector('.nav').innerHTML='<div class="empty" style="color:var(--status-error)"><b>screens.js did not load.</b><br><br>'
+    +'This page is at<br><code style="font-size:11px">'+location.pathname+'</code><br><br>'
+    +'and it asked for<br><code style="font-size:11px">'+new URL('./screens.js',location.href).pathname+'</code><br><br>'
+    +'Serve the whole project from its root, with <code>/web-portal/</code> as the entry path.</div>';
+  document.getElementById('hTitle').textContent='Cannot load the screen list';
+  throw new Error('SC_PORTAL missing — screens.js failed to load');
+}
 const P=window.SC_PORTAL;
 const flat=P.groups.flatMap(g=>g.items.map(it=>({...it,group:g})));
 const VIEW_KEY='sc-wireframe-view';
