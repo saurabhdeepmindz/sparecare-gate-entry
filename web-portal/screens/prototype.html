@@ -57,16 +57,16 @@ const INVOICES=[
 
 function Rail({index,onJump}){
   return (
-    <ol className="sc-rail" style={{display:'flex',flexWrap:'wrap',gap:'6px',listStyle:'none',margin:0,padding:0,justifyContent:'center'}}>
+    <ol className="sc-rail" style={{display:'flex',flexWrap:'wrap',gap:'5px',listStyle:'none',margin:0,padding:0,justifyContent:'center',alignItems:'center'}}>
       {STEPS.map((s,i)=>{
         const done=i<index,active=i===index;
         return (
           <li key={s.id} style={{display:'flex',alignItems:'center',gap:'6px'}}>
-            {i===3&&<span style={{display:'inline-flex',alignItems:'center',gap:'5px',font:'var(--type-caption)',color:'var(--sc-grey-500)',padding:'0 6px'}}>
-              <Icon name="arrow-right" size={13}/>desk to dock<Icon name="arrow-right" size={13}/>
+            {i===3&&<span style={{display:'inline-flex',alignItems:'center',gap:'4px',fontSize:'var(--fs-micro)',fontFamily:'var(--font-mono)',letterSpacing:'.05em',color:'var(--sc-grey-500)',padding:'0 4px',whiteSpace:'nowrap'}}>
+              <Icon name="arrow-right" size={12}/>DESK TO DOCK<Icon name="arrow-right" size={12}/>
             </span>}
             <button type="button" onClick={()=>onJump(i)}
-              style={{display:'inline-flex',alignItems:'center',gap:'7px',font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'6px 12px',borderRadius:'var(--r-pill)',cursor:'pointer',transition:'var(--transition-interactive)',
+              style={{display:'inline-flex',alignItems:'center',gap:'6px',font:'var(--type-caption)',fontWeight:'var(--fw-semibold)',padding:'5px 10px',borderRadius:'var(--r-pill)',cursor:'pointer',transition:'var(--transition-interactive)',
                 border:'1px solid '+(active?'var(--sc-teal)':done?'var(--border-field)':'var(--border-default)'),
                 background:active?'var(--sc-teal-deep)':done?'var(--surface-sunken)':'var(--surface-card)',
                 color:active?'#fff':done?'var(--sc-teal-deep)':'var(--sc-grey-600)'}}>
@@ -91,9 +91,8 @@ function FitStage({children,deps}){
       const cw=el.offsetWidth, ch=el.offsetHeight;
       if(!cw||!ch) return;
       const availW=w.clientWidth;
-      const availH=window.innerHeight-w.getBoundingClientRect().top-56;
-      const s=Math.min(1, availW/cw, availH/ch);
-      setScale(s>0.45?s:0.45);
+      const s=Math.min(1, availW/cw);
+      setScale(s>0.5?s:0.5);
       setBox({w:cw,h:ch});
     };
     measure();
@@ -168,7 +167,7 @@ function App(){
   /* The terminal is 412 x 880 dp by design. Here it is sized to the window instead, so the
      whole device — including the pinned action bar — is always visible and the type stays
      full size. The caption states the real device height. */
-  const deviceH=Math.max(520,Math.min(880,availH-72));
+  const deviceH=Math.max(560,Math.min(880,availH-56));
   const chrome=(child)=>step.surface==='web'
     ? <BrowserChrome url={step.url}>{child}</BrowserChrome>
     : <RuggedFrame caption={step.caption} height={deviceH} scrollHint={deviceH<880}>{child}</RuggedFrame>;
@@ -206,8 +205,8 @@ function App(){
     <div style={{padding:'var(--sp-2) var(--sp-3) var(--sp-3)'}}>
       <div style={{maxWidth:'1380px',margin:'0 auto'}}>
         <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:'var(--sp-3)',flexWrap:'wrap',marginBottom:'var(--sp-2)'}}>
-          <div style={{display:'flex',alignItems:'center',gap:'10px'}}>
-            <span style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-micro)',fontWeight:'var(--fw-semibold)',letterSpacing:'.06em',color:'var(--sc-teal-deep)',background:'var(--surface-sunken)',border:'1px solid var(--border-field)',borderRadius:'var(--r-sharp)',padding:'3px 8px'}}>{step.surface==='web'?'WEB SURFACE':'HANDHELD SURFACE'}</span>
+          <div style={{display:'flex',alignItems:'center',gap:'10px',minWidth:0}}>
+            <span style={{fontFamily:'var(--font-mono)',fontSize:'var(--fs-micro)',fontWeight:'var(--fw-semibold)',letterSpacing:'.06em',whiteSpace:'nowrap',color:'var(--sc-teal-deep)',background:'var(--surface-sunken)',border:'1px solid var(--border-field)',borderRadius:'var(--r-sharp)',padding:'3px 8px'}}>{step.surface==='web'?'WEB SURFACE':'HANDHELD SURFACE'}</span>
             <span style={{font:'var(--type-caption)',color:'var(--sc-grey-600)'}}>{step.surface==='web'?'Desk work \u2014 no scanning (FR-032.5)':'Rugged terminal, 412 \u00d7 880 dp \u2014 scanning and physical handling (FR-032.6)'}</span>
           </div>
           <div className="sc-bar" style={{display:'flex',gap:'10px',alignItems:'center'}}>
@@ -222,10 +221,10 @@ function App(){
           </div>
         </div>
 
-        <div style={{marginBottom:'var(--sp-2)'}}><Rail index={i} onJump={setI}/></div>
+        <div style={{marginBottom:'10px'}}><Rail index={i} onJump={setI}/></div>
 
-        {(hint||hot)&&<div style={{maxWidth:'820px',margin:'0 auto var(--sp-2)'}}>
-          <InfoNote tone={step.id==='cond'&&notOk&&!photo?'warn':'info'}>
+        {(hint||hot)&&<div style={{maxWidth:'900px',margin:'0 auto 10px'}}>
+          <InfoNote tone={step.id==='cond'&&notOk&&!photo?'warn':'info'} style={{padding:'7px 11px'}}>
             {hot?'Everything outlined is clickable. The strongest outline is the next step in the flow. ':''}{hint}
           </InfoNote>
         </div>}
@@ -236,7 +235,7 @@ function App(){
         </div>
 
         <p style={{textAlign:'center',font:'var(--type-caption)',color:'var(--sc-grey-500)',marginTop:'var(--sp-2)',maxWidth:'70ch',marginLeft:'auto',marginRight:'auto',lineHeight:1.5}}>
-          The screen is scaled to fit your window, so the action bar at the bottom is always reachable. Click anywhere to flash the clickable areas. Nothing is saved &mdash; illustrative and pre-approval, not agreed scope and not a visual design.
+Click anywhere on the screen to flash the clickable areas. Nothing is saved &mdash; illustrative and pre-approval, not agreed scope and not a visual design.
         </p>
       </div>
     </div>
